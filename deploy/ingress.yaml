@@ -1,0 +1,27 @@
+# Ingress for 3d.shep.bot. DNS is the *.shep.bot wildcard; TLS terminates at
+# the edge Caddy, which issues the cert on demand because this Ingress declares
+# the host (shep-infra: infra/edge-tls-ask) and forwards plain HTTP here.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: asset-server
+  namespace: asset-server
+  annotations:
+    # /v1/assets/:id/download streams multi-file zips (textures + companions)
+    # built on the fly — don't buffer them in nginx, and allow slow sources.
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: 3d.shep.bot
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: asset-server
+                port:
+                  number: 80

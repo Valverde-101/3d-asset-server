@@ -1,0 +1,17 @@
+# Production manifests for 3d.shep.bot, deployed by ArgoCD from this repo's
+# main branch (registered in shep-ai/shep-infra: bootstrap/apps/92-3d-asset-server.yaml,
+# which also creates the `asset-server` namespace).
+#
+# CI (.github/workflows/ci.yml) builds ghcr.io/arielshad/3d-asset-server on
+# every push to main and commits the new sha tag to `newTag` below — that
+# commit is the deploy.
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: asset-server
+resources:
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
+images:
+  - name: ghcr.io/arielshad/3d-asset-server
+    newTag: latest

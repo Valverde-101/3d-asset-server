@@ -1,0 +1,95 @@
+# 3d-asset-server (3d.shep.bot) — unified search + download gateway for 3D
+# models, materials, textures and HDRIs: web UI at /, REST API at /v1/*,
+# MCP (Streamable HTTP) at /mcp.
+#
+# Image tag is set by kustomization.yaml (pinned by CI on every push to main).
+#
+# Stateless (in-memory HTTP cache only), so no PVC. Server-side downloads over
+# MCP stay disabled (ASSET_SERVER_HTTP_DOWNLOADS unset): the HTTP download
+# endpoint streams zips straight to the client and never touches disk.
+#
+# Optional `asset-server-env` Secret (ASSET_SERVER_API_KEY to lock /v1/* and
+# /mcp behind a key, BLENDERKIT_API_KEY); the pod starts fine without it.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asset-server
+  namespace: asset-server
+spec:
+  replicas: 1
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: asset-server
+  template:
+    metadata:
+      labels:
+        app: asset-server
+    spec:
+      # Only needed if the GHCR package is private; a missing pull secret is
+      # ignored and the public image is pulled anonymously.
+      imagePullSecrets:
+        - name: ghcr-pull
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        seccompProfile:
+          type: RuntimeDefault
+      containers:
+        - name: asset-server
+          image: ghcr.io/arielshad/3d-asset-server
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: PORT
+              value: "8787"
+            # TLS terminates at the edge Caddy, so the request origin seen by
+            # the pod is http://; links handed to MCP clients must be https.
+            - name: ASSET_SERVER_PUBLIC_URL
+              value: https://3d.shep.bot
+            - name: ASSET_SERVER_USER_AGENT
+              value: "3d-asset-server/0.1 (+https://3d.shep.bot)"
+          envFrom:
+            - secretRef:
+                name: asset-server-env
+                optional: true
+          ports:
+            - name: http
+              containerPort: 8787
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+            timeoutSeconds: 2
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: http
+            initialDelaySeconds: 15
+            periodSeconds: 30
+            timeoutSeconds: 3
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities:
+              drop: ["ALL"]
+          volumeMounts:
+            - name: tmp
+              mountPath: /tmp
+          resources:
+            requests:
+              cpu: 25m
+              memory: 128Mi
+            limits:
+              cpu: "1"
+              memory: 512Mi
+      volumes:
+        - name: tmp
+          emptyDir:
+            sizeLimit: 256Mi

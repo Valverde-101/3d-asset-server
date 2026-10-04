@@ -18,3 +18,60 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+
+  # On main: publish ghcr.io/arielshad/3d-asset-server:{latest,sha-<commit>},
+  # then pin that tag in deploy/kustomization.yaml. ArgoCD (registered in
+  # shep-ai/shep-infra) syncs deploy/ from main, so the pin commit is the
+  # rollout to 3d.shep.bot. It's pushed with GITHUB_TOKEN, which doesn't
+  # trigger another run.
+  image:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    env:
+      IMAGE: ghcr.io/${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-buildx-action@v3
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          tags: |
+            ${{ env.IMAGE }}:latest
+            ${{ env.IMAGE }}:sha-${{ github.sha }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  deploy:
+    needs: image
+    runs-on: ubuntu-latest
+    concurrency: deploy
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Pin image tag
+        run: |
+          set -euo pipefail
+          tag="sha-${GITHUB_SHA}"
+          sed -i -E "s#^(\s*newTag:).*#\1 ${tag}#" deploy/kustomization.yaml
+          if git diff --quiet; then echo "already pinned to ${tag}"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "chore(deploy): pin image to ${tag}"
+          for i in 1 2 3; do git push origin HEAD:main && exit 0; git pull --rebase origin main; done
+          exit 1
