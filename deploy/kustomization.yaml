@@ -14,4 +14,4 @@ resources:
   - ingress.yaml
 images:
   - name: ghcr.io/arielshad/3d-asset-server
-    newTag: latest
+    newTag: sha-9756e783721cf13920a470b37925a9640405e931
