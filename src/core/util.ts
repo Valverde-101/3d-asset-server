@@ -113,13 +113,15 @@ export function wantsType(q: SearchQuery, ...types: AssetType[]): boolean {
 
 const TYPE_KEYWORDS: [AssetType, RegExp][] = [
   ["hdri", /\b(hdri|hdr|skybox|sky ?dome|panorama|environment map)\b/i],
-  ["material", /\b(material|pbr|substance|sbsar|shader)\b/i],
-  ["texture", /\b(texture|textures|seamless|tileable|decal|atlas)\b/i],
-  ["audio", /\b(audio|sound|sfx|music|soundtrack)\b/i],
-  ["font", /\b(font|typeface)\b/i],
+  // Strong 3D signals win over "...with textures" in titles like "Low Poly Trees with Textures".
+  ["model", /\b(3d|low[- ]?poly|mesh(es)?|glb|gltf|fbx|obj|rigged|models?)\b/i],
+  ["material", /\b(material|materials|pbr|substance|sbsar|shader)\b/i],
+  ["texture", /\b(texture|textures|seamless|tileable|decal|decals|atlas)\b/i],
+  ["audio", /\b(audio|sounds?|sfx|music|soundtrack)\b/i],
+  ["font", /\b(fonts?|typeface)\b/i],
   ["ui", /\b(ui|gui|interface|hud|icons?|buttons?)\b/i],
-  ["sprite", /\b(sprite|sprites|2d|pixel|tileset|tilemap|tiles)\b/i],
-  ["model", /\b(3d|model|models|mesh|low ?poly|lowpoly|character|prop|props|glb|gltf|fbx|obj|blend)\b/i],
+  ["sprite", /\b(sprites?|2d|pixel|tileset|tilemap|tiles)\b/i],
+  ["model", /\b(character|characters|props?|blend)\b/i],
 ];
 
 /** Best-effort asset type from free text (title/tags/category). */
