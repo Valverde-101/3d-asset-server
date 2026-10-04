@@ -62,6 +62,14 @@ node dist/cli.js mcp
 
 Or run it with Docker: `docker build -t 3d-asset-server . && docker run -p 8787:8787 3d-asset-server`.
 
+## Search UI
+
+`npm start`, then open <http://localhost:8787>. It's a single page served by the API: search every
+source, filter by type, free only or direct download, and pick which sources to query. Open a result
+to see its licence and details, choose a format and resolution, and download it. Multi-file assets
+come as one zip. Sources that can't be searched automatically show up as links to their own search.
+If `ASSET_SERVER_API_KEY` is set, the page asks for the key once and remembers it in the browser.
+
 ## Use it from an AI assistant (MCP)
 
 ### Claude Code
@@ -111,6 +119,7 @@ the server's disk rather than yours. Instead, `get_asset` returns direct file UR
 | `GET /v1/assets/{id}/download?format=&resolution=` | `302` to the file when it is a single file; otherwise a streamed zip with companions. |
 | `POST /mcp` | MCP Streamable HTTP endpoint (stateless). |
 | `GET /openapi.json` | OpenAPI 3.1 description. |
+| `GET /` | Search UI in a browser; JSON endpoint index otherwise. |
 
 ```bash
 curl 'localhost:8787/v1/search?q=brick+wall&type=material&free=true&limit=5'
@@ -122,7 +131,7 @@ curl -OJ 'localhost:8787/v1/assets/polyhaven:WoodenChair_01/download?format=gltf
 | Variable | Default | |
 |---|---|---|
 | `PORT` / `HOST` | `8787` / `0.0.0.0` | HTTP bind |
-| `ASSET_SERVER_API_KEY` | – | Require `Authorization: Bearer <key>` or `x-api-key` on `/v1/*` and `/mcp` |
+| `ASSET_SERVER_API_KEY` | – | Require `Authorization: Bearer <key>`, `x-api-key` or `?api_key=` on `/v1/*` and `/mcp` |
 | `ASSET_SERVER_PUBLIC_URL` | request origin | Base URL used in links handed to MCP clients |
 | `ASSET_SERVER_PROVIDERS` | all | Comma list to enable only some sources |
 | `ASSET_DOWNLOAD_DIR` | `./assets` | Default MCP download folder |
@@ -141,6 +150,7 @@ src/
   providers/   one adapter per site (api / scrape / link)
   api/         Hono REST API + MCP Streamable HTTP mount
   mcp/         MCP tool definitions (shared by stdio and HTTP)
+  ui/          the search page (static HTML/CSS/JS, no build step)
   cli.ts       serve | mcp | search
 ```
 

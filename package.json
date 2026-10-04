@@ -12,7 +12,7 @@
   },
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc -p tsconfig.build.json",
+    "build": "tsc -p tsconfig.build.json && node -e \"require('fs').cpSync('src/ui','dist/ui',{recursive:true})\"",
     "dev": "tsx watch src/cli.ts serve",
     "start": "node dist/cli.js serve",
     "mcp": "node dist/cli.js mcp",

@@ -126,11 +126,22 @@ describe("HTTP API", () => {
     expect(res.headers.get("location")).toBe("https://cdn.fake.example/crate.fbx");
   });
 
+  it("serves the search UI to browsers and JSON to API clients", async () => {
+    const html = await app.request("/", { headers: { accept: "text/html" } });
+    expect(html.headers.get("content-type")).toContain("text/html");
+    expect(html.headers.get("content-security-policy")).toContain("default-src 'self'");
+    expect(await html.text()).toContain("3D Asset Search");
+    const json = await app.request("/");
+    expect(((await json.json()) as { name: string }).name).toBe("3d-asset-server");
+  });
+
   it("requires the API key when configured", async () => {
     const secured = createApp(service(), { apiKey: "s3cret" });
     expect((await secured.request("/v1/providers")).status).toBe(401);
     expect((await secured.request("/v1/providers", { headers: { authorization: "Bearer s3cret" } })).status).toBe(200);
+    expect((await secured.request("/v1/providers?api_key=s3cret")).status).toBe(200);
     expect((await secured.request("/health")).status).toBe(200);
+    expect((await secured.request("/", { headers: { accept: "text/html" } })).status).toBe(200);
   });
 
   it("serves MCP over streamable HTTP", async () => {

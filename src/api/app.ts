@@ -1,4 +1,5 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
+import { readFileSync } from "node:fs";
 import { Hono, type Context } from "hono";
 import { cors } from "hono/cors";
 import { z } from "zod";
@@ -24,6 +25,19 @@ export interface AppOptions {
   allowServerDownloads?: boolean;
   downloadDir?: string;
 }
+
+/** The search UI: one static page (src/ui/index.html, copied to dist/ui on build). */
+const UI_HTML = (() => {
+  try {
+    return readFileSync(new URL("../ui/index.html", import.meta.url), "utf8");
+  } catch {
+    return undefined;
+  }
+})();
+
+const UI_CSP =
+  "default-src 'self'; img-src * data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; " +
+  "connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'";
 
 const csv = z
   .string()
@@ -60,7 +74,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     const key = opts.apiKey;
     const guard = async (c: Context, next: () => Promise<void>) => {
       const auth = c.req.header("authorization");
-      const given = auth?.startsWith("Bearer ") ? auth.slice(7) : c.req.header("x-api-key");
+      // `api_key` query param lets plain links (e.g. the UI's download button) authenticate.
+      const given = auth?.startsWith("Bearer ") ? auth.slice(7) : (c.req.header("x-api-key") ?? c.req.query("api_key"));
       if (given !== key) return c.json({ error: "unauthorized" }, 401);
       await next();
     };
@@ -78,8 +93,11 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     return c.json({ error: errorMessage(err) }, 500);
   });
 
-  app.get("/", (c) =>
-    c.json({
+  app.get("/", (c) => {
+    if (UI_HTML && c.req.header("accept")?.includes("text/html")) {
+      return c.html(UI_HTML, 200, { "content-security-policy": UI_CSP, "x-content-type-options": "nosniff" });
+    }
+    return c.json({
       name: "3d-asset-server",
       description: "Search and download 3D models, materials, textures, HDRIs and game assets across many sources.",
       endpoints: {
@@ -90,9 +108,10 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
         download: "/v1/assets/{provider}:{id}/download?format=gltf&resolution=2k",
         mcp: "/mcp (Streamable HTTP)",
         openapi: "/openapi.json",
+        ui: "/ (open in a browser)",
       },
-    }),
-  );
+    });
+  });
   app.get("/health", (c) => c.json({ ok: true }));
   app.get("/openapi.json", (c) => c.json(openApiSpec(opts.publicBaseUrl)));
 

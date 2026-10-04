@@ -47,7 +47,7 @@ function toAsset(id: string, a: PhAsset) {
     tags: a.tags ?? [],
     categories: a.categories,
     url: `https://polyhaven.com/a/${id}`,
-    thumbnailUrl: `https://cdn.polyhaven.com/asset_img/thumbs/${id}.png?width=256&height=256`,
+    thumbnailUrl: `https://cdn.polyhaven.com/asset_img/thumbs/${id}.png?width=512&height=512`,
     author: a.authors ? Object.keys(a.authors).join(", ") : undefined,
     license: LICENSES.CC0,
     price: { free: true },
