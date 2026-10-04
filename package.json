@@ -1,0 +1,38 @@
+{
+  "name": "3d-asset-server",
+  "version": "0.1.0",
+  "description": "Unified search + download gateway (HTTP API and MCP server) for free and paid 3D assets, textures, materials and HDRIs.",
+  "type": "module",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "3d-asset-server": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "dev": "tsx watch src/cli.ts serve",
+    "start": "node dist/cli.js serve",
+    "mcp": "node dist/cli.js mcp",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:live": "LIVE=1 vitest run test/live"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "cheerio": "^1.2.0",
+    "fflate": "^0.8.3",
+    "hono": "^4.13.13",
+    "lru-cache": "^11.5.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
