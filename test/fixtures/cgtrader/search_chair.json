@@ -1,0 +1,286 @@
+{
+ "listingPage": true,
+ "params": {
+  "keywords": "chair",
+  "locale": "en",
+  "controller": "listing_page",
+  "action": "index",
+  "file_types": null,
+  "printable": false
+ },
+ "data": [
+  {
+   "id": "6254357",
+   "type": "listingItem",
+   "attributes": {
+    "id": 6254357,
+    "title": "Dining chair armrest chair walnut wood Amir",
+    "price": 17.0,
+    "description": "Name: Dining chair armrest chair walnut wood Amir\nType: model\nFormat: 3Ds Max 2016\nExport: FBX, OBJ\nRender: Corona (10)\nPolys: 7416\nVerts: 4304\nUnits: Millimeters\nDimension: 597.1 x 587.83 x 801.31\nDescription: The Dining chair armrest chair walnut wood Amir is a minimalist, Japandi-style 3D model f",
+    "imageAlt": "Dining chair armrest chair walnut wood Amir 3D model",
+    "url": "https://www.cgtrader.com/3d-models/furniture/chair/dining-chair-armrest-chair-walnut-wood-amir",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/73utud2cqveq22403nj9o6p858pw/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/1.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/73utud2cqveq22403nj9o6p858pw/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/1.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/3d-models/furniture/chair/dining-chair-armrest-chair-walnut-wood-amir",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": false,
+      "rigged": false,
+      "lowPoly": false
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 17,
+      "name": ".max",
+      "is_native": true
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": 216,
+      "name": ".jpg",
+      "is_native": false
+     },
+     {
+      "id": 215,
+      "name": ".png",
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     }
+    ],
+    "categorySlug": "furniture",
+    "subcategorySlug": "chair",
+    "categoryTitle": "Furniture",
+    "subcategoryTitle": "Chair",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/6254357/94d09fad0e/dining-chair-armrest-chair-walnut-wood-amir-3d-model-94d09fad0e.webp",
+    "saleOffDiscount": 0
+   }
+  },
+  {
+   "id": "3874530",
+   "type": "listingItem",
+   "attributes": {
+    "id": 3874530,
+    "title": "Coll01-Furniture ornate upholstered chair",
+    "price": 20.0,
+    "description": "**Coll01-Furniture**\n\n1. Realistic model.\n2. PBR model.\n3. Textured by substance painter.\n4. Renderd by vray 5.\n5. Non-overlapping.\n6. ornament.\n7. High quality polygonal model, correctly scaled for an accurate representation of the original object.\n8. This model was constructed with utmost care and",
+    "imageAlt": "Coll01-Furniture 3D model",
+    "url": "https://www.cgtrader.com/3d-models/architectural/decoration/armchair-f898cc7e-9ab6-4bab-9e61-8aec49f0f27d",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/xqrD28UQCk2u59N9E51iyQhD/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/Coll01-%20%281%29.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/xqrD28UQCk2u59N9E51iyQhD/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/Coll01-%20%281%29.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/3d-models/architectural/decoration/armchair-f898cc7e-9ab6-4bab-9e61-8aec49f0f27d",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": true,
+      "rigged": false,
+      "lowPoly": false
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 17,
+      "name": ".max",
+      "is_native": true
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 21,
+      "name": ".blend",
+      "is_native": false
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     }
+    ],
+    "categorySlug": "architectural",
+    "subcategorySlug": "decoration",
+    "categoryTitle": "Architectural",
+    "subcategoryTitle": "Decoration",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/3874530/411636af5c/coll01-furniture-ornate-upholstered-chair-3d-model-411636af5c.webp",
+    "saleOffDiscount": 30
+   }
+  },
+  {
+   "id": "2472867",
+   "type": "listingItem",
+   "attributes": {
+    "id": 2472867,
+    "title": "Kroken easy chair interior scene",
+    "price": 39.0,
+    "description": "This is a **fully textured interior scene** with **natural light setups**, ready to render with **Cinema 4D and Corona**.\u00a0The scene is inspired by the \"Kroken\" easy chair designed by Christer Blomquist.\n\n**Kroken interior scene** is now **updated for Cinema 4D 2024 and Corona 11**, including Physica",
+    "imageAlt": "Kroken easy chair interior scene 3D design",
+    "url": "https://www.cgtrader.com/3d-models/interior/living-room/kroken-easy-chair-interior-scene",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/AP7xCAgDt6bRXx2aDuqjTFPj/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/Camera_01_Kroken_Interior_Scene.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/AP7xCAgDt6bRXx2aDuqjTFPj/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/Camera_01_Kroken_Interior_Scene.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/3d-models/interior/living-room/kroken-easy-chair-interior-scene",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": false,
+      "rigged": false,
+      "lowPoly": false
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 6,
+      "name": ".c4d",
+      "is_native": true
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     },
+     {
+      "id": 2,
+      "name": ".3ds",
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": 51,
+      "name": ".stl",
+      "is_native": false
+     },
+     {
+      "id": 28,
+      "name": ".hrd",
+      "is_native": false
+     },
+     {
+      "id": 17,
+      "name": ".max",
+      "is_native": false
+     },
+     {
+      "id": 100,
+      "name": ".pdf",
+      "is_native": false
+     }
+    ],
+    "categorySlug": "interior",
+    "subcategorySlug": "living-room",
+    "categoryTitle": "Interior",
+    "subcategoryTitle": "Living Room",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/2472867/34e1854c30/kroken-easy-chair-interior-scene-3d-model-34e1854c30.webp",
+    "saleOffDiscount": 50
+   }
+  },
+  {
+   "id": "7638963",
+   "type": "listingItem",
+   "attributes": {
+    "id": 7638963,
+    "title": "Chair Collection 8 Models Furniture Seating Pack 3D Models",
+    "price": 20.0,
+    "description": "Enhance your interior projects with this Chair Collection \u2013 8 Models, featuring a versatile selection of realistic chair designs for residential and commercial environments. The collection can be used for dining rooms, living rooms, bedrooms, offices, restaurants, lounges, hospitality spaces, and mo",
+    "imageAlt": "Chair Collection 8 Models Furniture Seating Pa...",
+    "url": "https://www.cgtrader.com/3d-models/furniture/chair/chair-collection-8-models-furniture-seating-pack-3d-models",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/58hlxmscw84dm0z5zg6xvpiyv470/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/Chair%20Collection.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/58hlxmscw84dm0z5zg6xvpiyv470/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/Chair%20Collection.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/3d-models/furniture/chair/chair-collection-8-models-furniture-seating-pack-3d-models",
+     "isCgtVerified": true,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": false,
+      "rigged": false,
+      "lowPoly": true
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 215,
+      "name": ".png",
+      "is_native": false
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": 51,
+      "name": ".stl",
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 117,
+      "name": ".gltf",
+      "is_native": false
+     },
+     {
+      "id": 127,
+      "name": ".usdz",
+      "is_native": false
+     }
+    ],
+    "categorySlug": "furniture",
+    "subcategorySlug": "chair",
+    "categoryTitle": "Furniture",
+    "subcategoryTitle": "Chair",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/7638963/ec5f6656d0/chair-collection-8-models-furniture-seating-pack-3d-models-3d-model-ec5f6656d0.webp",
+    "saleOffDiscount": 50
+   }
+  }
+ ],
+ "meta": {
+  "totalCount": 233502,
+  "currentPage": 1,
+  "totalPages": 83,
+  "perPage": 120
+ },
+ "sortByValue": "best_match",
+ "url": "/search?keywords=chair"
+}

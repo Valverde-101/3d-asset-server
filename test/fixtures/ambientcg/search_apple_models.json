@@ -1,0 +1,436 @@
+{
+ "totalResults": 3,
+ "assets": [
+  {
+   "id": "3DApple002",
+   "type": "3d-model",
+   "title": "3D Apple 002",
+   "url": "https://ambientcg.com/a/3DApple002",
+   "tags": [
+    "2",
+    "3d",
+    "apple",
+    "food",
+    "fruit",
+    "red"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2024-09-25",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "ambient-occlusion"
+   ],
+   "technique": "model-photogrammetry",
+   "downloadStatistics": {
+    "total": 14368,
+    "lastMonth": 1100,
+    "lastWeek": 287,
+    "lastDay": 52
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/3DApple002.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/3DApple002.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "LQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-1K-JPG.zip",
+     "size": 3108778
+    },
+    {
+     "attributes": "LQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-2K-JPG.zip",
+     "size": 9578382
+    },
+    {
+     "attributes": "LQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-4K-JPG.zip",
+     "size": 28505046
+    },
+    {
+     "attributes": "LQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-1K-PNG.zip",
+     "size": 7603948
+    },
+    {
+     "attributes": "LQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-2K-PNG.zip",
+     "size": 26228667
+    },
+    {
+     "attributes": "LQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_LQ-4K-PNG.zip",
+     "size": 28328322
+    },
+    {
+     "attributes": "SQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-1K-JPG.zip",
+     "size": 4069902
+    },
+    {
+     "attributes": "SQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-2K-JPG.zip",
+     "size": 9641473
+    },
+    {
+     "attributes": "SQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-4K-JPG.zip",
+     "size": 25876566
+    },
+    {
+     "attributes": "SQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-1K-PNG.zip",
+     "size": 7663043
+    },
+    {
+     "attributes": "SQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-2K-PNG.zip",
+     "size": 22946983
+    },
+    {
+     "attributes": "SQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_SQ-4K-PNG.zip",
+     "size": 25096533
+    },
+    {
+     "attributes": "HQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-1K-JPG.zip",
+     "size": 19247966
+    },
+    {
+     "attributes": "HQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-2K-JPG.zip",
+     "size": 25853289
+    },
+    {
+     "attributes": "HQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-4K-JPG.zip",
+     "size": 45054424
+    },
+    {
+     "attributes": "HQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-1K-PNG.zip",
+     "size": 23649424
+    },
+    {
+     "attributes": "HQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-2K-PNG.zip",
+     "size": 42104156
+    },
+    {
+     "attributes": "HQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple002_HQ-4K-PNG.zip",
+     "size": 44490153
+    }
+   ]
+  },
+  {
+   "id": "3DApple001",
+   "type": "3d-model",
+   "title": "3D Apple 001",
+   "url": "https://ambientcg.com/a/3DApple001",
+   "tags": [
+    "1",
+    "3d",
+    "apple",
+    "fruit",
+    "red"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2019-09-28",
+   "maps": [
+    "color",
+    "normal",
+    "ambient-occlusion"
+   ],
+   "technique": "model-photogrammetry",
+   "downloadStatistics": {
+    "total": 41767,
+    "lastMonth": 886,
+    "lastWeek": 248,
+    "lastDay": 25
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/3DApple001.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/3DApple001.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "LQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-1K-JPG.zip",
+     "size": 3130211
+    },
+    {
+     "attributes": "LQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-2K-JPG.zip",
+     "size": 9879074
+    },
+    {
+     "attributes": "LQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-4K-JPG.zip",
+     "size": 30307754
+    },
+    {
+     "attributes": "LQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-1K-PNG.zip",
+     "size": 7741421
+    },
+    {
+     "attributes": "LQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-2K-PNG.zip",
+     "size": 27083904
+    },
+    {
+     "attributes": "LQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_LQ-4K-PNG.zip",
+     "size": 30485723
+    },
+    {
+     "attributes": "SQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-1K-JPG.zip",
+     "size": 4035370
+    },
+    {
+     "attributes": "SQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-2K-JPG.zip",
+     "size": 11198613
+    },
+    {
+     "attributes": "SQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-4K-JPG.zip",
+     "size": 33028255
+    },
+    {
+     "attributes": "SQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-1K-PNG.zip",
+     "size": 8805331
+    },
+    {
+     "attributes": "SQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-2K-PNG.zip",
+     "size": 29198531
+    },
+    {
+     "attributes": "SQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_SQ-4K-PNG.zip",
+     "size": 33490691
+    },
+    {
+     "attributes": "HQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-1K-JPG.zip",
+     "size": 11607650
+    },
+    {
+     "attributes": "HQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-2K-JPG.zip",
+     "size": 19408611
+    },
+    {
+     "attributes": "HQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-4K-JPG.zip",
+     "size": 42981035
+    },
+    {
+     "attributes": "HQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-1K-PNG.zip",
+     "size": 16886958
+    },
+    {
+     "attributes": "HQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-2K-PNG.zip",
+     "size": 39213164
+    },
+    {
+     "attributes": "HQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple001_HQ-4K-PNG.zip",
+     "size": 43298986
+    }
+   ]
+  },
+  {
+   "id": "3DApple003",
+   "type": "3d-model",
+   "title": "3D Apple 003",
+   "url": "https://ambientcg.com/a/3DApple003",
+   "tags": [
+    "3",
+    "3d",
+    "apple",
+    "damaged",
+    "foot",
+    "old",
+    "red",
+    "rotten",
+    "spoiled",
+    "wrinkles"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2024-09-25",
+   "maps": [
+    "color",
+    "normal",
+    "roughness",
+    "ambient-occlusion"
+   ],
+   "technique": "model-photogrammetry",
+   "downloadStatistics": {
+    "total": 7321,
+    "lastMonth": 654,
+    "lastWeek": 200,
+    "lastDay": 28
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/3DApple003.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/3DApple003.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "LQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-1K-JPG.zip",
+     "size": 4270425
+    },
+    {
+     "attributes": "LQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-2K-JPG.zip",
+     "size": 13567397
+    },
+    {
+     "attributes": "LQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-4K-JPG.zip",
+     "size": 41256612
+    },
+    {
+     "attributes": "LQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-1K-PNG.zip",
+     "size": 10056459
+    },
+    {
+     "attributes": "LQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-2K-PNG.zip",
+     "size": 35467810
+    },
+    {
+     "attributes": "LQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_LQ-4K-PNG.zip",
+     "size": 41307545
+    },
+    {
+     "attributes": "SQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-1K-JPG.zip",
+     "size": 5645091
+    },
+    {
+     "attributes": "SQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-2K-JPG.zip",
+     "size": 14911798
+    },
+    {
+     "attributes": "SQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-4K-JPG.zip",
+     "size": 42666600
+    },
+    {
+     "attributes": "SQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-1K-PNG.zip",
+     "size": 11255081
+    },
+    {
+     "attributes": "SQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-2K-PNG.zip",
+     "size": 36042855
+    },
+    {
+     "attributes": "SQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_SQ-4K-PNG.zip",
+     "size": 42890532
+    },
+    {
+     "attributes": "HQ-1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-1K-JPG.zip",
+     "size": 19568643
+    },
+    {
+     "attributes": "HQ-2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-2K-JPG.zip",
+     "size": 27383910
+    },
+    {
+     "attributes": "HQ-4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-4K-JPG.zip",
+     "size": 51842475
+    },
+    {
+     "attributes": "HQ-1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-1K-PNG.zip",
+     "size": 23854366
+    },
+    {
+     "attributes": "HQ-2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-2K-PNG.zip",
+     "size": 43548372
+    },
+    {
+     "attributes": "HQ-4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=3DApple003_HQ-4K-PNG.zip",
+     "size": 51875973
+    }
+   ]
+  }
+ ]
+}

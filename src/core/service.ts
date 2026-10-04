@@ -191,7 +191,7 @@ export function rankResults(
   const diversified = scored.map((s) => {
     const n = seenPerProvider.get(s.provider) ?? 0;
     seenPerProvider.set(s.provider, n + 1);
-    return { ...s, score: s.score * Math.pow(0.97, n) };
+    return { ...s, score: s.score * Math.pow(0.93, n) };
   });
   diversified.sort((a, b) => b.score - a.score);
   return diversified.map((s) => ({ ...s.asset, score: round(s.score) }));

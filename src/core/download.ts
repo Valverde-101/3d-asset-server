@@ -87,9 +87,14 @@ export function selectFiles(asset: AssetDetails, sel: FileSelection = {}): Asset
     files = files.filter((f) => !f.resolution || f.resolution === chosen);
   }
 
-  // Several archives left (e.g. JPG and PNG zips at the same res): keep the first.
-  const archives = files.filter((f) => f.format === "zip");
-  if (!sel.format && archives.length > 1 && archives.length === files.length) files = archives.slice(0, 1);
+  if (!sel.format) {
+    // Same format from several packages (e.g. a standard and a Godot GLB): keep the first package.
+    const groups = [...new Set(files.map((f) => f.group).filter((g) => g && g !== "maps"))];
+    if (groups.length > 1) files = files.filter((f) => !f.group || f.group === "maps" || f.group === groups[0]);
+    // Several archives left (e.g. JPG and PNG zips at the same res): keep the first.
+    const archives = files.filter((f) => f.format === "zip");
+    if (archives.length > 1 && archives.length === files.length) files = archives.slice(0, 1);
+  }
   return files;
 }
 

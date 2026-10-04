@@ -1,0 +1,94 @@
+{
+ "count": 1,
+ "next": null,
+ "previous": null,
+ "results": [
+  {
+   "url": "https://www.blenderkit.com/api/v1/assets/500ece02-0c54-426a-8bae-e04b46f6cec0/",
+   "id": "500ece02-0c54-426a-8bae-e04b46f6cec0",
+   "assetBaseId": "99286ccd-5514-442b-ad36-468400a40164",
+   "versionNumber": 1,
+   "author": {
+    "id": 320086,
+    "firstName": "Ricardo",
+    "lastName": "Soares",
+    "fullName": "Ricardo Soares"
+   },
+   "name": "Valen Swivel Accent Chair",
+   "displayName": "Valen Swivel Accent Chair",
+   "description": "* Cozy up to Valen, your contemporary and super-comfortable take on a classic silhouette of modern design. This 3D model perfectly captures the original chair's sculptural, egg-shaped profile and its ",
+   "assetType": "model",
+   "category": "furniture",
+   "isFree": false,
+   "isForSale": false,
+   "basePrice": null,
+   "tags": [
+    "poltrona_giratoria",
+    "accent_chair",
+    "swivel_chair",
+    "modern_armchair",
+    "lounge_chair",
+    "armchair",
+    "chair",
+    "sofa"
+   ],
+   "license": "royalty_free",
+   "sourceAppName": "blender",
+   "created": "2025-10-15T16:46:30.429655+02:00",
+   "verificationStatus": "validated",
+   "isPrivate": false,
+   "files": [
+    {
+     "fileType": "blend",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/1ba97695-80ba-469a-a943-ba0910979afc/",
+     "uuid": "1ba97695-80ba-469a-a943-ba0910979afc",
+     "filename": "assets/500ece020c54426a8baee04b46f6cec0/files/blend_1feee1f6-4808-4535-8ef7-2314288ebff3.blend",
+     "fileUploadSize": 43438190,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/52dff753-7e3d-4090-8058-97cc4209a99f/",
+     "uuid": "52dff753-7e3d-4090-8058-97cc4209a99f",
+     "filename": "assets/500ece020c54426a8baee04b46f6cec0/files/gltf_2751689b-56c7-4a12-99cd-172a5533bf2c.glb",
+     "fileUploadSize": 1725628,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_1K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/854d13fd-9bd2-45ef-9a26-19a905ea6845/",
+     "uuid": "854d13fd-9bd2-45ef-9a26-19a905ea6845",
+     "filename": "assets/500ece020c54426a8baee04b46f6cec0/files/resolution_1K_bb3d4bb4-36d6-4e0d-8092-ae1116a300b5.blend",
+     "fileUploadSize": 1652542,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "thumbnail",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/ca048368-5b3e-4447-9650-fa38687519e4/",
+     "uuid": "ca048368-5b3e-4447-9650-fa38687519e4",
+     "filename": "assets/500ece020c54426a8baee04b46f6cec0/files/thumbnail_a76065e3-4865-42b4-85c8-d57608a62320.jpg",
+     "fileUploadSize": 2552460,
+     "isThumbnail": true
+    }
+   ],
+   "filesSize": 57351576,
+   "score": 800.0,
+   "access": "full",
+   "accessLabel": "Full Plan",
+   "dictParameters": {
+    "faceCount": 8096,
+    "textureResolutionMax": 2048,
+    "rig": false
+   },
+   "canDownload": false,
+   "canDownloadError": {
+    "messages": [
+     "User is anonymous"
+    ],
+    "type": "anonymous_user"
+   },
+   "thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/500ece020c54426a8baee04b46f6cec0/files/thumbnail_a76065e3-4865-42b4-85c8-d57608a62320.jpg.256x256_q85_crop-%2C.jpg",
+   "thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/500ece020c54426a8baee04b46f6cec0/files/thumbnail_a76065e3-4865-42b4-85c8-d57608a62320.jpg.512x512_q85_crop-%2C.jpg"
+  }
+ ]
+}

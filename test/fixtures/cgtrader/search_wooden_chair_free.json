@@ -1,0 +1,257 @@
+{
+ "listingPage": true,
+ "params": {
+  "free": "1",
+  "keywords": "wooden chair",
+  "locale": "en",
+  "controller": "listing_page",
+  "action": "index",
+  "file_types": null,
+  "printable": false
+ },
+ "data": [
+  {
+   "id": "2638330",
+   "type": "listingItem",
+   "attributes": {
+    "id": 2638330,
+    "title": "Outdoor Wooden Chair Free",
+    "price": 0.0,
+    "description": "Simple outdooring chair/daybed, 2 piece set.  Can be used patio, backyard or poolside areas. Pillow material was from poliigon which is free. Feel free to download and add it. https://www.poliigon.com/texture/fabric-upholstery-bright-angle-pattern-001",
+    "imageAlt": "Outdoor Wooden Chair Free 3D",
+    "url": "https://www.cgtrader.com/free-3d-models/furniture/chair/outdooring-wooden-chair-free",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/GNaDcB4bZTksq3p9BnkGmWvB/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/3D_Outdoor_Chair_Set.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/GNaDcB4bZTksq3p9BnkGmWvB/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/3D_Outdoor_Chair_Set.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/free-3d-models/furniture/chair/outdooring-wooden-chair-free",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": true,
+      "rigged": false,
+      "lowPoly": false
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 17,
+      "name": ".max",
+      "is_native": true
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     }
+    ],
+    "categorySlug": "furniture",
+    "subcategorySlug": "chair",
+    "categoryTitle": "Furniture",
+    "subcategoryTitle": "Chair",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/2638330/2e7be70f60/outdoor-wooden-chair-free-3d-model-2e7be70f60.webp",
+    "saleOffDiscount": 0
+   }
+  },
+  {
+   "id": "6978053",
+   "type": "listingItem",
+   "attributes": {
+    "id": 6978053,
+    "title": "Wooden Chair",
+    "price": 0.0,
+    "description": "Wooden Chair\n\nLow-poly\n\nPBR\n\n2K Texture Map",
+    "imageAlt": "classic retro 3D model game-ready PBR Wooden Chair",
+    "url": "https://www.cgtrader.com/free-3d-models/interior/other/wooden-chair-8eea6c62-af5c-4e05-90f0-6e27c12f2ea9",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/pg379j3k0tfx4p8nvygjtiu9tr3a/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/Main.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/pg379j3k0tfx4p8nvygjtiu9tr3a/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/Main.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/free-3d-models/interior/other/wooden-chair-8eea6c62-af5c-4e05-90f0-6e27c12f2ea9",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": false,
+      "rigged": false,
+      "lowPoly": true
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 215,
+      "name": ".png",
+      "is_native": false
+     },
+     {
+      "id": 216,
+      "name": ".jpg",
+      "is_native": false
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 6,
+      "name": ".c4d",
+      "is_native": false
+     }
+    ],
+    "categorySlug": "interior",
+    "subcategorySlug": "other",
+    "categoryTitle": "Interior",
+    "subcategoryTitle": "Other",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/6978053/f768bae647/wooden-chair-3d-model-f768bae647.webp",
+    "saleOffDiscount": 0
+   }
+  },
+  {
+   "id": "6797132",
+   "type": "listingItem",
+   "attributes": {
+    "id": 6797132,
+    "title": "Old Wooden Chair 05 Low-poly PBR",
+    "price": 0.0,
+    "description": "Old Wooden Chair\n\n- Low-poly 778 tris ready to use in Games AR/VR\n- textures are in PNG format 4096x4096 PBR Metallic/Roughness 1 set. (2048x2048 2K is also included)",
+    "imageAlt": "Old Wooden Chair 05 Low-poly PBR",
+    "url": "https://www.cgtrader.com/free-3d-models/furniture/chair/old-wooden-chair-05-low-poly-pbr",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/cx5bwl43ldm2pk9m20obli9h8adi/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/screenshot002.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/cx5bwl43ldm2pk9m20obli9h8adi/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/screenshot002.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/free-3d-models/furniture/chair/old-wooden-chair-05-low-poly-pbr",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": true,
+      "rigged": false,
+      "lowPoly": true
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 17,
+      "name": ".max",
+      "is_native": true
+     },
+     {
+      "id": 21,
+      "name": ".blend",
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     },
+     {
+      "id": 215,
+      "name": ".png",
+      "is_native": false
+     },
+     {
+      "id": null,
+      "name": null,
+      "is_native": false
+     }
+    ],
+    "categorySlug": "furniture",
+    "subcategorySlug": "chair",
+    "categoryTitle": "Furniture",
+    "subcategoryTitle": "Chair",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/6797132/13184e3496/old-wooden-chair-05-low-poly-pbr-3d-model-13184e3496.webp",
+    "saleOffDiscount": 0
+   }
+  },
+  {
+   "id": "2849886",
+   "type": "listingItem",
+   "attributes": {
+    "id": 2849886,
+    "title": "Wooden Chair",
+    "price": 0.0,
+    "description": "A wooden chair with minimalist design.\n\nContains 4K baked texture maps for diffuse color, roughness and metalness, and they are easy to set up.\nObj- and Fbx-files have been pre-subdivided once, the original low-poly -file is included in the .blend-file.",
+    "imageAlt": null,
+    "url": "https://www.cgtrader.com/free-3d-models/furniture/chair/wooden-chair-39edc281-1880-4e2f-9cd7-a1889f1a1726",
+    "primaryImage": {
+     "gridFallbackUrl": "https://media.cgtrader.com/variants/hn5akcncidxLVMGPkPkHbyMc/a26e47dab5f2d22c43d6c5ce4b4b46ecc30c70918878397cba1a10c1e35d7bfc/p%C3%A4%C3%A4kuva.jpg",
+     "gridUrl": "https://media.cgtrader.com/variants/hn5akcncidxLVMGPkPkHbyMc/78add9c2f02fbd73a43ffb3970be38683c5f15eff6ca849dc78c644f4ff9ce1b/p%C3%A4%C3%A4kuva.webp"
+    },
+    "modelInfo": {
+     "modelUrl": "https://www.cgtrader.com/free-3d-models/furniture/chair/wooden-chair-39edc281-1880-4e2f-9cd7-a1889f1a1726",
+     "isCgtVerified": false,
+     "types": {
+      "printReady": false,
+      "animated": false,
+      "pbr": false,
+      "rigged": false,
+      "lowPoly": false
+     }
+    },
+    "metaverseFormatsList": [
+     {
+      "id": 21,
+      "name": ".blend",
+      "is_native": true
+     },
+     {
+      "id": 12,
+      "name": ".obj",
+      "is_native": false
+     },
+     {
+      "id": 5,
+      "name": ".fbx",
+      "is_native": false
+     }
+    ],
+    "categorySlug": "furniture",
+    "subcategorySlug": "chair",
+    "categoryTitle": "Furniture",
+    "subcategoryTitle": "Chair",
+    "schemaImageUrl": "https://img-new.cgtrader.com/items/2849886/910f429a01/wooden-chair-3d-model-910f429a01.webp",
+    "saleOffDiscount": 0
+   }
+  }
+ ],
+ "meta": {
+  "totalCount": 12597,
+  "currentPage": 1,
+  "totalPages": 83,
+  "perPage": 120
+ },
+ "sortByValue": "best_match",
+ "url": "/search?free=1&keywords=wooden+chair"
+}

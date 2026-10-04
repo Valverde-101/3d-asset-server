@@ -1,0 +1,91 @@
+{
+ "count": 1,
+ "next": null,
+ "previous": null,
+ "results": [
+  {
+   "url": "https://www.blenderkit.com/api/v1/assets/8c2e3c07-9b27-4034-8a46-6bf501b8a5f6/",
+   "id": "8c2e3c07-9b27-4034-8a46-6bf501b8a5f6",
+   "assetBaseId": "7bea2b93-30ac-4ee2-8414-c5e1f712911e",
+   "versionNumber": 1,
+   "author": {
+    "id": 1826089,
+    "firstName": "dleon3D",
+    "lastName": "Le\u00f3n",
+    "fullName": "dleon3D Le\u00f3n"
+   },
+   "name": "Dining table and chairs set",
+   "displayName": "Dining table and chairs set",
+   "description": "Elevate your interior scenes with this sophisticated dining set, designed for modern elegance and comfort. This asset features a sleek round table with a distinctive, sturdy conical base, surrounded b",
+   "assetType": "model",
+   "category": "table",
+   "isFree": true,
+   "isForSale": false,
+   "basePrice": null,
+   "tags": [
+    "table",
+    "chair",
+    "dining",
+    "archviz",
+    "minimalist",
+    "scandinavian",
+    "wood",
+    "green",
+    "sage",
+    "interior"
+   ],
+   "license": "royalty_free",
+   "sourceAppName": "blender",
+   "created": "2026-06-17T21:36:41.311304+02:00",
+   "verificationStatus": "validated",
+   "isPrivate": false,
+   "files": [
+    {
+     "fileType": "blend",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/71be19e1-c220-489c-bc7d-3c7831f62691/",
+     "uuid": "71be19e1-c220-489c-bc7d-3c7831f62691",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/blend_963a950d-0990-4fbc-9f22-387c07667027.blend",
+     "fileUploadSize": 56586718,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/f7c7357a-6f00-43b3-a4fc-319eeb8d2d6b/",
+     "uuid": "f7c7357a-6f00-43b3-a4fc-319eeb8d2d6b",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/gltf_642ad0b9-6d58-478f-a38c-a13629284b77.glb",
+     "fileUploadSize": 690468,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_1K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/250ead8f-de8f-4d46-a9ce-adedc09d2ae2/",
+     "uuid": "250ead8f-de8f-4d46-a9ce-adedc09d2ae2",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/resolution_1K_269ed1e3-459e-4bf4-94b7-581b379cbb7a.blend",
+     "fileUploadSize": 1730286,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "thumbnail",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/4c2f2c84-43ab-42e7-91f4-b655ca0b6494/",
+     "uuid": "4c2f2c84-43ab-42e7-91f4-b655ca0b6494",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg",
+     "fileUploadSize": 1137369,
+     "isThumbnail": true
+    }
+   ],
+   "filesSize": 86607649,
+   "score": 480.0,
+   "access": "free",
+   "accessLabel": "Free",
+   "dictParameters": {
+    "faceCount": 20384,
+    "textureResolutionMax": 4096,
+    "rig": false
+   },
+   "canDownload": true,
+   "canDownloadError": true,
+   "thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg.256x256_q85_crop-%2C.jpg",
+   "thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg.512x512_q85_crop-%2C.jpg"
+  }
+ ]
+}

@@ -1,0 +1,291 @@
+{
+ "totalResults": 331,
+ "assets": [
+  {
+   "id": "Wood096",
+   "type": "material",
+   "title": "Wood 096",
+   "url": "https://ambientcg.com/a/Wood096",
+   "tags": [
+    "096",
+    "96",
+    "beige",
+    "grain",
+    "knots",
+    "light",
+    "natural",
+    "smooth",
+    "softwood",
+    "wood",
+    "wood096"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2026-09-30",
+   "maps": [
+    "color",
+    "displacement",
+    "normal",
+    "roughness"
+   ],
+   "technique": "surface-approximated",
+   "downloadStatistics": {
+    "total": 1649,
+    "lastMonth": 1649,
+    "lastWeek": 1649,
+    "lastDay": 416
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/Wood096.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood096.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_1K-JPG.zip",
+     "size": 5358165
+    },
+    {
+     "attributes": "2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_2K-JPG.zip",
+     "size": 19620619
+    },
+    {
+     "attributes": "4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_4K-JPG.zip",
+     "size": 80846753
+    },
+    {
+     "attributes": "8K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_8K-JPG.zip",
+     "size": 337304737
+    },
+    {
+     "attributes": "1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_1K-PNG.zip",
+     "size": 15153371
+    },
+    {
+     "attributes": "2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_2K-PNG.zip",
+     "size": 59698785
+    },
+    {
+     "attributes": "4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_4K-PNG.zip",
+     "size": 239335565
+    },
+    {
+     "attributes": "8K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood096_8K-PNG.zip",
+     "size": 929591354
+    }
+   ]
+  },
+  {
+   "id": "Wood095",
+   "type": "material",
+   "title": "Wood 095",
+   "url": "https://ambientcg.com/a/Wood095",
+   "tags": [
+    "095",
+    "95",
+    "beige",
+    "clean",
+    "indoor",
+    "light",
+    "minimalist",
+    "modern",
+    "natural",
+    "polished",
+    "rustic",
+    "smooth",
+    "subtle",
+    "uniform",
+    "wood"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2026-03-08",
+   "maps": [
+    "color",
+    "displacement",
+    "normal",
+    "roughness"
+   ],
+   "technique": "surface-approximated",
+   "downloadStatistics": {
+    "total": 51805,
+    "lastMonth": 9199,
+    "lastWeek": 2252,
+    "lastDay": 272
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/Wood095.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood095.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_1K-JPG.zip",
+     "size": 3882297
+    },
+    {
+     "attributes": "2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_2K-JPG.zip",
+     "size": 12931993
+    },
+    {
+     "attributes": "4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_4K-JPG.zip",
+     "size": 54190542
+    },
+    {
+     "attributes": "8K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_8K-JPG.zip",
+     "size": 223690900
+    },
+    {
+     "attributes": "12K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_12K-JPG.zip",
+     "size": 488417557
+    },
+    {
+     "attributes": "16K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_16K-JPG.zip",
+     "size": 891782590
+    },
+    {
+     "attributes": "1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_1K-PNG.zip",
+     "size": 9156988
+    },
+    {
+     "attributes": "2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_2K-PNG.zip",
+     "size": 34016478
+    },
+    {
+     "attributes": "4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_4K-PNG.zip",
+     "size": 138139267
+    },
+    {
+     "attributes": "8K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_8K-PNG.zip",
+     "size": 553316807
+    },
+    {
+     "attributes": "12K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_12K-PNG.zip",
+     "size": 1225009660
+    },
+    {
+     "attributes": "16K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood095_16K-PNG.zip",
+     "size": 2194524720
+    }
+   ]
+  },
+  {
+   "id": "Wood094",
+   "type": "material",
+   "title": "Wood 094",
+   "url": "https://ambientcg.com/a/Wood094",
+   "tags": [
+    "94",
+    "brown",
+    "smooth",
+    "wood",
+    "wooden"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2025-07-12",
+   "maps": [
+    "color",
+    "displacement",
+    "normal",
+    "roughness"
+   ],
+   "technique": "surface-approximated",
+   "downloadStatistics": {
+    "total": 65672,
+    "lastMonth": 4584,
+    "lastWeek": 1344,
+    "lastDay": 178
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/Wood094.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood094.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "1K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_1K-JPG.zip",
+     "size": 4166756
+    },
+    {
+     "attributes": "2K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_2K-JPG.zip",
+     "size": 14806756
+    },
+    {
+     "attributes": "4K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_4K-JPG.zip",
+     "size": 58630415
+    },
+    {
+     "attributes": "8K-JPG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_8K-JPG.zip",
+     "size": 239799833
+    },
+    {
+     "attributes": "1K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_1K-PNG.zip",
+     "size": 12848310
+    },
+    {
+     "attributes": "2K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_2K-PNG.zip",
+     "size": 48829694
+    },
+    {
+     "attributes": "4K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_4K-PNG.zip",
+     "size": 193123600
+    },
+    {
+     "attributes": "8K-PNG",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=Wood094_8K-PNG.zip",
+     "size": 683244270
+    }
+   ]
+  }
+ ]
+}

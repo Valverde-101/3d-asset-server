@@ -1,0 +1,344 @@
+{
+ "count": 7267,
+ "next": "https://www.blenderkit.com/api/v1/search/?page=2&page_size=3&query=chair+asset_type%3Amodel%2Cprintable%2Cscene",
+ "previous": null,
+ "results": [
+  {
+   "url": "https://www.blenderkit.com/api/v1/assets/8c2e3c07-9b27-4034-8a46-6bf501b8a5f6/",
+   "id": "8c2e3c07-9b27-4034-8a46-6bf501b8a5f6",
+   "assetBaseId": "7bea2b93-30ac-4ee2-8414-c5e1f712911e",
+   "versionNumber": 1,
+   "author": {
+    "id": 1826089,
+    "firstName": "dleon3D",
+    "lastName": "Le\u00f3n",
+    "fullName": "dleon3D Le\u00f3n"
+   },
+   "name": "Dining table and chairs set",
+   "displayName": "Dining table and chairs set",
+   "description": "Elevate your interior scenes with this sophisticated dining set, designed for modern elegance and comfort. This asset features a sleek round table with a distinctive, sturdy conical base, surrounded b",
+   "assetType": "model",
+   "category": "table",
+   "isFree": true,
+   "isForSale": false,
+   "basePrice": null,
+   "tags": [
+    "table",
+    "chair",
+    "dining",
+    "archviz",
+    "minimalist",
+    "scandinavian",
+    "wood",
+    "green",
+    "sage",
+    "interior"
+   ],
+   "license": "royalty_free",
+   "sourceAppName": "blender",
+   "created": "2026-06-17T21:36:41.311304+02:00",
+   "verificationStatus": "validated",
+   "isPrivate": false,
+   "files": [
+    {
+     "fileType": "blend",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/71be19e1-c220-489c-bc7d-3c7831f62691/",
+     "uuid": "71be19e1-c220-489c-bc7d-3c7831f62691",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/blend_963a950d-0990-4fbc-9f22-387c07667027.blend",
+     "fileUploadSize": 56586718,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/f7c7357a-6f00-43b3-a4fc-319eeb8d2d6b/",
+     "uuid": "f7c7357a-6f00-43b3-a4fc-319eeb8d2d6b",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/gltf_642ad0b9-6d58-478f-a38c-a13629284b77.glb",
+     "fileUploadSize": 690468,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf_godot",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/85f4b10d-e619-44e8-8e53-711edf6c680c/",
+     "uuid": "85f4b10d-e619-44e8-8e53-711edf6c680c",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/gltf_godot_4c7040b2-b058-41e3-bb72-73eb06a7e650.glb",
+     "fileUploadSize": 1843596,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_0_5K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/58b05741-747f-418d-828f-7628bd88de0f/",
+     "uuid": "58b05741-747f-418d-828f-7628bd88de0f",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/resolution_0_5K_3a5f9a08-3bc1-43d4-8fe6-4dd2bb3e5c7b.blend",
+     "fileUploadSize": 888239,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_1K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/250ead8f-de8f-4d46-a9ce-adedc09d2ae2/",
+     "uuid": "250ead8f-de8f-4d46-a9ce-adedc09d2ae2",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/resolution_1K_269ed1e3-459e-4bf4-94b7-581b379cbb7a.blend",
+     "fileUploadSize": 1730286,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_2K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/7631d977-84a0-41ae-9e35-7788c30eb97c/",
+     "uuid": "7631d977-84a0-41ae-9e35-7788c30eb97c",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/resolution_2K_544714f5-80cb-49d3-be41-c63216452865.blend",
+     "fileUploadSize": 5192938,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_4K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/cb44e7c8-b7cc-4014-a6cf-a95393f77e1f/",
+     "uuid": "cb44e7c8-b7cc-4014-a6cf-a95393f77e1f",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/resolution_4K_774857f2-4d09-4e7f-b4af-60caa238fc10.blend",
+     "fileUploadSize": 18538035,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "thumbnail",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/4c2f2c84-43ab-42e7-91f4-b655ca0b6494/",
+     "uuid": "4c2f2c84-43ab-42e7-91f4-b655ca0b6494",
+     "filename": "assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg",
+     "fileUploadSize": 1137369,
+     "isThumbnail": true
+    }
+   ],
+   "filesSize": 86607649,
+   "score": 480.0,
+   "access": "free",
+   "accessLabel": "Free",
+   "dictParameters": {
+    "faceCount": 20384,
+    "textureResolutionMax": 4096,
+    "rig": false
+   },
+   "canDownload": true,
+   "canDownloadError": true,
+   "thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg.256x256_q85_crop-%2C.jpg",
+   "thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/8c2e3c079b2740348a466bf501b8a5f6/files/thumbnail_2fa6891f-27bc-4104-86a2-6f246b0be5d4.jpg.512x512_q85_crop-%2C.jpg"
+  },
+  {
+   "url": "https://www.blenderkit.com/api/v1/assets/afd2d2af-f09a-438b-a3ef-d3b659a476c7/",
+   "id": "afd2d2af-f09a-438b-a3ef-d3b659a476c7",
+   "assetBaseId": "dcf64f4b-fb84-41f8-a32a-1cfb32242286",
+   "versionNumber": 1,
+   "author": {
+    "id": 800325,
+    "firstName": "polimesh",
+    "lastName": "",
+    "fullName": "polimesh "
+   },
+   "name": "Minotti Linha Table & Fynn Chair",
+   "displayName": "Minotti Linha Table & Fynn Chair",
+   "description": "A contemporary luxury dining set inspired by Italian modern design, featuring a strong architectural table and elegantly crafted dining chairs. The table showcases clean lines, solid proportions, and ",
+   "assetType": "model",
+   "category": "chair-table-set",
+   "isFree": true,
+   "isForSale": false,
+   "basePrice": null,
+   "tags": [
+    "Chair",
+    "dcorative",
+    "table",
+    "dining"
+   ],
+   "license": "royalty_free",
+   "sourceAppName": "blender",
+   "created": "2026-01-28T14:57:44.609642+01:00",
+   "verificationStatus": "validated",
+   "isPrivate": false,
+   "files": [
+    {
+     "fileType": "blend",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/ed832248-85a5-4a93-b154-7760c5ba8081/",
+     "uuid": "ed832248-85a5-4a93-b154-7760c5ba8081",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/blend_e675de66-e2e4-484b-bb7f-a45b1eb61745.blend",
+     "fileUploadSize": 82078085,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/828c9c43-efa1-4162-add5-f1775fc7c909/",
+     "uuid": "828c9c43-efa1-4162-add5-f1775fc7c909",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/gltf_e12b503a-009c-474d-b27b-0f195136f8b2.glb",
+     "fileUploadSize": 1621912,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf_godot",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/d88f935f-4e74-470c-89f3-019f3aa84419/",
+     "uuid": "d88f935f-4e74-470c-89f3-019f3aa84419",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/gltf_godot_e6037560-b130-4355-84a1-a6d2b8a7cf6a.glb",
+     "fileUploadSize": 10809448,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_0_5K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/0ad4dd3b-ce9d-47a9-8f36-8622cdda8e06/",
+     "uuid": "0ad4dd3b-ce9d-47a9-8f36-8622cdda8e06",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/resolution_0_5K_0b519b10-e08a-4efc-93ca-99f9a05b8cab.blend",
+     "fileUploadSize": 6345423,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_1K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/2f3ec7b8-2eed-41e3-8918-99edbe5a677b/",
+     "uuid": "2f3ec7b8-2eed-41e3-8918-99edbe5a677b",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/resolution_1K_156274c0-6e38-4907-890e-4d351eb74b87.blend",
+     "fileUploadSize": 7447168,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_2K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/3d9713e3-6b7c-42ea-a1c8-041f0fe4d78d/",
+     "uuid": "3d9713e3-6b7c-42ea-a1c8-041f0fe4d78d",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/resolution_2K_d76ddb35-ee82-498d-8f81-736f2575bc32.blend",
+     "fileUploadSize": 11894291,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_4K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/56c0175b-93a0-4e08-93d8-ed4f802d862b/",
+     "uuid": "56c0175b-93a0-4e08-93d8-ed4f802d862b",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/resolution_4K_4bb20903-d1b2-43d6-9bfc-eddce07c715f.blend",
+     "fileUploadSize": 27353776,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "thumbnail",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/f2e303bc-a4aa-402b-9635-2bd09587d2cd/",
+     "uuid": "f2e303bc-a4aa-402b-9635-2bd09587d2cd",
+     "filename": "assets/afd2d2aff09a438ba3efd3b659a476c7/files/thumbnail_de3ac12a-3016-4594-82c7-73a37d149a34.jpg",
+     "fileUploadSize": 1359028,
+     "isThumbnail": true
+    }
+   ],
+   "filesSize": 148909131,
+   "score": 1187.5,
+   "access": "free",
+   "accessLabel": "Free",
+   "dictParameters": {
+    "faceCount": 691586,
+    "textureResolutionMax": 4096,
+    "rig": false
+   },
+   "canDownload": true,
+   "canDownloadError": true,
+   "thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/afd2d2aff09a438ba3efd3b659a476c7/files/thumbnail_de3ac12a-3016-4594-82c7-73a37d149a34.jpg.256x256_q85_crop-%2C.jpg",
+   "thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/afd2d2aff09a438ba3efd3b659a476c7/files/thumbnail_de3ac12a-3016-4594-82c7-73a37d149a34.jpg.512x512_q85_crop-%2C.jpg"
+  },
+  {
+   "url": "https://www.blenderkit.com/api/v1/assets/e5e6a20b-7483-4d9f-8ad3-7f62755c3385/",
+   "id": "e5e6a20b-7483-4d9f-8ad3-7f62755c3385",
+   "assetBaseId": "703fe964-84bb-4468-84bd-f6aa3fb337b4",
+   "versionNumber": 1,
+   "author": {
+    "id": 275024,
+    "firstName": "Free",
+    "lastName": "poly",
+    "fullName": "Free poly"
+   },
+   "name": "Chair",
+   "displayName": "Chair",
+   "description": "Old Wood Chair 4k tex",
+   "assetType": "model",
+   "category": "chair",
+   "isFree": true,
+   "isForSale": false,
+   "basePrice": null,
+   "tags": [
+    "Old",
+    "Wood",
+    "Chair",
+    "4k",
+    "tex"
+   ],
+   "license": "cc_zero",
+   "sourceAppName": "blender",
+   "created": "2025-07-21T09:52:51.035332+02:00",
+   "verificationStatus": "validated",
+   "isPrivate": false,
+   "files": [
+    {
+     "fileType": "blend",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/0a34fcee-6c12-45b6-b627-4b6486baf08f/",
+     "uuid": "0a34fcee-6c12-45b6-b627-4b6486baf08f",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/blend_02af086c-18e6-4218-9d42-828f7710b575.blend",
+     "fileUploadSize": 16022406,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/7d3eac65-c6c0-4316-b859-c1c642539e99/",
+     "uuid": "7d3eac65-c6c0-4316-b859-c1c642539e99",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/gltf_e5b62bb0-d24f-4fa3-b623-a2c498c4c99e.glb",
+     "fileUploadSize": 3096064,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "gltf_godot",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/42413465-4a98-4f63-bb45-92d26cd9a3f7/",
+     "uuid": "42413465-4a98-4f63-bb45-92d26cd9a3f7",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/gltf_godot_679cfa70-40d1-43e3-9b30-233cf6a3cfc6.glb",
+     "fileUploadSize": 5750696,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_0_5K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/73f32a6e-761a-4725-a2bf-25448bb4b1fd/",
+     "uuid": "73f32a6e-761a-4725-a2bf-25448bb4b1fd",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/resolution_0_5K_6aff412e-953b-45f4-9fa2-de8aa763514d.blend",
+     "fileUploadSize": 4060638,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_1K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/ccb9ecbf-06fa-4b24-afea-b8e03205a9aa/",
+     "uuid": "ccb9ecbf-06fa-4b24-afea-b8e03205a9aa",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/resolution_1K_a6dd4851-c355-4844-a025-a9a0eaa122dc.blend",
+     "fileUploadSize": 3945680,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_2K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/b15946d9-c781-45c2-95cc-cdcbe1884253/",
+     "uuid": "b15946d9-c781-45c2-95cc-cdcbe1884253",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/resolution_2K_02d5d07d-0746-4d30-8f02-e79df79395be.blend",
+     "fileUploadSize": 5992864,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "resolution_4K",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/4a82829c-8c1f-47c6-b2de-af53305f96ff/",
+     "uuid": "4a82829c-8c1f-47c6-b2de-af53305f96ff",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/resolution_4K_f3b1b955-3afb-48c4-8c73-f91df2c52f37.blend",
+     "fileUploadSize": 15176956,
+     "isThumbnail": false
+    },
+    {
+     "fileType": "thumbnail",
+     "downloadUrl": "https://www.blenderkit.com/api/v1/downloads/6000ca30-689e-418a-90dd-7d1827bbd0c4/",
+     "uuid": "6000ca30-689e-418a-90dd-7d1827bbd0c4",
+     "filename": "assets/e5e6a20b74834d9f8ad37f62755c3385/files/thumbnail_d5ecc2ac-6b4b-4f20-a3f7-2d75107a10d6.jpg",
+     "fileUploadSize": 437362,
+     "isThumbnail": true
+    }
+   ],
+   "filesSize": 54482666,
+   "score": 250.0,
+   "access": "free",
+   "accessLabel": "Free",
+   "dictParameters": {
+    "faceCount": 48715,
+    "textureResolutionMax": 4096,
+    "rig": false
+   },
+   "canDownload": true,
+   "canDownloadError": true,
+   "thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/e5e6a20b74834d9f8ad37f62755c3385/files/thumbnail_d5ecc2ac-6b4b-4f20-a3f7-2d75107a10d6.jpg.256x256_q85_crop-%2C.jpg",
+   "thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/e5e6a20b74834d9f8ad37f62755c3385/files/thumbnail_d5ecc2ac-6b4b-4f20-a3f7-2d75107a10d6.jpg.512x512_q85_crop-%2C.jpg"
+  }
+ ]
+}

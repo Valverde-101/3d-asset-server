@@ -1,0 +1,74 @@
+{
+ "totalResults": 1,
+ "assets": [
+  {
+   "id": "DaySkyHDRI071B",
+   "type": "hdri",
+   "title": "Day Sky HDRI 071 B",
+   "url": "https://ambientcg.com/a/DaySkyHDRI071B",
+   "tags": [
+    "071",
+    "71",
+    "day",
+    "dayskyhdri071b",
+    "haze",
+    "hazy",
+    "hdri",
+    "sky",
+    "sunny"
+   ],
+   "shortDescription": "",
+   "releaseDate": "2026-10-03",
+   "maps": [],
+   "technique": "hdri-bracketed-panorama-horizon-clearing",
+   "downloadStatistics": {
+    "total": 95,
+    "lastMonth": 95,
+    "lastWeek": 95,
+    "lastDay": 95
+   },
+   "thumbnails": {
+    "256-PNG": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-PNG/DaySkyHDRI071B.png",
+    "256-JPG-242424": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DaySkyHDRI071B.jpg"
+   },
+   "downloads": [
+    {
+     "attributes": "1K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_1K.zip",
+     "size": 2553896
+    },
+    {
+     "attributes": "2K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_2K.zip",
+     "size": 5318594
+    },
+    {
+     "attributes": "4K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_4K.zip",
+     "size": 16235967
+    },
+    {
+     "attributes": "8K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_8K.zip",
+     "size": 60040640
+    },
+    {
+     "attributes": "12K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_12K.zip",
+     "size": 130115004
+    },
+    {
+     "attributes": "16K",
+     "extension": "zip",
+     "url": "https://ambientcg.com/get?file=DaySkyHDRI071B_16K.zip",
+     "size": 229291941
+    }
+   ]
+  }
+ ]
+}

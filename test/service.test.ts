@@ -53,6 +53,17 @@ describe("selectFiles", () => {
     expect(selectFiles(CRATE, { format: "fbx" }).map((f) => f.filename)).toEqual(["crate.fbx"]);
     expect(selectFiles(CRATE, { format: "gltf", resolution: "8k" }).map((f) => f.filename)).toEqual(["crate_2k.gltf"]);
   });
+  it("keeps one package when several share the default format", () => {
+    const asset = {
+      ...CRATE,
+      files: [
+        { url: "https://x.example/a.glb", filename: "a.glb", format: "glb", group: "gltf" },
+        { url: "https://x.example/a_godot.glb", filename: "a_godot.glb", format: "glb", group: "gltf_godot" },
+      ],
+    };
+    expect(selectFiles(asset).map((f) => f.filename)).toEqual(["a.glb"]);
+    expect(selectFiles(asset, { format: "gltf_godot" }).map((f) => f.filename)).toEqual(["a_godot.glb"]);
+  });
 });
 
 describe("download safety", () => {
