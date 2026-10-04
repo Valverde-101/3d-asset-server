@@ -1,0 +1,15 @@
+{
+ "success": true,
+ "data": [
+  "stone",
+  "wall",
+  "concrete",
+  "metal",
+  "floor",
+  "brick-wall",
+  "wood",
+  "brick",
+  "chair"
+ ],
+ "error": []
+}

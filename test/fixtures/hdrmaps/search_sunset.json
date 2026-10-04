@@ -1,0 +1,666 @@
+[
+ {
+  "id": 220290,
+  "name": "Jawornik Before the Sunset",
+  "slug": "jawornik-before-the-sunset",
+  "type": "simple",
+  "permalink": "https://hdrmaps.com/freebies/jawornik-before-the-sunset/",
+  "short_description": "<p>Jawornik meadow free hdri sky map &#8211; just before the sunset, but with blue sky, captured in the shade.</p>",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "EUR",
+   "currency_symbol": "€",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": "",
+   "currency_prefix": "",
+   "currency_suffix": " €"
+  },
+  "images": [
+   {
+    "src": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset.jpg",
+    "thumbnail": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-560x280.jpg",
+    "thumbnail_srcset": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-560x280.jpg 560w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-345x173.jpg 345w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-900x450.jpg 900w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-768x384.jpg 768w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-96x48.jpg 96w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-42x21.jpg 42w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-64x32.jpg 64w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset.jpg 1280w",
+    "thumbnail_sizes": "(max-width: 560px) 100vw, 560px"
+   }
+  ],
+  "categories": [
+   {
+    "id": 64,
+    "name": "Freebies",
+    "slug": "freebies"
+   }
+  ],
+  "tags": [
+   {
+    "id": 2086,
+    "name": "blue sky",
+    "slug": "blue-sky"
+   },
+   {
+    "id": 2042,
+    "name": "cumulus",
+    "slug": "cumulus"
+   },
+   {
+    "id": 649,
+    "name": "grass",
+    "slug": "grass"
+   },
+   {
+    "id": 2098,
+    "name": "grassland",
+    "slug": "grassland"
+   },
+   {
+    "id": 626,
+    "name": "meadow",
+    "slug": "meadow"
+   },
+   {
+    "id": 582,
+    "name": "mountains",
+    "slug": "mountains"
+   },
+   {
+    "id": 610,
+    "name": "nature",
+    "slug": "nature"
+   },
+   {
+    "id": 1784,
+    "name": "outdoor",
+    "slug": "outdoor"
+   },
+   {
+    "id": 2051,
+    "name": "shade",
+    "slug": "shade"
+   },
+   {
+    "id": 2107,
+    "name": "summer",
+    "slug": "summer"
+   },
+   {
+    "id": 718,
+    "name": "sunny",
+    "slug": "sunny"
+   },
+   {
+    "id": 625,
+    "name": "sunset",
+    "slug": "sunset"
+   },
+   {
+    "id": 2244,
+    "name": "trees",
+    "slug": "trees"
+   }
+  ],
+  "attributes": [
+   {
+    "name": "HDRI Resolution",
+    "terms": [
+     {
+      "name": "10000x5000"
+     }
+    ]
+   },
+   {
+    "name": "Camera",
+    "terms": [
+     {
+      "name": "Sony A7R IV"
+     }
+    ]
+   },
+   {
+    "name": "Lens",
+    "terms": [
+     {
+      "name": "Samyang AF 18 mm 2.8"
+     }
+    ]
+   },
+   {
+    "name": "Country",
+    "terms": [
+     {
+      "name": "Poland"
+     }
+    ]
+   },
+   {
+    "name": "Has Pano",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   },
+   {
+    "name": "Download size",
+    "terms": [
+     {
+      "name": "505689387"
+     }
+    ]
+   },
+   {
+    "name": "Location",
+    "terms": [
+     {
+      "name": "Outdoor"
+     }
+    ]
+   },
+   {
+    "name": "Environment",
+    "terms": [
+     {
+      "name": "Nature"
+     }
+    ]
+   },
+   {
+    "name": "Time",
+    "terms": [
+     {
+      "name": "Sunset"
+     }
+    ]
+   },
+   {
+    "name": "Weather",
+    "terms": [
+     {
+      "name": "Partly Cloudy"
+     }
+    ]
+   },
+   {
+    "name": "License Type",
+    "terms": [
+     {
+      "name": "Royalty-Free"
+     }
+    ]
+   },
+   {
+    "name": "Patreon",
+    "terms": [
+     {
+      "name": "Full Resolution"
+     }
+    ]
+   },
+   {
+    "name": "HDR Preview",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 215603,
+  "name": "Kalten-Floss Sunset",
+  "slug": "kalten-floss-sunset",
+  "type": "variable",
+  "permalink": "https://hdrmaps.com/hdri/kalten-floss-sunset/",
+  "short_description": "<p>Captured in the mountains of southwestern Poland at 19:16 in spring, this 30K unclipped HDRI is perfect for realistic 3D rendering. Using an ND filter, it preserves full dynamic range with long, natural sunset shadows and smooth sky gradients. Ideal for golden hour lighting, detailed reflections, and accurate outdoor illumination in CGI scenes.</p>",
+  "prices": {
+   "price": "700",
+   "regular_price": "700",
+   "sale_price": "700",
+   "price_range": {
+    "min_amount": "700",
+    "max_amount": "1400"
+   },
+   "currency_code": "EUR",
+   "currency_symbol": "€",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": "",
+   "currency_prefix": "",
+   "currency_suffix": " €"
+  },
+  "images": [
+   {
+    "src": "https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature.jpg",
+    "thumbnail": "https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-560x280.jpg",
+    "thumbnail_srcset": "https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-560x280.jpg 560w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-345x173.jpg 345w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-900x450.jpg 900w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-768x384.jpg 768w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-96x48.jpg 96w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-42x21.jpg 42w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature-64x32.jpg 64w, https://hdrmaps.com/wp-content/uploads/2025/06/hdre_459_sunset_hdri_meadow_nature.jpg 1280w",
+    "thumbnail_sizes": "(max-width: 560px) 100vw, 560px"
+   }
+  ],
+  "categories": [
+   {
+    "id": 52,
+    "name": "HDRIs",
+    "slug": "hdri"
+   },
+   {
+    "id": 54,
+    "name": "Nature",
+    "slug": "nature"
+   },
+   {
+    "id": 635,
+    "name": "Skies",
+    "slug": "skies"
+   }
+  ],
+  "tags": [
+   {
+    "id": 2158,
+    "name": "farmland",
+    "slug": "farmland"
+   },
+   {
+    "id": 649,
+    "name": "grass",
+    "slug": "grass"
+   },
+   {
+    "id": 2098,
+    "name": "grassland",
+    "slug": "grassland"
+   },
+   {
+    "id": 2970,
+    "name": "hdri",
+    "slug": "hdri"
+   },
+   {
+    "id": 626,
+    "name": "meadow",
+    "slug": "meadow"
+   },
+   {
+    "id": 582,
+    "name": "mountains",
+    "slug": "mountains"
+   },
+   {
+    "id": 1784,
+    "name": "outdoor",
+    "slug": "outdoor"
+   },
+   {
+    "id": 1855,
+    "name": "poland",
+    "slug": "poland"
+   },
+   {
+    "id": 1798,
+    "name": "rural",
+    "slug": "rural"
+   },
+   {
+    "id": 581,
+    "name": "sky",
+    "slug": "sky"
+   },
+   {
+    "id": 718,
+    "name": "sunny",
+    "slug": "sunny"
+   },
+   {
+    "id": 625,
+    "name": "sunset",
+    "slug": "sunset"
+   }
+  ],
+  "attributes": [
+   {
+    "name": "HDRI Resolution",
+    "terms": [
+     {
+      "name": "30000x15000"
+     }
+    ]
+   },
+   {
+    "name": "Camera",
+    "terms": [
+     {
+      "name": "Sony A7R IV"
+     }
+    ]
+   },
+   {
+    "name": "Lens",
+    "terms": [
+     {
+      "name": "Samyang AF 18 mm 2.8"
+     }
+    ]
+   },
+   {
+    "name": "Country",
+    "terms": [
+     {
+      "name": "Poland"
+     }
+    ]
+   },
+   {
+    "name": "HDR Preview",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   },
+   {
+    "name": "Has Pano",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   },
+   {
+    "name": "Download size",
+    "terms": [
+     {
+      "name": "4965760477"
+     }
+    ]
+   },
+   {
+    "name": "License",
+    "terms": [
+     {
+      "name": "Personal"
+     },
+     {
+      "name": "Professional"
+     }
+    ]
+   },
+   {
+    "name": "Location",
+    "terms": [
+     {
+      "name": "Outdoor"
+     }
+    ]
+   },
+   {
+    "name": "Environment",
+    "terms": [
+     {
+      "name": "Nature"
+     }
+    ]
+   },
+   {
+    "name": "Time",
+    "terms": [
+     {
+      "name": "Sunset"
+     }
+    ]
+   },
+   {
+    "name": "Weather",
+    "terms": [
+     {
+      "name": "Partly Cloudy"
+     },
+     {
+      "name": "Sunny"
+     }
+    ]
+   },
+   {
+    "name": "License Type",
+    "terms": [
+     {
+      "name": "Royalty-Free"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 202325,
+  "name": "Egg Hill Clear Sky Sunset",
+  "slug": "egg-hill-clear-sky-sunset",
+  "type": "simple",
+  "permalink": "https://hdrmaps.com/freebies/egg-hill-clear-sky-sunset/",
+  "short_description": "",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "EUR",
+   "currency_symbol": "€",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": "",
+   "currency_prefix": "",
+   "currency_suffix": " €"
+  },
+  "images": [
+   {
+    "src": "https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset.jpg",
+    "thumbnail": "https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-560x280.jpg",
+    "thumbnail_srcset": "https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-560x280.jpg 560w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-900x450.jpg 900w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-64x32.jpg 64w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-345x173.jpg 345w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-768x384.jpg 768w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-96x48.jpg 96w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset-42x21.jpg 42w, https://hdrmaps.com/wp-content/uploads/2024/10/free_hdr_170_clear_sky_sunset.jpg 1280w",
+    "thumbnail_sizes": "(max-width: 560px) 100vw, 560px"
+   }
+  ],
+  "categories": [
+   {
+    "id": 64,
+    "name": "Freebies",
+    "slug": "freebies"
+   }
+  ],
+  "tags": [
+   {
+    "id": 1692,
+    "name": "clear",
+    "slug": "clear"
+   },
+   {
+    "id": 2044,
+    "name": "clear sky",
+    "slug": "clear-sky"
+   },
+   {
+    "id": 1956,
+    "name": "dark",
+    "slug": "dark"
+   },
+   {
+    "id": 756,
+    "name": "hill",
+    "slug": "hill"
+   },
+   {
+    "id": 580,
+    "name": "mountain",
+    "slug": "mountain"
+   },
+   {
+    "id": 582,
+    "name": "mountains",
+    "slug": "mountains"
+   },
+   {
+    "id": 1784,
+    "name": "outdoor",
+    "slug": "outdoor"
+   },
+   {
+    "id": 2091,
+    "name": "owl mountains",
+    "slug": "owl-mountains"
+   },
+   {
+    "id": 2092,
+    "name": "panoramic",
+    "slug": "panoramic"
+   },
+   {
+    "id": 581,
+    "name": "sky",
+    "slug": "sky"
+   },
+   {
+    "id": 625,
+    "name": "sunset",
+    "slug": "sunset"
+   },
+   {
+    "id": 775,
+    "name": "twilight",
+    "slug": "twilight"
+   },
+   {
+    "id": 2135,
+    "name": "twilight colors",
+    "slug": "twilight-colors"
+   }
+  ],
+  "attributes": [
+   {
+    "name": "HDRI Resolution",
+    "terms": [
+     {
+      "name": "10000x5000"
+     }
+    ]
+   },
+   {
+    "name": "Camera",
+    "terms": [
+     {
+      "name": "Nikon D810"
+     }
+    ]
+   },
+   {
+    "name": "Lens",
+    "terms": [
+     {
+      "name": "Nikkor 18-35mm f/3.5-4.5G ED"
+     }
+    ]
+   },
+   {
+    "name": "Country",
+    "terms": [
+     {
+      "name": "Poland"
+     }
+    ]
+   },
+   {
+    "name": "Has Pano",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   },
+   {
+    "name": "Download size",
+    "terms": [
+     {
+      "name": "152488883"
+     }
+    ]
+   },
+   {
+    "name": "Location",
+    "terms": [
+     {
+      "name": "Outdoor"
+     }
+    ]
+   },
+   {
+    "name": "Environment",
+    "terms": [
+     {
+      "name": "Nature"
+     }
+    ]
+   },
+   {
+    "name": "Time",
+    "terms": [
+     {
+      "name": "Sunset"
+     }
+    ]
+   },
+   {
+    "name": "Weather",
+    "terms": [
+     {
+      "name": "Clear"
+     }
+    ]
+   },
+   {
+    "name": "License Type",
+    "terms": [
+     {
+      "name": "Royalty-Free"
+     }
+    ]
+   },
+   {
+    "name": "HDR Preview",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "id": 224881,
+  "name": "HDRI Map 947",
+  "slug": "hdri-map-947",
+  "type": "simple",
+  "permalink": "https://hdrmaps.com/hs_hdri-maps/hdri-map-947/",
+  "short_description": "",
+  "prices": {
+   "price": "980",
+   "regular_price": "1400",
+   "sale_price": "980",
+   "price_range": null,
+   "currency_code": "EUR",
+   "currency_symbol": "€",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": "",
+   "currency_prefix": "",
+   "currency_suffix": " €"
+  },
+  "images": [],
+  "categories": [
+   {
+    "id": 3131,
+    "name": "HS_HDRI-Maps",
+    "slug": "hs_hdri-maps"
+   }
+  ],
+  "tags": [],
+  "attributes": []
+ }
+]

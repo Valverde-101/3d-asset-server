@@ -1,0 +1,471 @@
+{
+ "success": true,
+ "data": {
+  "items": [
+   {
+    "_id": "63339aa9f4e541e95269076a",
+    "title": "Brick Wall 2",
+    "slug": "brick-wall-2",
+    "itemType": {
+     "_id": "63334c7b180bb34fa67996e4",
+     "name": "Textures",
+     "slug": "textures"
+    },
+    "category": {
+     "_id": "63339aa816b5fda8ac770a85",
+     "name": "Wall",
+     "slug": "wall"
+    },
+    "publishDate": "2018-09-02T00:00:00.000Z",
+    "threeD": null,
+    "downloadCount": 6643,
+    "previewImage1": {
+     "originalObjectKey": "u/brick_wall_2-1.webp",
+     "thumbObjectKey": "u/brick_wall_2-1-min.webp",
+     "alt": ""
+    },
+    "tagDetails": [
+     {
+      "_id": "63339aa816b5fda8ac770a8d",
+      "name": "brick wall",
+      "slug": "brick-wall"
+     },
+     {
+      "_id": "63339aa8f4e541e952690753",
+      "name": "wall textures",
+      "slug": "wall-textures"
+     },
+     {
+      "_id": "63339aa8f4e541e952690755",
+      "name": "brick textures",
+      "slug": "brick-textures"
+     }
+    ],
+    "isNew": false,
+    "isEarlyAccess": false
+   },
+   {
+    "_id": "63339b8416b5fda8ac77209c",
+    "title": "Brick Wall 5",
+    "slug": "brick-wall-5",
+    "itemType": {
+     "_id": "63334c7b180bb34fa67996e4",
+     "name": "Textures",
+     "slug": "textures"
+    },
+    "category": {
+     "_id": "63339aa816b5fda8ac770a85",
+     "name": "Wall",
+     "slug": "wall"
+    },
+    "publishDate": "2019-04-24T00:00:00.000Z",
+    "threeD": null,
+    "downloadCount": 2291,
+    "previewImage1": {
+     "originalObjectKey": "u/brick_wall_5.webp",
+     "thumbObjectKey": "u/brick_wall_5-min.webp",
+     "alt": ""
+    },
+    "tagDetails": [
+     {
+      "_id": "63339aa816b5fda8ac770a8d",
+      "name": "brick wall",
+      "slug": "brick-wall"
+     },
+     {
+      "_id": "63339af2f4e541e952690dea",
+      "name": "brick",
+      "slug": "brick"
+     }
+    ],
+    "isNew": false,
+    "isEarlyAccess": false
+   },
+   {
+    "_id": "63339b8216b5fda8ac77203f",
+    "title": "Brick Wall 4",
+    "slug": "brick-wall-4",
+    "itemType": {
+     "_id": "63334c7b180bb34fa67996e4",
+     "name": "Textures",
+     "slug": "textures"
+    },
+    "category": {
+     "_id": "63339aa816b5fda8ac770a85",
+     "name": "Wall",
+     "slug": "wall"
+    },
+    "publishDate": "2019-04-20T00:00:00.000Z",
+    "threeD": null,
+    "downloadCount": 2267,
+    "previewImage1": {
+     "originalObjectKey": "u/brick_wall_4.webp",
+     "thumbObjectKey": "u/brick_wall_4-min.webp",
+     "alt": null
+    },
+    "tagDetails": [
+     {
+      "_id": "63339aa816b5fda8ac770a8d",
+      "name": "brick wall",
+      "slug": "brick-wall"
+     }
+    ],
+    "isNew": false,
+    "isEarlyAccess": false
+   }
+  ],
+  "pagination": {
+   "perPage": 3,
+   "currentPage": 1,
+   "totalPage": 3,
+   "totalCount": 9,
+   "showEa": false
+  },
+  "earlyAccess": {
+   "count": 0,
+   "originalCount": 0
+  },
+  "facets": {
+   "tags": [
+    {
+     "_id": "63339aa816b5fda8ac770a8d",
+     "name": "brick wall",
+     "slug": "brick-wall",
+     "count": 9
+    },
+    {
+     "_id": "63339aa816b5fda8ac770a8b",
+     "name": "wall texture",
+     "slug": "wall-texture",
+     "count": 2
+    },
+    {
+     "_id": "63339aaa16b5fda8ac770adb",
+     "name": "stone wall",
+     "slug": "stone-wall",
+     "count": 2
+    },
+    {
+     "_id": "63339aab16b5fda8ac770afe",
+     "name": "wall",
+     "slug": "wall",
+     "count": 2
+    },
+    {
+     "_id": "63339aa8f4e541e952690753",
+     "name": "wall textures",
+     "slug": "wall-textures",
+     "count": 2
+    },
+    {
+     "_id": "63339af2f4e541e952690dea",
+     "name": "brick",
+     "slug": "brick",
+     "count": 2
+    },
+    {
+     "_id": "63339b0b16b5fda8ac771547",
+     "name": "b3d",
+     "slug": "b3d",
+     "count": 1
+    },
+    {
+     "_id": "63339b0b16b5fda8ac771545",
+     "name": "blender",
+     "slug": "blender",
+     "count": 1
+    },
+    {
+     "_id": "63339b7f16b5fda8ac771f83",
+     "name": "seamless brick",
+     "slug": "seamless-brick",
+     "count": 1
+    },
+    {
+     "_id": "63339b4ff4e541e952691687",
+     "name": "colurfull brick",
+     "slug": "colurfull-brick",
+     "count": 1
+    },
+    {
+     "_id": "63339b7f16b5fda8ac771f81",
+     "name": "white brick",
+     "slug": "white-brick",
+     "count": 1
+    },
+    {
+     "_id": "63339abe16b5fda8ac770c86",
+     "name": "stone texture",
+     "slug": "stone-texture",
+     "count": 1
+    },
+    {
+     "_id": "63339b0b16b5fda8ac771543",
+     "name": "corona texture",
+     "slug": "corona-texture",
+     "count": 1
+    },
+    {
+     "_id": "63339aa8f4e541e952690755",
+     "name": "brick textures",
+     "slug": "brick-textures",
+     "count": 1
+    }
+   ],
+   "colors": [
+    {
+     "_id": "#080000",
+     "name": null,
+     "count": 8
+    },
+    {
+     "_id": "#000008",
+     "name": null,
+     "count": 8
+    },
+    {
+     "_id": "#080800",
+     "name": null,
+     "count": 7
+    },
+    {
+     "_id": "#C8C8D0",
+     "name": null,
+     "count": 4
+    },
+    {
+     "_id": "#302820",
+     "name": null,
+     "count": 4
+    },
+    {
+     "_id": "#383030",
+     "name": null,
+     "count": 4
+    },
+    {
+     "_id": "#D8E0FF",
+     "name": null,
+     "count": 4
+    },
+    {
+     "_id": "#181010",
+     "name": null,
+     "count": 3
+    },
+    {
+     "_id": "#9090A0",
+     "name": null,
+     "count": 3
+    },
+    {
+     "_id": "#100800",
+     "name": null,
+     "count": 3
+    },
+    {
+     "_id": "#181020",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#000808",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#181018",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#303838",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#E0E8FF",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#B8B0C8",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#303038",
+     "name": null,
+     "count": 2
+    },
+    {
+     "_id": "#C8D0FF",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#302818",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#C8B8A8",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#080010",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#D0D0C8",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#C8D8FF",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#080008",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#281000",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#D8D0E8",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#C8B098",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#401000",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#605040",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#101818",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#9098A0",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#181810",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#201808",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#303830",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#D0E0FF",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#300000",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#001018",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#302800",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#302020",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#100008",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#200810",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#180800",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#302808",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#282030",
+     "name": null,
+     "count": 1
+    },
+    {
+     "_id": "#D0D8F8",
+     "name": null,
+     "count": 1
+    }
+   ],
+   "palettes": [
+    {
+     "_id": "LightGray",
+     "count": 2
+    },
+    {
+     "_id": "Brown",
+     "count": 2
+    },
+    {
+     "_id": "Red",
+     "count": 2
+    },
+    {
+     "_id": "DarkGray",
+     "count": 1
+    },
+    {
+     "_id": "White",
+     "count": 1
+    },
+    {
+     "_id": "Yellow",
+     "count": 1
+    }
+   ]
+  }
+ },
+ "error": []
+}

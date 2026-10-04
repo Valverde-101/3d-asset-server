@@ -1,0 +1,90 @@
+{
+ "success": true,
+ "data": {
+  "_id": "63339aa9f4e541e95269076a",
+  "title": "Brick Wall 2",
+  "slug": "brick-wall-2",
+  "itemType": {
+   "_id": "63334c7b180bb34fa67996e4",
+   "name": "Textures",
+   "slug": "textures"
+  },
+  "category": {
+   "_id": "63339aa816b5fda8ac770a85",
+   "name": "Wall",
+   "slug": "wall"
+  },
+  "publishDate": "2018-09-02T00:00:00.000Z",
+  "tags": [
+   {
+    "slug": "wall-textures",
+    "text": "wall textures"
+   },
+   {
+    "slug": "brick-wall",
+    "text": "brick wall"
+   },
+   {
+    "slug": "brick-textures",
+    "text": "brick textures"
+   }
+  ],
+  "authors": [
+   {
+    "title": "Processing",
+    "author": {
+     "name": {
+      "firstName": "M.Tolga",
+      "lastName": "Arslan"
+     },
+     "username": "mtolgaarslan"
+    }
+   }
+  ],
+  "description": "",
+  "threeD": null,
+  "downloadLinks": [
+   {
+    "icon": "googleDrive",
+    "title": "Google Drive",
+    "value": "https://drive.google.com/open?id=1KGqU6Y0M3zNOYEsyGyHYCCuadTBOzgJB",
+    "_id": "63339aa9f4e541e95269076c"
+   },
+   {
+    "icon": null,
+    "title": "1K",
+    "value": "https://files.sharetextures.com/file/Share-Textures/brick_wall_2-1K.zip",
+    "_id": "63339aa9f4e541e95269076d"
+   },
+   {
+    "icon": null,
+    "title": "2K",
+    "value": "https://files.sharetextures.com/file/Share-Textures/brick_wall_2-2K.zip",
+    "_id": "63339aa9f4e541e95269076e"
+   },
+   {
+    "icon": null,
+    "title": "4K",
+    "value": "https://files.sharetextures.com/file/Share-Textures/brick_wall_2-4K.zip",
+    "_id": "63339aa9f4e541e95269076f"
+   }
+  ],
+  "downloadCount": 6643,
+  "previewImage1": {
+   "originalObjectKey": "u/brick_wall_2-1.webp",
+   "thumbObjectKey": "u/brick_wall_2-1-min.webp",
+   "alt": ""
+  },
+  "text1Type": "textures",
+  "text1Licence": "CC0",
+  "text1Resolution": 4096,
+  "metaDescription": "Free brick wall texture in sharetextures.com. High quality textures with diffuse reflection bump normal displacement opacitiy and ambient occlusion map.",
+  "createdAt": "2022-09-28T00:51:53.086Z",
+  "updatedAt": "2026-10-04T10:09:41.170Z",
+  "categoryName": "Wall",
+  "itemTypeName": "Textures",
+  "isEarlyAccess": false,
+  "isNew": false
+ },
+ "error": []
+}

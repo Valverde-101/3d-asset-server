@@ -18,7 +18,31 @@ asset sites at once and download what you pick, ready to drop into a game or web
 
 ## Sources
 
-<!-- PROVIDERS_TABLE -->
+| Source | Best for | Search | Direct download | Licence |
+|---|---|---|---|---|
+| [Poly Haven](https://polyhaven.com) | HDRIs, PBR textures, scanned models | API | ✅ glTF/blend/fbx, maps, HDR/EXR | CC0 |
+| [ambientCG](https://ambientcg.com) | Realistic materials, HDRIs, models | API | ✅ per-resolution zips | CC0 |
+| [CGBookcase](https://www.cgbookcase.com) | PBR textures | API (catalogue) | – (CDN hotlink protection; link to download page) | CC0 |
+| [ShareTextures](https://www.sharetextures.com) | Textures and realistic models | API (tag search) | – (licence forbids automated downloads) | CC0 + site terms |
+| [BlenderKit](https://www.blendkit.com) | Blender assets of every kind | API | ✅ free assets (GLB/blend); paid need `BLENDERKIT_API_KEY` | CC0 / royalty free |
+| [Fab](https://www.fab.com) | Game assets, environments, characters | deep link (bot wall) | – | per listing |
+| [Kenney](https://kenney.nl/assets) | Low-poly 3D, 2D, UI, audio packs | scrape | ✅ pack zips (auto-extracted) | CC0 |
+| [Poliigon](https://www.poliigon.com) | Premium materials and models | deep link (bot wall) | – | per listing |
+| [Quaternius](https://quaternius.com) | Low-poly and animated characters | scrape | – (Google Drive / itch.io links) | CC0 / QAL |
+| [3DTextures.me](https://3dtextures.me) | Realistic and stylized PBR | WordPress API | – (Google Drive folders) | CC0 |
+| [TextureCan](https://www.texturecan.com) | PBR materials and a few models | scrape | ✅ 1K–4K zips | CC0 |
+| [Textures.com](https://www.textures.com) | Photo textures, 3D foliage, decals, skies | JSON API | – (credit system) | Textures.com licence |
+| [HDRMaps](https://hdrmaps.com) | HDRIs and backplates | WooCommerce API | ✅ free HDRIs (EXR) | royalty free |
+| [HDRI Hub](https://www.hdri-hub.com) | HDRI environments | scrape | – (checkout) | royalty free |
+| [CGTrader](https://www.cgtrader.com/free-3d-models) | Free and paid models | JSON listing | – (login) | per listing |
+| [TurboSquid](https://www.turbosquid.com) | Free and paid models | deep link (bot wall) | – | per listing |
+| [itch.io](https://itch.io/game-assets) | Indie art, 3D packs, UI, audio | scrape | – (itch download flow) | per listing |
+
+Sources without direct downloads still return full metadata and a link to the asset page. Fab,
+Poliigon and TurboSquid block automated access, so they show up as deep links to their own search.
+CGTrader uses an IP-based bot wall that often blocks cloud and datacenter IPs. From such hosts, run
+behind a proxy (see `NODE_USE_ENV_PROXY` below); when blocked, CGTrader reports the error and its
+search link.
 
 ## Quick start
 
@@ -106,7 +130,8 @@ curl -OJ 'localhost:8787/v1/assets/polyhaven:WoodenChair_01/download?format=gltf
 | `ASSET_SERVER_MAX_DOWNLOAD_BYTES` | 2 GiB | Per-download size guard |
 | `ASSET_SERVER_PROVIDER_TIMEOUT_MS` | `12000` | Per-source search timeout |
 | `ASSET_SERVER_CACHE_TTL_MS` | 10 min | In-memory HTTP cache TTL |
-| `BLENDERKIT_API_KEY` | – | Optional BlenderKit key |
+| `BLENDERKIT_API_KEY` | – | Optional BlenderKit key (unlocks plan/purchased assets) |
+| `NODE_USE_ENV_PROXY` | – | Set to `1` so Node's `fetch` honours `HTTPS_PROXY` |
 
 ## How it works
 

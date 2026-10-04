@@ -1,0 +1,211 @@
+[
+ {
+  "id": 220290,
+  "name": "Jawornik Before the Sunset",
+  "slug": "jawornik-before-the-sunset",
+  "type": "simple",
+  "permalink": "https://hdrmaps.com/freebies/jawornik-before-the-sunset/",
+  "short_description": "<p>Jawornik meadow free hdri sky map &#8211; just before the sunset, but with blue sky, captured in the shade.</p>",
+  "prices": {
+   "price": "0",
+   "regular_price": "0",
+   "sale_price": "0",
+   "price_range": null,
+   "currency_code": "EUR",
+   "currency_symbol": "€",
+   "currency_minor_unit": 2,
+   "currency_decimal_separator": ",",
+   "currency_thousand_separator": "",
+   "currency_prefix": "",
+   "currency_suffix": " €"
+  },
+  "images": [
+   {
+    "src": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset.jpg",
+    "thumbnail": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-560x280.jpg",
+    "thumbnail_srcset": "https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-560x280.jpg 560w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-345x173.jpg 345w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-900x450.jpg 900w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-768x384.jpg 768w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-96x48.jpg 96w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-42x21.jpg 42w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset-64x32.jpg 64w, https://hdrmaps.com/wp-content/uploads/2025/10/free_hdr_197_meadow_sunset.jpg 1280w",
+    "thumbnail_sizes": "(max-width: 560px) 100vw, 560px"
+   }
+  ],
+  "categories": [
+   {
+    "id": 64,
+    "name": "Freebies",
+    "slug": "freebies"
+   }
+  ],
+  "tags": [
+   {
+    "id": 2086,
+    "name": "blue sky",
+    "slug": "blue-sky"
+   },
+   {
+    "id": 2042,
+    "name": "cumulus",
+    "slug": "cumulus"
+   },
+   {
+    "id": 649,
+    "name": "grass",
+    "slug": "grass"
+   },
+   {
+    "id": 2098,
+    "name": "grassland",
+    "slug": "grassland"
+   },
+   {
+    "id": 626,
+    "name": "meadow",
+    "slug": "meadow"
+   },
+   {
+    "id": 582,
+    "name": "mountains",
+    "slug": "mountains"
+   },
+   {
+    "id": 610,
+    "name": "nature",
+    "slug": "nature"
+   },
+   {
+    "id": 1784,
+    "name": "outdoor",
+    "slug": "outdoor"
+   },
+   {
+    "id": 2051,
+    "name": "shade",
+    "slug": "shade"
+   },
+   {
+    "id": 2107,
+    "name": "summer",
+    "slug": "summer"
+   },
+   {
+    "id": 718,
+    "name": "sunny",
+    "slug": "sunny"
+   },
+   {
+    "id": 625,
+    "name": "sunset",
+    "slug": "sunset"
+   },
+   {
+    "id": 2244,
+    "name": "trees",
+    "slug": "trees"
+   }
+  ],
+  "attributes": [
+   {
+    "name": "HDRI Resolution",
+    "terms": [
+     {
+      "name": "10000x5000"
+     }
+    ]
+   },
+   {
+    "name": "Camera",
+    "terms": [
+     {
+      "name": "Sony A7R IV"
+     }
+    ]
+   },
+   {
+    "name": "Lens",
+    "terms": [
+     {
+      "name": "Samyang AF 18 mm 2.8"
+     }
+    ]
+   },
+   {
+    "name": "Country",
+    "terms": [
+     {
+      "name": "Poland"
+     }
+    ]
+   },
+   {
+    "name": "Has Pano",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   },
+   {
+    "name": "Download size",
+    "terms": [
+     {
+      "name": "505689387"
+     }
+    ]
+   },
+   {
+    "name": "Location",
+    "terms": [
+     {
+      "name": "Outdoor"
+     }
+    ]
+   },
+   {
+    "name": "Environment",
+    "terms": [
+     {
+      "name": "Nature"
+     }
+    ]
+   },
+   {
+    "name": "Time",
+    "terms": [
+     {
+      "name": "Sunset"
+     }
+    ]
+   },
+   {
+    "name": "Weather",
+    "terms": [
+     {
+      "name": "Partly Cloudy"
+     }
+    ]
+   },
+   {
+    "name": "License Type",
+    "terms": [
+     {
+      "name": "Royalty-Free"
+     }
+    ]
+   },
+   {
+    "name": "Patreon",
+    "terms": [
+     {
+      "name": "Full Resolution"
+     }
+    ]
+   },
+   {
+    "name": "HDR Preview",
+    "terms": [
+     {
+      "name": "yes"
+     }
+    ]
+   }
+  ]
+ }
+]
