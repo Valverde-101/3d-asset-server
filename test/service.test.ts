@@ -1,11 +1,13 @@
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
+import { fileURLToPath } from "node:url";
 import { unzipSync } from "fflate";
 import { afterEach, describe, expect, it } from "vitest";
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
 import { InMemoryTransport } from "@modelcontextprotocol/sdk/inMemory.js";
 import { createApp } from "../src/api/app.js";
+import { PrometheusAnalytics } from "../src/core/analytics.js";
 import { assertPublicUrl, downloadFiles, safeRelative, selectFiles } from "../src/core/download.js";
 import { AssetService } from "../src/core/service.js";
 import { createMcpServer } from "../src/mcp/server.js";
@@ -96,8 +98,10 @@ describe("downloadFiles", () => {
   });
 });
 
+const SITE = fileURLToPath(new URL("./fixtures/site", import.meta.url));
+
 describe("HTTP API", () => {
-  const app = createApp(service());
+  const app = createApp(service(), { siteRoot: SITE });
 
   it("searches", async () => {
     const res = await app.request("/v1/search?q=crate&type=model&providers=fake");
@@ -126,17 +130,76 @@ describe("HTTP API", () => {
     expect(res.headers.get("location")).toBe("https://cdn.fake.example/crate.fbx");
   });
 
-  it("serves the search UI to browsers and JSON to API clients", async () => {
+  it("serves the website to browsers and JSON to API clients", async () => {
     const html = await app.request("/", { headers: { accept: "text/html" } });
     expect(html.headers.get("content-type")).toContain("text/html");
     expect(html.headers.get("content-security-policy")).toContain("default-src 'self'");
-    expect(await html.text()).toContain("3D Asset Search");
-    const json = await app.request("/");
-    expect(((await json.json()) as { name: string }).name).toBe("3d-asset-server");
+    expect(html.headers.get("link")).toBe('</AGENTS.md>; rel="alternate"; type="text/markdown"');
+    expect(await html.text()).toContain("3D Asset Server");
+    const json = (await (await app.request("/")).json()) as { name: string; agents: { instructions: string } };
+    expect(json.name).toBe("3d-asset-server");
+    expect(json.agents.instructions).toBe("/AGENTS.md");
+  });
+
+  it("gives agents markdown when they ask for it", async () => {
+    const root = await app.request("/", { headers: { accept: "text/markdown, text/html;q=0.9" } });
+    expect(root.headers.get("content-type")).toContain("text/markdown");
+    expect(await root.text()).toContain("agent guide");
+    const mcp = await app.request("/docs/mcp", { headers: { accept: "text/markdown" } });
+    expect(await mcp.text()).toBe("# MCP setup\n");
+    expect((await app.request("/agents.md")).status).toBe(200);
+    expect(await (await app.request("/llms.txt")).text()).toContain("3D Asset Server");
+  });
+
+  it("serves site pages with canonical URLs, caching and a 404 page", async () => {
+    expect((await app.request("/docs/mcp")).status).toBe(200);
+    const slash = await app.request("/docs/mcp/?x=1");
+    expect(slash.status).toBe(301);
+    expect(slash.headers.get("location")).toBe("/docs/mcp?x=1");
+    const asset = await app.request("/_astro/app.abc123.js");
+    expect(asset.headers.get("cache-control")).toContain("immutable");
+    const again = await app.request("/_astro/app.abc123.js", { headers: { "if-none-match": asset.headers.get("etag")! } });
+    expect(again.status).toBe(304);
+    const missing = await app.request("/no/such/page");
+    expect(missing.status).toBe(404);
+    expect(missing.headers.get("content-type")).toContain("text/html");
+    const apiMissing = await app.request("/v1/nope");
+    expect(apiMissing.status).toBe(404);
+    expect(apiMissing.headers.get("content-type")).toContain("application/json");
+  });
+
+  it("records analytics for searches, downloads and page views", async () => {
+    const lines: string[] = [];
+    const analytics = new PrometheusAnalytics((l) => lines.push(l));
+    const tracked = createApp(service(), { siteRoot: SITE, analytics });
+    await tracked.request("/v1/search?q=Crate&providers=fake", { headers: { "x-asset-client": "web", "user-agent": "Mozilla/5.0" } });
+    await tracked.request("/v1/assets/fake:crate/download?format=fbx", { headers: { "user-agent": "curl/8.5" } });
+    await tracked.request("/docs/mcp");
+    const metrics = await analytics.registry.metrics();
+    expect(metrics).toContain('asset_server_searches_total{surface="web",client="browser",type="any",free_only="false",has_results="true"} 1');
+    expect(metrics).toContain('asset_server_provider_requests_total{provider="fake",status="ok"} 1');
+    expect(metrics).toContain('asset_server_downloads_total{surface="api",client="curl",provider="fake",kind="redirect"} 1');
+    expect(metrics).toContain('asset_server_page_views_total{page="/docs/mcp"} 1');
+    expect(metrics).toContain('asset_server_http_requests_total{route="/v1/search",method="GET",status="2xx"} 1');
+    const search = JSON.parse(lines.find((l) => l.includes('"event":"search"'))!);
+    expect(search).toMatchObject({ event: "search", surface: "web", query: "crate", results: 1 });
+  });
+
+  it("counts MCP tool calls by client", async () => {
+    const analytics = new PrometheusAnalytics(() => undefined);
+    const tracked = createApp(service(), { siteRoot: SITE, analytics });
+    await tracked.request("/mcp", {
+      method: "POST",
+      headers: { "content-type": "application/json", accept: "application/json, text/event-stream", "user-agent": "claude-code/2.1.0" },
+      body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "tools/call", params: { name: "list_providers", arguments: {} } }),
+    });
+    expect(await analytics.registry.metrics()).toContain(
+      'asset_server_mcp_tool_calls_total{tool="list_providers",client="claude-code",outcome="ok"} 1',
+    );
   });
 
   it("requires the API key when configured", async () => {
-    const secured = createApp(service(), { apiKey: "s3cret" });
+    const secured = createApp(service(), { apiKey: "s3cret", siteRoot: SITE });
     expect((await secured.request("/v1/providers")).status).toBe(401);
     expect((await secured.request("/v1/providers", { headers: { authorization: "Bearer s3cret" } })).status).toBe(200);
     expect((await secured.request("/v1/providers?api_key=s3cret")).status).toBe(200);

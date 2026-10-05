@@ -8,6 +8,7 @@ import {
   selectFiles,
   totalBytes,
 } from "../core/download.js";
+import { noopAnalytics, type Analytics } from "../core/analytics.js";
 import { AssetService, errorMessage } from "../core/service.js";
 import { ASSET_TYPES, type Asset, type AssetDetails, type AssetFile } from "../core/types.js";
 import { compact } from "../core/util.js";
@@ -19,6 +20,10 @@ export interface McpOptions {
   downloadDir?: string;
   /** Public base URL of the HTTP API, used to offer one-click zip bundle links. */
   publicBaseUrl?: string;
+  /** Where tool calls are recorded (defaults to no-op). */
+  analytics?: Analytics;
+  /** Client family of the caller (from its User-Agent), for analytics only. */
+  client?: string;
 }
 
 const VERSION = "0.1.0";
@@ -40,6 +45,23 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
   );
 
   const providerIds = service.listProviders().map((p) => p.id);
+  const analytics = opts.analytics ?? noopAnalytics;
+  const client = opts.client ?? "unknown";
+
+  /** Wrap a tool handler so every call is counted and timed. */
+  const timed =
+    <A>(tool: string, handler: (args: A) => Promise<ToolResult>) =>
+    async (args: A): Promise<ToolResult> => {
+      const started = Date.now();
+      let outcome: "ok" | "error" = "error";
+      try {
+        const res = await handler(args);
+        outcome = res.isError ? "error" : "ok";
+        return res;
+      } finally {
+        analytics.toolCall({ tool, client, outcome, tookMs: Date.now() - started });
+      }
+    };
 
   server.registerTool(
     "search_assets",
@@ -64,8 +86,9 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       },
       annotations: { readOnlyHint: true, openWorldHint: true },
     },
-    async (args) => {
+    timed("search_assets", async (args) => {
       try {
+        const started = Date.now();
         const res = await service.search({
           query: args.query,
           types: args.types,
@@ -74,6 +97,16 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
           downloadableOnly: args.downloadable_only,
           limit: args.limit ?? 12,
           offset: args.offset,
+        });
+        analytics.search({
+          surface: "mcp",
+          client,
+          query: args.query,
+          types: args.types,
+          freeOnly: args.free_only,
+          downloadableOnly: args.downloadable_only,
+          response: res,
+          tookMs: Date.now() - started,
         });
         const out = {
           query: res.query,
@@ -93,7 +126,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       } catch (e) {
         return fail(e);
       }
-    },
+    }),
   );
 
   server.registerTool(
@@ -111,9 +144,10 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       },
       annotations: { readOnlyHint: true, openWorldHint: true },
     },
-    async (args) => {
+    timed("get_asset", async (args) => {
       try {
         const asset = await service.getAsset(args.id);
+        analytics.assetView({ surface: "mcp", client, provider: args.id.split(":")[0] ?? "", found: Boolean(asset) });
         if (!asset) return fail(`Asset not found: ${args.id}`);
         const selected = asset.files.length ? selectFiles(asset, { format: args.format, resolution: args.resolution }) : [];
         const size = totalBytes(selected);
@@ -138,7 +172,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       } catch (e) {
         return fail(e);
       }
-    },
+    }),
   );
 
   if (opts.allowLocalDownload) {
@@ -164,7 +198,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
         },
         annotations: { readOnlyHint: false, destructiveHint: false, openWorldHint: true },
       },
-      async (args) => {
+      timed("download_asset", async (args) => {
         try {
           const asset = await service.getAsset(args.id);
           if (!asset) return fail(`Asset not found: ${args.id}`);
@@ -183,6 +217,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
           const baseDir = resolve(args.dest_dir ?? opts.downloadDir ?? "assets");
           const dir = resolve(baseDir, assetFolderName(asset));
           const result = await downloadFiles(service.http, files, dir, { extract: args.extract ?? true });
+          analytics.download({ surface: "mcp", client, provider: asset.provider, kind: "local" });
           return json({
             id: asset.id,
             title: asset.title,
@@ -198,7 +233,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
         } catch (e) {
           return fail(e);
         }
-      },
+      }),
     );
   }
 
@@ -210,7 +245,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       inputSchema: {},
       annotations: { readOnlyHint: true },
     },
-    async () =>
+    timed("list_providers", async () =>
       json(
         service.listProviders().map((p) =>
           compact({
@@ -226,6 +261,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
           }),
         ),
       ),
+    ),
   );
 
   return server;
@@ -290,10 +326,12 @@ function query(params: Record<string, string | undefined>): string {
   return s ? `?${s}` : "";
 }
 
-function json(value: unknown) {
+type ToolResult = { content: { type: "text"; text: string }[]; isError?: boolean };
+
+function json(value: unknown): ToolResult {
   return { content: [{ type: "text" as const, text: JSON.stringify(value, null, 1) }] };
 }
 
-function fail(e: unknown) {
+function fail(e: unknown): ToolResult {
   return { isError: true, content: [{ type: "text" as const, text: typeof e === "string" ? e : errorMessage(e) }] };
 }

@@ -1,0 +1,222 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import AgentSetup from "@/components/home/AgentSetup";
+import { AnimatedGridPattern } from "@/components/ui/animated-grid-pattern";
+import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
+import { Marquee } from "@/components/ui/marquee";
+import { EXAMPLE_PROMPTS } from "@/lib/agents";
+import { FAQ } from "@/lib/faq";
+import { faqPage, softwareApplication, webApi } from "@/lib/schema";
+import { CC0_COUNT, DIRECT_DOWNLOAD_COUNT, MCP_URL, PROVIDERS, SITE, SOURCE_COUNT } from "@/lib/site";
+
+const suggestions = ["low poly tree", "sunset hdri", "brick wall", "medieval barrel", "mossy rock", "sci-fi crate"];
+const stats = [
+  { value: SOURCE_COUNT, label: "asset sites in one search" },
+  { value: DIRECT_DOWNLOAD_COUNT, label: "with direct downloads" },
+  { value: CC0_COUNT, label: "CC0 / public-domain sources" },
+  { value: "0", label: "accounts or API keys needed" },
+];
+const surfaces = [
+  {
+    title: "Web search",
+    body: "Type what you need, filter by models, materials, HDRIs or packs, and download with one click. Licence on every card.",
+    href: "/search",
+    cta: "Open search",
+    code: `${SITE.url.replace("https://", "")}/search?q=sunset+hdri`,
+  },
+  {
+    title: "REST API",
+    body: "A JSON API with an OpenAPI 3.1 spec. Search, inspect files and stream zips from any language or build script.",
+    href: "/docs/api",
+    cta: "API guide",
+    code: `curl "${SITE.url}/v1/search?q=crate&type=model&free=true"`,
+  },
+  {
+    title: "MCP for AI agents",
+    body: "Give Claude, Cursor or Copilot tools to find, vet and fetch assets while they build your game or website.",
+    href: "/docs/mcp",
+    cta: "Connect an agent",
+    code: `claude mcp add --transport http 3d-assets ${MCP_URL}`,
+  },
+];
+const steps = [
+  ["Fan out", "Your query goes to every matching source in parallel, each with its own timeout."],
+  ["Rank", "Results are merged by text match, the source's own ranking, free status and direct-download availability."],
+  ["Vet", "Each result carries its licence, attribution rule, formats, resolutions and poly count."],
+  ["Fetch", "Pick a format and resolution: glTF with its .bin and textures, a 2k PBR map set or an EXR. Multi-file assets arrive as one zip."],
+];
+const typeLinks = [
+  ["Free 3D models", "/search?type=model&free=true", "glTF, GLB, FBX, Blend, OBJ"],
+  ["Free PBR materials", "/search?type=material&free=true", "Albedo, normal, roughness, AO, displacement"],
+  ["Free HDRIs", "/search?type=hdri&free=true", "HDR and EXR environment maps up to 16k"],
+  ["Free game asset packs", "/search?type=pack&free=true", "Kenney, Quaternius, itch.io bundles"],
+];
+---
+
+<BaseLayout
+  title={SITE.name}
+  description={SITE.description}
+  schema={[softwareApplication(), webApi(), faqPage(FAQ)]}
+>
+  <!-- Hero -->
+  <section class="relative isolate overflow-hidden border-b border-border/60">
+    <AnimatedGridPattern
+      client:only="react"
+      numSquares={36}
+      maxOpacity={0.12}
+      duration={3}
+      className="absolute inset-0 -z-10 h-full w-full [mask-image:radial-gradient(640px_circle_at_50%_30%,white,transparent)] skew-y-6 fill-primary/20 stroke-primary/15"
+    />
+    <div class="pointer-events-none absolute left-1/2 top-[-12rem] -z-10 h-[32rem] w-[64rem] -translate-x-1/2 rounded-full bg-[radial-gradient(closest-side,color-mix(in_oklch,var(--color-primary)_28%,transparent),transparent)] blur-2xl"></div>
+    <div class="mx-auto max-w-5xl px-4 pb-20 pt-20 text-center sm:px-6 sm:pt-28">
+      <a href="/docs/mcp" class="group mx-auto inline-flex items-center rounded-full border border-border bg-card/60 px-1 py-1 pr-3 text-sm backdrop-blur transition hover:border-primary/40">
+        <span class="mr-2 rounded-full bg-primary/15 px-2 py-0.5 text-xs font-medium text-primary">New</span>
+        <AnimatedShinyText className="mx-0 max-w-none">MCP server for Claude Code, Cursor &amp; Copilot</AnimatedShinyText>
+        <span class="ml-1 text-muted-foreground transition group-hover:translate-x-0.5">→</span>
+      </a>
+      <h1 class="mx-auto mt-7 max-w-4xl text-balance text-4xl font-semibold tracking-tight sm:text-6xl">
+        One search for every{" "}
+        <span class="bg-gradient-to-r from-primary via-[color-mix(in_oklch,var(--color-primary)_50%,var(--color-brand-2))] to-brand-2 bg-clip-text text-transparent">free 3D asset</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
+        Search {SOURCE_COUNT} sites at once (Poly Haven, ambientCG, Kenney, BlenderKit and more) and download glTF models, PBR textures and HDRIs with clear licences. In your browser, over an API, or from your AI coding agent.
+      </p>
+
+      <form action="/search" method="get" role="search" class="relative mx-auto mt-10 max-w-2xl">
+        <label for="hero-q" class="sr-only">Search 3D assets</label>
+        <div class="flex items-center gap-2 rounded-2xl border bg-card/80 p-2 shadow-2xl shadow-primary/10 ring-1 ring-primary/10 backdrop-blur focus-within:ring-2 focus-within:ring-primary/40">
+          <svg class="ml-2 size-5 shrink-0 text-muted-foreground" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
+          <input id="hero-q" name="q" type="search" required autocomplete="off" placeholder="low poly tree, brick wall, sunset hdri…" class="h-11 min-w-0 flex-1 bg-transparent text-base outline-none placeholder:text-muted-foreground/70" />
+          <button type="submit" class="h-11 rounded-xl bg-primary px-5 text-sm font-medium text-primary-foreground transition hover:opacity-90">Search</button>
+        </div>
+      </form>
+      <div class="mx-auto mt-4 flex max-w-2xl flex-wrap justify-center gap-2 text-sm">
+        <span class="text-muted-foreground">Try:</span>
+        {suggestions.map((s) => (
+          <a href={`/search?q=${encodeURIComponent(s)}`} class="rounded-full border border-border/70 px-3 py-0.5 text-muted-foreground transition hover:border-primary/40 hover:text-foreground">{s}</a>
+        ))}
+      </div>
+
+      <dl class="mx-auto mt-14 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+        {stats.map((s) => (
+          <div>
+            <dt class="sr-only">{s.label}</dt>
+            <dd class="text-3xl font-semibold tabular-nums tracking-tight">{s.value}</dd>
+            <dd class="mt-1 text-xs text-muted-foreground">{s.label}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+
+    <div class="relative border-t border-border/60 py-6">
+      <p class="sr-only">Sources searched:</p>
+      <Marquee pauseOnHover className="[--duration:45s] [--gap:2.5rem]">
+        {PROVIDERS.map((p) => (
+          <a href={`/docs/sources#${p.id}`} class="whitespace-nowrap text-sm font-medium text-muted-foreground transition hover:text-foreground">{p.name}</a>
+        ))}
+      </Marquee>
+      <div class="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background"></div>
+      <div class="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background"></div>
+    </div>
+  </section>
+
+  <!-- Three ways -->
+  <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6" aria-labelledby="ways">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-primary">Three ways in</p>
+      <h2 id="ways" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Use it however you build</h2>
+      <p class="mt-4 text-muted-foreground">The same search, ranking and downloads behind a website, a REST API and an MCP server.</p>
+    </div>
+    <div class="mt-14 grid gap-4 md:grid-cols-3">
+      {surfaces.map((s) => (
+        <a href={s.href} class="group relative flex flex-col overflow-hidden rounded-2xl border bg-card/50 p-6 transition hover:border-primary/40 hover:bg-card">
+          <h3 class="text-lg font-semibold">{s.title}</h3>
+          <p class="mt-2 flex-1 text-sm text-muted-foreground">{s.body}</p>
+          <code class="mt-6 block truncate rounded-lg border bg-[#0d0d12] px-3 py-2 font-mono text-xs text-zinc-300">{s.code}</code>
+          <span class="mt-5 text-sm font-medium text-primary">{s.cta} <span class="inline-block transition group-hover:translate-x-0.5">→</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Agents -->
+  <section class="border-y border-border/60 bg-card/30" aria-labelledby="agents">
+    <div class="mx-auto grid max-w-7xl items-start gap-12 px-4 py-24 sm:px-6 lg:grid-cols-[1fr_1.15fr]">
+      <div>
+        <p class="text-sm font-medium text-primary">For AI coding agents</p>
+        <h2 id="agents" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">Let your agent fetch the assets</h2>
+        <p class="mt-4 text-muted-foreground">
+          Connect the MCP server once. Your agent can then search every source, check licences and pull the right files into your project while it writes the code that uses them.
+        </p>
+        <ul class="mt-8 space-y-3">
+          {EXAMPLE_PROMPTS.map((p) => (
+            <li class="flex gap-3 rounded-xl border bg-background/60 px-4 py-3 text-sm">
+              <span class="font-mono text-primary">›</span><span>{p}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="mt-6 text-sm text-muted-foreground">
+          Agents that only browse the web can read <a class="text-primary underline decoration-primary/40 underline-offset-2" href="/AGENTS.md">/AGENTS.md</a> or <a class="text-primary underline decoration-primary/40 underline-offset-2" href="/llms.txt">/llms.txt</a> and call the REST API directly. <a class="text-primary underline decoration-primary/40 underline-offset-2" href="/docs/mcp">Full setup guide →</a>
+        </p>
+      </div>
+      <AgentSetup client:visible />
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="mx-auto max-w-7xl px-4 py-24 sm:px-6" aria-labelledby="how">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-medium text-primary">How it works</p>
+      <h2 id="how" class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">From query to files in your project</h2>
+    </div>
+    <ol class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {steps.map(([title, body], i) => (
+        <li class="rounded-2xl border bg-card/50 p-6">
+          <span class="flex size-8 items-center justify-center rounded-lg bg-primary/15 font-mono text-sm font-semibold text-primary">{i + 1}</span>
+          <h3 class="mt-4 font-semibold">{title}</h3>
+          <p class="mt-2 text-sm text-muted-foreground">{body}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {typeLinks.map(([title, href, sub]) => (
+        <a href={href} class="group rounded-2xl border p-5 transition hover:border-primary/40 hover:bg-card">
+          <h3 class="font-semibold">{title}</h3>
+          <p class="mt-1 text-sm text-muted-foreground">{sub}</p>
+          <span class="mt-3 inline-block text-sm text-primary">Browse <span class="inline-block transition group-hover:translate-x-0.5">→</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="border-t border-border/60" aria-labelledby="faq">
+    <div class="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+      <h2 id="faq" class="text-center text-3xl font-semibold tracking-tight sm:text-4xl">Questions</h2>
+      <div class="mt-10 divide-y divide-border rounded-2xl border bg-card/40">
+        {FAQ.map((f, i) => (
+          <details class="group px-5 py-4" open={i === 0}>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-medium [&::-webkit-details-marker]:hidden">
+              <h3 class="text-base">{f.q}</h3>
+              <span class="text-muted-foreground transition group-open:rotate-45" aria-hidden="true">+</span>
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden border-t border-border/60">
+    <div class="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_80%_at_50%_100%,color-mix(in_oklch,var(--color-primary)_18%,transparent),transparent)]"></div>
+    <div class="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+      <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">Stop opening seventeen tabs</h2>
+      <p class="mt-4 text-muted-foreground">Search once, compare licences side by side, and get files that are ready to drop into a game or a website.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/search" class="rounded-xl bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:opacity-90">Start searching</a>
+        <a href="/docs" class="rounded-xl border px-5 py-2.5 text-sm font-medium transition hover:bg-accent">Read the docs</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

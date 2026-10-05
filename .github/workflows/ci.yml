@@ -14,10 +14,14 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
       - run: npm ci
+      - run: npm --prefix web ci
+      - run: npm run build
       - run: npm run typecheck
       - run: npm test
-      - run: npm run build
 
   # On main: publish ghcr.io/arielshad/3d-asset-server:{latest,sha-<commit>},
   # then pin that tag in deploy/kustomization.yaml. ArgoCD (registered in

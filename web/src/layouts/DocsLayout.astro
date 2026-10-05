@@ -1,0 +1,112 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import { breadcrumbs, techArticle, type JsonLd } from "@/lib/schema";
+import { DOCS_NAV } from "@/lib/site";
+
+interface Heading { depth: number; slug: string; text: string }
+interface Props {
+  // Markdown pages pass these through `frontmatter`; .astro pages pass them directly.
+  frontmatter?: { title: string; description: string; crumb?: string };
+  title?: string;
+  description?: string;
+  crumb?: string;
+  headings?: Heading[];
+  schema?: JsonLd[];
+  wide?: boolean;
+}
+
+const p = Astro.props;
+const title = p.frontmatter?.title ?? p.title ?? "";
+const description = p.frontmatter?.description ?? p.description ?? "";
+const crumb = p.frontmatter?.crumb ?? p.crumb ?? title;
+const headings = (p.headings ?? []).filter((h) => h.depth === 2 || h.depth === 3);
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+const trail = path === "/docs" ? [{ name: "Home", path: "/" }, { name: "Docs", path: "/docs" }] : [{ name: "Home", path: "/" }, { name: "Docs", path: "/docs" }, { name: crumb, path }];
+const flat = DOCS_NAV.flatMap((g) => g.items).filter((i) => i.href.startsWith("/docs"));
+const idx = flat.findIndex((i) => i.href === path);
+const prev = idx > 0 ? flat[idx - 1] : undefined;
+const next = idx >= 0 && idx < flat.length - 1 ? flat[idx + 1] : undefined;
+const markdown = path === "/docs/api/reference" ? "/openapi.json" : `${path}.md`;
+---
+
+<BaseLayout title={title} description={description} ogType="article" markdown={markdown} schema={[techArticle({ title, description, path }), breadcrumbs(trail), ...(p.schema ?? [])]}>
+  <div class:list={["mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6", p.wide ? "lg:grid-cols-[14rem_1fr]" : "lg:grid-cols-[14rem_1fr] xl:grid-cols-[14rem_1fr_13rem]"]}>
+    <aside class="hidden lg:block">
+      <nav class="sticky top-24 space-y-7 text-sm" aria-label="Docs">
+        {DOCS_NAV.map((group) => (
+          <div>
+            <p class="mb-2 font-medium">{group.title}</p>
+            <ul class="space-y-1 border-l border-border">
+              {group.items.map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={item.href === path ? "page" : undefined}
+                    class="-ml-px block border-l border-transparent py-1 pl-3 text-muted-foreground transition hover:border-foreground/40 hover:text-foreground aria-[current=page]:border-primary aria-[current=page]:font-medium aria-[current=page]:text-primary"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </nav>
+    </aside>
+
+    <article class="min-w-0">
+      <nav aria-label="Breadcrumb" class="mb-6 text-sm text-muted-foreground">
+        <ol class="flex flex-wrap items-center gap-1.5">
+          {trail.map((t, i) => (
+            <li class="flex items-center gap-1.5">
+              {i > 0 && <span aria-hidden="true">/</span>}
+              {i === trail.length - 1 ? <span class="text-foreground" aria-current="page">{t.name}</span> : <a class="hover:text-foreground" href={t.path}>{t.name}</a>}
+            </li>
+          ))}
+        </ol>
+      </nav>
+      <div class="prose-docs">
+        <slot />
+      </div>
+      <div class="mt-14 flex flex-wrap items-center justify-between gap-4 border-t pt-6 text-sm">
+        {prev ? <a href={prev.href} class="text-muted-foreground hover:text-foreground">← {prev.label}</a> : <span></span>}
+        {next ? <a href={next.href} class="text-muted-foreground hover:text-foreground">{next.label} →</a> : <span></span>}
+      </div>
+      <p class="mt-6 text-xs text-muted-foreground">
+        AI agent? This page is also available as <a class="text-primary underline underline-offset-2" href={markdown}>markdown</a>.
+      </p>
+    </article>
+
+    {!p.wide && headings.length > 1 && (
+      <aside class="hidden xl:block">
+        <nav class="sticky top-24 text-sm" aria-label="On this page">
+          <p class="mb-2 font-medium">On this page</p>
+          <ul class="space-y-1.5 text-muted-foreground">
+            {headings.map((h) => (
+              <li class:list={[h.depth === 3 && "pl-3"]}><a class="hover:text-foreground" href={`#${h.slug}`}>{h.text}</a></li>
+            ))}
+          </ul>
+        </nav>
+      </aside>
+    )}
+  </div>
+  <script is:inline>
+    // Copy buttons on code blocks.
+    document.querySelectorAll(".prose-docs pre").forEach((pre) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = "Copy";
+      b.className = "absolute right-2 top-2 rounded-md border border-white/10 bg-white/5 px-2 py-0.5 text-[11px] text-zinc-300 opacity-0 transition group-hover:opacity-100 focus:opacity-100 hover:bg-white/10";
+      b.addEventListener("click", () => {
+        navigator.clipboard.writeText(pre.querySelector("code")?.innerText ?? pre.innerText).then(() => {
+          b.textContent = "Copied";
+          setTimeout(() => (b.textContent = "Copy"), 1500);
+        });
+      });
+      const wrap = document.createElement("div");
+      wrap.className = "group relative";
+      pre.replaceWith(wrap);
+      wrap.append(pre, b);
+    });
+  </script>
+</BaseLayout>

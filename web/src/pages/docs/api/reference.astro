@@ -1,0 +1,45 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { breadcrumbs, techArticle, webApi } from "@/lib/schema";
+const title = "API reference";
+const description = "Interactive OpenAPI 3.1 reference for the 3D Asset Server API: search, asset details, file selection, downloads and MCP, with curl, JS and Python examples.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  markdown="/openapi.json"
+  schema={[webApi(), techArticle({ title, description, path: "/docs/api/reference" }), breadcrumbs([{ name: "Home", path: "/" }, { name: "Docs", path: "/docs" }, { name: title, path: "/docs/api/reference" }])]}
+>
+  <h1 class="sr-only">3D Asset Server API reference</h1>
+  <noscript>
+    <p class="mx-auto max-w-3xl px-4 py-10">The interactive reference needs JavaScript. The raw OpenAPI 3.1 document is at <a href="/openapi.json">/openapi.json</a>, and the <a href="/docs/api">REST API guide</a> covers every endpoint.</p>
+  </noscript>
+  <!-- Scalar mounts here. Not "#api-reference": the standalone build auto-mounts a second, unconfigured instance on that id. -->
+  <div id="scalar-reference" class="min-h-[80vh]"></div>
+  <!-- Scalar API Reference, self-hosted (ES-module build copied from @scalar/api-reference at build). -->
+  <script is:inline type="module">
+    import { createApiReference } from "/scalar/standalone.esm.js";
+    createApiReference("#scalar-reference", {
+      url: "/openapi.json",
+      theme: "purple",
+      darkMode: document.documentElement.classList.contains("dark"),
+      hideDarkModeToggle: true,
+      withDefaultFonts: false,
+      layout: "modern",
+      defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+      hideClientButton: false,
+      telemetry: false,
+      showDeveloperTools: "never",
+      agent: { disabled: true },
+      // "Generate MCP" points at this server's own MCP endpoint.
+      mcp: { name: "3d-assets", url: location.origin + "/mcp" },
+      metaData: { title: "API reference · 3D Asset Server" },
+      customCss: `
+        .scalar-app, .scalar-api-reference { --scalar-font: "Geist Variable", ui-sans-serif, system-ui, sans-serif; --scalar-font-code: "Geist Mono Variable", ui-monospace, monospace; --scalar-custom-header-height: 56px; }
+        .dark-mode { --scalar-background-1: #16141f; --scalar-background-2: #1c1a27; --scalar-background-3: #24212f; }
+      `,
+    });
+  </script>
+</BaseLayout>

@@ -1,0 +1,23 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SearchApp from "@/components/search/SearchApp";
+import { breadcrumbs } from "@/lib/schema";
+import { PROVIDERS, SOURCE_COUNT } from "@/lib/site";
+---
+
+<BaseLayout
+  title="Search free 3D models, textures & HDRIs"
+  description={`Search ${SOURCE_COUNT} sites at once for free glTF models, CC0 PBR textures, HDRIs and game asset packs from Poly Haven, ambientCG, Kenney and more.`}
+  schema={[breadcrumbs([{ name: "Home", path: "/" }, { name: "Search", path: "/search" }])]}
+  markdown="/AGENTS.md"
+>
+  <h1 class="sr-only">Search 3D assets across {SOURCE_COUNT} sources</h1>
+  <SearchApp client:load />
+  <noscript>
+    <div class="mx-auto max-w-3xl px-4 py-10 text-sm text-muted-foreground">
+      Live search needs JavaScript. You can also use the JSON API directly:
+      <code>/v1/search?q=wooden+chair&type=model&free=true</code>. Sources searched:
+      {PROVIDERS.map((p) => p.name).join(", ")}.
+    </div>
+  </noscript>
+</BaseLayout>

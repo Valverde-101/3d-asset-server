@@ -1,0 +1,33 @@
+---
+import Logo from "./Logo.astro";
+import { SITE, SOURCE_COUNT } from "@/lib/site";
+const cols = [
+  { title: "Product", links: [["Search assets", "/search"], ["Sources & licences", "/docs/sources"], ["Self-hosting", "/docs/self-hosting"]] },
+  { title: "Developers", links: [["Quick start", "/docs"], ["Coding agents & MCP", "/docs/mcp"], ["REST API guide", "/docs/api"], ["API reference", "/docs/api/reference"]] },
+  { title: "For AI agents", links: [["AGENTS.md", "/AGENTS.md"], ["llms.txt", "/llms.txt"], ["llms-full.txt", "/llms-full.txt"], ["OpenAPI 3.1", "/openapi.json"]] },
+];
+---
+<footer class="border-t border-border/60">
+  <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+    <div class="space-y-3">
+      <a href="/" class="flex items-center gap-2 font-semibold"><Logo class="size-6" />{SITE.name}</a>
+      <p class="max-w-xs text-sm text-muted-foreground">
+        One search box for {SOURCE_COUNT} 3D asset sites. Free to use, open source (Apache-2.0), built for people and AI agents.
+      </p>
+    </div>
+    {cols.map((c) => (
+      <div>
+        <h2 class="mb-3 text-sm font-medium">{c.title}</h2>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          {c.links.map(([label, href]) => <li><a class="transition-colors hover:text-foreground" href={href}>{label}</a></li>)}
+        </ul>
+      </div>
+    ))}
+  </div>
+  <div class="border-t border-border/60">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-2 px-4 py-5 text-xs text-muted-foreground sm:px-6">
+      <p>Assets belong to their creators. Always check each asset's licence before use.</p>
+      <p><a href={SITE.repo} class="hover:text-foreground" rel="noopener">Open source on GitHub</a></p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,69 @@
+---
+import DocsLayout from "@/layouts/DocsLayout.astro";
+import { sourcesList } from "@/lib/schema";
+import { PROVIDERS, SOURCE_COUNT } from "@/lib/site";
+
+const access = { api: "API", scrape: "Site search", link: "Deep link" } as const;
+const pricing = { free: "Free", freemium: "Free + paid", paid: "Paid" } as const;
+const headings = [{ depth: 2, slug: "all-sources", text: "All sources" }, { depth: 2, slug: "how-sources-are-searched", text: "How sources are searched" }, { depth: 2, slug: "licences", text: "Licences" }];
+---
+
+<DocsLayout
+  title="Sources & licences"
+  crumb="Sources & licences"
+  description={`The ${SOURCE_COUNT} 3D asset sites searched (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io…) with asset types, pricing, licences and downloads.`}
+  headings={headings}
+  schema={[sourcesList()]}
+>
+  <h1>Sources &amp; licences</h1>
+  <p>
+    One search covers {SOURCE_COUNT} sites. Each result keeps its source's licence, so you can tell at a glance what you may ship and whether you have to credit the author.
+  </p>
+
+  <h2 id="all-sources">All sources</h2>
+  <div class="not-prose overflow-x-auto rounded-xl border">
+    <table class="w-full text-sm">
+      <thead class="bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
+        <tr>
+          <th class="px-4 py-3 font-medium">Source</th>
+          <th class="px-4 py-3 font-medium">Best for</th>
+          <th class="px-4 py-3 font-medium">Search</th>
+          <th class="px-4 py-3 font-medium">Pricing</th>
+          <th class="px-4 py-3 font-medium">Licence</th>
+          <th class="px-4 py-3 font-medium">Direct download</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y">
+        {PROVIDERS.map((p) => (
+          <tr id={p.id} class="scroll-mt-24 align-top target:bg-primary/10">
+            <td class="px-4 py-3 font-medium">
+              <a href={p.homepage} class="text-primary hover:underline" rel="noopener">{p.name}</a>
+              <div class="mt-1 font-mono text-[11px] font-normal text-muted-foreground">{p.id}</div>
+            </td>
+            <td class="px-4 py-3 text-muted-foreground">
+              {p.description}
+              <div class="mt-1 text-xs">{p.assetTypes.join(", ")}</div>
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">{access[p.access as keyof typeof access]}</td>
+            <td class="px-4 py-3 whitespace-nowrap">{pricing[p.pricing as keyof typeof pricing]}</td>
+            <td class="px-4 py-3">{p.license ?? "Per asset"}</td>
+            <td class="px-4 py-3">{p.supportsDownload ? "Yes" : "Source page"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="how-sources-are-searched">How sources are searched</h2>
+  <ul>
+    <li><strong>API</strong>: the source's official or public JSON API. Richest metadata, often with direct files.</li>
+    <li><strong>Site search</strong>: the source's public pages are read like a browser would, politely and with caching.</li>
+    <li><strong>Deep link</strong>: the site blocks automated access (Fab, Poliigon, TurboSquid). The search response includes a link that runs the same query on that site, so you still know where else to look.</li>
+  </ul>
+  <p>Every source has its own timeout. A slow or failing site shows up in the per-source report and never fails the search.</p>
+
+  <h2 id="licences">Licences</h2>
+  <p>
+    <strong>CC0</strong> assets are public domain: use them commercially, modify them, no credit needed. <strong>Royalty free</strong> assets can be used in projects but usually not resold as-is. Some sources mix free and paid items, and itch.io, CGTrader and Fab set licences per listing. Each result's <code>license</code> field carries <code>commercialUse</code> and <code>attributionRequired</code> when known. When in doubt, follow the link to the asset page.
+  </p>
+</DocsLayout>

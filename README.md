@@ -39,7 +39,7 @@ assistant drive it over MCP.
 - [How it works](#how-it-works)
 - [Sources](#sources)
 - [Quick start](#quick-start)
-- [Web UI](#web-ui)
+- [Web UI](#web-ui) (and [for AI agents](#for-ai-agents))
 - [MCP: use it from an AI assistant](#mcp-use-it-from-an-ai-assistant)
 - [HTTP API](#http-api)
 - [CLI](#cli)
@@ -196,60 +196,44 @@ docker run -p 8787:8787 3d-asset-server
 
 ## Web UI
 
-Run `npm start` and open <http://localhost:8787>.
+Live at **<https://3d.shep.bot>**, or run `npm start` and open <http://localhost:8787>.
 
-```
- +--------------------------------------------------------------------------+
- | [#] 3D Asset Search  [ wooden chair                         ] [ Search ] |
- | (Models) (Materials) (Textures) (HDRIs) (Sprites) (UI) ..                |
- | [ ] Free only   [ ] Direct download   > Sources: all                     |
- +--------------------------------------------------------------------------+
- | Poly Haven 24 | BlenderKit 24 | itch.io 24 | Kenney 2 | Fab -> | ...      |
- |                                                                          |
- | +------------+ +------------+ +------------+ +------------+              |
- | |            | |            | |            | |            |              |
- | |   [img]    | |   [img]    | |   [img]    | |   [img]    |              |
- | |            | |            | |            | |            |              |
- | | Wooden     | | Vintage    | | Outdoor    | | Chair 24   |              |
- | | Chair 01   | | Wooden ... | | wooden ... | |            |              |
- | | PolyHaven  | | BlenderKit | | CGTrader   | | ShareText. |              |
- | | Free CC0   | | Free       | | 18 USD     | | Free CC0   |              |
- | | v direct   | | v direct   | |            | |            |              |
- | +------------+ +------------+ +------------+ +------------+              |
- +--------------------------------------------------------------------------+
+The website lives in [`web/`](web/): Astro with React islands, Tailwind CSS 4, shadcn/ui and Magic UI
+components. Every page is pre-rendered HTML, so search engines and AI crawlers see the full content;
+only the interactive parts hydrate.
 
-  click a card -->  +--------------------------------------+
-                    | Poly Haven . model               [x] |
-                    | Wooden Chair 01                      |
-                    |  +--------------------------------+  |
-                    |  |            [preview]           |  |
-                    |  +--------------------------------+  |
-                    | Price     Free                       |
-                    | Licence   CC0 . commercial use OK    |
-                    | Formats   gltf, blend, fbx, usd      |
-                    | Polygons  19992                      |
-                    |                                      |
-                    | [Open on Poly Haven ->]              |
-                    | +----------------------------------+ |
-                    | | [Auto format v] [2k v] [Download]| |
-                    | |  WoodenChair_01_2k.gltf          | |
-                    | |  + 4 companion files     2.2 MB  | |
-                    | +----------------------------------+ |
-                    +--------------------------------------+
-```
+| Page | What it is |
+|---|---|
+| `/` | Landing page: hero search, sources, agent setup, FAQ |
+| `/search` | The search app: type chips, free/direct-download switches, source picker, per-site status, detail sheet with format/resolution picker, download, curl and agent snippets |
+| `/docs` | Quick start |
+| `/docs/mcp` | Setup for Claude Code, Cursor, VS Code, Windsurf, Codex CLI, Gemini CLI, the Claude apps and any stdio client |
+| `/docs/api` | REST API guide with curl, JavaScript and Python examples |
+| `/docs/api/reference` | Interactive OpenAPI reference ([Scalar](https://scalar.com), self-hosted) |
+| `/docs/sources` | All sources with licences, generated from the provider registry |
+| `/docs/self-hosting` | Docker, Node, configuration, metrics |
 
-- **Search and filter.** Filter by type, free only, or direct download, and choose which sources
-  to query. The search is kept in the address bar, so `/?q=sunset&type=hdri&free=true` can be
-  bookmarked or shared.
-- **Per-site status bar.** Shows how many results each site returned. Sites that can't be searched
-  automatically, or that failed, link to their own search.
-- **Detail panel.** Shows licence, author, formats, polygon count, tags and description. Pick a
-  format and resolution to see exactly which files you'll get and their total size. Download gives
-  you the file, or one zip when the asset has several files.
-- **Works anywhere.** Light and dark mode, works on phones, no build step: the whole page is
-  [`src/ui/index.html`](src/ui/index.html).
-- **API key.** If `ASSET_SERVER_API_KEY` is set, the page asks for the key once and remembers it in
-  that browser.
+- **Search state in the URL.** `/search?q=sunset&type=hdri&free=true` can be bookmarked or shared.
+- **Detail sheet.** Licence, author, formats, polygon count and tags; pick a format and resolution to see
+  exactly which files you'll get and their size; download the file or one zip; copy a curl command or a
+  prompt for your agent.
+- **API key.** If `ASSET_SERVER_API_KEY` is set, the page asks for the key once and remembers it.
+
+### For AI agents
+
+Point an agent at `https://3d.shep.bot` and it finds its way:
+
+| URL | For |
+|---|---|
+| `/AGENTS.md` | The agent guide: MCP setup, REST workflow, licensing rules, an example |
+| `/llms.txt`, `/llms-full.txt` | [llms.txt](https://llmstxt.org) index and every guide in one file |
+| `/docs/*.md` | Markdown twin of every docs page |
+| `/skill/SKILL.md` | A Claude Code skill (`~/.claude/skills/3d-assets/SKILL.md`) |
+| `/openapi.json` | OpenAPI 3.1 |
+
+Requests with `Accept: text/markdown` get markdown instead of HTML (`/` → `/AGENTS.md`), every page
+advertises its twin with `Link: <…>; rel="alternate"; type="text/markdown"`, and `curl
+https://3d.shep.bot` returns a JSON index that points at all of the above.
 
 ---
 
@@ -291,7 +275,14 @@ claude mcp add 3d-assets -e ASSET_DOWNLOAD_DIR="$PWD/assets" -- node /path/to/3d
 
 ### Remote (Streamable HTTP)
 
-Point the client at `http://<host>:8787/mcp`. If you set `ASSET_SERVER_API_KEY`, send
+The public server needs no setup or key:
+
+```bash
+claude mcp add --transport http 3d-assets https://3d.shep.bot/mcp
+```
+
+Other clients: see <https://3d.shep.bot/docs/mcp>. For your own server, point the client at
+`http://<host>:8787/mcp`. If you set `ASSET_SERVER_API_KEY`, send
 `Authorization: Bearer <key>`.
 
 Over HTTP, `download_asset` is off by default because it would write to the server's disk, not
@@ -450,9 +441,29 @@ Safety:
 | `ASSET_SERVER_USER_AGENT` | `3d-asset-server/0.1` | User-Agent sent to the sites |
 | `BLENDERKIT_API_KEY` | – | Optional; unlocks plan and purchased BlenderKit assets |
 | `NODE_USE_ENV_PROXY` | – | Set to `1` so Node's `fetch` uses `HTTPS_PROXY` |
+| `METRICS_PORT` | – | Serve Prometheus metrics on this port at `/metrics` and log one JSON line per search, download and MCP tool call (see below) |
 
 > If you set `ASSET_SERVER_API_KEY` on a public server, note that `?api_key=` (used by the web UI's
 > download button) can end up in browser history and server logs.
+
+### Analytics
+
+With `METRICS_PORT` set ([`src/core/analytics.ts`](src/core/analytics.ts)), metrics are served on that
+separate port (never on the public listener), with bounded labels only:
+
+| Metric | Labels |
+|---|---|
+| `asset_server_searches_total` | surface (`web`, `api`, `mcp`), client family, type, free_only, has_results |
+| `asset_server_search_duration_seconds`, `asset_server_search_results` | surface |
+| `asset_server_provider_requests_total`, `asset_server_provider_duration_seconds` | provider, status |
+| `asset_server_downloads_total`, `asset_server_asset_views_total` | surface, client, provider |
+| `asset_server_mcp_tool_calls_total`, `asset_server_mcp_tool_duration_seconds` | tool, client (claude-code, cursor, vscode, …) |
+| `asset_server_http_requests_total`, `asset_server_page_views_total` | route / page |
+
+Each search also logs `{"event":"search","query":…,"results":…,"surface":…}` to stdout for top-query and
+zero-result analysis in a log store. No IPs, keys or cookies are recorded. In the shep.bot cluster a
+ServiceMonitor ([`deploy/servicemonitor.yaml`](deploy/servicemonitor.yaml)) feeds Prometheus, Loki
+collects the event lines, and the *3D Asset Server* Grafana dashboard shows both.
 
 ---
 
@@ -474,12 +485,19 @@ src/
 |   |-- sharetextures.ts  cgbookcase.ts  texturecan.ts  hdrihub.ts
 |   `-- linked.ts        Fab, Poliigon, TurboSquid (link-only)
 |-- api/
-|   |-- app.ts           Hono REST API, web UI route, MCP Streamable HTTP mount
-|   `-- openapi.ts
-|-- mcp/
-|   `-- server.ts        MCP tool definitions (shared by stdio and HTTP)
-`-- ui/
-    `-- index.html       the web UI (static HTML/CSS/JS)
+|   |-- app.ts           Hono REST API, website, MCP Streamable HTTP mount, request metrics
+|   |-- site.ts          serves the pre-rendered site: caching, 404, markdown twins for agents
+|   `-- openapi.ts       OpenAPI 3.1 with full schemas (rendered at /docs/api/reference)
+|-- core/analytics.ts    Prometheus metrics + JSON event log
+`-- mcp/
+    `-- server.ts        MCP tool definitions (shared by stdio and HTTP)
+web/                     the website (Astro + React + Tailwind + shadcn/ui)
+|-- src/pages/           index, search, docs (markdown), sources, API reference, 404
+|-- src/components/      ui/ (shadcn + Magic UI), search/ (the search app), home/
+|-- src/content/         AGENTS.md and the Claude Code skill
+|-- src/lib/             site constants, schema.org JSON-LD, agent client configs, FAQ
+`-- integrations/        emits AGENTS.md, llms.txt, llms-full.txt, markdown twins, Scalar bundle
+deploy/                  Kubernetes manifests for 3d.shep.bot (synced by ArgoCD)
 test/
 |-- providers/           offline tests per site, against trimmed fixtures
 |-- live/                live smoke tests (LIVE=1)
@@ -503,14 +521,17 @@ offline test with fixtures.
 ## Development
 
 ```bash
+npm ci && npm --prefix web ci
 npm test            # offline tests (fixtures, no network)
 npm run test:live   # live smoke tests against the real sites
-npm run typecheck
-npm run build       # compiles to dist/ and copies the web UI
+npm run typecheck   # server + website (astro check)
+npm run build       # server to dist/, then the website to dist/web
 npm run dev         # watch-mode server
+npm --prefix web run dev   # website dev server; proxies /v1 and /mcp to `npm start` on :8787
 ```
 
-CI (`.github/workflows/ci.yml`) runs typecheck, tests and build on every push and pull request.
+CI (`.github/workflows/ci.yml`) runs build, typecheck and tests on every push and pull request; on
+`main` it also publishes the image and pins it in `deploy/`, which ArgoCD rolls out to 3d.shep.bot.
 
 ---
 

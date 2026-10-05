@@ -53,6 +53,10 @@ spec:
               value: https://3d.shep.bot
             - name: ASSET_SERVER_USER_AGENT
               value: "3d-asset-server/0.1 (+https://3d.shep.bot)"
+            # Prometheus metrics on a separate port (Service-internal only, not
+            # routed by the Ingress) + JSON event log lines for Loki.
+            - name: METRICS_PORT
+              value: "9464"
           envFrom:
             - secretRef:
                 name: asset-server-env
@@ -60,6 +64,8 @@ spec:
           ports:
             - name: http
               containerPort: 8787
+            - name: metrics
+              containerPort: 9464
           readinessProbe:
             httpGet:
               path: /health

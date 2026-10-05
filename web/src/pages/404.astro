@@ -1,0 +1,17 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Page not found" description="This page does not exist. Search 3D assets or read the docs." noindex>
+  <section class="mx-auto max-w-xl px-4 py-32 text-center">
+    <p class="font-mono text-sm text-primary">404</p>
+    <h1 class="mt-3 text-4xl font-semibold tracking-tight">Nothing at this address</h1>
+    <p class="mt-4 text-muted-foreground">The page moved or never existed. Try a search instead.</p>
+    <form action="/search" method="get" role="search" class="mx-auto mt-8 flex max-w-md gap-2">
+      <label for="nf-q" class="sr-only">Search 3D assets</label>
+      <input id="nf-q" name="q" type="search" placeholder="Search 3D assets…" class="h-10 flex-1 rounded-lg border bg-card px-3 text-sm outline-none focus:ring-2 focus:ring-ring" />
+      <button class="h-10 rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground">Search</button>
+    </form>
+    <p class="mt-8 text-sm"><a href="/" class="text-primary hover:underline">Home</a> · <a href="/docs" class="text-primary hover:underline">Docs</a></p>
+  </section>
+</BaseLayout>

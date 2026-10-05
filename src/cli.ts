@@ -2,6 +2,7 @@
 import { serve } from "@hono/node-server";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { createApp } from "./api/app.js";
+import { PrometheusAnalytics, noopAnalytics, type Analytics } from "./core/analytics.js";
 import { AssetService } from "./core/service.js";
 import { createMcpServer } from "./mcp/server.js";
 import { allProviders } from "./providers/index.js";
@@ -22,6 +23,8 @@ Environment:
   ASSET_DOWNLOAD_DIR           Default folder for MCP downloads (default ./assets)
   ASSET_SERVER_HTTP_DOWNLOADS  "true" to expose download_asset on the HTTP MCP endpoint
   BLENDERKIT_API_KEY           Optional, enables BlenderKit downloads
+  METRICS_PORT                 Serve Prometheus metrics on this port at /metrics and log
+                               one JSON line per search/download/tool call (off when unset)
 `;
 
 function buildService(): AssetService {
@@ -37,7 +40,9 @@ async function main(argv: string[]): Promise<void> {
       const service = buildService();
       const port = Number(process.env.PORT ?? 8787);
       const hostname = process.env.HOST ?? "0.0.0.0";
+      const analytics = startMetrics(hostname);
       const app = createApp(service, {
+        analytics,
         apiKey: process.env.ASSET_SERVER_API_KEY,
         publicBaseUrl: process.env.ASSET_SERVER_PUBLIC_URL,
         allowServerDownloads: process.env.ASSET_SERVER_HTTP_DOWNLOADS === "true",
@@ -106,3 +111,28 @@ main(process.argv.slice(2)).catch((e) => {
   console.error(e);
   process.exit(1);
 });
+
+/**
+ * Analytics are opt-in: with METRICS_PORT set, metrics are served on that
+ * separate port (kept off the public listener) and product events are
+ * logged as JSON lines.
+ */
+function startMetrics(hostname: string): Analytics {
+  const port = Number(process.env.METRICS_PORT);
+  if (!port) return noopAnalytics;
+  const analytics = new PrometheusAnalytics();
+  serve(
+    {
+      port,
+      hostname,
+      fetch: async (req) => {
+        if (new URL(req.url).pathname !== "/metrics") return new Response("not found", { status: 404 });
+        return new Response(await analytics.registry.metrics(), {
+          headers: { "content-type": analytics.registry.contentType },
+        });
+      },
+    },
+    (info) => console.error(`metrics on http://${hostname}:${info.port}/metrics`),
+  );
+  return analytics;
+}

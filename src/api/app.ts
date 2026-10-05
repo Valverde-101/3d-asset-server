@@ -1,8 +1,10 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
-import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { Hono, type Context } from "hono";
+import { compress } from "hono/compress";
 import { cors } from "hono/cors";
 import { z } from "zod";
+import { clientFamily, noopAnalytics, type Analytics, type Surface } from "../core/analytics.js";
 import { assertPublicUrl, assetFolderName, selectFiles, totalBytes, zipStream } from "../core/download.js";
 import { HttpError } from "../core/http.js";
 import {
@@ -15,6 +17,7 @@ import {
 import { ASSET_TYPES, type AssetType } from "../core/types.js";
 import { createMcpServer } from "../mcp/server.js";
 import { openApiSpec } from "./openapi.js";
+import { Site } from "./site.js";
 
 export interface AppOptions {
   /** Require this key as `Authorization: Bearer <key>` or `x-api-key` on /v1 and /mcp. */
@@ -24,20 +27,31 @@ export interface AppOptions {
   /** Allow the MCP download tool to write to this server's disk. Off by default for HTTP. */
   allowServerDownloads?: boolean;
   downloadDir?: string;
+  /** Product analytics sink (metrics + event log). Defaults to no-op. */
+  analytics?: Analytics;
+  /** Built website root (web/dist copied to dist/web). Defaults to ../web next to this file. */
+  siteRoot?: string;
 }
 
-/** The search UI: one static page (src/ui/index.html, copied to dist/ui on build). */
-const UI_HTML = (() => {
-  try {
-    return readFileSync(new URL("../ui/index.html", import.meta.url), "utf8");
-  } catch {
-    return undefined;
-  }
-})();
+const DEFAULT_SITE_ROOT = fileURLToPath(new URL("../web", import.meta.url));
 
-const UI_CSP =
-  "default-src 'self'; img-src * data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; " +
-  "connect-src 'self'; frame-ancestors 'none'; base-uri 'none'; form-action 'self'";
+/** The bundled website marks its API calls so analytics can tell it apart from other API users. */
+const WEB_CLIENT_HEADER = "x-asset-client";
+
+/** Bounded route label for metrics (never the raw path). */
+function routeLabel(path: string): string {
+  if (path === "/v1/search" || path === "/v1/providers" || path === "/mcp" || path === "/openapi.json" || path === "/health") {
+    return path;
+  }
+  if (path.startsWith("/v1/assets/")) {
+    if (path.endsWith("/download")) return "/v1/assets/:id/download";
+    if (path.endsWith("/files")) return "/v1/assets/:id/files";
+    return "/v1/assets/:id";
+  }
+  if (path.startsWith("/v1/")) return "/v1/other";
+  if (path.startsWith("/_astro/") || path.startsWith("/scalar/") || path.startsWith("/fonts/")) return "static-asset";
+  return "site";
+}
 
 const csv = z
   .string()
@@ -67,7 +81,23 @@ const fileParams = z.object({
 
 export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   const app = new Hono();
+  const analytics = opts.analytics ?? noopAnalytics;
+  const site = Site.load(opts.siteRoot ?? DEFAULT_SITE_ROOT);
+  const who = (c: Context): { surface: Surface; client: string } => ({
+    surface: c.req.header(WEB_CLIENT_HEADER) === "web" ? "web" : "api",
+    client: clientFamily(c.req.header("user-agent")),
+  });
 
+  app.use("*", async (c, next) => {
+    const started = Date.now();
+    await next();
+    if (c.req.path === "/health") return; // probes would drown everything else
+    analytics.httpRequest({ route: routeLabel(c.req.path), method: c.req.method, status: c.res.status, tookMs: Date.now() - started });
+  });
+
+  // Gzip/deflate text responses (pages, JSON, JS). Zip downloads are not
+  // compressible types, so they stream through untouched.
+  app.use("*", compress());
   app.use("*", cors({ origin: "*", exposeHeaders: ["mcp-session-id"] }));
 
   if (opts.apiKey) {
@@ -93,13 +123,32 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     return c.json({ error: errorMessage(err) }, 500);
   });
 
-  app.get("/", (c) => {
-    if (UI_HTML && c.req.header("accept")?.includes("text/html")) {
-      return c.html(UI_HTML, 200, { "content-security-policy": UI_CSP, "x-content-type-options": "nosniff" });
+  /** Serve a site file (or the HTML 404); undefined when there is no site or no match. */
+  const serveSite = (c: Context, path: string): Response | undefined => {
+    // Agents that ask for markdown get the page's markdown twin (/ -> /AGENTS.md).
+    if (site && c.req.header("accept")?.includes("text/markdown")) {
+      const twin = site.markdownFor(path.length > 1 ? path.replace(/\/+$/, "") : path);
+      if (twin) path = twin;
     }
+    const hit = site?.resolve(path, c.req.header("if-none-match"));
+    if (!hit) return undefined;
+    if ("redirect" in hit) return c.redirect(hit.redirect + (new URL(c.req.url).search || ""), 301);
+    if (hit.page && hit.status === 200) analytics.pageView({ page: hit.page });
+    if (c.req.method === "HEAD") return new Response(null, { status: hit.status, headers: hit.headers });
+    return new Response(hit.status === 304 ? null : new Uint8Array(hit.body), { status: hit.status, headers: hit.headers });
+  };
+
+  app.get("/", (c) => {
+    const accept = c.req.header("accept") ?? "";
+    if (site && (accept.includes("text/html") || accept.includes("text/markdown"))) return serveSite(c, "/")!;
     return c.json({
       name: "3d-asset-server",
       description: "Search and download 3D models, materials, textures, HDRIs and game assets across many sources.",
+      agents: {
+        instructions: "/AGENTS.md",
+        llms: "/llms.txt",
+        mcp: `claude mcp add --transport http 3d-assets ${(opts.publicBaseUrl ?? new URL(c.req.url).origin).replace(/\/$/, "")}/mcp`,
+      },
       endpoints: {
         providers: "/v1/providers",
         search: "/v1/search?q=wooden+chair&type=model&free=true",
@@ -108,6 +157,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
         download: "/v1/assets/{provider}:{id}/download?format=gltf&resolution=2k",
         mcp: "/mcp (Streamable HTTP)",
         openapi: "/openapi.json",
+        docs: "/docs",
+        apiReference: "/docs/api/reference",
         ui: "/ (open in a browser)",
       },
     });
@@ -119,6 +170,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
 
   app.get("/v1/search", async (c) => {
     const p = searchParams.parse(c.req.query());
+    const started = Date.now();
     const res = await service.search({
       query: p.q,
       types: p.type as AssetType[] | undefined,
@@ -128,11 +180,22 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
       limit: p.limit,
       offset: p.offset,
     });
+    analytics.search({
+      ...who(c),
+      query: p.q,
+      types: p.type as AssetType[] | undefined,
+      freeOnly: p.free,
+      downloadableOnly: p.downloadable,
+      response: res,
+      tookMs: Date.now() - started,
+    });
     return c.json(res);
   });
 
   app.get("/v1/assets/:id", async (c) => {
-    const asset = await service.getAsset(c.req.param("id"));
+    const id = c.req.param("id");
+    const asset = await service.getAsset(id);
+    analytics.assetView({ ...who(c), provider: id.split(":")[0] ?? "", found: Boolean(asset) });
     if (!asset) return c.json({ error: "not found" }, 404);
     return c.json(asset);
   });
@@ -161,8 +224,10 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     const only = files[0]!;
     if (files.length === 1 && !only.includes?.length) {
       assertPublicUrl(only.url);
+      analytics.download({ ...who(c), provider: asset.provider, kind: "redirect" });
       return c.redirect(only.url, 302);
     }
+    analytics.download({ ...who(c), provider: asset.provider, kind: "zip" });
     const folder = assetFolderName(asset);
     return new Response(zipStream(service.http, files, folder), {
       headers: {
@@ -178,6 +243,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
       allowLocalDownload: opts.allowServerDownloads ?? false,
       downloadDir: opts.downloadDir,
       publicBaseUrl: opts.publicBaseUrl ?? new URL(c.req.url).origin,
+      analytics,
+      client: clientFamily(c.req.header("user-agent")),
     });
     const transport = new WebStandardStreamableHTTPServerTransport({
       sessionIdGenerator: undefined,
@@ -189,6 +256,13 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     void server.close().catch(() => undefined);
     return res;
   });
+
+  // Everything else is the website (pages, /_astro assets, robots.txt, sitemap, llms.txt, ...).
+  app.on(["GET", "HEAD"], "*", (c) => {
+    if (c.req.path.startsWith("/v1/")) return c.json({ error: "not found" }, 404);
+    return serveSite(c, c.req.path) ?? c.json({ error: "not found" }, 404);
+  });
+  app.notFound((c) => c.json({ error: "not found" }, 404));
 
   return app;
 }

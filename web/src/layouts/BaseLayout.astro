@@ -1,0 +1,86 @@
+---
+import "@/styles/global.css";
+import SiteHeader from "@/components/SiteHeader.astro";
+import SiteFooter from "@/components/SiteFooter.astro";
+import { graph, type JsonLd } from "@/lib/schema";
+import { SITE } from "@/lib/site";
+import geistSans from "@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url";
+
+interface Props {
+  title: string;
+  description: string;
+  /** Extra JSON-LD nodes for this page. */
+  schema?: JsonLd[];
+  /** Markdown twin for agents (rel=alternate type=text/markdown). */
+  markdown?: string;
+  ogType?: "website" | "article";
+  noindex?: boolean;
+  bare?: boolean;
+}
+
+const { title, description, schema = [], markdown, ogType = "website", noindex = false, bare = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, "") || "/", SITE.url).toString();
+const fullTitle = title === SITE.name ? SITE.homeTitle : `${title} · ${SITE.name}`;
+const ogImage = new URL(SITE.image, SITE.url).toString();
+---
+
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />}
+    <meta name="theme-color" content="#16141f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#fcfcfd" media="(prefers-color-scheme: light)" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="preload" href={geistSans} as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <!-- For AI agents and LLM crawlers: plain-text guides. -->
+    <link rel="alternate" type="text/markdown" href={markdown ?? "/AGENTS.md"} title="Markdown version for AI agents" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <link rel="alternate" type="application/vnd.oai.openapi+json" href="/openapi.json" title="OpenAPI 3.1" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${SITE.name}: ${SITE.tagline}`} />
+    <meta property="og:locale" content={SITE.locale} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script type="application/ld+json" set:html={graph(schema)} />
+
+    <script is:inline>
+      // Theme: dark by default, remembers an explicit choice. Runs before paint.
+      try {
+        if (localStorage.getItem("theme") === "light") document.documentElement.classList.remove("dark");
+      } catch (e) {}
+    </script>
+  </head>
+  <body class="min-h-dvh flex flex-col font-sans">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground">Skip to content</a>
+    {!bare && <SiteHeader />}
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    {!bare && <SiteFooter />}
+  </body>
+</html>
