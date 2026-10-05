@@ -23,8 +23,12 @@ Environment:
   ASSET_DOWNLOAD_DIR           Default folder for MCP downloads (default ./assets)
   ASSET_SERVER_HTTP_DOWNLOADS  "true" to expose download_asset on the HTTP MCP endpoint
   BLENDERKIT_API_KEY           Optional, enables BlenderKit downloads
+  ASSET_SERVER_RATE_LIMIT      Requests per client per window on /v1 and /mcp (default 120, 0 = off)
+  ASSET_SERVER_RATE_LIMIT_WINDOW  Window in seconds (default 60)
   METRICS_PORT                 Serve Prometheus metrics on this port at /metrics and log
                                one JSON line per search/download/tool call (off when unset)
+  PROMETHEUS_URL               Prometheus that scrapes METRICS_PORT; /v1/stats then reports
+                               the last 24 hours and 7 days (default: counts since start)
 `;
 
 function buildService(): AssetService {
@@ -43,10 +47,15 @@ async function main(argv: string[]): Promise<void> {
       const analytics = startMetrics(hostname);
       const app = createApp(service, {
         analytics,
+        rateLimit: {
+          limit: Number(process.env.ASSET_SERVER_RATE_LIMIT ?? 120),
+          windowSec: Number(process.env.ASSET_SERVER_RATE_LIMIT_WINDOW ?? 60),
+        },
         apiKey: process.env.ASSET_SERVER_API_KEY,
         publicBaseUrl: process.env.ASSET_SERVER_PUBLIC_URL,
         allowServerDownloads: process.env.ASSET_SERVER_HTTP_DOWNLOADS === "true",
         downloadDir: process.env.ASSET_DOWNLOAD_DIR,
+        prometheus: process.env.PROMETHEUS_URL ? { url: process.env.PROMETHEUS_URL } : undefined,
       });
       serve({ fetch: app.fetch, port, hostname }, (info) => {
         console.log(`3d-asset-server listening on http://${hostname}:${info.port} (MCP at /mcp)`);

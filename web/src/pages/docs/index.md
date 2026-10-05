@@ -2,10 +2,10 @@
 layout: ../../layouts/DocsLayout.astro
 title: Quick start
 crumb: Docs
-description: Get started with 3D Asset Server in two minutes. Search 17 3D asset sites from the browser, connect Claude Code or Cursor over MCP, or call the REST API with curl.
+description: Get started with 3D Asset Server in two minutes. Search 17 asset sites in the browser, connect Claude Code or Cursor over MCP, or call the REST API.
 ---
 
-# Quick start
+# 3D Asset Server quick start
 
 **3D Asset Server** searches 17 3D asset sites at once and downloads what you pick, ready to drop into a game or a website. Results cover 3D models, PBR materials, textures, HDRIs and game asset packs, and every result shows its licence.
 

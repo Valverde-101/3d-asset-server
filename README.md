@@ -231,9 +231,12 @@ Point an agent at `https://3d.shep.bot` and it finds its way:
 | `/skill/SKILL.md` | A Claude Code skill (`~/.claude/skills/3d-assets/SKILL.md`) |
 | `/openapi.json` | OpenAPI 3.1 |
 
-Requests with `Accept: text/markdown` get markdown instead of HTML (`/` → `/AGENTS.md`), every page
-advertises its twin with `Link: <…>; rel="alternate"; type="text/markdown"`, and `curl
-https://3d.shep.bot` returns a JSON index that points at all of the above.
+Requests with `Accept: text/markdown` get markdown instead of HTML (`/` → `/AGENTS.md`, sent with
+`Vary: Accept`), unknown paths answer agents with a Markdown 404 that links to the docs, `llms.txt` and
+the sitemap, every page advertises its twin with `Link: <…>; rel="alternate"; type="text/markdown"`,
+and `curl https://3d.shep.bot` returns a JSON index that points at all of the above. `/about`,
+`/contact` and `/privacy` describe who runs the service and what it records; `/docs/api/versioning`
+is the versioning, deprecation and rate-limit policy.
 
 ---
 
@@ -306,6 +309,7 @@ yours. Instead, `get_asset` returns direct file URLs plus a one-click `bundleUrl
 |---|---|
 | `GET /v1/search?q=&type=&providers=&free=&downloadable=&limit=&offset=` | Ranked, merged results plus a per-site report (`ok`, `error`, `timeout`, `skipped`, `link`). |
 | `GET /v1/providers` | The source catalogue. |
+| `GET /v1/stats` | Usage totals (searches by surface, downloads, MCP tool calls, top clients and asset types) and per-source health (success rate, p50/p95 latency). Shown on [/stats](https://3d.shep.bot/stats). |
 | `GET /v1/assets/{provider}:{id}` | Full details, including every file. |
 | `GET /v1/assets/{id}/files?format=&resolution=&maps=&all=` | The files a download would fetch. |
 | `GET /v1/assets/{id}/download?format=&resolution=` | `302` to the file when it is one self-contained file; otherwise a streamed zip with its companions. |
@@ -441,7 +445,10 @@ Safety:
 | `ASSET_SERVER_USER_AGENT` | `3d-asset-server/0.1` | User-Agent sent to the sites |
 | `BLENDERKIT_API_KEY` | – | Optional; unlocks plan and purchased BlenderKit assets |
 | `NODE_USE_ENV_PROXY` | – | Set to `1` so Node's `fetch` uses `HTTPS_PROXY` |
+| `ASSET_SERVER_RATE_LIMIT` | `120` | Requests per client per window on `/v1/*` and `/mcp`; responses carry `RateLimit-Policy` / `RateLimit` (+ `RateLimit-Limit/Remaining/Reset`), and `429` adds `Retry-After`. `0` = off |
+| `ASSET_SERVER_RATE_LIMIT_WINDOW` | `60` | Rate-limit window in seconds |
 | `METRICS_PORT` | – | Serve Prometheus metrics on this port at `/metrics` and log one JSON line per search, download and MCP tool call (see below) |
+| `PROMETHEUS_URL` | – | Prometheus that scrapes `METRICS_PORT`. `/v1/stats` (and the `/stats` page) then report the last 24 hours and 7 days across replicas; without it they count this process since it started |
 
 > If you set `ASSET_SERVER_API_KEY` on a public server, note that `?api_key=` (used by the web UI's
 > download button) can end up in browser history and server logs.
@@ -464,6 +471,34 @@ Each search also logs `{"event":"search","query":…,"results":…,"surface":…
 zero-result analysis in a log store. No IPs, keys or cookies are recorded. In the shep.bot cluster a
 ServiceMonitor ([`deploy/servicemonitor.yaml`](deploy/servicemonitor.yaml)) feeds Prometheus, Loki
 collects the event lines, and the *3D Asset Server* Grafana dashboard shows both.
+
+The public [/stats](https://3d.shep.bot/stats) page reads the same counters back through `GET /v1/stats`
+([`src/core/stats.ts`](src/core/stats.ts)): from Prometheus when `PROMETHEUS_URL` is set (cached for a
+minute), otherwise from in-process tallies since the last restart. It shows aggregate counts only.
+
+### Daily source discovery
+
+[`.github/workflows/discover-integrations.yml`](.github/workflows/discover-integrations.yml) runs once a
+day (and on demand from the Actions tab):
+
+1. A Claude Code agent follows [`prompts/discover-integrations.md`](prompts/discover-integrations.md). It
+   searches the web for 3D asset sites that are not yet in
+   [`integrations/registry.json`](integrations/registry.json), checks their robots.txt and terms,
+   integrates the best one as a provider with offline and live tests, and records the others as
+   rejected with a reason. It works in a read-only checkout and hands over a patch.
+2. A separate job without Claude credentials applies the patch and gates it
+   ([`scripts/integration-gate.mjs`](scripts/integration-gate.mjs)):
+   - only provider, test, fixture, registry and docs files may change;
+   - nothing may be deleted, and existing tests may not be edited;
+   - at most one new source per run.
+
+   It then runs the build, typecheck, the full test suite and the new source's live test.
+3. If everything passes, it commits to `main` and dispatches CI, which builds the image and pins it in
+   `deploy/`, so ArgoCD rolls the new source out to 3d.shep.bot. If a check fails, the site is recorded
+   as rejected with a 30-day recheck instead.
+
+It needs one repository secret: `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-token`) or
+`ANTHROPIC_API_KEY`.
 
 ---
 
@@ -489,15 +524,19 @@ src/
 |   |-- site.ts          serves the pre-rendered site: caching, 404, markdown twins for agents
 |   `-- openapi.ts       OpenAPI 3.1 with full schemas (rendered at /docs/api/reference)
 |-- core/analytics.ts    Prometheus metrics + JSON event log
+|-- core/stats.ts        /v1/stats: Prometheus queries or in-process tallies
 `-- mcp/
     `-- server.ts        MCP tool definitions (shared by stdio and HTTP)
 web/                     the website (Astro + React + Tailwind + shadcn/ui)
-|-- src/pages/           index, search, docs (markdown), sources, API reference, 404
+|-- src/pages/           index, search, stats, docs (markdown), sources, API reference, 404
 |-- src/components/      ui/ (shadcn + Magic UI), search/ (the search app), home/
 |-- src/content/         AGENTS.md and the Claude Code skill
 |-- src/lib/             site constants, schema.org JSON-LD, agent client configs, FAQ
 `-- integrations/        emits AGENTS.md, llms.txt, llms-full.txt, markdown twins, Scalar bundle
 deploy/                  Kubernetes manifests for 3d.shep.bot (synced by ArgoCD)
+integrations/            registry.json: live sources (with date added) and evaluated/rejected sites
+prompts/                 instructions for the daily source-discovery agent
+scripts/                 site data export, integration gate
 test/
 |-- providers/           offline tests per site, against trimmed fixtures
 |-- live/                live smoke tests (LIVE=1)

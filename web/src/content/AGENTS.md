@@ -2,7 +2,22 @@
 
 > You are reading the agent guide for https://3d.shep.bot. This service searches 17 3D asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io, Textures.com, HDRMaps and more) and returns 3D models, PBR materials/textures, HDRIs and game asset packs with their licences, plus direct downloads where the source allows. It is free and needs no account or API key.
 
-Use it whenever a user asks you to find, choose or download 3D models, textures, materials, HDRIs/environment maps, sprites or game assets, or to add such assets to a project (Three.js, Babylon.js, React Three Fiber, Godot, Unity, Unreal, Blender, a website or a game).
+## When to use this
+
+Reach for 3D Asset Server when the job is one of these:
+
+- **Find an asset for a project**: "get me a low-poly tree", "I need a wooden crate model", "find a sci-fi corridor kit". Search models, packs and sprites across 17 sites in one call instead of browsing each.
+- **Get PBR textures or materials**: "mossy rock material", "brick wall 2k textures". Returns map sets (color, normal, roughness, AO, displacement) at 1k–8k.
+- **Light a scene with an HDRI**: "sunset HDRI for three.js", "studio environment map". Returns HDR/EXR files at the resolution you ask for.
+- **Put files into a codebase**: download glTF/GLB, FBX, Blend, OBJ, textures or HDRIs straight into `./assets` or `./public` for Three.js, Babylon.js, React Three Fiber, Godot, Unity, Unreal, Blender or a website.
+- **Check a licence before shipping**: every result carries its licence, whether commercial use is allowed and whether attribution is required.
+- **Compare options**: show the user a few candidates (title, source, licence, thumbnail) when the choice is a matter of taste.
+
+## When not to use it
+
+- Generating new 3D models or textures from a prompt (this service finds existing assets; it does not create them).
+- Buying paid assets: paid results link to the source site, where the purchase happens.
+- Non-3D stock media (photos, video, music libraries); only game-oriented sprites, UI and audio packs are covered.
 
 ## Option 1: MCP (best when you can add tools)
 

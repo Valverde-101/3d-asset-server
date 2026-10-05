@@ -17,7 +17,7 @@ export default defineConfig({
     react(),
     agentFiles(),
     sitemap({
-      filter: (page) => !page.includes("/404"),
+      filter: (page) => !page.includes("/404") && !page.includes("/docs/api/playground"),
       changefreq: "weekly",
       lastmod: new Date(),
     }),

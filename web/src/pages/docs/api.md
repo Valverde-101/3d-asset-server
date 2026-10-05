@@ -5,7 +5,7 @@ crumb: REST API guide
 description: Search 3D models, textures and HDRIs across 17 sites with one REST call, read licences and file lists, and download glTF, FBX, PBR maps or EXR files.
 ---
 
-# REST API guide
+# 3D Asset Server REST API guide
 
 A small JSON API over HTTPS. No key is needed on `https://3d.shep.bot`. Every endpoint is described in the [OpenAPI 3.1 spec](/openapi.json), which you can explore and try in the [interactive reference](/docs/api/reference).
 
@@ -90,6 +90,14 @@ A single self-contained file answers with a `302` redirect to the source CDN (so
 curl "https://3d.shep.bot/v1/providers"
 ```
 
+## Usage statistics and source health
+
+```bash
+curl "https://3d.shep.bot/v1/stats"
+```
+
+Aggregate usage (searches by surface, downloads, MCP tool calls, top clients and asset types) for the last 24 hours and 7 days, plus each source's success rate and p50/p95 latency. Check `providers[]` to see which sources are slow or failing right now. The same data is on the [usage statistics](/stats) page.
+
 ## Examples
 
 ### JavaScript / TypeScript
@@ -129,11 +137,16 @@ Errors are JSON: `{ "error": "message" }`.
 | `401` | API key required (self-hosted servers with `ASSET_SERVER_API_KEY` only). |
 | `404` | Unknown asset, or no file matches the format/resolution. |
 | `409` | The source has no direct downloads; use the returned `url`. |
+| `429` | Rate limit exceeded; wait `Retry-After` seconds. |
 | `502` | The source site failed. |
 
 ## Authentication (self-hosted)
 
 The public server is open. If you run your own with `ASSET_SERVER_API_KEY`, send the key as `Authorization: Bearer <key>` or `x-api-key: <key>` (or `?api_key=` for plain download links).
+
+## Rate limits and versioning
+
+The public server allows 120 requests per minute per client. Every response carries `RateLimit-Policy` and `RateLimit` headers (plus `RateLimit-Limit`, `RateLimit-Remaining` and `RateLimit-Reset`); going over returns `429` with `Retry-After`. The API is versioned in the path (`/v1`), only grows additively within a version, and announces deprecations with `Deprecation` and `Sunset` headers at least 90 days ahead. Details: [Versioning, deprecation & rate limits](/docs/api/versioning).
 
 ## Fair use
 

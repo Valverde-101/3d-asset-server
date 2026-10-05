@@ -1,0 +1,49 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { breadcrumbs, techArticle, webApi } from "@/lib/schema";
+// Interactive API client (Scalar). Not indexed: it is a client-side app that
+// duplicates /docs/api/reference, and it needs inline styles that the strict
+// CSP of the content pages does not allow.
+const title = "API playground";
+const description = "Send live requests to the 3D Asset Server API from your browser with the interactive Scalar client, generated from the OpenAPI 3.1 document.";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  ogType="article"
+  markdown="/openapi.json"
+  noindex
+  schema={[webApi(), techArticle({ title, description, path: "/docs/api/playground" }), breadcrumbs([{ name: "Home", path: "/" }, { name: "Docs", path: "/docs" }, { name: title, path: "/docs/api/playground" }])]}
+>
+  <h1 class="sr-only">3D Asset Server API playground</h1>
+  <noscript>
+    <p class="mx-auto max-w-3xl px-4 py-10">The interactive reference needs JavaScript. The raw OpenAPI 3.1 document is at <a href="/openapi.json">/openapi.json</a>, and the <a href="/docs/api">REST API guide</a> covers every endpoint.</p>
+  </noscript>
+  <!-- Scalar mounts here. Not "#api-reference": the standalone build auto-mounts a second, unconfigured instance on that id. -->
+  <div id="scalar-reference" class="min-h-[80vh]"></div>
+  <!-- Scalar API Reference, self-hosted (ES-module build copied from @scalar/api-reference at build). -->
+  <script is:inline type="module">
+    import { createApiReference } from "/scalar/standalone.esm.js";
+    createApiReference("#scalar-reference", {
+      url: "/openapi.json",
+      theme: "purple",
+      darkMode: document.documentElement.classList.contains("dark"),
+      hideDarkModeToggle: true,
+      withDefaultFonts: false,
+      layout: "modern",
+      defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
+      hideClientButton: false,
+      telemetry: false,
+      showDeveloperTools: "never",
+      agent: { disabled: true },
+      // "Generate MCP" points at this server's own MCP endpoint.
+      mcp: { name: "3d-assets", url: location.origin + "/mcp" },
+      metaData: { title: "API playground · 3D Asset Server" },
+      customCss: `
+        .scalar-app, .scalar-api-reference { --scalar-font: "Geist Variable", ui-sans-serif, system-ui, sans-serif; --scalar-font-code: "Geist Mono Variable", ui-monospace, monospace; --scalar-custom-header-height: 56px; }
+        .dark-mode { --scalar-background-1: #16141f; --scalar-background-2: #1c1a27; --scalar-background-3: #24212f; }
+      `,
+    });
+  </script>
+</BaseLayout>

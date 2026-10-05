@@ -1,45 +1,125 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import { breadcrumbs, techArticle, webApi } from "@/lib/schema";
+// Server-rendered API reference generated from the OpenAPI document at build
+// time: every endpoint, parameter, response and schema is in the HTML (for
+// readers, crawlers and agents). The interactive client lives at
+// /docs/api/playground.
+import { Code } from "astro:components";
+import DocsLayout from "@/layouts/DocsLayout.astro";
+import { SPEC, curl, inlineMd, operations, resolve, typeLabel } from "@/lib/openapi";
+import { webApi } from "@/lib/schema";
+import { SITE } from "@/lib/site";
+
+const ops = operations();
+const base = SITE.url;
+const methodColor: Record<string, string> = {
+  GET: "bg-success/15 text-success border-success/30",
+  POST: "bg-primary/15 text-primary border-primary/30",
+};
+const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+const schemas = Object.entries(SPEC.components.schemas);
+const headings = [
+  ...SPEC.tags.map((t) => ({ depth: 2, slug: slug(t.name), text: t.name })),
+  { depth: 2, slug: "schemas", text: "Schemas" },
+];
 const title = "API reference";
-const description = "Interactive OpenAPI 3.1 reference for the 3D Asset Server API: search, asset details, file selection, downloads and MCP, with curl, JS and Python examples.";
+const description = "3D Asset Server REST API reference: search, asset details, file selection, downloads, sources and MCP, with parameters, responses and curl examples.";
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  ogType="article"
-  markdown="/openapi.json"
-  schema={[webApi(), techArticle({ title, description, path: "/docs/api/reference" }), breadcrumbs([{ name: "Home", path: "/" }, { name: "Docs", path: "/docs" }, { name: title, path: "/docs/api/reference" }])]}
->
-  <h1 class="sr-only">3D Asset Server API reference</h1>
-  <noscript>
-    <p class="mx-auto max-w-3xl px-4 py-10">The interactive reference needs JavaScript. The raw OpenAPI 3.1 document is at <a href="/openapi.json">/openapi.json</a>, and the <a href="/docs/api">REST API guide</a> covers every endpoint.</p>
-  </noscript>
-  <!-- Scalar mounts here. Not "#api-reference": the standalone build auto-mounts a second, unconfigured instance on that id. -->
-  <div id="scalar-reference" class="min-h-[80vh]"></div>
-  <!-- Scalar API Reference, self-hosted (ES-module build copied from @scalar/api-reference at build). -->
-  <script is:inline type="module">
-    import { createApiReference } from "/scalar/standalone.esm.js";
-    createApiReference("#scalar-reference", {
-      url: "/openapi.json",
-      theme: "purple",
-      darkMode: document.documentElement.classList.contains("dark"),
-      hideDarkModeToggle: true,
-      withDefaultFonts: false,
-      layout: "modern",
-      defaultHttpClient: { targetKey: "shell", clientKey: "curl" },
-      hideClientButton: false,
-      telemetry: false,
-      showDeveloperTools: "never",
-      agent: { disabled: true },
-      // "Generate MCP" points at this server's own MCP endpoint.
-      mcp: { name: "3d-assets", url: location.origin + "/mcp" },
-      metaData: { title: "API reference · 3D Asset Server" },
-      customCss: `
-        .scalar-app, .scalar-api-reference { --scalar-font: "Geist Variable", ui-sans-serif, system-ui, sans-serif; --scalar-font-code: "Geist Mono Variable", ui-monospace, monospace; --scalar-custom-header-height: 56px; }
-        .dark-mode { --scalar-background-1: #16141f; --scalar-background-2: #1c1a27; --scalar-background-3: #24212f; }
-      `,
-    });
-  </script>
-</BaseLayout>
+<DocsLayout title={title} crumb="API reference" description={description} headings={headings} schema={[webApi()]}>
+  <h1>3D Asset Server API reference</h1>
+  <p>
+    {SPEC.info.summary} Version <code>{SPEC.info.version}</code>, base URL <code>{base}</code>. Machine-readable:
+    <a href="/openapi.json">OpenAPI 3.1 JSON</a>. Want to send requests from the browser? Open the
+    <a href="/docs/api/playground">interactive API playground</a>.
+  </p>
+  <ul>
+    <li><strong>Authentication:</strong> none on the public server. Self-hosted servers may require <code>Authorization: Bearer &lt;key&gt;</code> or <code>x-api-key</code>.</li>
+    <li><strong>Rate limits:</strong> 120 requests per minute per client, announced in <code>RateLimit-Policy</code> / <code>RateLimit</code> headers; <code>429</code> comes with <code>Retry-After</code>. See <a href="/docs/api/versioning">versioning &amp; rate limits</a>.</li>
+    <li><strong>Errors:</strong> JSON <code>{"{"} "error": "message" {"}"}</code> with a 4xx/5xx status.</li>
+  </ul>
+
+  {SPEC.tags.map((tag) => {
+    const tagOps = ops.filter((o) => o.tags.includes(tag.name));
+    return (
+      <section>
+        <h2 id={slug(tag.name)}>{tag.name}</h2>
+        <p>{tag.description}</p>
+        {tagOps.map((op) => (
+          <div class="not-prose my-8 overflow-hidden rounded-xl border bg-card/40" id={`op-${op.id}`}>
+            <div class="flex flex-wrap items-center gap-3 border-b bg-muted/40 px-4 py-3">
+              <span class:list={["rounded-md border px-2 py-0.5 font-mono text-xs font-semibold", methodColor[op.method] ?? "bg-muted"]}>{op.method}</span>
+              <code class="font-mono text-sm">{op.path}</code>
+              <span class="text-sm text-muted-foreground">{op.summary}</span>
+            </div>
+            <div class="space-y-5 px-4 py-4 text-sm">
+              {op.description && <p class="leading-relaxed text-muted-foreground" set:html={inlineMd(op.description)} />}
+              {op.parameters.length > 0 && (
+                <div>
+                  <h3 class="mb-2 font-medium">Parameters</h3>
+                  <div class="overflow-x-auto">
+                    <table class="w-full text-left text-sm">
+                      <thead class="text-xs text-muted-foreground"><tr><th class="py-1 pr-4 font-medium">Name</th><th class="py-1 pr-4 font-medium">In</th><th class="py-1 pr-4 font-medium">Type</th><th class="py-1 font-medium">Description</th></tr></thead>
+                      <tbody class="divide-y">
+                        {op.parameters.map((p) => (
+                          <tr class="align-top">
+                            <td class="py-2 pr-4 font-mono text-xs">{p.name}{p.required && <span class="text-destructive" title="required"> *</span>}</td>
+                            <td class="py-2 pr-4 text-muted-foreground">{p.in}</td>
+                            <td class="py-2 pr-4 font-mono text-xs">{typeLabel(p.schema)}</td>
+                            <td class="py-2 text-muted-foreground" set:html={inlineMd(p.description ?? "")} />
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              )}
+              <div>
+                <h3 class="mb-2 font-medium">Responses</h3>
+                <ul class="space-y-1.5">
+                  {op.responses.map((r) => (
+                    <li class="flex flex-wrap gap-x-3">
+                      <code class:list={["font-mono text-xs font-semibold", r.status.startsWith("2") || r.status.startsWith("3") ? "text-success" : "text-warning"]}>{r.status}</code>
+                      <span class="text-muted-foreground" set:html={inlineMd(r.description)} />
+                      {r.schema && <code class="font-mono text-xs">{r.schema}</code>}
+                      {r.headers.length > 0 && <span class="text-xs text-muted-foreground">headers: {r.headers.join(", ")}</span>}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 class="mb-2 font-medium">Example</h3>
+                <Code code={curl(op, base)} lang="bash" theme="github-dark-default" class="!m-0 overflow-x-auto rounded-lg border p-3 text-[0.8rem]" />
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+    );
+  })}
+
+  <h2 id="schemas">Schemas</h2>
+  {schemas.map(([name, raw]) => {
+    const schema = resolve(raw) as { description?: string; enum?: unknown[]; required?: string[]; properties?: Record<string, { description?: string } & Record<string, unknown>>; allOf?: unknown[] };
+    const props = schema.properties ? Object.entries(schema.properties) : [];
+    return (
+      <div class="not-prose my-6 rounded-xl border bg-card/40 px-4 py-3 text-sm" id={`schema-${slug(name)}`}>
+        <h3 class="font-mono font-semibold">{name}</h3>
+        {schema.enum && <p class="mt-1 text-muted-foreground">One of: <code class="font-mono text-xs">{schema.enum.join(", ")}</code></p>}
+        {schema.allOf && <p class="mt-1 text-muted-foreground">{typeLabel(raw as Record<string, unknown>)}</p>}
+        {props.length > 0 && (
+          <table class="mt-2 w-full text-left">
+            <tbody class="divide-y">
+              {props.map(([prop, p]) => (
+                <tr class="align-top">
+                  <td class="py-1.5 pr-4 font-mono text-xs">{prop}{schema.required?.includes(prop) && <span class="text-destructive" title="required"> *</span>}</td>
+                  <td class="py-1.5 pr-4 font-mono text-xs text-muted-foreground">{typeLabel(p)}</td>
+                  <td class="py-1.5 text-muted-foreground" set:html={inlineMd(p.description ?? "")} />
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+    );
+  })}
+</DocsLayout>

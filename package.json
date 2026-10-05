@@ -4,6 +4,30 @@
   "description": "Unified search + download gateway (HTTP API and MCP server) for free and paid 3D assets, textures, materials and HDRIs.",
   "type": "module",
   "license": "Apache-2.0",
+  "homepage": "https://3d.shep.bot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arielshad/3d-asset-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arielshad/3d-asset-server/issues"
+  },
+  "keywords": [
+    "3d",
+    "3d-assets",
+    "gltf",
+    "pbr",
+    "textures",
+    "hdri",
+    "polyhaven",
+    "ambientcg",
+    "kenney",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "cli",
+    "game-assets"
+  ],
   "engines": {
     "node": ">=20"
   },
@@ -11,6 +35,15 @@
     "3d-asset-server": "dist/cli.js"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
   "scripts": {
     "build": "npm run build:server && npm run build:web",
     "build:server": "tsc -p tsconfig.build.json",

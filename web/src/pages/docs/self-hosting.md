@@ -5,7 +5,7 @@ crumb: Self-hosting
 description: Run your own 3D Asset Server with Docker or Node.js, protect it with an API key, enable BlenderKit, and expose Prometheus metrics.
 ---
 
-# Self-hosting
+# Self-hosting 3D Asset Server
 
 3D Asset Server is open source (Apache-2.0). Run your own copy to put it behind your own key, enable more sources, or let the MCP server write files to a shared disk.
 
@@ -38,7 +38,10 @@ npm start
 | `ASSET_DOWNLOAD_DIR` | `./assets` | Where MCP downloads go. |
 | `ASSET_SERVER_PROVIDER_TIMEOUT_MS` | `12000` | Per-source search timeout. |
 | `BLENDERKIT_API_KEY` | none | Unlocks plan and purchased BlenderKit assets. |
+| `ASSET_SERVER_RATE_LIMIT` | `120` | Requests per client per window on `/v1/*` and `/mcp`, with RateLimit headers and `429` + `Retry-After` beyond it. `0` turns it off. |
+| `ASSET_SERVER_RATE_LIMIT_WINDOW` | `60` | Rate-limit window in seconds. |
 | `METRICS_PORT` | off | Serve Prometheus metrics on this port at `/metrics`, and log one JSON line per search, download and tool call. |
+| `PROMETHEUS_URL` | off | Prometheus that scrapes `METRICS_PORT`. `/v1/stats` and the `/stats` page then show the last 24 hours and 7 days; without it they count since the server started. |
 
 ## Analytics
 
@@ -49,6 +52,8 @@ With `METRICS_PORT` set, the server exports Prometheus metrics with bounded labe
 - `asset_server_downloads_total`, `asset_server_asset_views_total`
 - `asset_server_mcp_tool_calls_total` by tool and client family (Claude Code, Cursor, VS Code, …)
 - `asset_server_http_requests_total`, `asset_server_page_views_total`
+
+The [/stats](/stats) page and `GET /v1/stats` read these counters back: from Prometheus when `PROMETHEUS_URL` is set, otherwise from this process since it started.
 
 Each search also logs a JSON line (`{"event":"search","query":…,"results":…}`) for top-query and zero-result analysis in Loki or any log store. Nothing personal is recorded: no IPs, keys or cookies.
 

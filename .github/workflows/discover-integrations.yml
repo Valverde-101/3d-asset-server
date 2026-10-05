@@ -1,0 +1,225 @@
+name: Discover new sources
+
+# Once a day, a Claude Code agent looks for a new 3D asset website, integrates
+# it as a provider with offline and live tests (prompts/discover-integrations.md),
+# and records every site it evaluated in integrations/registry.json. Then:
+#
+#   discover  The agent works in a read-only checkout (contents: read, no push
+#             credentials) and hands its changes over as a patch artifact.
+#   verify    No Claude credentials. Applies the patch to a clean checkout and
+#             gates it (scripts/integration-gate.mjs: allowlisted files only, no
+#             deletions, no edits to existing tests, at most one new source).
+#             Then build, typecheck, the full test suite and the new source's
+#             live test. If everything passes, it commits to main and starts the
+#             CI workflow, whose image and deploy jobs roll it out to 3d.shep.bot
+#             (pushes made with GITHUB_TOKEN don't trigger workflows by
+#             themselves, so CI is dispatched explicitly). If a check fails
+#             after the gate, the site is recorded as rejected with a 30-day
+#             recheck, so the next run doesn't retry it.
+#
+# Required secret, one of:
+#   CLAUDE_CODE_OAUTH_TOKEN  from `claude setup-token` (Claude subscription)
+#   ANTHROPIC_API_KEY        an Anthropic API key (usage-based billing)
+#
+# Run it by hand from the Actions tab ("Run workflow").
+
+on:
+  schedule:
+    # Daily at 05:17 UTC (off the hour to avoid the scheduler rush).
+    - cron: "17 5 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: discover-integrations
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      # anthropics/claude-code-action fetches an OIDC token during setup.
+      id-token: write
+    outputs:
+      changed: ${{ steps.patch.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci && npm --prefix web ci
+
+      - name: Capture current date
+        id: now
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Find and integrate a new source with Claude Code
+        uses: anthropics/claude-code-action@v1
+        timeout-minutes: 50
+        env:
+          ASTRO_TELEMETRY_DISABLED: "1"
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ github.token }}
+          show_full_output: "true"
+          display_report: "true"
+          # The real instructions live in prompts/discover-integrations.md;
+          # keep this shim minimal so the two can't drift.
+          prompt: |
+            You are the 3D Asset Server source scout running in GitHub Actions.
+            Working dir is the repo root.
+
+            TODAY'S DATE IS ${{ steps.now.outputs.date }} (real UTC). Trust it and
+            what you fetch from the web, even if sites look unfamiliar; your
+            training data predates today.
+
+            Read `prompts/discover-integrations.md` and follow it exactly.
+            Do NOT commit or push; the next job verifies and does that.
+          claude_args: |
+            --max-turns 300
+            --permission-mode acceptEdits
+            --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep,Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(curl:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(wc:*),Bash(grep:*),Bash(mkdir:*),Bash(rm:*),Bash(git status:*),Bash(git diff:*)"
+
+      - name: Collect changes
+        id: patch
+        run: |
+          set -euo pipefail
+          git add -A
+          git diff --cached --stat
+          git diff --cached --binary > "$RUNNER_TEMP/changes.patch"
+          if [[ -s "$RUNNER_TEMP/changes.patch" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No changes: nothing new today." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: steps.patch.outputs.changed == 'true'
+        with:
+          name: discovery-patch
+          path: ${{ runner.temp }}/changes.patch
+          retention-days: 14
+
+  verify:
+    needs: discover
+    if: needs.discover.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      # gh workflow run ci.yml
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci && npm --prefix web ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: discovery-patch
+          path: ${{ runner.temp }}
+
+      - name: Apply the agent's patch
+        run: |
+          git apply --index --binary "$RUNNER_TEMP/changes.patch"
+          cp integrations/registry.json "$RUNNER_TEMP/patched-registry.json"
+
+      - name: Gate the patch
+        id: gate
+        run: node scripts/integration-gate.mjs HEAD
+
+      - name: Build
+        env:
+          ASTRO_TELEMETRY_DISABLED: "1"
+        run: npm run build
+
+      - name: Generated site data is up to date
+        # The build regenerates web/src/data/*.json; the patch must already match.
+        run: git diff --exit-code -- web/src/data
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Test
+        run: npm test
+
+      - name: Live test the new source
+        if: steps.gate.outputs.added != ''
+        env:
+          LIVE: "1"
+          ADDED: ${{ steps.gate.outputs.added }}
+        run: |
+          set -euo pipefail
+          for id in ${ADDED//,/ }; do npx vitest run "test/live/${id}.live.test.ts"; done
+
+      - name: Commit and push
+        id: commit
+        env:
+          ADDED: ${{ steps.gate.outputs.added }}
+          REJECTED: ${{ steps.gate.outputs.rejected }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if [[ -n "$ADDED" ]]; then
+            names=$(node -e 'const r=require("./integrations/registry.json");console.log(process.env.ADDED.split(",").map(id=>r.integrated.find(e=>e.id===id).name).join(", "))')
+            subject="feat(sources): add ${names}"
+          else
+            subject="chore(integrations): record ${REJECTED} evaluated site(s)"
+          fi
+          git commit -q -F - <<EOF
+          ${subject}
+
+          Found and integrated by the daily discovery workflow:
+          ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}
+
+          Verified: integration gate, build, typecheck, full test suite${ADDED:+, live test of ${ADDED}}.
+
+          Co-Authored-By: Claude Code Action <noreply@anthropic.com>
+          EOF
+          for _ in 1 2 3; do git push origin HEAD:main && exit 0; git pull --rebase origin main; done
+          exit 1
+
+      - name: Deploy (run CI on main)
+        if: steps.gate.outputs.added != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow run ci.yml --ref main
+          echo "Started CI on main: it builds the image and pins it in deploy/ (ArgoCD rolls it out)." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Record a failed integration as rejected
+        # Only when a check after the gate failed (build, tests, live test), so
+        # tomorrow's run moves on to another site instead of retrying this one.
+        if: failure() && steps.gate.outcome == 'success' && steps.gate.outputs.added != '' && steps.commit.outcome == 'skipped'
+        run: |
+          set -euo pipefail
+          git reset -q --hard HEAD
+          node scripts/integration-gate.mjs demote "$RUNNER_TEMP/patched-registry.json" \
+            "integration failed workflow verification: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -qam "chore(integrations): record failed integration attempt (${{ steps.gate.outputs.added }})"
+          for _ in 1 2 3; do git push origin HEAD:main && exit 0; git pull --rebase origin main; done
+          exit 1

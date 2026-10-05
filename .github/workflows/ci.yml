@@ -4,6 +4,9 @@ on:
   push:
     branches: [main]
   pull_request:
+  # The daily source-discovery workflow pushes with GITHUB_TOKEN, which does
+  # not trigger `push` runs, so it starts this workflow explicitly.
+  workflow_dispatch:
 
 jobs:
   test:
@@ -30,7 +33,7 @@ jobs:
   # trigger another run.
   image:
     needs: test
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: read

@@ -131,3 +131,48 @@ The crawlable content for the API lives in `/docs/api` and `/openapi.json`.
    `/cc0-textures`, `/free-low-poly-models` with server-rendered top results.
 6. **Watch the Grafana "3D Asset Server" dashboard**: zero-result queries show content gaps, and the
    MCP client breakdown shows which agent setup docs matter most.
+
+## SiteOne Crawler audit (v2.6.1)
+
+[SiteOne Crawler](https://github.com/janreges/siteone-crawler) scores Performance, SEO, Security,
+Accessibility and Best Practices from 0 to 10.
+
+| | Overall | Performance | SEO | Security | Accessibility | Best practices |
+|---|---|---|---|---|---|---|
+| Production before | 8.0 | 10.0 | 9.4 | 7.0 | 5.0 | 9.1 |
+| After (local production build) | 9.9 | 10.0 | 10.0 | 10.0 | 10.0 | 9.5 |
+
+### What was fixed
+
+| Finding | Deduction | Fix |
+|---|---|---|
+| HSTS missing on every page (critical) | Security −3.0 | `Strict-Transport-Security: max-age=31536000; includeSubDomains` on HTTPS responses |
+| `Access-Control-Allow-Origin: *` on pages | Security warning | CORS only on `/v1/*`, `/mcp`, `/health` and `.json/.md/.txt/.xml` files |
+| CSP weakened by `'unsafe-inline'` | Security warning | Per-page CSP built from SHA-256 hashes of every inline script, `<style>` and `style=""` (`'unsafe-hashes'`); `/search` adds a per-request style nonce for its scroll lock |
+| No `Permissions-Policy` | Security warning | `Permissions-Policy` plus `Cross-Origin-Opener-Policy` and `Cross-Origin-Resource-Policy` on pages |
+| Search switches: hidden checkbox without a label | Accessibility −2.5 | Native `<input type="checkbox" role="switch">` inside its `<label>` (same look) |
+| Search switches / loading button without an accessible name | Accessibility −2.5 | Same switch; the loading spinner carries "Searching…" screen-reader text |
+| Duplicate `id` on every page (logo gradient in header and footer) | Accessibility | Gradient ids unique per logo instance; operation anchors prefixed `op-` |
+| 11 `/search?…` URLs with the same title and description | SEO −0.6 | Per-query `<title>`, description and Open Graph tags rendered server-side; query variants are `noindex, follow` |
+| No WebP / AVIF images | Best practices −0.4 | Product screenshot on the home page as `<picture>` (AVIF 59 KB, WebP 81 KB, PNG fallback) |
+| No Brotli | Best practices −0.5 | Static text files precompressed with Brotli (quality 11), per-request variants at quality 5 |
+| Short cache on unhashed static files | info | `max-age=86400` (fingerprinted assets stay `immutable`) |
+| Description over 160 characters | info | Shortened |
+
+Also: the Scalar API client moved to `/docs/api/playground` (it injects styles at runtime, so it alone keeps
+`style-src 'unsafe-inline'`; it is `noindex` and disallowed in `robots.txt`), and `/docs/api/reference` is now a
+server-rendered reference generated from the OpenAPI document, so every endpoint and schema is in the HTML.
+`robots.txt` uses one `*` group with Disallow lines plus a named group for AI crawlers (the previous single group
+with many `User-agent` lines and `Allow: /` is valid per RFC 9309 but was misread by SiteOne's parser).
+
+### Remaining 0.1 is a crawler limitation
+
+Best Practices keeps "No Brotli compression support" although every page is served with `Content-Encoding: br`
+(`curl -sI -H 'Accept-Encoding: br' https://3d.shep.bot/`). SiteOne v2.6.1's HTTP client (reqwest with the
+`brotli` feature) decompresses responses and strips `Content-Encoding`, and its fallback can only infer `gzip`
+(`src/engine/http_client.rs`), so the check cannot pass for any site; the project's own sample report
+(`docs/OUTPUT-crawler.siteone.io.txt`) shows the same warning on all 50 pages.
+
+The remaining informational notice (no `Cross-Origin-Embedder-Policy`) is not scored. `require-corp` would block
+the third-party thumbnails that search results show, so it is left unset. No IPv6 (AAAA record) is an
+infrastructure item for the edge host.

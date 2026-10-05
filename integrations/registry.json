@@ -1,0 +1,141 @@
+{
+  "integrated": [
+    {
+      "id": "polyhaven",
+      "name": "Poly Haven",
+      "homepage": "https://polyhaven.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "ambientcg",
+      "name": "ambientCG",
+      "homepage": "https://ambientcg.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "cgbookcase",
+      "name": "cgbookcase",
+      "homepage": "https://www.cgbookcase.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "sharetextures",
+      "name": "ShareTextures",
+      "homepage": "https://www.sharetextures.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "blenderkit",
+      "name": "BlenderKit",
+      "homepage": "https://www.blendkit.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "fab",
+      "name": "Fab",
+      "homepage": "https://www.fab.com",
+      "access": "link",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "kenney",
+      "name": "Kenney",
+      "homepage": "https://kenney.nl/assets",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "poliigon",
+      "name": "Poliigon",
+      "homepage": "https://www.poliigon.com",
+      "access": "link",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "quaternius",
+      "name": "Quaternius",
+      "homepage": "https://quaternius.com",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "threedtextures",
+      "name": "3DTextures.me",
+      "homepage": "https://3dtextures.me",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "texturecan",
+      "name": "TextureCan",
+      "homepage": "https://www.texturecan.com",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "texturescom",
+      "name": "Textures.com",
+      "homepage": "https://www.textures.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "hdrmaps",
+      "name": "HDRMAPS",
+      "homepage": "https://hdrmaps.com",
+      "access": "api",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "hdrihub",
+      "name": "HDRI Hub",
+      "homepage": "https://www.hdri-hub.com",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "cgtrader",
+      "name": "CGTrader",
+      "homepage": "https://www.cgtrader.com",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "turbosquid",
+      "name": "TurboSquid",
+      "homepage": "https://www.turbosquid.com",
+      "access": "link",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    },
+    {
+      "id": "itchio",
+      "name": "itch.io",
+      "homepage": "https://itch.io/game-assets",
+      "access": "scrape",
+      "addedAt": "2026-10-04",
+      "addedBy": "launch"
+    }
+  ],
+  "rejected": []
+}

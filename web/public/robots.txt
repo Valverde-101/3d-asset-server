@@ -1,7 +1,14 @@
-# 3D Asset Server: everything public is crawlable, including by AI search and
-# answer engines (named explicitly below). Agents: start with /AGENTS.md or
-# /llms.txt. Download endpoints stream large files and are not for crawling.
+# 3D Asset Server: everything public may be crawled, including by AI search
+# and answer engines. Agents: start with /AGENTS.md or /llms.txt.
+#
+# Not for crawling: download endpoints (large binary streams) and the
+# interactive API playground (a client-side app; the indexable API reference
+# is /docs/api/reference).
 User-agent: *
+Disallow: /v1/assets/*/download
+Disallow: /docs/api/playground
+
+# AI crawlers are welcome, with the same rules.
 User-agent: GPTBot
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
@@ -12,9 +19,7 @@ User-agent: PerplexityBot
 User-agent: Perplexity-User
 User-agent: Google-Extended
 User-agent: Applebot-Extended
-User-agent: Bingbot
-User-agent: Googlebot
-Allow: /
 Disallow: /v1/assets/*/download
+Disallow: /docs/api/playground
 
 Sitemap: https://3d.shep.bot/sitemap-index.xml

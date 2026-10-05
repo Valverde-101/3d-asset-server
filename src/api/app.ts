@@ -1,4 +1,5 @@
 import { WebStandardStreamableHTTPServerTransport } from "@modelcontextprotocol/sdk/server/webStandardStreamableHttp.js";
+import { randomBytes } from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { Hono, type Context } from "hono";
 import { compress } from "hono/compress";
@@ -14,10 +15,14 @@ import {
   UnsupportedError,
   errorMessage,
 } from "../core/service.js";
+import { LocalStats, PrometheusStats, cachedStats, teeAnalytics, type StatsSource } from "../core/stats.js";
 import { ASSET_TYPES, type AssetType } from "../core/types.js";
 import { createMcpServer } from "../mcp/server.js";
+import { prefersMarkdown } from "./negotiate.js";
 import { openApiSpec } from "./openapi.js";
-import { Site } from "./site.js";
+import { RATE_LIMIT_HEADERS, rateLimit, type RateLimitOptions } from "./ratelimit.js";
+import { searchMeta } from "./search-meta.js";
+import { Site, rewriteHead, type ServeOptions } from "./site.js";
 
 export interface AppOptions {
   /** Require this key as `Authorization: Bearer <key>` or `x-api-key` on /v1 and /mcp. */
@@ -31,7 +36,24 @@ export interface AppOptions {
   analytics?: Analytics;
   /** Built website root (web/dist copied to dist/web). Defaults to ../web next to this file. */
   siteRoot?: string;
+  /** Per-client limit on /v1/* and /mcp (with RateLimit headers). Off when unset. */
+  rateLimit?: RateLimitOptions;
+  /**
+   * Prometheus that scrapes this server's metrics, for /v1/stats over 24 hours
+   * and 7 days. Without it, /v1/stats counts this process since it started.
+   */
+  prometheus?: { url: string; fetch?: typeof fetch };
 }
+
+/** Short, guessable URLs for developer resources. */
+const ALIASES: Record<string, string> = {
+  "/api": "/docs/api",
+  "/api-docs": "/docs/api/reference",
+  "/reference": "/docs/api/reference",
+  "/developers": "/docs",
+  "/about-us": "/about",
+  "/privacy-policy": "/privacy",
+};
 
 const DEFAULT_SITE_ROOT = fileURLToPath(new URL("../web", import.meta.url));
 
@@ -40,7 +62,7 @@ const WEB_CLIENT_HEADER = "x-asset-client";
 
 /** Bounded route label for metrics (never the raw path). */
 function routeLabel(path: string): string {
-  if (path === "/v1/search" || path === "/v1/providers" || path === "/mcp" || path === "/openapi.json" || path === "/health") {
+  if (path === "/v1/search" || path === "/v1/providers" || path === "/v1/stats" || path === "/mcp" || path === "/openapi.json" || path === "/health") {
     return path;
   }
   if (path.startsWith("/v1/assets/")) {
@@ -51,6 +73,12 @@ function routeLabel(path: string): string {
   if (path.startsWith("/v1/")) return "/v1/other";
   if (path.startsWith("/_astro/") || path.startsWith("/scalar/") || path.startsWith("/fonts/")) return "static-asset";
   return "site";
+}
+
+function tally(values: string[]): Record<string, number> {
+  const out: Record<string, number> = {};
+  for (const v of values) out[v] = (out[v] ?? 0) + 1;
+  return out;
 }
 
 const csv = z
@@ -79,9 +107,35 @@ const fileParams = z.object({
   all: bool,
 });
 
+/**
+ * Per-request page rewrites:
+ * - /search gets a CSP nonce (its sheet's scroll lock injects a <style> tag and
+ *   reads the nonce from <meta property="csp-nonce">) and unique metadata for
+ *   query variants;
+ * - the Scalar API playground injects styles at runtime, so it alone gets
+ *   inline styles (it is noindex and disallowed for crawlers).
+ */
+function pageRewrite(route: string, params: URLSearchParams): ServeOptions["rewrite"] {
+  if (route === "/search") {
+    const meta = searchMeta(params);
+    return (html) => {
+      const nonce = randomBytes(16).toString("base64");
+      const withNonce = html.replace("<head>", `<head><meta property="csp-nonce" content="${nonce}">`);
+      return { html: meta ? rewriteHead(withNonce, meta) : withNonce, styleNonce: nonce };
+    };
+  }
+  if (route === "/docs/api/playground") return (html) => ({ html, inlineStyles: true });
+  return undefined;
+}
+
 export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   const app = new Hono();
-  const analytics = opts.analytics ?? noopAnalytics;
+  // Every event also feeds the in-process tallies behind /v1/stats.
+  const localStats = new LocalStats();
+  const analytics = teeAnalytics(opts.analytics ?? noopAnalytics, localStats);
+  const stats: StatsSource = opts.prometheus
+    ? cachedStats(new PrometheusStats({ ...opts.prometheus, fallback: localStats }), 60_000)
+    : localStats;
   const site = Site.load(opts.siteRoot ?? DEFAULT_SITE_ROOT);
   const who = (c: Context): { surface: Surface; client: string } => ({
     surface: c.req.header(WEB_CLIENT_HEADER) === "web" ? "web" : "api",
@@ -95,10 +149,33 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     analytics.httpRequest({ route: routeLabel(c.req.path), method: c.req.method, status: c.res.status, tookMs: Date.now() - started });
   });
 
-  // Gzip/deflate text responses (pages, JSON, JS). Zip downloads are not
-  // compressible types, so they stream through untouched.
+  // HSTS on every HTTPS response (TLS terminates at the edge proxy, which sets X-Forwarded-Proto).
+  const httpsOrigin = opts.publicBaseUrl?.startsWith("https://") ?? false;
+  app.use("*", async (c, next) => {
+    await next();
+    if (httpsOrigin || c.req.header("x-forwarded-proto") === "https") {
+      c.res.headers.set("strict-transport-security", "max-age=31536000; includeSubDomains");
+    }
+  });
+
+  // Gzip/deflate text responses that aren't already encoded (site files are
+  // Brotli-compressed by Site). Zip downloads are not compressible, so they
+  // stream through untouched.
   app.use("*", compress());
-  app.use("*", cors({ origin: "*", exposeHeaders: ["mcp-session-id"] }));
+
+  // CORS only where cross-origin reads make sense: the API, MCP and the
+  // machine-readable files. HTML pages don't send Access-Control-Allow-Origin.
+  const corsMw = cors({ origin: "*", exposeHeaders: ["mcp-session-id", ...RATE_LIMIT_HEADERS] });
+  app.use("*", (c, next) => {
+    const p = c.req.path;
+    const machine = p.startsWith("/v1/") || p === "/mcp" || p === "/health" || /\.(json|md|txt|xml)$/i.test(p);
+    return machine ? corsMw(c, next) : next();
+  });
+  if (opts.rateLimit && opts.rateLimit.limit > 0) {
+    const limiter = rateLimit(opts.rateLimit);
+    app.use("/v1/*", limiter);
+    app.use("/mcp", limiter);
+  }
 
   if (opts.apiKey) {
     const key = opts.apiKey;
@@ -123,24 +200,42 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     return c.json({ error: errorMessage(err) }, 500);
   });
 
-  /** Serve a site file (or the HTML 404); undefined when there is no site or no match. */
+  /**
+   * Serve a site file, or the 404 page; undefined when there is no site.
+   * Pages negotiate HTML vs Markdown on Accept (`/` -> /AGENTS.md, `/docs/mcp`
+   * -> /docs/mcp.md) and say so with `Vary: Accept`; unknown paths answer a
+   * Markdown 404 to agents and the HTML 404 page to browsers.
+   */
   const serveSite = (c: Context, path: string): Response | undefined => {
-    // Agents that ask for markdown get the page's markdown twin (/ -> /AGENTS.md).
-    if (site && c.req.header("accept")?.includes("text/markdown")) {
-      const twin = site.markdownFor(path.length > 1 ? path.replace(/\/+$/, "") : path);
-      if (twin) path = twin;
+    if (!site) return undefined;
+    const markdown = prefersMarkdown(c.req.header("accept"));
+    const route = path.length > 1 ? path.replace(/\/+$/, "") : path;
+    const negotiated = site.isPage(route);
+    const twin = markdown && negotiated ? site.markdownFor(route) : undefined;
+    const serveOpts: ServeOptions = {
+      ifNoneMatch: c.req.header("if-none-match"),
+      acceptEncoding: c.req.header("accept-encoding"),
+      rewrite: twin ? undefined : pageRewrite(route, new URL(c.req.url).searchParams),
+    };
+    let hit = site.resolve(twin ?? path, serveOpts);
+    if (markdown && (!hit || ("status" in hit && hit.status === 404))) {
+      hit = site.markdownNotFound(path, opts.publicBaseUrl ?? new URL(c.req.url).origin);
     }
-    const hit = site?.resolve(path, c.req.header("if-none-match"));
     if (!hit) return undefined;
     if ("redirect" in hit) return c.redirect(hit.redirect + (new URL(c.req.url).search || ""), 301);
+    const headers = { ...hit.headers };
+    if (negotiated && !/\bAccept\b/.test(headers.vary ?? "")) headers.vary = headers.vary ? `Accept, ${headers.vary}` : "Accept";
     if (hit.page && hit.status === 200) analytics.pageView({ page: hit.page });
-    if (c.req.method === "HEAD") return new Response(null, { status: hit.status, headers: hit.headers });
-    return new Response(hit.status === 304 ? null : new Uint8Array(hit.body), { status: hit.status, headers: hit.headers });
+    else if (twin && hit.status === 200) analytics.pageView({ page: `${route} (markdown)` });
+    if (c.req.method === "HEAD") return new Response(null, { status: hit.status, headers });
+    return new Response(hit.status === 304 ? null : new Uint8Array(hit.body), { status: hit.status, headers });
   };
 
   app.get("/", (c) => {
     const accept = c.req.header("accept") ?? "";
     if (site && (accept.includes("text/html") || accept.includes("text/markdown"))) return serveSite(c, "/")!;
+    // The same URL serves HTML, Markdown or this JSON index depending on Accept.
+    c.header("vary", "Accept");
     return c.json({
       name: "3d-asset-server",
       description: "Search and download 3D models, materials, textures, HDRIs and game assets across many sources.",
@@ -151,6 +246,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
       },
       endpoints: {
         providers: "/v1/providers",
+        stats: "/v1/stats",
         search: "/v1/search?q=wooden+chair&type=model&free=true",
         asset: "/v1/assets/{provider}:{id}",
         files: "/v1/assets/{provider}:{id}/files?format=gltf&resolution=2k",
@@ -167,6 +263,21 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   app.get("/openapi.json", (c) => c.json(openApiSpec(opts.publicBaseUrl)));
 
   app.get("/v1/providers", (c) => c.json({ providers: service.listProviders() }));
+
+  app.get("/v1/stats", async (c) => {
+    const providers = service.listProviders();
+    const usage = await stats.snapshot();
+    c.header("cache-control", "public, max-age=60");
+    return c.json({
+      ...usage,
+      catalog: {
+        sources: providers.length,
+        directDownload: providers.filter((p) => p.supportsDownload).length,
+        byAccess: tally(providers.map((p) => p.access)),
+        byPricing: tally(providers.map((p) => p.pricing)),
+      },
+    });
+  });
 
   app.get("/v1/search", async (c) => {
     const p = searchParams.parse(c.req.query());
@@ -237,6 +348,13 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     });
   });
 
+  // Opening the MCP URL in a browser leads to the setup guide instead of a JSON-RPC error.
+  app.get("/mcp", async (c, next) => {
+    const accept = c.req.header("accept") ?? "";
+    if (accept.includes("text/html") && !accept.includes("text/event-stream")) return c.redirect("/docs/mcp", 302);
+    await next();
+  });
+
   // MCP over Streamable HTTP, stateless: a fresh server+transport per request.
   app.all("/mcp", async (c) => {
     const server = createMcpServer(service, {
@@ -260,9 +378,12 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   // Everything else is the website (pages, /_astro assets, robots.txt, sitemap, llms.txt, ...).
   app.on(["GET", "HEAD"], "*", (c) => {
     if (c.req.path.startsWith("/v1/")) return c.json({ error: "not found" }, 404);
+    const alias = ALIASES[c.req.path.replace(/\/+$/, "").toLowerCase()];
+    if (alias) return c.redirect(alias, 301);
     return serveSite(c, c.req.path) ?? c.json({ error: "not found" }, 404);
   });
-  app.notFound((c) => c.json({ error: "not found" }, 404));
+  // Paths the router can't match (e.g. with encoded control characters) get the same 404 treatment.
+  app.notFound((c) => (c.req.path.startsWith("/v1/") ? undefined : serveSite(c, c.req.path)) ?? c.json({ error: "not found" }, 404));
 
   return app;
 }

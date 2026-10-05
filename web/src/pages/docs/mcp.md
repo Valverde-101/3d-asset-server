@@ -1,11 +1,11 @@
 ---
 layout: ../../layouts/DocsLayout.astro
-title: Use with coding agents (MCP)
+title: MCP server for coding agents
 crumb: Coding agents & MCP
 description: Connect Claude Code, Cursor, VS Code, Windsurf, Codex or Gemini CLI to the 3D Asset Server MCP server so your agent finds and downloads 3D assets.
 ---
 
-# Use with coding agents (MCP)
+# 3D Asset Server MCP server for coding agents
 
 3D Asset Server is a [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it once and your coding agent can search 17 asset sites, check licences and pull models, textures and HDRIs into your project while it writes the code that uses them.
 

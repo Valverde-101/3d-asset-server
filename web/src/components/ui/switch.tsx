@@ -1,31 +1,42 @@
 import * as React from "react"
-import { cn } from "cn"
-import { Switch as SwitchPrimitive } from "radix-ui"
 
+import { cn } from "cn"
+
+/**
+ * Accessible on/off switch built on a native checkbox (`role="switch"`) inside
+ * its own <label>, so it is labelled and operable in server-rendered HTML
+ * without JavaScript. Visually identical to the shadcn/ui switch.
+ */
 function Switch({
   className,
-  size = "default",
+  label,
+  labelClassName,
+  checked,
+  onCheckedChange,
   ...props
-}: React.ComponentProps<typeof SwitchPrimitive.Root> & {
-  size?: "sm" | "default"
+}: Omit<React.ComponentProps<"input">, "type" | "onChange"> & {
+  label: React.ReactNode
+  labelClassName?: string
+  onCheckedChange?: (checked: boolean) => void
 }) {
   return (
-    <SwitchPrimitive.Root
-      data-slot="switch"
-      data-size={size}
-      className={cn(
-        "peer group/switch inline-flex shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 data-[size=default]:h-[1.15rem] data-[size=default]:w-8 data-[size=sm]:h-3.5 data-[size=sm]:w-6 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input dark:data-[state=unchecked]:bg-input/80",
-        className
-      )}
-      {...props}
-    >
-      <SwitchPrimitive.Thumb
-        data-slot="switch-thumb"
-        className={cn(
-          "pointer-events-none block rounded-full bg-background ring-0 transition-transform group-data-[size=default]/switch:size-4 group-data-[size=sm]/switch:size-3 data-[state=checked]:translate-x-[calc(100%-2px)] data-[state=unchecked]:translate-x-0 dark:data-[state=checked]:bg-primary-foreground dark:data-[state=unchecked]:bg-foreground"
-        )}
+    <label data-slot="switch" className={cn("inline-flex cursor-pointer items-center gap-2 select-none", className)}>
+      <input
+        type="checkbox"
+        role="switch"
+        className="peer sr-only"
+        checked={checked}
+        onChange={(e) => onCheckedChange?.(e.target.checked)}
+        {...props}
       />
-    </SwitchPrimitive.Root>
+      <span
+        aria-hidden="true"
+        className="inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full border border-transparent bg-input shadow-xs transition-all peer-checked:bg-primary peer-focus-visible:ring-[3px] peer-focus-visible:ring-ring/50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50 dark:bg-input/80 dark:peer-checked:bg-primary [&>span]:translate-x-0 peer-checked:[&>span]:translate-x-[calc(100%-2px)] dark:[&>span]:bg-foreground dark:peer-checked:[&>span]:bg-primary-foreground"
+      >
+        <span className="pointer-events-none block size-4 rounded-full bg-background ring-0 transition-transform" />
+      </span>
+      <span className={labelClassName}>{label}</span>
+    </label>
   )
 }
 

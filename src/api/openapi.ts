@@ -1,4 +1,5 @@
 import { ASSET_TYPES } from "../core/types.js";
+import { allProviders } from "../providers/index.js";
 
 const DEFAULT_PUBLIC_URL = "https://3d.shep.bot";
 
@@ -59,14 +60,14 @@ export function openApiSpec(baseUrl?: string) {
     score: 0.92,
   };
 
-  return {
+  const spec = {
     openapi: "3.1.0",
     info: {
       title: "3D Asset Server API",
       version: "0.1.0",
       summary: "One search API for free and paid 3D models, PBR materials, textures, HDRIs and game assets.",
       description: [
-        "Search 17 asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io and more),",
+        `Search ${allProviders.length} asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io and more),`,
         "get licences and file lists, and download glTF/FBX/Blend models, PBR texture maps and HDRIs.",
         "",
         "**Typical flow:** `GET /v1/search` → `GET /v1/assets/{id}` → `GET /v1/assets/{id}/download`.",
@@ -76,11 +77,20 @@ export function openApiSpec(baseUrl?: string) {
         "",
         "**For AI agents:** the same capabilities are exposed as MCP tools at `/mcp` (Streamable HTTP).",
         "See [Use with coding agents](/docs/mcp).",
+        "",
+        "**Rate limits:** 120 requests per minute per client on `/v1/*` and `/mcp`. Every response carries",
+        "`RateLimit-Policy` and `RateLimit` (IETF RateLimit header fields) plus `RateLimit-Limit`,",
+        "`RateLimit-Remaining` and `RateLimit-Reset`; a `429` adds `Retry-After` (seconds).",
+        "",
+        "**Versioning:** the major version is in the path (`/v1`). Breaking changes only ship in a new major",
+        "version; deprecated endpoints announce themselves with `Deprecation` and `Sunset` headers at least",
+        "90 days ahead. See [Versioning & deprecation](/docs/api/versioning).",
       ].join("\n"),
       contact: { name: "3D Asset Server", url: "https://github.com/arielshad/3d-asset-server" },
       license: { name: "Apache-2.0", identifier: "Apache-2.0" },
     },
     externalDocs: { description: "Guides: quick start, MCP setup, API usage", url: `${server}/docs` },
+    "x-api-lifecycle": { versioning: "path (/v1)", deprecationPolicy: `${server}/docs/api/versioning`, minimumSunsetNoticeDays: 90 },
     servers: [{ url: server, description: "This server" }],
     tags: [
       { name: "Search", description: "Find assets across every source in one call." },
@@ -95,8 +105,86 @@ export function openApiSpec(baseUrl?: string) {
         bearer: { type: "http", scheme: "bearer", description: "Only when the server sets ASSET_SERVER_API_KEY." },
         apiKey: { type: "apiKey", in: "header", name: "x-api-key", description: "Same key, as a header." },
       },
+      headers: {
+        RateLimit: { description: 'Current quota, e.g. `"default";r=117;t=42` (r = requests remaining, t = seconds until reset).', schema: { type: "string" } },
+        "RateLimit-Policy": { description: 'Quota policy, e.g. `"default";q=120;w=60` (q = requests per window, w = window seconds).', schema: { type: "string" } },
+        "RateLimit-Limit": { description: "Requests allowed per window.", schema: { type: "integer" } },
+        "RateLimit-Remaining": { description: "Requests left in the current window.", schema: { type: "integer" } },
+        "RateLimit-Reset": { description: "Seconds until the window resets.", schema: { type: "integer" } },
+        "Retry-After": { description: "Seconds to wait before retrying (on 429).", schema: { type: "integer" } },
+      },
+      responses: {
+        TooManyRequests: {
+          description: "Rate limit exceeded. Wait `Retry-After` seconds.",
+          headers: {
+            "Retry-After": { $ref: "#/components/headers/Retry-After" },
+            RateLimit: { $ref: "#/components/headers/RateLimit" },
+            "RateLimit-Policy": { $ref: "#/components/headers/RateLimit-Policy" },
+          },
+          content: json(ref("Error"), { error: "Rate limit exceeded: 120 requests per 60s. Retry after 12s.", retryAfter: 12 }),
+        },
+      },
       schemas: {
         AssetType: { type: "string", enum: [...ASSET_TYPES] },
+        UsageWindow: {
+          type: "object",
+          required: ["key", "label", "searches", "searchesWithResults", "bySurface", "assetViews", "downloads", "toolCalls", "pageViews"],
+          properties: {
+            key: { type: "string", description: "`24h`, `7d`, or `process` (since the last restart).", example: "24h" },
+            label: { type: "string", example: "Last 24 hours" },
+            searches: { type: "integer" },
+            searchesWithResults: { type: "integer" },
+            bySurface: {
+              type: "object",
+              required: ["web", "api", "mcp"],
+              properties: { web: { type: "integer" }, api: { type: "integer" }, mcp: { type: "integer" } },
+            },
+            assetViews: { type: "integer" },
+            downloads: { type: "integer" },
+            toolCalls: { type: "integer", description: "MCP tool calls." },
+            pageViews: { type: "integer", description: "Website pages served." },
+          },
+        },
+        Ranked: { type: "object", required: ["name", "count"], properties: { name: { type: "string" }, count: { type: "integer" } } },
+        ProviderHealth: {
+          type: "object",
+          required: ["provider", "requests", "ok", "errors", "timeouts", "okRate", "p50Ms", "p95Ms"],
+          properties: {
+            provider: { type: "string", example: "polyhaven" },
+            requests: { type: "integer", description: "Searches that reached the source." },
+            ok: { type: "integer" },
+            errors: { type: "integer" },
+            timeouts: { type: "integer" },
+            okRate: { type: ["number", "null"], minimum: 0, maximum: 1 },
+            p50Ms: { type: ["integer", "null"] },
+            p95Ms: { type: ["integer", "null"] },
+          },
+        },
+        Stats: {
+          type: "object",
+          required: ["generatedAt", "source", "windows", "breakdownLabel", "clients", "tools", "assetTypes", "providers", "catalog"],
+          properties: {
+            generatedAt: { type: "string", format: "date-time" },
+            source: { type: "string", enum: ["prometheus", "process"] },
+            since: { type: "string", format: "date-time", description: "Start of counting for `source: process`." },
+            windows: { type: "array", items: ref("UsageWindow") },
+            breakdownLabel: { type: "string", description: "Period covered by `clients`, `tools` and `assetTypes`.", example: "Last 7 days" },
+            clients: { type: "array", items: ref("Ranked"), description: "Searches by client family (claude-code, cursor, browser, curl…)." },
+            tools: { type: "array", items: ref("Ranked"), description: "MCP tool calls by tool." },
+            assetTypes: { type: "array", items: ref("Ranked"), description: "Searches by asset type filter (`any` = no filter)." },
+            providers: { type: "array", items: ref("ProviderHealth"), description: "Per-source health over the last 24 hours." },
+            catalog: {
+              type: "object",
+              required: ["sources", "directDownload", "byAccess", "byPricing"],
+              properties: {
+                sources: { type: "integer" },
+                directDownload: { type: "integer" },
+                byAccess: { type: "object", additionalProperties: { type: "integer" } },
+                byPricing: { type: "object", additionalProperties: { type: "integer" } },
+              },
+            },
+          },
+        },
         License: {
           type: "object",
           required: ["name"],
@@ -223,7 +311,7 @@ export function openApiSpec(baseUrl?: string) {
         Error: {
           type: "object",
           required: ["error"],
-          properties: { error: { type: "string" }, url: { type: "string", format: "uri" } },
+          properties: { error: { type: "string" }, url: { type: "string", format: "uri" }, retryAfter: { type: "integer" } },
         },
       },
     },
@@ -316,6 +404,21 @@ export function openApiSpec(baseUrl?: string) {
           },
         },
       },
+      "/v1/stats": {
+        get: {
+          operationId: "getStats",
+          tags: ["Sources"],
+          summary: "Usage statistics",
+          description:
+            "Aggregate usage of this server: searches by surface (web, API, MCP), downloads, MCP tool calls, the client families " +
+            "and asset types searched most, and per-source health (success rate, p50/p95 latency). Counts come from Prometheus " +
+            "(`source: prometheus`, last 24 hours and 7 days) or, when it is unavailable, from this process since it started " +
+            "(`source: process`). No queries, IPs or user agents are exposed. Cached for 60 seconds.",
+          responses: {
+            200: { description: "Usage statistics.", content: json(ref("Stats")) },
+          },
+        },
+      },
       "/mcp": {
         post: {
           operationId: "mcp",
@@ -354,4 +457,18 @@ export function openApiSpec(baseUrl?: string) {
       },
     },
   };
+
+  // Every rate-limited operation documents its headers and the 429 response.
+  const limited = { 429: { $ref: "#/components/responses/TooManyRequests" } };
+  const rateHeaders = Object.fromEntries(
+    ["RateLimit", "RateLimit-Policy", "RateLimit-Limit", "RateLimit-Remaining", "RateLimit-Reset"].map((h) => [h, { $ref: `#/components/headers/${h}` }]),
+  );
+  for (const [path, item] of Object.entries(spec.paths)) {
+    if (!path.startsWith("/v1/") && path !== "/mcp") continue;
+    for (const op of Object.values(item) as { responses: Record<string, Record<string, unknown>> }[]) {
+      for (const res of Object.values(op.responses)) if (!("$ref" in res)) res.headers = { ...(res.headers as object), ...rateHeaders };
+      Object.assign(op.responses, limited);
+    }
+  }
+  return spec;
 }

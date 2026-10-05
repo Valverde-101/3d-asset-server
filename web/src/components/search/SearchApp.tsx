@@ -1,10 +1,10 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { setNonce } from "get-nonce";
 import { ArrowUpRight, Download, Filter, Loader2, Search, SlidersHorizontal, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -24,6 +24,13 @@ const TYPES: [string, string][] = [
   ["audio", "Audio"],
 ];
 const PAGE = 24;
+
+// The server sends a per-request CSP nonce; the detail sheet's scroll lock
+// injects a <style> tag and must carry it.
+if (typeof document !== "undefined") {
+  const nonce = document.querySelector<HTMLMetaElement>('meta[property="csp-nonce"]')?.content;
+  if (nonce) setNonce(nonce);
+}
 
 interface Filters {
   q: string;
@@ -68,6 +75,9 @@ export default function SearchApp() {
   const [searched, setSearched] = useState(false);
   const [selected, setSelected] = useState<Asset | null>(null);
   const offset = useRef(0);
+  // The server already sends a unique <title> for the URL the page loaded with;
+  // only searches the user runs afterwards update it.
+  const firstRun = useRef(true);
   const seen = useRef(new Set<string>());
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -85,7 +95,8 @@ export default function SearchApp() {
     setSearched(true);
     const qs = toParams(f);
     window.history.replaceState(null, "", `/search?${qs.toString()}`);
-    document.title = f.q ? `${f.q} · 3D asset search` : "Search 3D assets · 3D Asset Server";
+    if (!firstRun.current) document.title = f.q ? `“${f.q}”: 3D assets · 3D Asset Server` : "Search free 3D models, textures & HDRIs · 3D Asset Server";
+    firstRun.current = false;
     try {
       const params = toParams(f, offset.current);
       params.set("limit", String(PAGE));
@@ -147,7 +158,14 @@ export default function SearchApp() {
             />
           </div>
           <Button type="submit" size="lg" className="h-11 rounded-xl px-5" disabled={loading}>
-            {loading ? <Loader2 className="size-4 animate-spin" /> : "Search"}
+            {loading ? (
+              <>
+                <Loader2 className="size-4 animate-spin" aria-hidden="true" />
+                <span className="sr-only">Searching…</span>
+              </>
+            ) : (
+              "Search"
+            )}
           </Button>
         </form>
 
@@ -171,14 +189,8 @@ export default function SearchApp() {
               );
             })}
           </div>
-          <div className="flex items-center gap-2">
-            <Switch id="free" checked={filters.free} onCheckedChange={(v) => update({ free: v })} />
-            <Label htmlFor="free" className="text-xs text-muted-foreground">Free only</Label>
-          </div>
-          <div className="flex items-center gap-2">
-            <Switch id="dl" checked={filters.downloadable} onCheckedChange={(v) => update({ downloadable: v })} />
-            <Label htmlFor="dl" className="text-xs text-muted-foreground">Direct download</Label>
-          </div>
+          <Switch label="Free only" labelClassName="text-xs font-medium text-muted-foreground" checked={filters.free} onCheckedChange={(v) => update({ free: v })} />
+          <Switch label="Direct download" labelClassName="text-xs font-medium text-muted-foreground" checked={filters.downloadable} onCheckedChange={(v) => update({ downloadable: v })} />
           <Popover>
             <PopoverTrigger asChild>
               <Button variant="outline" size="sm" className="h-7 gap-1.5 rounded-full text-xs">

@@ -1,0 +1,24 @@
+---
+// Plain prose pages (About, Contact, Privacy), written in Markdown.
+import BaseLayout from "./BaseLayout.astro";
+import { aboutPage, breadcrumbs } from "@/lib/schema";
+
+interface Props {
+  frontmatter: { title: string; description: string; schemaType?: "AboutPage" | "ContactPage" | "WebPage" };
+}
+const { title, description, schemaType = "WebPage" } = Astro.props.frontmatter;
+const path = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  markdown={`${path}.md`}
+  schema={[aboutPage({ title, description, path, type: schemaType }), breadcrumbs([{ name: "Home", path: "/" }, { name: title, path }])]}
+>
+  <div class="mx-auto max-w-3xl px-4 py-14 sm:px-6">
+    <article class="prose-docs">
+      <slot />
+    </article>
+  </div>
+</BaseLayout>

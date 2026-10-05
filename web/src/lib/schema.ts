@@ -3,7 +3,7 @@
  * the layout); pages add their own (SoftwareApplication, WebAPI, FAQPage,
  * TechArticle, BreadcrumbList, ItemList).
  */
-import { MCP_URL, PROVIDERS, SITE } from "./site";
+import { MCP_URL, ORG, PROVIDERS, SITE } from "./site";
 
 const abs = (path: string) => new URL(path, SITE.url).toString();
 const ORG_ID = `${SITE.url}/#organization`;
@@ -12,13 +12,40 @@ const APP_ID = `${SITE.url}/#app`;
 
 export type JsonLd = Record<string, unknown>;
 
+/**
+ * Organization with its contact point. `email` and `address` come from
+ * src/data/organization.json and are only emitted when filled in, so the
+ * markup never claims contact details that don't exist.
+ */
 export const organization = (): JsonLd => ({
   "@type": "Organization",
   "@id": ORG_ID,
-  name: "Shep",
-  url: "https://shep.bot",
+  name: ORG.name,
+  url: ORG.url,
   logo: abs("/icon-512.png"),
   sameAs: [SITE.repo],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      contactType: "customer support",
+      url: ORG.contactUrl,
+      availableLanguage: ["en"],
+      ...(ORG.email ? { email: ORG.email } : {}),
+    },
+    { "@type": "ContactPoint", contactType: "technical support", url: ORG.issuesUrl, availableLanguage: ["en"] },
+  ],
+  ...(ORG.address ? { address: { "@type": "PostalAddress", ...ORG.address } } : {}),
+});
+
+export const aboutPage = (a: { title: string; description: string; path: string; type: "AboutPage" | "ContactPage" | "WebPage" }): JsonLd => ({
+  "@type": a.type,
+  name: a.title,
+  description: a.description,
+  url: abs(a.path),
+  inLanguage: "en",
+  isPartOf: { "@id": SITE_ID },
+  about: { "@id": a.type === "AboutPage" ? APP_ID : ORG_ID },
+  publisher: { "@id": ORG_ID },
 });
 
 export const website = (): JsonLd => ({

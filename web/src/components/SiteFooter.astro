@@ -2,15 +2,15 @@
 import Logo from "./Logo.astro";
 import { SITE, SOURCE_COUNT } from "@/lib/site";
 const cols = [
-  { title: "Product", links: [["Search assets", "/search"], ["Sources & licences", "/docs/sources"], ["Self-hosting", "/docs/self-hosting"]] },
-  { title: "Developers", links: [["Quick start", "/docs"], ["Coding agents & MCP", "/docs/mcp"], ["REST API guide", "/docs/api"], ["API reference", "/docs/api/reference"]] },
+  { title: "Product", links: [["Search assets", "/search"], ["Sources & licences", "/docs/sources"], ["Usage statistics", "/stats"], ["About", "/about"], ["Contact", "/contact"], ["Privacy", "/privacy"]] },
+  { title: "Developers", links: [["Quick start", "/docs"], ["Coding agents & MCP", "/docs/mcp"], ["REST API guide", "/docs/api"], ["API reference", "/docs/api/reference"], ["CLI", "/docs/cli"], ["Self-hosting", "/docs/self-hosting"]] },
   { title: "For AI agents", links: [["AGENTS.md", "/AGENTS.md"], ["llms.txt", "/llms.txt"], ["llms-full.txt", "/llms-full.txt"], ["OpenAPI 3.1", "/openapi.json"]] },
 ];
 ---
 <footer class="border-t border-border/60">
   <div class="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_repeat(3,1fr)]">
     <div class="space-y-3">
-      <a href="/" class="flex items-center gap-2 font-semibold"><Logo class="size-6" />{SITE.name}</a>
+      <a href="/" class="flex items-center gap-2 font-semibold"><Logo class="size-6" id="logo-footer" />{SITE.name}</a>
       <p class="max-w-xs text-sm text-muted-foreground">
         One search box for {SOURCE_COUNT} 3D asset sites. Free to use, open source (Apache-2.0), built for people and AI agents.
       </p>

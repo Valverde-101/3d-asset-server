@@ -57,6 +57,11 @@ spec:
             # routed by the Ingress) + JSON event log lines for Loki.
             - name: METRICS_PORT
               value: "9464"
+            # The /stats page reads 24h / 7d totals back from the cluster
+            # Prometheus (shep-infra: kube-prometheus-stack, 10-day retention),
+            # which scrapes the port above via servicemonitor.yaml.
+            - name: PROMETHEUS_URL
+              value: http://kube-prometheus-stack-prometheus.monitoring.svc:9090
           envFrom:
             - secretRef:
                 name: asset-server-env
