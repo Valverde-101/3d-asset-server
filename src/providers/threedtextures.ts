@@ -10,6 +10,7 @@ import {
   qs,
   wantsType,
 } from "../core/util.js";
+import { addedSince, wpTotal } from "../core/census.js";
 
 /**
  * 3DTextures.me — a WordPress blog of free CC0 PBR materials (realistic and stylized).
@@ -154,6 +155,22 @@ export const threedtextures: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: false,
+
+  async census(ctx) {
+    const base = `${API}/posts`;
+    const [all, patreon, recent] = await Promise.all([
+      wpTotal(ctx.fetch, `${base}${qs({ per_page: 1, categories_exclude: CAT_TEXTURING_EXAMPLES, _fields: "id" })}`, ctx.signal),
+      wpTotal(ctx.fetch, `${base}${qs({ per_page: 1, categories: CAT_PATREON_EXCLUSIVE, _fields: "id" })}`, ctx.signal),
+      ctx.fetch.json<{ date?: string }[]>(`${base}${qs({ per_page: 100, _fields: "date" })}`, { signal: ctx.signal }),
+    ]);
+    return {
+      total: all,
+      free: all - patreon,
+      byType: { material: all },
+      addedLast30Days: addedSince(recent.map((p) => (p.date ? `${p.date}Z` : undefined))),
+      method: "WordPress REST API: X-WP-Total of material posts (excluding showcase posts)",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${SITE}/${qs({ s: q.query })}`;

@@ -3,6 +3,7 @@
  * the layout); pages add their own (SoftwareApplication, WebAPI, FAQPage,
  * TechArticle, BreadcrumbList, ItemList).
  */
+import { CATALOG } from "./catalog";
 import { MCP_URL, ORG, PROVIDERS, SITE } from "./site";
 
 const abs = (path: string) => new URL(path, SITE.url).toString();
@@ -139,6 +140,27 @@ export const sourcesList = (): JsonLd => ({
     position: i + 1,
     item: { "@type": "WebSite", name: p.name, url: p.homepage, description: p.description },
   })),
+});
+
+/** The daily catalog census as a schema.org Dataset (for dataset search and citation). */
+export const catalogDataset = (): JsonLd => ({
+  "@type": "Dataset",
+  "@id": `${SITE.url}/stats#catalog`,
+  name: "3D Asset Server catalog census",
+  description:
+    "Daily counts of the 3D models, PBR materials, textures, HDRIs and game asset packs held by the asset sites 3D Asset Server searches: listings per source, by asset type, licence and category, free and CC0 counts, and releases in the last 30 days.",
+  url: abs("/stats"),
+  isAccessibleForFree: true,
+  creator: { "@id": ORG_ID },
+  publisher: { "@id": ORG_ID },
+  dateModified: CATALOG.countedAt,
+  temporalCoverage: `${CATALOG.countedAt.slice(0, 10)}/..`,
+  keywords: ["3D assets", "3D models", "PBR textures", "HDRI", "CC0", "game assets", "asset libraries"],
+  variableMeasured: ["asset listings", "free listings", "CC0 listings", "listings by asset type", "listings per source", "listings released in the last 30 days"],
+  distribution: [
+    { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: abs("/catalog.json"), name: "Latest census" },
+    { "@type": "DataDownload", encodingFormat: "application/json", contentUrl: abs("/catalog-history.json"), name: "Daily history" },
+  ],
 });
 
 /** Node types that describe the page itself (they get the share image). */

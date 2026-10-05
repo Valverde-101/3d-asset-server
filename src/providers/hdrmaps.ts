@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import type { Asset, AssetDetails, AssetFile, AssetType, License, Provider, SearchQuery } from "../core/types.js";
 import { cleanText, filenameFromUrl, formatFromFilename, makeAsset, qs, typeMatches, wantsType } from "../core/util.js";
+import { mapLimit, wpTotal } from "../core/census.js";
 
 /**
  * HDRMAPS — WooCommerce shop of HDRIs (plus sky domes, 3D scans, bundles), with a "Freebies"
@@ -189,6 +190,24 @@ export const hdrmaps: Provider = {
   pricing: "freemium",
   license: LICENSE,
   supportsDownload: true,
+
+  async census(ctx) {
+    const count = (category: string, operator?: "not_in") =>
+      wpTotal(ctx.fetch, `${STORE}${qs({ per_page: 1, category, category_operator: operator, _fields: "id" })}`, ctx.signal);
+    const total = await count(HIDDEN_CATS.join(","), "not_in");
+    const [hdri, skyDomes, scans, photogrammetry, bundles, footage, addons, freebies] = await mapLimit(
+      [CAT.hdri, CAT.skyDomes, CAT.scans, CAT.photogrammetry, CAT.bundles, CAT.footage, CAT.addons, CAT.freebies],
+      3,
+      (c) => count(String(c)),
+    );
+    return {
+      total,
+      free: freebies,
+      byType: { hdri: hdri! + skyDomes!, model: scans! + photogrammetry!, pack: bundles, other: footage! + addons! },
+      categories: { HDRIs: hdri!, "Sky domes": skyDomes!, "3D scans": scans!, Photogrammetry: photogrammetry!, Bundles: bundles!, Footage: footage!, "Add-ons": addons!, Freebies: freebies! },
+      method: "WooCommerce Store API: X-WP-Total per shop category",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${SITE}/${qs({ s: q.query, post_type: "product" })}`;

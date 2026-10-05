@@ -89,22 +89,34 @@ Follow `docs/PROVIDERS_GUIDE.md` exactly.
    - Set `supportsDownload: true` only when `getAsset` returns plain-GET file
      URLs. You confirmed that with `curl -sSI` (no login, no Referer check, no
      redirect to an HTML page).
-2. **Register.** Add it to `allProviders` in `src/providers/index.ts`, after
+2. **Census.** Give the provider a `census(ctx)` method that counts what the
+   site holds in a few requests: total listings, free listings, listings per
+   asset type, and the site's own categories where cheap.
+   - Use the site's own totals: an API `total`, WordPress `X-WP-Total`
+     (`wpTotal` in `src/core/census.ts`), a "N results" line, or its sitemap.
+   - If the whole catalogue is one cached request, `catalogueCensus(this, ctx)`
+     does it.
+   - Set `atLeast: true` if the site caps its counts.
+   - Never page through the whole site.
+
+   `test/census.test.ts` fails for a searchable provider without one.
+3. **Register.** Add it to `allProviders` in `src/providers/index.ts`, after
    the other sources of its kind.
-3. **Offline test.**
+4. **Offline test.**
    - Save real responses with `curl -sS` under `test/fixtures/<id>/`. Trim them
      to what the parser needs, keeping each file under 100 KB.
    - Write `test/providers/<id>.test.ts` in the style of the existing tests:
-     search mapping, type filtering, pagination, and `getAsset` files (or
-     `null` for unknown ids).
-4. **Live test.** Write `test/live/<id>.live.test.ts`, guarded by
+     search mapping, type filtering, pagination, `getAsset` files (or `null`
+     for unknown ids), and the census against fixtures.
+5. **Live test.** Write `test/live/<id>.live.test.ts`, guarded by
    `describe.runIf(process.env.LIVE)`. It searches the real site and gets at
-   least one asset. If `supportsDownload` is true, it also checks with `HEAD`
-   that one file URL answers with a file content type.
-5. **Registry.** Append to `integrated`:
+   least one asset, and that `census()` returns a total above zero. If
+   `supportsDownload` is true, it also checks with `HEAD` that one file URL
+   answers with a file content type.
+6. **Registry.** Append to `integrated`:
    `{ "id", "name", "homepage", "access", "addedAt": "<today>", "addedBy": "agent" }`.
    `name`, `homepage` and `access` must match the provider.
-6. **Docs.**
+7. **Docs.**
    - Add a row to the Sources table in `README.md`, and to its
      download/link summary block.
    - Then update every "N sites" / "N asset sites" / "N 3D asset sites" count to

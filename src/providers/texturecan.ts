@@ -13,6 +13,7 @@ import {
   wantsType,
 } from "../core/util.js";
 
+
 /**
  * TextureCan — ~650 free CC0 PBR textures plus a few CC0 3D models (server-rendered PHP site).
  *
@@ -175,6 +176,19 @@ export const texturecan: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: true,
+
+  async census(ctx) {
+    const first = parseCards(await ctx.fetch.text(searchPath("", 1), { signal: ctx.signal }));
+    const last = first.lastPage > 1 ? parseCards(await ctx.fetch.text(searchPath("", first.lastPage), { signal: ctx.signal })) : first;
+    const textures = (first.lastPage - 1) * PAGE_SIZE + last.cards.filter((c) => !c.isModel).length;
+    const modelCount = parseCards(await ctx.fetch.text(`${SITE}/models/`, { signal: ctx.signal })).cards.length;
+    return {
+      total: textures + modelCount,
+      free: textures + modelCount,
+      byType: { material: textures, model: modelCount },
+      method: "Listing pages: full pages × 20 + the last page, plus the models page",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     if (q.types?.length && !wantsType(q, "material") && wantsType(q, "model")) return `${SITE}/models/`;

@@ -310,6 +310,7 @@ yours. Instead, `get_asset` returns direct file URLs plus a one-click `bundleUrl
 | `GET /v1/search?q=&type=&providers=&free=&downloadable=&limit=&offset=` | Ranked, merged results plus a per-site report (`ok`, `error`, `timeout`, `skipped`, `link`). |
 | `GET /v1/providers` | The source catalogue. |
 | `GET /og/query.png?q=&type=&free=` · `GET /og/asset.png?id=` | 1200×630 share cards for search and asset links (see below). |
+| `GET /v1/catalog` | Catalog census, counted daily: listings per source, by asset type, licence and category, free and CC0 counts, the last 30 days' releases, most downloaded assets. Same as `/catalog.json`; daily history at `/catalog-history.json`. |
 | `GET /v1/stats` | Usage totals (searches by surface, downloads, MCP tool calls, top clients and asset types) and per-source health (success rate, p50/p95 latency). Shown on [/stats](https://3d.shep.bot/stats). |
 | `GET /v1/assets/{provider}:{id}` | Full details, including every file. |
 | `GET /v1/assets/{id}/files?format=&resolution=&maps=&all=` | The files a download would fetch. |
@@ -476,6 +477,18 @@ collects the event lines, and the *3D Asset Server* Grafana dashboard shows both
 The public [/stats](https://3d.shep.bot/stats) page reads the same counters back through `GET /v1/stats`
 ([`src/core/stats.ts`](src/core/stats.ts)): from Prometheus when `PROMETHEUS_URL` is set (cached for a
 minute), otherwise from in-process tallies since the last restart. It shows aggregate counts only.
+
+### Catalog census
+
+[`.github/workflows/catalog-census.yml`](.github/workflows/catalog-census.yml) runs
+[`scripts/census.mjs`](scripts/census.mjs) daily: every provider's `census()` counts what its site
+holds in a few requests (API totals, catalogues, WordPress `X-WP-Total`, result counts or sitemaps; see
+[`src/core/census.ts`](src/core/census.ts)). The result is committed to `web/src/data/catalog.json` with
+one point per day in `catalog-history.json`, then CI deploys it. It feeds the
+[/stats](https://3d.shep.bot/stats) page, the homepage numbers, `llms.txt`, `/v1/catalog` and a
+schema.org `Dataset`.
+- Counts the source caps (BlenderKit stops at 10,000 per type) are marked as lower bounds.
+- A source whose count fails keeps its last good numbers, marked `stale`.
 
 ### Share previews (Open Graph)
 

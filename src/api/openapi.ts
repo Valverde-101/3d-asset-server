@@ -126,6 +126,63 @@ export function openApiSpec(baseUrl?: string) {
       },
       schemas: {
         AssetType: { type: "string", enum: [...ASSET_TYPES] },
+        CountWithBound: {
+          type: "object",
+          required: ["count"],
+          properties: { count: { type: "integer" }, atLeast: { type: "boolean", description: "The count is a lower bound." } },
+        },
+        SourceCensus: {
+          type: "object",
+          required: ["id", "name", "homepage", "total", "byType", "method", "countedAt"],
+          properties: {
+            id: { type: "string", example: "polyhaven" },
+            name: { type: "string", example: "Poly Haven" },
+            homepage: { type: "string", format: "uri" },
+            total: { type: "integer", description: "Listings on the source (free and paid)." },
+            atLeast: { type: "boolean" },
+            free: { type: "integer" },
+            byType: { type: "object", additionalProperties: { type: "integer" }, example: { hdri: 997, material: 865, model: 521 } },
+            byLicense: { type: "object", additionalProperties: { type: "integer" } },
+            categories: { type: "object", additionalProperties: { type: "integer" } },
+            unit: { type: "string", enum: ["assets", "packs"] },
+            addedLast30Days: { type: "integer" },
+            downloads: { type: "integer", description: "Total downloads, when the source publishes them." },
+            highlights: {
+              type: "array",
+              items: {
+                type: "object",
+                required: ["label", "title", "url"],
+                properties: { label: { type: "string" }, title: { type: "string" }, url: { type: "string", format: "uri" }, value: { type: "integer" } },
+              },
+            },
+            method: { type: "string", description: "How the source was counted." },
+            countedAt: { type: "string", format: "date-time" },
+            stale: { type: "object", properties: { since: { type: "string", format: "date-time" }, error: { type: "string" } } },
+          },
+        },
+        Catalog: {
+          type: "object",
+          required: ["countedAt", "totals", "byType", "sources"],
+          properties: {
+            countedAt: { type: "string", format: "date-time" },
+            totals: {
+              type: "object",
+              properties: {
+                listings: ref("CountWithBound"),
+                free: ref("CountWithBound"),
+                cc0: ref("CountWithBound"),
+                directDownload: ref("CountWithBound"),
+                addedLast30Days: { type: "integer" },
+                sourcesCounted: { type: "integer" },
+                sourcesLinked: { type: "integer" },
+              },
+            },
+            byType: { type: "object", additionalProperties: ref("CountWithBound") },
+            byLicense: { type: "object", additionalProperties: { type: "integer" } },
+            sources: { type: "array", items: ref("SourceCensus") },
+            linked: { type: "array", items: { type: "object", properties: { id: { type: "string" }, name: { type: "string" }, homepage: { type: "string" } } } },
+          },
+        },
         UsageWindow: {
           type: "object",
           required: ["key", "label", "searches", "searchesWithResults", "bySurface", "assetViews", "downloads", "toolCalls", "pageViews"],
@@ -417,6 +474,19 @@ export function openApiSpec(baseUrl?: string) {
               content: json({ type: "object", required: ["providers"], properties: { providers: { type: "array", items: ref("Provider") } } }),
             },
           },
+        },
+      },
+      "/v1/catalog": {
+        get: {
+          operationId: "getCatalog",
+          tags: ["Sources"],
+          summary: "Catalog census",
+          description:
+            "How many assets every source holds, counted once a day: listings per source, by asset type, licence and the source's " +
+            "own categories, free counts, listings added in the last 30 days, and highlights such as the most downloaded asset. " +
+            "`atLeast: true` marks lower bounds (sources that cap their counts). Sources whose count failed today keep their last " +
+            "good numbers with `stale`. The same file is at `/catalog.json`; one point per day is in `/catalog-history.json`.",
+          responses: { 200: { description: "Catalog census.", content: json(ref("Catalog")) } },
         },
       },
       "/v1/stats": {

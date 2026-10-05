@@ -1,5 +1,6 @@
 import type { AssetDetails, AssetFile, AssetType, Provider, SearchQuery } from "../core/types.js";
 import { LICENSES, filterLocal, makeAsset, paginate, qs, wantsType } from "../core/util.js";
+import { addedSince, countBy, top } from "../core/census.js";
 
 const API = "https://api.polyhaven.com";
 const CATALOGUE_TTL = 60 * 60_000;
@@ -115,6 +116,26 @@ export const polyhaven: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: true,
+
+  async census(ctx) {
+    const all = Object.entries(await ctx.fetch.json<Record<string, PhAsset>>(`${API}/assets?t=all`, { signal: ctx.signal }));
+    const byDownloads = [...all].sort((a, b) => (b[1].download_count ?? 0) - (a[1].download_count ?? 0));
+    const label: Record<AssetType, string> = { hdri: "HDRI", material: "texture", model: "model" } as Record<AssetType, string>;
+    const highlights = (["hdri", "material", "model"] as AssetType[]).flatMap((t) => {
+      const hit = byDownloads.find(([, a]) => TYPE_MAP[a.type] === t);
+      return hit ? [{ label: `Most downloaded ${label[t]}`, title: hit[1].name, url: `https://polyhaven.com/a/${hit[0]}`, value: hit[1].download_count }] : [];
+    });
+    return {
+      total: all.length,
+      free: all.length,
+      byType: countBy(all, ([, a]) => TYPE_MAP[a.type]),
+      categories: top(countBy(all, ([, a]) => a.categories), 12),
+      addedLast30Days: addedSince(all.map(([, a]) => a.date_published)),
+      downloads: all.reduce((n, [, a]) => n + (a.download_count ?? 0), 0),
+      highlights,
+      method: "Poly Haven API: every asset (/assets)",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     const t = q.types?.find((x) => PH_TYPE[x]);

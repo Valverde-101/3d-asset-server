@@ -15,6 +15,7 @@ import {
   uniq,
   wantsType,
 } from "../core/util.js";
+import { catalogueCensus } from "../core/census.js";
 
 /**
  * Kenney (https://kenney.nl/assets): ~220 CC0 game asset packs (2D, 3D, audio, textures, UI, fonts).
@@ -240,6 +241,10 @@ export const kenney: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: true,
+
+  census(ctx) {
+    return catalogueCensus(this, ctx, "packs");
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${BASE}/assets${qs({ search: meaningfulQuery(q.query) || q.query.trim() })}`;

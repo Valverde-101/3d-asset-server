@@ -47,19 +47,51 @@ function sourcesMarkdown(providers) {
   ].join("\n");
 }
 
-function statsMarkdown(providers, integrations, site) {
+const num = (n, atLeast) => `${n.toLocaleString("en")}${atLeast ? "+" : ""}`;
+const TYPE_NAMES = { model: "3D models", material: "PBR materials", texture: "Textures", hdri: "HDRIs", pack: "Asset packs", sprite: "Sprites", ui: "UI kits", audio: "Audio", font: "Fonts", other: "Other" };
+
+/** One-line headline numbers from the catalog census (for llms.txt). */
+function catalogLine(c) {
+  const t = c.totals;
+  const types = Object.entries(c.byType).sort((a, b) => b[1].count - a[1].count).map(([k, v]) => `${num(v.count, v.atLeast)} ${(TYPE_NAMES[k] ?? k).toLowerCase()}`);
+  return `**Catalog (counted ${c.countedAt.slice(0, 10)}).** ${num(t.listings.count, t.listings.atLeast)} asset listings from ${t.sourcesCounted} counted sources, ${num(t.free.count, t.free.atLeast)} free and ${num(t.cc0.count, t.cc0.atLeast)} CC0: ${types.join(", ")}.`;
+}
+
+function statsMarkdown(providers, integrations, catalog, site) {
   const recent = integrations.slice(0, 6).map((i) => `- [${i.name}](${i.homepage}) (\`${i.id}\`), added ${i.addedAt}`);
+  const t = catalog.totals;
+  const rows = catalog.sources.map(
+    (s) =>
+      `| [${s.name}](${s.homepage}) | ${num(s.total, s.atLeast)}${s.unit === "packs" ? " packs" : ""} | ${s.free !== undefined ? num(s.free) : s.pricing === "free" ? num(s.total) : "–"} | ${Object.entries(s.byType).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([k, n]) => `${TYPE_NAMES[k] ?? k} ${num(n)}`).join(", ")} | ${s.addedLast30Days ?? "–"} |`,
+  );
+  const highlights = catalog.sources.flatMap((s) => (s.highlights ?? []).map((h) => `- ${h.label} on ${s.name}: [${h.title}](${h.url})${h.value !== undefined ? ` (${num(h.value)} downloads)` : ""}`));
   return [
-    "# Usage statistics",
+    "# 3D assets in numbers",
     "",
-    `Live usage of 3D Asset Server and the health of its ${providers.length} sources. The numbers change every minute, so read them as JSON from \`GET ${site}/v1/stats\` (schema \`Stats\` in ${site}/openapi.json):`,
+    `Counted ${catalog.countedAt.slice(0, 10)} (daily). Machine-readable: \`GET ${site}/v1/catalog\` (same as ${site}/catalog.json; daily history at ${site}/catalog-history.json). "+" marks lower bounds.`,
     "",
-    "- `windows[]`: searches (by surface: `web`, `api`, `mcp`), searches with results, asset views, downloads, MCP tool calls and page views for the last 24 hours and 7 days (`source: prometheus`), or since the last restart (`source: process`).",
-    "- `clients`, `assetTypes`, `tools`: what was searched most, by client family, asset type filter and MCP tool.",
-    "- `providers[]`: per-source success rate and p50/p95 latency over the last 24 hours. Use it to see which sources are slow or failing right now.",
-    "- `catalog`: number of sources, how many allow direct downloads, by access method and pricing.",
+    "## Totals",
     "",
-    "Counts are anonymous totals: no search terms, IP addresses or user agents.",
+    `- Asset listings: ${num(t.listings.count, t.listings.atLeast)} from ${t.sourcesCounted} counted sources (a listing is one asset, or one pack on Kenney, Quaternius and itch.io)`,
+    `- Free: ${num(t.free.count, t.free.atLeast)}`,
+    `- CC0 / public domain: ${num(t.cc0.count, t.cc0.atLeast)}`,
+    `- Free with direct download through this server: ${num(t.directDownload.count, t.directDownload.atLeast)}`,
+    `- Released in the last 30 days (sources that date their listings): ${num(t.addedLast30Days)}`,
+    "",
+    "## By asset type",
+    "",
+    ...Object.entries(catalog.byType).sort((a, b) => b[1].count - a[1].count).map(([k, v]) => `- ${TYPE_NAMES[k] ?? k}: ${num(v.count, v.atLeast)}`),
+    "",
+    "## By source",
+    "",
+    "| Source | Listings | Free | Mostly | New (30 days) |",
+    "| --- | --- | --- | --- | --- |",
+    ...rows,
+    "",
+    ...(highlights.length ? ["## Most downloaded", "", ...highlights, ""] : []),
+    "## Live usage",
+    "",
+    `Searches, downloads, MCP tool calls and per-source health change every minute: read them from \`GET ${site}/v1/stats\` (schema \`Stats\` in ${site}/openapi.json). Counts are anonymous totals: no search terms, IP addresses or user agents.`,
     "",
     "## Recently added sources",
     "",
@@ -106,9 +138,14 @@ export default function agentFiles() {
         write("docs/sources.md", `${sources}\n---\nSource: ${site}/docs/sources\n`);
         docs.push({ route: "/docs/sources", title: "Sources & licences", description: `The ${providers.length} sites searched, with licences.`, md: sources });
 
-        const stats = statsMarkdown(providers, JSON.parse(read("src/data/integrations.json")).integrations, site);
+        // Machine-readable catalog census (scripts/census.mjs), also served at /v1/catalog.
+        write("catalog.json", read("src/data/catalog.json"));
+        write("catalog-history.json", read("src/data/catalog-history.json"));
+
+        const catalog = JSON.parse(read("src/data/catalog.json"));
+        const stats = statsMarkdown(providers, JSON.parse(read("src/data/integrations.json")).integrations, catalog, site);
         write("stats.md", `${stats}\n---\nSource: ${site}/stats\n`);
-        docs.push({ route: "/stats", title: "Usage statistics", description: "Live usage (searches, downloads, MCP tool calls) and per-source health; JSON at /v1/stats.", md: stats });
+        docs.push({ route: "/stats", title: "3D assets in numbers", description: "How many models, materials, HDRIs and packs every source holds (counted daily), plus live usage.", md: stats });
 
         const order = ["/docs", "/docs/mcp", "/docs/api", "/docs/api/versioning", "/docs/sources", "/docs/cli", "/docs/self-hosting", "/about", "/stats", "/contact", "/privacy"];
         const rank = (r) => (order.indexOf(r) === -1 ? order.length : order.indexOf(r));
@@ -133,6 +170,8 @@ export default function agentFiles() {
             "- getting an HDRI / environment map (\"sunset\", \"studio\") as HDR or EXR;",
             "- downloading those files into a codebase for Three.js, Babylon.js, React Three Fiber, Godot, Unity, Unreal, Blender or a website;",
             "- checking whether an asset's licence allows commercial use or requires attribution.",
+            "",
+            catalogLine(catalog),
             "",
             "Do not use it to generate new models or textures, to buy paid assets (paid results link to their store), or for non-3D stock photos and video.",
             "",

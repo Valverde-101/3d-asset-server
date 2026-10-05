@@ -49,6 +49,7 @@ export const NAV = [
   { href: "/docs/mcp", label: "AI agents" },
   { href: "/docs/api", label: "API" },
   { href: "/docs/api/reference", label: "Reference" },
+  { href: "/stats", label: "Stats" },
 ];
 
 export const DOCS_NAV = [

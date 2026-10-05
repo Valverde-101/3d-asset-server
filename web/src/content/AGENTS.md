@@ -79,4 +79,5 @@ Then load it with `RGBELoader` and set `scene.environment`, and tell the user: "
 - Coding agent setup: https://3d.shep.bot/docs/mcp
 - REST guide: https://3d.shep.bot/docs/api
 - Sources and licences: https://3d.shep.bot/docs/sources
+- How many assets each source holds (counted daily): https://3d.shep.bot/stats.md, JSON at https://3d.shep.bot/v1/catalog
 - Everything as one text file: https://3d.shep.bot/llms-full.txt

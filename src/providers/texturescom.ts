@@ -1,5 +1,6 @@
 import type { Asset, AssetType, Provider, SearchQuery } from "../core/types.js";
 import { cleanText, makeAsset, paginate, qs, typeMatches, wantsType } from "../core/util.js";
+import { top } from "../core/census.js";
 
 const ROOT = "https://www.textures.com";
 /** The site's SPA calls this unauthenticated JSON search; it returns up to 200 hits per page. */
@@ -14,6 +15,15 @@ const ROOT_TYPES: Record<number, AssetType> = {
   114552: "hdri", // HDR Environments
   23740: "hdri", // HDR Skies
 };
+
+interface TcCategory {
+  id: number;
+  name: string;
+  parentCategoryId: number | null;
+  photoSetCount?: number;
+  kind?: string;
+  enabled?: number;
+}
 
 interface TcItem {
   id: number;
@@ -80,6 +90,26 @@ export const texturescom: Provider = {
   access: "api",
   pricing: "freemium",
   supportsDownload: false,
+
+  async census(ctx) {
+    const tree = await ctx.fetch.json<{ data?: { categories?: TcCategory[] } }>(`${ROOT}/api/v1/category/tree`, { signal: ctx.signal });
+    const roots = (tree.data?.categories ?? []).filter((c) => c.parentCategoryId === null && c.enabled !== 0);
+    if (!roots.length) throw new Error("texturescom: empty category tree");
+    // Regular roots partition the texture library; "special" roots are curated cross-cuts
+    // (Decals, Glass, Sci-Fi…) except the 3D and HDR roots, which hold their own sets.
+    const counted = roots.filter((c) => c.kind === "regular" || ROOT_TYPES[c.id]);
+    const byType: Partial<Record<AssetType, number>> = {};
+    for (const c of counted) {
+      const t = ROOT_TYPES[c.id] ?? "texture";
+      byType[t] = (byType[t] ?? 0) + (c.photoSetCount ?? 0);
+    }
+    return {
+      total: counted.reduce((n, c) => n + (c.photoSetCount ?? 0), 0),
+      byType,
+      categories: top(Object.fromEntries(counted.map((c) => [c.name, c.photoSetCount ?? 0])), 12),
+      method: "Category tree: photo sets per top-level category",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${ROOT}/search${qs({ q: q.query })}`;

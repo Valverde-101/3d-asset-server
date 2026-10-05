@@ -38,7 +38,7 @@ const CHIPS = {
   "/docs/api/versioning": ["/v1", "RateLimit headers", "Deprecation"],
   "/docs/cli": ["npx", "stdio MCP", "Docker"],
   "/docs/self-hosting": ["Docker", "Kubernetes", "Prometheus"],
-  "/stats": ["Searches", "Downloads", "Source health"],
+  "/stats": ["Assets by type", "Every source", "Live usage"],
 };
 
 const attr = (html, re) => {
@@ -61,6 +61,8 @@ export default function ogImages() {
       "astro:build:done": async ({ dir, logger }) => {
         const { pageCard, renderPng } = await import(new URL("../../dist/og/render.js", import.meta.url).href);
         const providers = JSON.parse(readFileSync(join(root, "src/data/providers.json"), "utf8"));
+        const { totals } = JSON.parse(readFileSync(join(root, "src/data/catalog.json"), "utf8"));
+        const big = (c) => (c.count >= 1e6 ? `${Math.floor(c.count / 1e5) / 10}M` : c.count >= 1e4 ? `${Math.floor(c.count / 1e3)}K` : c.count.toLocaleString("en")) + (c.atLeast || c.count >= 1e4 ? "+" : "");
         const out = fileURLToPath(dir);
         const started = Date.now();
         let count = 0;
@@ -80,7 +82,7 @@ export default function ogImages() {
               ? pageCard({
                   title: "One search for every",
                   highlight: "free 3D asset",
-                  subtitle: `${providers.length} sites · glTF models, PBR textures, HDRIs · licences included · REST API & MCP for AI agents`,
+                  subtitle: `${big(totals.free)} free assets from ${providers.length} sites · glTF models, PBR textures, HDRIs · licences included · API & MCP for AI agents`,
                   chips: providers.slice(0, 4).map((p) => p.name),
                   site: host,
                 })

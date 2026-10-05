@@ -1,0 +1,189 @@
+---
+// The catalog census: what every source holds, counted daily (scripts/census.mjs).
+// Static HTML, so the numbers are indexable and quotable.
+import CopyButton from "@/components/stats/CopyQuote";
+import { CATALOG, CATALOG_SENTENCE, COUNTED_ON, FREE_LIBRARIES, HISTORY, TYPE_NAMES, TYPES_BY_SIZE, fmt, fmtShort } from "@/lib/catalog";
+
+const t = CATALOG.totals;
+const tiles = [
+  { label: "Asset listings", value: fmtShort(t.listings.count, t.listings.atLeast), exact: fmt(t.listings.count, t.listings.atLeast), hint: `on ${t.sourcesCounted} sources` },
+  { label: "Free", value: fmtShort(t.free.count, t.free.atLeast), exact: fmt(t.free.count, t.free.atLeast), hint: "free to download" },
+  { label: "CC0 / public domain", value: fmtShort(t.cc0.count, t.cc0.atLeast), exact: fmt(t.cc0.count, t.cc0.atLeast), hint: "no credit needed, commercial use OK" },
+  { label: "Direct downloads", value: fmtShort(t.directDownload.count, t.directDownload.atLeast), exact: fmt(t.directDownload.count, t.directDownload.atLeast), hint: "free files this server fetches for you" },
+];
+
+// Counts span 1 to millions, so bar lengths use a log scale (values are printed).
+const logPct = (n: number, max: number) => (n <= 0 ? 0 : Math.max(2, (Math.log10(n + 1) / Math.log10(max + 1)) * 100));
+const typeMax = Math.max(...TYPES_BY_SIZE.map((x) => x.count));
+const sourceMax = Math.max(...CATALOG.sources.map((s) => s.total));
+const mainTypes = (byType: Record<string, number>) =>
+  Object.entries(byType)
+    .filter(([, n]) => n > 0)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 3)
+    .map(([k, n]) => `${TYPE_NAMES[k] ?? k} ${fmtShort(n)}`)
+    .join(" · ");
+
+const highlights = CATALOG.sources.flatMap((s) => (s.highlights ?? []).map((h) => ({ ...h, source: s.name })));
+const downloads = CATALOG.sources.filter((s) => s.downloads);
+const dated = CATALOG.sources.filter((s) => s.addedLast30Days !== undefined);
+
+// Growth: free listings per day (CGTrader's paid catalogue would flatten everything else).
+const points = HISTORY.map((h) => ({ date: h.date, value: h.free }));
+const W = 640;
+const H = 160;
+const pad = { l: 8, r: 8, t: 12, b: 22 };
+const vMin = Math.min(...points.map((p) => p.value));
+const vMax = Math.max(...points.map((p) => p.value));
+const x = (i: number) => pad.l + (points.length > 1 ? (i / (points.length - 1)) * (W - pad.l - pad.r) : 0);
+const y = (v: number) => pad.t + (vMax === vMin ? 0.5 : 1 - (v - vMin) / (vMax - vMin)) * (H - pad.t - pad.b);
+const path = points.map((p, i) => `${i ? "L" : "M"}${x(i).toFixed(1)},${y(p.value).toFixed(1)}`).join(" ");
+---
+
+<section aria-labelledby="catalog" class="mt-10">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 id="catalog" class="text-2xl font-semibold tracking-tight">The catalog</h2>
+    <p class="text-sm text-muted-foreground">Counted daily · last count <time datetime={CATALOG.countedAt}>{COUNTED_ON}</time></p>
+  </div>
+
+  <dl class="mt-4 grid grid-cols-2 gap-4 lg:grid-cols-4">
+    {tiles.map((tile) => (
+      <div class="rounded-xl border bg-card/40 p-5">
+        <dt class="text-sm text-muted-foreground">{tile.label}</dt>
+        <dd class="mt-2 text-4xl font-semibold tabular-nums tracking-tight" title={tile.exact}>{tile.value}</dd>
+        <dd class="mt-1 text-xs text-muted-foreground"><span class="tabular-nums">{tile.exact}</span> · {tile.hint}</dd>
+      </div>
+    ))}
+  </dl>
+
+  <figure class="mt-4 flex flex-wrap items-start justify-between gap-3 rounded-xl border border-primary/30 bg-primary/5 p-5">
+    <blockquote class="max-w-3xl text-pretty text-base">{CATALOG_SENTENCE}</blockquote>
+    <CopyButton client:visible text={`${CATALOG_SENTENCE} Source: https://3d.shep.bot/stats`} />
+    <figcaption class="w-full text-xs text-muted-foreground">
+      Quote it freely. A "listing" is one asset, or one pack on Kenney, Quaternius and itch.io. Numbers with + are lower bounds (BlenderKit caps its counts at 10,000 per type).
+    </figcaption>
+  </figure>
+
+  <div class="mt-10 grid gap-8 lg:grid-cols-2">
+    <div>
+      <h3 class="font-medium">By asset type</h3>
+      <p class="mt-1 text-xs text-muted-foreground">Bar length on a log scale; each listing counts once.</p>
+      <ul class="mt-4 space-y-3">
+        {TYPES_BY_SIZE.map((row) => (
+          <li title={`${row.name}: ${fmt(row.count, row.atLeast)}`}>
+            <div class="flex items-baseline justify-between gap-3 text-sm">
+              <span>{row.name}</span>
+              <span class="tabular-nums text-muted-foreground">{fmt(row.count, row.atLeast)}</span>
+            </div>
+            <div class="mt-1.5 h-2.5 rounded-r-[4px] bg-muted" aria-hidden="true">
+              <div class="h-full rounded-r-[4px] bg-primary/80" style={`width:${logPct(row.count, typeMax).toFixed(1)}%`}></div>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="font-medium">Free libraries</h3>
+      <p class="mt-1 text-xs text-muted-foreground">Sources where every listing is free.</p>
+      <ul class="mt-4 divide-y rounded-xl border">
+        {FREE_LIBRARIES.map((s) => (
+          <li class="flex items-center justify-between gap-3 px-4 py-2.5 text-sm">
+            <a href={`/docs/sources#${s.id}`} class="font-medium hover:underline">{s.name}</a>
+            <span class="text-right text-muted-foreground">
+              <span class="tabular-nums text-foreground">{fmt(s.total, s.atLeast)}</span> {s.unit === "packs" ? "packs" : "assets"}
+              {s.license && <span class="ml-1 text-xs">· {s.license}</span>}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <h3 class="mt-12 font-medium">Every source</h3>
+  <p class="mt-1 text-xs text-muted-foreground">Listings per source, largest first (bar length on a log scale). "New" counts listings released in the last 30 days, where the source dates them.</p>
+  <div class="mt-4 overflow-x-auto rounded-xl border">
+    <table class="w-full text-sm">
+      <caption class="sr-only">Listings per source from the catalog census of {COUNTED_ON}</caption>
+      <thead class="bg-muted/50 text-left text-xs uppercase tracking-wide text-muted-foreground">
+        <tr>
+          <th scope="col" class="px-4 py-3 font-medium">Source</th>
+          <th scope="col" class="px-4 py-3 font-medium">Listings</th>
+          <th scope="col" class="px-4 py-3 text-right font-medium">Free</th>
+          <th scope="col" class="px-4 py-3 font-medium">Mostly</th>
+          <th scope="col" class="px-4 py-3 text-right font-medium">New (30 d)</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y">
+        {CATALOG.sources.map((s) => (
+          <tr class="align-top">
+            <th scope="row" class="px-4 py-3 text-left font-medium">
+              <a href={`/docs/sources#${s.id}`} class="hover:underline">{s.name}</a>
+              {s.stale && <div class="text-xs font-normal text-muted-foreground">last counted {s.stale.since.slice(0, 10)}</div>}
+            </th>
+            <td class="min-w-48 px-4 py-3" title={s.method}>
+              <div class="tabular-nums">{fmt(s.total, s.atLeast)} <span class="text-xs text-muted-foreground">{s.unit === "packs" ? "packs" : ""}</span></div>
+              <div class="mt-1.5 h-1.5 rounded-r-[4px] bg-muted" aria-hidden="true">
+                <div class="h-full rounded-r-[4px] bg-primary/80" style={`width:${logPct(s.total, sourceMax).toFixed(1)}%`}></div>
+              </div>
+            </td>
+            <td class="px-4 py-3 text-right tabular-nums">{s.free !== undefined ? fmt(s.free, s.atLeast && s.free >= 10_000) : s.pricing === "free" ? fmt(s.total) : "–"}</td>
+            <td class="px-4 py-3 text-muted-foreground">{mainTypes(s.byType)}</td>
+            <td class="px-4 py-3 text-right tabular-nums">{s.addedLast30Days ?? "–"}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {CATALOG.linked.length > 0 && (
+    <p class="mt-2 text-xs text-muted-foreground">
+      Not counted: {CATALOG.linked.map((l) => l.name).join(", ")} (linked searches only; they block automated access).
+    </p>
+  )}
+
+  {highlights.length > 0 && (
+    <>
+      <h3 class="mt-12 font-medium">Most downloaded</h3>
+      <ul class="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {highlights.map((h) => (
+          <li class="rounded-xl border bg-card/40 p-5">
+            <p class="text-xs text-muted-foreground">{h.label} on {h.source}</p>
+            <a href={h.url} rel="noopener" class="mt-1 block font-medium hover:underline">{h.title}</a>
+            {h.value !== undefined && <p class="mt-2 text-2xl font-semibold tabular-nums tracking-tight">{fmt(h.value)} <span class="text-sm font-normal text-muted-foreground">downloads</span></p>}
+          </li>
+        ))}
+        {downloads.map((s) => (
+          <li class="rounded-xl border bg-card/40 p-5">
+            <p class="text-xs text-muted-foreground">All {s.name} assets</p>
+            <p class="mt-1 font-medium">Downloaded in total</p>
+            <p class="mt-2 text-2xl font-semibold tabular-nums tracking-tight">{fmtShort(s.downloads!)} <span class="text-sm font-normal text-muted-foreground">({fmt(s.downloads!)})</span></p>
+          </li>
+        ))}
+      </ul>
+    </>
+  )}
+
+  <h3 class="mt-12 font-medium">Free listings over time</h3>
+  {points.length > 1 ? (
+    <figure class="mt-4 rounded-xl border bg-card/40 p-4">
+      <svg viewBox={`0 0 ${W} ${H}`} class="h-40 w-full" role="img" aria-label={`Free listings from ${points[0]!.date} (${fmt(points[0]!.value)}) to ${points.at(-1)!.date} (${fmt(points.at(-1)!.value)})`}>
+        <line x1={pad.l} x2={W - pad.r} y1={H - pad.b} y2={H - pad.b} class="stroke-border" stroke-width="1" />
+        <path d={path} fill="none" class="stroke-primary" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />
+        {points.map((p, i) => (
+          <circle cx={x(i)} cy={y(p.value)} r="6" class="fill-transparent hover:fill-primary/30">
+            <title>{p.date}: {fmt(p.value)} free listings</title>
+          </circle>
+        ))}
+        <text x={pad.l} y={H - 6} class="fill-muted-foreground text-[11px]">{points[0]!.date}</text>
+        <text x={W - pad.r} y={H - 6} text-anchor="end" class="fill-muted-foreground text-[11px]">{points.at(-1)!.date}</text>
+      </svg>
+    </figure>
+  ) : (
+    <p class="mt-2 text-sm text-muted-foreground">Daily counts started on {COUNTED_ON}; the growth chart appears once there are a few days of history.</p>
+  )}
+
+  <p class="mt-6 text-xs text-muted-foreground">
+    How it's counted: each source reports its own size once a day (its API's total, its catalogue, its WordPress counters or its sitemap; hover a row for the method). {dated.length} of {CATALOG.sources.length} sources publish release dates, so "New" covers those. Data: <a class="text-primary hover:underline" href="/catalog.json">/catalog.json</a> ·{" "}
+    <a class="text-primary hover:underline" href="/catalog-history.json">history</a> · <a class="text-primary hover:underline" href="/docs/api/reference#op-getCatalog">API</a>
+  </p>
+</section>

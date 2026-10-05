@@ -14,6 +14,7 @@ import {
   uniq,
   wantsType,
 } from "../core/util.js";
+import { mapLimit, parseCount } from "../core/census.js";
 
 /**
  * itch.io game assets (https://itch.io/game-assets): indie asset packs, free and paid.
@@ -285,6 +286,26 @@ export const itchio: Provider = {
   access: "scrape",
   pricing: "freemium",
   supportsDownload: false,
+
+  async census(ctx) {
+    const count = async (path: string) => {
+      const html = await ctx.fetch.text(`${ITCH}/game-assets${path}`, { signal: ctx.signal });
+      const n = parseCount(html, /\(?([\d,]+) results\)?/);
+      if (n === undefined) throw new Error(`itchio: no result count on /game-assets${path}`);
+      return n;
+    };
+    const tags = { "3D": "3d", "2D": "2d", Textures: "textures", "UI / GUI": "gui", Audio: "audio", Fonts: "fonts" };
+    const [total, free, ...perTag] = await mapLimit(["", "/free", ...Object.values(tags).map((t) => `/tag-${t}`)], 3, count);
+    return {
+      total: total!,
+      free,
+      // Listings are packs with overlapping tags, so they count once, as packs; tags go in categories.
+      byType: { pack: total },
+      categories: Object.fromEntries(Object.keys(tags).map((k, i) => [k, perTag[i]!])),
+      unit: "packs",
+      method: "itch.io game-assets browse pages: result counts",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     const text = searchText(q);

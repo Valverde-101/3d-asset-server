@@ -1,0 +1,35 @@
+[
+  {
+    "date": "2026-10-05",
+    "listings": 2951627,
+    "free": 242986,
+    "byType": {
+      "model": 2737098,
+      "pack": 118437,
+      "texture": 57115,
+      "hdri": 12890,
+      "material": 17561,
+      "other": 8165,
+      "sprite": 126,
+      "ui": 18,
+      "audio": 10,
+      "font": 1
+    },
+    "sources": {
+      "cgtrader": 2719278,
+      "itchio": 118384,
+      "texturescom": 59171,
+      "blenderkit": 42967,
+      "ambientcg": 2898,
+      "polyhaven": 2383,
+      "sharetextures": 2247,
+      "threedtextures": 1500,
+      "hdrmaps": 875,
+      "texturecan": 658,
+      "cgbookcase": 566,
+      "hdrihub": 401,
+      "kenney": 216,
+      "quaternius": 83
+    }
+  }
+]

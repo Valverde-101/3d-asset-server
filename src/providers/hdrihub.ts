@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import type { Asset, AssetDetails, AssetType, License, Price, Provider, ProviderContext, SearchQuery } from "../core/types.js";
 import { cleanText, filterLocal, inferType, makeAsset, paginate, qs, tokenize, typeMatches, wantsType } from "../core/util.js";
+import { countBy } from "../core/census.js";
 
 /**
  * HDRI Hub — commercial shop of HDRIs, backplates and 3D people (Next.js App Router), with a
@@ -251,6 +252,21 @@ export const hdrihub: Provider = {
   pricing: "freemium",
   license: LICENSE,
   supportsDownload: false,
+
+  async census(ctx) {
+    const xml = await ctx.fetch.text(`${SITE}/sitemap.xml`, { signal: ctx.signal });
+    // Product pages are /shop/<section>/<sub>/<slug>; shorter paths are listings.
+    const products = [...xml.matchAll(/<loc>https:\/\/www\.hdri-hub\.com(\/shop\/[^/<]+\/[^/<]+\/[^/<]+)<\/loc>/g)].map((m) => m[1]!);
+    if (!products.length) throw new Error("hdrihub: no products in sitemap");
+    const sections = countBy(products, (p) => p.split("/")[2]);
+    return {
+      total: products.length,
+      free: sections["free-samples"] ?? 0,
+      byType: countBy(products, typeFromPath),
+      categories: sections,
+      method: "Sitemap: product pages per shop section",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return q.query.trim() ? `${SITE}/search${qs({ q: q.query.trim() })}` : `${SITE}${browsePath(q)}`;
