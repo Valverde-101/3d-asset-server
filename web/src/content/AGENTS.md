@@ -57,6 +57,7 @@ Full OpenAPI 3.1 spec: https://3d.shep.bot/openapi.json
 - Before downloading big files, check `/files` for `totalBytes`; 8k textures and 16k HDRIs can be hundreds of MB.
 - Always tell the user each asset's licence, and when `attributionRequired` is true, give the exact credit line (title, author, source URL, licence).
 - Show a few options (title, source, licence, thumbnail URL) when the choice is subjective; download directly when the request is specific.
+- To let the user see an asset (or share it), link `https://3d.shep.bot/search?asset=<id>`: it opens the asset with its preview, licence and downloads, and unfurls in chat apps with a card showing its thumbnail.
 - If a search comes back thin, try a simpler synonym, drop filters, or pass along the `searchUrl` links of `link` sources (Fab, Poliigon, TurboSquid).
 
 ## Example

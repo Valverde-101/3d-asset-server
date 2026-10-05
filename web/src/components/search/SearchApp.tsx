@@ -94,6 +94,8 @@ export default function SearchApp() {
     setError(undefined);
     setSearched(true);
     const qs = toParams(f);
+    const shared = new URLSearchParams(window.location.search).get("asset");
+    if (shared) qs.set("asset", shared);
     window.history.replaceState(null, "", `/search?${qs.toString()}`);
     if (!firstRun.current) document.title = f.q ? `“${f.q}”: 3D assets · 3D Asset Server` : "Search free 3D models, textures & HDRIs · 3D Asset Server";
     firstRun.current = false;
@@ -114,16 +116,31 @@ export default function SearchApp() {
     }
   }, []);
 
+  /** Open (or close) the detail sheet and keep `?asset=` in the URL, so the address bar is a share link. */
+  const openAsset = useCallback((a: Asset | null) => {
+    setSelected(a);
+    const url = new URL(window.location.href);
+    if (a) url.searchParams.set("asset", a.id);
+    else url.searchParams.delete("asset");
+    window.history.replaceState(null, "", url.pathname + url.search);
+  }, []);
+
   useEffect(() => {
     const f = readUrl();
     setFilters(f);
     setDraft(f.q);
+    const shared = new URLSearchParams(window.location.search).get("asset");
     api<{ providers: Provider[] }>("/v1/providers")
       .then((r) => setProviders(r.providers))
       .catch((e) => e instanceof UnauthorizedError && setNeedKey(true));
     if (f.q || f.types.length) void run(f, false);
-    else inputRef.current?.focus();
-  }, [run]);
+    else if (!shared) inputRef.current?.focus();
+    if (shared) {
+      api<Asset>(`/v1/assets/${encodeURIComponent(shared)}`)
+        .then((a) => openAsset(a))
+        .catch(() => undefined);
+    }
+  }, [run, openAsset]);
 
   const update = (patch: Partial<Filters>, rerun = true) => {
     const next = { ...filters, ...patch };
@@ -281,7 +298,7 @@ export default function SearchApp() {
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
         {results.map((a) => (
-          <ResultCard key={a.id} asset={a} providerName={providerName(a.provider)} onOpen={() => setSelected(a)} />
+          <ResultCard key={a.id} asset={a} providerName={providerName(a.provider)} onOpen={() => openAsset(a)} />
         ))}
         {loading &&
           Array.from({ length: results.length ? 5 : 10 }).map((_, i) => (
@@ -315,7 +332,7 @@ export default function SearchApp() {
         </div>
       )}
 
-      <Sheet open={Boolean(selected)} onOpenChange={(o) => !o && setSelected(null)}>
+      <Sheet open={Boolean(selected)} onOpenChange={(o) => !o && openAsset(null)}>
         <SheetContent className="w-full overflow-y-auto sm:max-w-xl">
           {selected && (
             <>

@@ -640,6 +640,12 @@
                 "items": {
                   "$ref": "#/components/schemas/AssetFile"
                 }
+              },
+              "shareUrl": {
+                "type": "string",
+                "format": "uri",
+                "description": "Web page for people: opens this asset in the search app and unfurls in chat apps with a preview card.",
+                "example": "https://3d.shep.bot/search?asset=polyhaven%3AArmChair_01"
               }
             }
           }

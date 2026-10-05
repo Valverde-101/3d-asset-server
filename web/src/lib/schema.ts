@@ -86,7 +86,7 @@ export const softwareApplication = (): JsonLd => ({
   codeRepository: SITE.repo,
   license: "https://www.apache.org/licenses/LICENSE-2.0",
   publisher: { "@id": ORG_ID },
-  screenshot: abs(SITE.image),
+  screenshot: abs("/img/search-preview.png"),
 });
 
 export const webApi = (): JsonLd => ({
@@ -141,6 +141,38 @@ export const sourcesList = (): JsonLd => ({
   })),
 });
 
-/** Wrap page nodes + the site-wide ones in a single @graph. */
-export const graph = (nodes: JsonLd[]): string =>
-  JSON.stringify({ "@context": "https://schema.org", "@graph": [website(), organization(), ...nodes] }).replace(/</g, "\\u003c");
+/** Node types that describe the page itself (they get the share image). */
+const PAGE_TYPES = new Set(["WebPage", "AboutPage", "ContactPage", "TechArticle", "CollectionPage", "SearchResultsPage", "FAQPage"]);
+
+export interface PageMeta {
+  url: string;
+  name: string;
+  description: string;
+  /** Absolute URL of the page's 1200×630 share card. */
+  image: string;
+  imageAlt: string;
+}
+
+/**
+ * Wrap page nodes + the site-wide ones in a single @graph. The page's share
+ * card is attached as an ImageObject: `primaryImageOfPage` + `image` on the
+ * node that describes the page, or on a WebPage node added for pages that
+ * have none (e.g. the home page, whose nodes describe the app and API).
+ */
+export const graph = (nodes: JsonLd[], page?: PageMeta): string => {
+  let out = nodes;
+  if (page) {
+    const image = { "@type": "ImageObject", "@id": `${page.url}#primaryimage`, url: page.image, contentUrl: page.image, width: 1200, height: 630, caption: page.imageAlt };
+    const i = nodes.findIndex((n) => PAGE_TYPES.has(String(n["@type"])) && n["@type"] !== "FAQPage");
+    if (i >= 0) {
+      out = nodes.map((n, j) => (j === i ? { ...n, image: { "@id": image["@id"] }, ...(n["@type"] === "TechArticle" ? {} : { primaryImageOfPage: { "@id": image["@id"] } }) } : n));
+    } else {
+      out = [
+        { "@type": "WebPage", "@id": `${page.url}#webpage`, url: page.url, name: page.name, description: page.description, inLanguage: "en", isPartOf: { "@id": SITE_ID }, primaryImageOfPage: { "@id": image["@id"] }, image: { "@id": image["@id"] } },
+        ...nodes,
+      ];
+    }
+    out = [...out, image];
+  }
+  return JSON.stringify({ "@context": "https://schema.org", "@graph": [website(), organization(), ...out] }).replace(/</g, "\\u003c");
+};

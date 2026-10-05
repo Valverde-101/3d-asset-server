@@ -21,7 +21,8 @@ import { createMcpServer } from "../mcp/server.js";
 import { prefersMarkdown } from "./negotiate.js";
 import { openApiSpec } from "./openapi.js";
 import { RATE_LIMIT_HEADERS, rateLimit, type RateLimitOptions } from "./ratelimit.js";
-import { searchMeta } from "./search-meta.js";
+import { OgImages } from "./og.js";
+import { assetMeta, searchMeta, searchShare, shareableAssetId, type HeadMeta } from "./search-meta.js";
 import { Site, rewriteHead, type ServeOptions } from "./site.js";
 
 export interface AppOptions {
@@ -71,7 +72,8 @@ function routeLabel(path: string): string {
     return "/v1/assets/:id";
   }
   if (path.startsWith("/v1/")) return "/v1/other";
-  if (path.startsWith("/_astro/") || path.startsWith("/scalar/") || path.startsWith("/fonts/")) return "static-asset";
+  if (path === "/og/query.png" || path === "/og/asset.png") return path;
+  if (path.startsWith("/_astro/") || path.startsWith("/scalar/") || path.startsWith("/fonts/") || path.startsWith("/og/")) return "static-asset";
   return "site";
 }
 
@@ -115,18 +117,30 @@ const fileParams = z.object({
  * - the Scalar API playground injects styles at runtime, so it alone gets
  *   inline styles (it is noindex and disallowed for crawlers).
  */
-function pageRewrite(route: string, params: URLSearchParams): ServeOptions["rewrite"] {
+/**
+ * Per-request page changes. /search gets a CSP nonce, and for share links
+ * (query variants or `?asset=`) a unique title, description, share card and
+ * og:url; `pre` carries metadata looked up ahead of time (the asset).
+ */
+function pageRewrite(route: string, params: URLSearchParams, origin: string, pre?: HeadMeta): ServeOptions["rewrite"] {
   if (route === "/search") {
-    const meta = searchMeta(params);
+    const meta = pre ?? searchMeta(params);
+    const share = pre ? `asset=${encodeURIComponent(params.get("asset") ?? "")}` : searchShare(params)?.key;
     return (html) => {
       const nonce = randomBytes(16).toString("base64");
       const withNonce = html.replace("<head>", `<head><meta property="csp-nonce" content="${nonce}">`);
-      return { html: meta ? rewriteHead(withNonce, meta) : withNonce, styleNonce: nonce };
+      if (!meta) return { html: withNonce, styleNonce: nonce };
+      const head = { ...meta, image: meta.image && origin + meta.image, url: share ? `${origin}/search?${share}` : undefined };
+      return { html: rewriteHead(withNonce, head), styleNonce: nonce };
     };
   }
   if (route === "/docs/api/playground") return (html) => ({ html, inlineStyles: true });
   return undefined;
 }
+
+const OG_HEADERS = { "content-type": "image/png", "cache-control": "public, max-age=86400", "x-content-type-options": "nosniff" };
+/** Asset lookups for share-link metadata must not hold a page load for long. */
+const SHARE_LOOKUP_MS = 3500;
 
 export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   const app = new Hono();
@@ -175,6 +189,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     const limiter = rateLimit(opts.rateLimit);
     app.use("/v1/*", limiter);
     app.use("/mcp", limiter);
+    app.use("/og/query.png", limiter);
+    app.use("/og/asset.png", limiter);
   }
 
   if (opts.apiKey) {
@@ -206,7 +222,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
    * -> /docs/mcp.md) and say so with `Vary: Accept`; unknown paths answer a
    * Markdown 404 to agents and the HTML 404 page to browsers.
    */
-  const serveSite = (c: Context, path: string): Response | undefined => {
+  const origin = (c: Context) => (opts.publicBaseUrl ?? new URL(c.req.url).origin).replace(/\/$/, "");
+  const serveSite = (c: Context, path: string, pre?: HeadMeta): Response | undefined => {
     if (!site) return undefined;
     const markdown = prefersMarkdown(c.req.header("accept"));
     const route = path.length > 1 ? path.replace(/\/+$/, "") : path;
@@ -215,7 +232,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     const serveOpts: ServeOptions = {
       ifNoneMatch: c.req.header("if-none-match"),
       acceptEncoding: c.req.header("accept-encoding"),
-      rewrite: twin ? undefined : pageRewrite(route, new URL(c.req.url).searchParams),
+      rewrite: twin ? undefined : pageRewrite(route, new URL(c.req.url).searchParams, origin(c), pre),
     };
     let hit = site.resolve(twin ?? path, serveOpts);
     if (markdown && (!hit || ("status" in hit && hit.status === 404))) {
@@ -308,7 +325,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     const asset = await service.getAsset(id);
     analytics.assetView({ ...who(c), provider: id.split(":")[0] ?? "", found: Boolean(asset) });
     if (!asset) return c.json({ error: "not found" }, 404);
-    return c.json(asset);
+    // A page for people: opens this asset on the website and unfurls with a preview card.
+    return c.json({ ...asset, shareUrl: `${origin(c)}/search?asset=${encodeURIComponent(asset.id)}` });
   });
 
   app.get("/v1/assets/:id/files", async (c) => {
@@ -375,12 +393,34 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     return res;
   });
 
+  // Share cards for search and asset links (static pages have pre-rendered /og/<page>.png files).
+  const providerIds = service.listProviders().map((p) => p.id);
+  const og = new OgImages(service, { site: new URL(opts.publicBaseUrl ?? "https://3d.shep.bot").host });
+  const png = (c: Context, body: Buffer | null) =>
+    body ? new Response(c.req.method === "HEAD" ? null : new Uint8Array(body), { headers: OG_HEADERS }) : c.json({ error: "not found" }, 404);
+  app.on(["GET", "HEAD"], "/og/query.png", async (c) => png(c, await og.query(new URL(c.req.url).searchParams)));
+  app.on(["GET", "HEAD"], "/og/asset.png", async (c) => {
+    const id = shareableAssetId(c.req.query("id"), providerIds);
+    return png(c, id ? await og.asset(id) : null);
+  });
+
+  /** Title, description and card for `/search?asset=<id>` share links (undefined if the asset can't be found quickly). */
+  const assetShareMeta = async (c: Context): Promise<HeadMeta | undefined> => {
+    const id = shareableAssetId(c.req.query("asset"), providerIds);
+    if (!id) return undefined;
+    const lookup = service.getAsset(id).catch(() => null);
+    const timeout = new Promise<null>((r) => setTimeout(() => r(null), SHARE_LOOKUP_MS).unref());
+    const asset = await Promise.race([lookup, timeout]);
+    return asset ? assetMeta(asset) : undefined;
+  };
+
   // Everything else is the website (pages, /_astro assets, robots.txt, sitemap, llms.txt, ...).
-  app.on(["GET", "HEAD"], "*", (c) => {
+  app.on(["GET", "HEAD"], "*", async (c) => {
     if (c.req.path.startsWith("/v1/")) return c.json({ error: "not found" }, 404);
     const alias = ALIASES[c.req.path.replace(/\/+$/, "").toLowerCase()];
     if (alias) return c.redirect(alias, 301);
-    return serveSite(c, c.req.path) ?? c.json({ error: "not found" }, 404);
+    const pre = c.req.path.replace(/\/+$/, "") === "/search" ? await assetShareMeta(c) : undefined;
+    return serveSite(c, c.req.path, pre) ?? c.json({ error: "not found" }, 404);
   });
   // Paths the router can't match (e.g. with encoded control characters) get the same 404 treatment.
   app.notFound((c) => (c.req.path.startsWith("/v1/") ? undefined : serveSite(c, c.req.path)) ?? c.json({ error: "not found" }, 404));

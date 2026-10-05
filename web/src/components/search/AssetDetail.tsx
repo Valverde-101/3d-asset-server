@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowUpRight, Bot, Download, FileBox, Loader2, Terminal } from "lucide-react";
+import { ArrowUpRight, Bot, Check, Download, FileBox, Loader2, Share2, Terminal } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -103,11 +103,14 @@ export function AssetDetail({ asset, providerName }: { asset: Asset; providerNam
           {a.tags.slice(0, 14).map((t) => <Badge key={t} variant="secondary" className="text-[10px]">{t}</Badge>)}
         </div>
       )}
-      {source && (
-        <Button variant="outline" asChild>
-          <a href={source} target="_blank" rel="noopener noreferrer">Open on {providerName} <ArrowUpRight className="size-4" /></a>
-        </Button>
-      )}
+      <div className="flex flex-wrap gap-2">
+        {source && (
+          <Button variant="outline" asChild>
+            <a href={source} target="_blank" rel="noopener noreferrer">Open on {providerName} <ArrowUpRight className="size-4" /></a>
+          </Button>
+        )}
+        <ShareButton title={a.title} url={`${origin}/search?asset=${encodeURIComponent(asset.id)}`} />
+      </div>
 
       <Separator />
 
@@ -170,5 +173,25 @@ function Snippet({ icon, label, text }: { icon: React.ReactNode; label: string; 
       </div>
       <pre className="whitespace-pre-wrap break-all font-mono text-[12px] leading-relaxed">{text}</pre>
     </div>
+  );
+}
+
+/** Share link to this asset (`/search?asset=<id>`, which unfurls with its own preview card). */
+function ShareButton({ title, url }: { title: string; url: string }) {
+  const [copied, setCopied] = useState(false);
+  const share = async () => {
+    if (typeof navigator.share === "function" && window.matchMedia("(pointer: coarse)").matches) {
+      await navigator.share({ title, url }).catch(() => undefined);
+      return;
+    }
+    await navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 1600);
+  };
+  return (
+    <Button variant="outline" onClick={() => void share()}>
+      {copied ? <Check className="size-4" /> : <Share2 className="size-4" />}
+      {copied ? "Link copied" : "Share"}
+    </Button>
   );
 }

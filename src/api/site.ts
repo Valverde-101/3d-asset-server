@@ -111,18 +111,25 @@ const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;")
  * Replace a page's <title>, description (meta + Open Graph + Twitter) and
  * robots directive. Used for per-query variants of /search.
  */
-export function rewriteHead(html: string, meta: { title?: string; description?: string; robots?: string }): string {
+export function rewriteHead(
+  html: string,
+  meta: { title?: string; description?: string; robots?: string; image?: string; imageAlt?: string; url?: string },
+): string {
   let out = html;
+  const set = (re: RegExp, value: string) => {
+    out = out.replace(re, `$1${escapeHtml(value)}$2`);
+  };
   if (meta.title !== undefined) {
-    const t = escapeHtml(meta.title);
-    out = out.replace(/<title>[\s\S]*?<\/title>/i, `<title>${t}</title>`);
-    out = out.replace(/(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*(")/gi, `$1${t}$2`);
+    out = out.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(meta.title)}</title>`);
+    set(/(<meta (?:property="og:title"|name="twitter:title") content=")[^"]*(")/gi, meta.title);
   }
   if (meta.description !== undefined) {
-    const d = escapeHtml(meta.description);
-    out = out.replace(/(<meta (?:name="description"|property="og:description"|name="twitter:description") content=")[^"]*(")/gi, `$1${d}$2`);
+    set(/(<meta (?:name="description"|property="og:description"|name="twitter:description") content=")[^"]*(")/gi, meta.description);
   }
-  if (meta.robots !== undefined) out = out.replace(/(<meta name="robots" content=")[^"]*(")/i, `$1${escapeHtml(meta.robots)}$2`);
+  if (meta.robots !== undefined) set(/(<meta name="robots" content=")[^"]*(")/i, meta.robots);
+  if (meta.image !== undefined) set(/(<meta (?:property="og:image"|name="twitter:image") content=")[^"]*(")/gi, meta.image);
+  if (meta.imageAlt !== undefined) set(/(<meta (?:property="og:image:alt"|name="twitter:image:alt") content=")[^"]*(")/gi, meta.imageAlt);
+  if (meta.url !== undefined) set(/(<meta (?:property="og:url"|name="twitter:url") content=")[^"]*(")/gi, meta.url);
   return out;
 }
 

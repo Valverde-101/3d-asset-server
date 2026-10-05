@@ -252,7 +252,22 @@ export function openApiSpec(baseUrl?: string) {
           },
         },
         AssetDetails: {
-          allOf: [ref("Asset"), { type: "object", required: ["files"], properties: { files: { type: "array", items: ref("AssetFile") } } }],
+          allOf: [
+            ref("Asset"),
+            {
+              type: "object",
+              required: ["files"],
+              properties: {
+                files: { type: "array", items: ref("AssetFile") },
+                shareUrl: {
+                  type: "string",
+                  format: "uri",
+                  description: "Web page for people: opens this asset in the search app and unfurls in chat apps with a preview card.",
+                  example: `${server}/search?asset=polyhaven%3AArmChair_01`,
+                },
+              },
+            },
+          ],
         },
         ProviderReport: {
           type: "object",

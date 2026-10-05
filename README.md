@@ -309,6 +309,7 @@ yours. Instead, `get_asset` returns direct file URLs plus a one-click `bundleUrl
 |---|---|
 | `GET /v1/search?q=&type=&providers=&free=&downloadable=&limit=&offset=` | Ranked, merged results plus a per-site report (`ok`, `error`, `timeout`, `skipped`, `link`). |
 | `GET /v1/providers` | The source catalogue. |
+| `GET /og/query.png?q=&type=&free=` · `GET /og/asset.png?id=` | 1200×630 share cards for search and asset links (see below). |
 | `GET /v1/stats` | Usage totals (searches by surface, downloads, MCP tool calls, top clients and asset types) and per-source health (success rate, p50/p95 latency). Shown on [/stats](https://3d.shep.bot/stats). |
 | `GET /v1/assets/{provider}:{id}` | Full details, including every file. |
 | `GET /v1/assets/{id}/files?format=&resolution=&maps=&all=` | The files a download would fetch. |
@@ -475,6 +476,20 @@ collects the event lines, and the *3D Asset Server* Grafana dashboard shows both
 The public [/stats](https://3d.shep.bot/stats) page reads the same counters back through `GET /v1/stats`
 ([`src/core/stats.ts`](src/core/stats.ts)): from Prometheus when `PROMETHEUS_URL` is set (cached for a
 minute), otherwise from in-process tallies since the last restart. It shows aggregate counts only.
+
+### Share previews (Open Graph)
+
+Every page has its own 1200×630 card (`og:image` = `/og/<page>.png`), rendered at build time by
+[`web/integrations/og-images.mjs`](web/integrations/og-images.mjs) from the page's title and
+description, with matching `og:image:alt`, `twitter:*` tags and a `primaryImageOfPage` ImageObject in
+the JSON-LD. Share links get cards rendered on request ([`src/og/render.ts`](src/og/render.ts): satori +
+resvg, Geist font; [`src/api/og.ts`](src/api/og.ts): LRU cache, two renders at a time, rate-limited):
+
+- `/search?q=brick+wall&type=material`: title, description, `og:url` and a card for the query
+  (`/og/query.png?…`).
+- `/search?asset=polyhaven:ArmChair_01`: opens that asset in the search app (the detail panel's
+  **Share** button copies this link) and unfurls with the asset's title, licence, formats and thumbnail
+  (`/og/asset.png?id=…`; the thumbnail is fetched from public hosts only and re-encoded with sharp).
 
 ### Daily source discovery
 

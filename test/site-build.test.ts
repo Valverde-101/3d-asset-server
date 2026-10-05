@@ -112,5 +112,39 @@ describe.skipIf(!built)("built website", () => {
       for (const m of body!.matchAll(/\b(\d+) (?:3D )?(?:asset )?sites\b/g)) expect(`${f}: ${m[0]}`).toBe(`${f}: ${m[1] === String(n) ? m[0] : `${n} … sites`}`);
     }
   });
+
+  it("gives every page its own 1200×630 share card, alt text and schema image", async () => {
+    const { readdirSync, statSync } = await import("node:fs");
+    const sharp = (await import("sharp")).default;
+    const pages: string[] = [];
+    const walk = (dir: URL) => {
+      for (const e of readdirSync(dir, { withFileTypes: true })) {
+        if (e.isDirectory()) walk(new URL(`${e.name}/`, dir));
+        else if (e.name === "index.html" || e.name === "404.html") pages.push(new URL(e.name, dir).pathname.slice(root.pathname.length));
+      }
+    };
+    walk(root);
+    expect(pages.length).toBeGreaterThan(10);
+    const images = new Set<string>();
+    for (const page of pages) {
+      const html = read(page);
+      const image = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+      expect(image, page).toMatch(/^https:\/\/3d\.shep\.bot\/og\/[a-z0-9-]+\.png$/);
+      images.add(image!);
+      const file = new URL(`.${new URL(image!).pathname}`, root);
+      expect(statSync(file).size, image).toBeGreaterThan(10_000);
+      expect(await sharp(file.pathname).metadata(), image).toMatchObject({ width: 1200, height: 630, format: "png" });
+      for (const tag of ['property="og:image:alt"', 'name="twitter:image:alt"', 'property="og:image:type" content="image/png"', 'name="twitter:card" content="summary_large_image"']) {
+        expect(html, `${page} ${tag}`).toContain(tag);
+      }
+      const nodes = jsonLd(html)["@graph"];
+      const img = nodes.find((n) => n["@type"] === "ImageObject");
+      expect(img?.url, page).toBe(image);
+      expect(nodes.some((n) => (n.primaryImageOfPage as { "@id"?: string } | undefined)?.["@id"] === img?.["@id"] || (n.image as { "@id"?: string } | undefined)?.["@id"] === img?.["@id"]), page).toBe(true);
+    }
+    expect(images.size).toBe(pages.length); // one card per page
+    expect(statSync(new URL("og.png", root)).size).toBeGreaterThan(10_000); // legacy URL still served
+    expect(read("docs/mcp/index.html")).toContain('<meta property="article:section" content="Docs"');
+  });
 });
 

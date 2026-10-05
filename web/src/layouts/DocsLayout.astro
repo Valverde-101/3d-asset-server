@@ -29,7 +29,7 @@ const next = idx >= 0 && idx < flat.length - 1 ? flat[idx + 1] : undefined;
 const markdown = path === "/docs/api/reference" ? "/openapi.json" : `${path}.md`;
 ---
 
-<BaseLayout title={title} description={description} ogType="article" markdown={markdown} schema={[techArticle({ title, description, path }), breadcrumbs(trail), ...(p.schema ?? [])]}>
+<BaseLayout title={title} description={description} ogType="article" section="Docs" markdown={markdown} schema={[techArticle({ title, description, path }), breadcrumbs(trail), ...(p.schema ?? [])]}>
   <div class:list={["mx-auto grid max-w-7xl gap-10 px-4 py-10 sm:px-6", p.wide ? "lg:grid-cols-[14rem_1fr]" : "lg:grid-cols-[14rem_1fr] xl:grid-cols-[14rem_1fr_13rem]"]}>
     <aside class="hidden lg:block">
       <nav class="sticky top-24 space-y-7 text-sm" aria-label="Docs">

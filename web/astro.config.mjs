@@ -4,6 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import agentFiles from "./integrations/agent-files.mjs";
+import ogImages from "./integrations/og-images.mjs";
 
 // Canonical origin baked into canonical URLs, sitemap, Open Graph and JSON-LD.
 const site = process.env.SITE_URL ?? "https://3d.shep.bot";
@@ -16,6 +17,7 @@ export default defineConfig({
   integrations: [
     react(),
     agentFiles(),
+    ogImages(),
     sitemap({
       filter: (page) => !page.includes("/404") && !page.includes("/docs/api/playground"),
       changefreq: "weekly",

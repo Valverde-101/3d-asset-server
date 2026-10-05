@@ -35,6 +35,12 @@ export const CC0_COUNT = PROVIDERS.filter((p) => p.license?.startsWith("CC0")).l
 /** Sources by date added, newest first (from integrations/registry.json). */
 export const INTEGRATIONS = integrations.integrations;
 
+/** Share-card path for a route: "/" -> /og/home.png, "/docs/api" -> /og/docs-api.png. */
+export function ogImagePath(route: string): string {
+  const slug = route === "/" ? "home" : route.replace(/^\/+|\/+$/g, "").replace(/\//g, "-");
+  return `/og/${slug}.png`;
+}
+
 export const MCP_URL = `${SITE.url}/mcp`;
 
 export const NAV = [

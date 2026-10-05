@@ -168,6 +168,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
           note: asset.files.length
             ? undefined
             : "No direct files: download from the asset page on the source site.",
+          shareUrl: opts.publicBaseUrl ? `${opts.publicBaseUrl.replace(/\/$/, "")}/search?asset=${encodeURIComponent(asset.id)}` : undefined,
         });
       } catch (e) {
         return fail(e);

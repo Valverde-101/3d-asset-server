@@ -302,8 +302,8 @@ describe("MCP tools", () => {
     if (dir) await rm(dir, { recursive: true, force: true });
   });
 
-  async function connect(downloadDir?: string) {
-    const server = createMcpServer(service(), { allowLocalDownload: true, downloadDir });
+  async function connect(downloadDir?: string, publicBaseUrl?: string) {
+    const server = createMcpServer(service(), { allowLocalDownload: true, downloadDir, publicBaseUrl });
     const [a, b] = InMemoryTransport.createLinkedPair();
     const client = new Client({ name: "test", version: "1" });
     await Promise.all([server.connect(a), client.connect(b)]);
@@ -325,6 +325,9 @@ describe("MCP tools", () => {
     const r = text(await client.callTool({ name: "get_asset", arguments: { id: "fake:crate", resolution: "1k" } }));
     expect(r.available.formats).toEqual(["gltf", "blend", "fbx"]);
     expect(r.selection.files.map((f: { filename: string }) => f.filename)).toEqual(["crate_1k.gltf"]);
+    expect(r.shareUrl).toBeUndefined();
+    const linked = text(await (await connect(undefined, "https://3d.shep.bot/")).callTool({ name: "get_asset", arguments: { id: "fake:crate" } }));
+    expect(linked.shareUrl).toBe("https://3d.shep.bot/search?asset=fake%3Acrate");
   });
 
   it("download_asset writes into <dest>/<provider>-<id>", async () => {
