@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import type { Asset, AssetDetails, AssetFile, Provider, SearchQuery } from "../core/types.js";
 import { LICENSES, filterLocal, makeAsset, paginate, qs, wantsType } from "../core/util.js";
+import { catalogueCensus } from "../core/census.js";
 
 /**
  * cgbookcase — ~570 free CC0 PBR textures (SvelteKit site).
@@ -140,6 +141,10 @@ export const cgbookcase: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: false,
+
+  census(ctx) {
+    return catalogueCensus(this, ctx);
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${SITE}/textures${qs({ search: q.query })}`;

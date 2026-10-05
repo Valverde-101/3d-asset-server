@@ -1,6 +1,7 @@
 import type { Asset, AssetDetails, AssetType, License, Provider, SearchQuery } from "../core/types.js";
 import { cleanText, makeAsset, qs, stem, tokenize, typeMatches, wantsType } from "../core/util.js";
 
+
 /**
  * ShareTextures — free textures, 3D models and atlases (Next.js front end over a JSON API).
  *
@@ -173,6 +174,28 @@ export const sharetextures: Provider = {
   pricing: "free",
   license: LICENSE,
   supportsDownload: false,
+
+  async census(ctx) {
+    const listing = (params: Record<string, string | number>) =>
+      ctx.fetch.json<StResponse<StListing>>(`${API}/for-frontend/items${qs({ ...params, page: 1, perPage: 1 })}`, { signal: ctx.signal });
+    const [perType, popular] = await Promise.all([
+      Promise.all(Object.keys(TYPE_MAP).map(async (t) => [t, (await listing({ itemType: t })).data?.pagination?.totalCount ?? 0] as const)),
+      listing({ sortBy: "most_download" }),
+    ]);
+    const byType: Partial<Record<AssetType, number>> = {};
+    for (const [t, n] of perType) byType[TYPE_MAP[t]!] = (byType[TYPE_MAP[t]!] ?? 0) + n;
+    const total = perType.reduce((n, [, c]) => n + c, 0);
+    const paid = perType.find(([t]) => t === "products")?.[1] ?? 0;
+    const hit = popular.data?.items?.[0];
+    return {
+      total,
+      free: total - paid,
+      byType,
+      categories: Object.fromEntries(perType.filter(([, n]) => n > 0)),
+      highlights: hit ? [{ label: "Most downloaded", title: hit.title, url: toAsset(hit).url, value: hit.downloadCount }] : [],
+      method: "ShareTextures API: totalCount per item type",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     const words = tokenize(q.query);

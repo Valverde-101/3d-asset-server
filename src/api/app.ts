@@ -63,7 +63,7 @@ const WEB_CLIENT_HEADER = "x-asset-client";
 
 /** Bounded route label for metrics (never the raw path). */
 function routeLabel(path: string): string {
-  if (path === "/v1/search" || path === "/v1/providers" || path === "/v1/stats" || path === "/mcp" || path === "/openapi.json" || path === "/health") {
+  if (path === "/v1/search" || path === "/v1/providers" || path === "/v1/stats" || path === "/v1/catalog" || path === "/mcp" || path === "/openapi.json" || path === "/health") {
     return path;
   }
   if (path.startsWith("/v1/assets/")) {
@@ -264,6 +264,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
       endpoints: {
         providers: "/v1/providers",
         stats: "/v1/stats",
+        catalog: "/v1/catalog",
         search: "/v1/search?q=wooden+chair&type=model&free=true",
         asset: "/v1/assets/{provider}:{id}",
         files: "/v1/assets/{provider}:{id}/files?format=gltf&resolution=2k",
@@ -280,6 +281,18 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   app.get("/openapi.json", (c) => c.json(openApiSpec(opts.publicBaseUrl)));
 
   app.get("/v1/providers", (c) => c.json({ providers: service.listProviders() }));
+
+  // Daily catalog census (scripts/census.mjs), shipped with the website build.
+  let catalogBody: string | null | undefined;
+  app.get("/v1/catalog", (c) => {
+    if (catalogBody === undefined) {
+      const hit = site?.resolve("/catalog.json", {});
+      catalogBody = hit && !("redirect" in hit) && hit.status === 200 ? hit.body.toString("utf8") : null;
+    }
+    if (!catalogBody) return c.json({ error: "catalog not built" }, 404);
+    c.header("cache-control", "public, max-age=3600");
+    return c.body(catalogBody, 200, { "content-type": "application/json; charset=utf-8" });
+  });
 
   app.get("/v1/stats", async (c) => {
     const providers = service.listProviders();

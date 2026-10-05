@@ -2,6 +2,7 @@ import * as cheerio from "cheerio";
 import type { Asset, AssetDetails, AssetFile, License, Provider, ProviderContext, SearchQuery } from "../core/types.js";
 import { cleanText, makeAsset, qs, uniq, wantsType } from "../core/util.js";
 
+
 /**
  * CGTrader (https://www.cgtrader.com): marketplace of free and paid 3D models.
  *
@@ -290,6 +291,15 @@ export const cgtrader: Provider = {
   access: "scrape",
   pricing: "freemium",
   supportsDownload: false,
+
+  async census(ctx) {
+    const [all, free] = await Promise.all([
+      this.search({ query: "", limit: 1 }, ctx),
+      this.search({ query: "", limit: 1, freeOnly: true }, ctx),
+    ]);
+    if (all.total === undefined) throw new Error("cgtrader: listing without totalCount");
+    return { total: all.total, free: free.total, byType: { model: all.total }, method: "CGTrader listing: totalCount for all and free models" };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     if (!q.query.trim()) return `${SITE}/${q.freeOnly ? "free-3d-models" : "3d-models"}`;

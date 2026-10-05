@@ -1,5 +1,6 @@
 import type { Asset, AssetDetails, AssetFile, AssetType, Provider, SearchQuery } from "../core/types.js";
 import { LICENSES, makeAsset, qs, typeMatches, uniq, wantsType } from "../core/util.js";
+import { addedSince, mapLimit } from "../core/census.js";
 
 /**
  * ambientCG (https://ambientcg.com): CC0 PBR materials, HDRIs, decals, atlases,
@@ -161,6 +162,29 @@ export const ambientcg: Provider = {
   pricing: "free",
   license: LICENSES.CC0,
   supportsDownload: true,
+
+  async census(ctx) {
+    const count = async (type?: string) =>
+      (await ctx.fetch.json<AcgResponse>(`${API}${qs({ type, limit: 1, include: "title" })}`, { signal: ctx.signal })).totalResults ?? 0;
+    const [total, perType, latest, popular] = await Promise.all([
+      count(),
+      mapLimit(ACG_TYPES, 3, async (t) => [t, await count(t)] as const),
+      ctx.fetch.json<AcgResponse>(`${API}${qs({ sort: "latest", limit: 100, include: "releaseDate" })}`, { signal: ctx.signal }),
+      ctx.fetch.json<AcgResponse>(`${API}${qs({ sort: "popular", limit: 1, include: "title,url,downloadStatistics" })}`, { signal: ctx.signal }),
+    ]);
+    const byType: Partial<Record<AssetType, number>> = {};
+    for (const [t, n] of perType) byType[TYPE_MAP[t]!] = (byType[TYPE_MAP[t]!] ?? 0) + n;
+    const hit = popular.assets?.[0];
+    return {
+      total,
+      free: total,
+      byType,
+      categories: Object.fromEntries(perType.filter(([, n]) => n > 0).sort((a, b) => b[1] - a[1])),
+      addedLast30Days: addedSince((latest.assets ?? []).map((a) => a.releaseDate)),
+      highlights: hit ? [{ label: "Most downloaded this month", title: hit.title ?? hit.id, url: hit.url ?? `${SITE}/a/${hit.id}`, value: hit.downloadStatistics?.total }] : [],
+      method: "ambientCG API v3: totalResults per asset type",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     const types = uniq((q.types ?? []).map((t) => SITE_TYPE[t]).filter((t): t is string => !!t));

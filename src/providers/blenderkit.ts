@@ -10,6 +10,8 @@ import type {
   SearchQuery,
 } from "../core/types.js";
 import { LICENSES, formatFromFilename, makeAsset, qs, typeMatches, uniq, wantsType } from "../core/util.js";
+import { mapLimit } from "../core/census.js";
+
 
 /**
  * BlenderKit (now branded "Blendkit", www.blendkit.com): Blender-native models, materials,
@@ -237,6 +239,24 @@ export const blenderkit: Provider = {
   pricing: "freemium",
   apiKeyEnv: API_KEY_ENV,
   supportsDownload: true,
+
+  async census(ctx) {
+    const count = async (query: string) =>
+      (await ctx.fetch.json<BkSearchResponse>(`${API}/search/${qs({ query, page_size: 1 })}`, { signal: ctx.signal })).count ?? 0;
+    const rows = await mapLimit(BK_TYPES, 3, async (t) => [t, await count(`asset_type:${t}`), await count(`asset_type:${t} is_free:true`)] as const);
+    // The API caps every count at 10,000 (an Elasticsearch default): those numbers are lower bounds.
+    const capped = rows.some(([, all, free]) => all >= 10_000 || free >= 10_000);
+    const byType: Partial<Record<AssetType, number>> = {};
+    for (const [t, n] of rows) byType[TYPE_MAP[t]!] = (byType[TYPE_MAP[t]!] ?? 0) + n;
+    return {
+      total: rows.reduce((n, [, all]) => n + all, 0),
+      atLeast: capped || undefined,
+      free: rows.reduce((n, [, , free]) => n + free, 0),
+      byType,
+      categories: Object.fromEntries(rows.filter(([, n]) => n > 0).map(([t, n]) => [t, n])),
+      method: "BlenderKit search API: count per asset type, free and all (capped at 10,000 each)",
+    };
+  },
 
   buildSearchUrl(q: SearchQuery) {
     return `${SITE}/asset-gallery${qs({ query: queryString(q, bkTypesFor(q)) })}`;

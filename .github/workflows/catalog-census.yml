@@ -1,0 +1,65 @@
+name: Catalog census
+
+# Once a day, count what every source holds (scripts/census.mjs: each
+# provider's census(), a few requests per source) and save it to
+# web/src/data/catalog.json plus one point per day in catalog-history.json.
+# If the numbers changed, commit them to main and run CI, which builds the
+# image and pins it in deploy/ so ArgoCD rolls out the new /stats page,
+# /catalog.json and /v1/catalog. No secrets needed.
+
+on:
+  schedule:
+    # Daily at 04:41 UTC, before the source-discovery run.
+    - cron: "41 4 * * *"
+  workflow_dispatch: {}
+
+concurrency:
+  group: catalog-census
+  cancel-in-progress: false
+
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      # gh workflow run ci.yml
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build the server
+        run: npm run build:server
+
+      - name: Count every source
+        run: node scripts/census.mjs
+
+      - name: Commit, push and deploy
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- web/src/data/catalog.json web/src/data/catalog-history.json; then
+            echo "No changes." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/src/data/catalog.json web/src/data/catalog-history.json
+          git commit -q -m "chore(catalog): census $(date -u +%Y-%m-%d)"
+          pushed=false
+          for _ in 1 2 3; do
+            if git push origin HEAD:main; then pushed=true; break; fi
+            git pull --rebase origin main
+          done
+          [[ "$pushed" == true ]]
+          # Pushes made with GITHUB_TOKEN don't trigger workflows; start the deploy explicitly.
+          gh workflow run ci.yml --ref main

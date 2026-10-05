@@ -136,6 +136,43 @@ export interface ProviderInfo {
   supportsDownload: boolean;
 }
 
+/** One "notable" asset a census can point at (most downloaded, newest…). */
+export interface CensusHighlight {
+  label: string;
+  title: string;
+  url: string;
+  value?: number;
+}
+
+/**
+ * What a source holds, counted by `Provider.census` (run daily, see
+ * scripts/census.mjs). Every count is the source's own number of listings:
+ * single assets on most sites, packs on Kenney, Quaternius and itch.io.
+ */
+export interface SourceCensus {
+  /** Every listing on the source (free and paid). */
+  total: number;
+  /** True when a number is a lower bound (the source caps its counts, e.g. 10,000). */
+  atLeast?: boolean;
+  /** Free listings, when known. */
+  free?: number;
+  /** Listings per asset type; each listing counts once. */
+  byType: Partial<Record<AssetType, number>>;
+  /** Listings per licence, when the source mixes licences. */
+  byLicense?: Record<string, number>;
+  /** The source's own categories or tags (may overlap). */
+  categories?: Record<string, number>;
+  /** What a listing is on this source. */
+  unit?: "assets" | "packs";
+  /** Listings released in the 30 days before the count, when the source dates them. */
+  addedLast30Days?: number;
+  /** Total downloads, when the source publishes them. */
+  downloads?: number;
+  highlights?: CensusHighlight[];
+  /** One line on how this was counted. */
+  method: string;
+}
+
 export interface ProviderContext {
   fetch: HttpClient;
   signal?: AbortSignal;
@@ -148,6 +185,8 @@ export interface Provider extends ProviderInfo {
   getAsset?(nativeId: string, ctx: ProviderContext): Promise<AssetDetails | null>;
   /** Deep link to run the query on the source website. */
   buildSearchUrl(query: SearchQuery): string;
+  /** Count what the source holds (a few requests; run daily, not per search). */
+  census?(ctx: ProviderContext): Promise<SourceCensus>;
   /** Whether the provider is usable right now (e.g. API key configured). */
   isEnabled?(): boolean;
 }

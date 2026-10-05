@@ -95,7 +95,7 @@ describe.skipIf(!built)("built website", () => {
 
   it("publishes a /stats page with a Markdown twin, footer link and llms.txt entry", () => {
     const html = read("stats/index.html");
-    expect(html).toMatch(/<h1[^>]*>Usage statistics<\/h1>/);
+    expect(html).toMatch(/<h1[^>]*>3D assets in numbers<\/h1>/);
     expect(html).toContain("StatsDashboard"); // the live island
     expect(read("sitemap-0.xml")).toContain("https://3d.shep.bot/stats<");
     expect(read("index.html")).toContain('href="/stats"');
@@ -145,6 +145,25 @@ describe.skipIf(!built)("built website", () => {
     expect(images.size).toBe(pages.length); // one card per page
     expect(statSync(new URL("og.png", root)).size).toBeGreaterThan(10_000); // legacy URL still served
     expect(read("docs/mcp/index.html")).toContain('<meta property="article:section" content="Docs"');
+  });
+
+  it("publishes the catalog census on /stats, the homepage, llms.txt and as JSON", () => {
+    const catalog = JSON.parse(read("catalog.json")) as { countedAt: string; totals: { listings: { count: number }; free: { count: number } }; sources: { id: string }[] };
+    expect(catalog.sources.length).toBeGreaterThan(5);
+    expect(JSON.parse(read("catalog-history.json")).length).toBeGreaterThan(0);
+    const stats = read("stats/index.html");
+    const listings = catalog.totals.listings.count.toLocaleString("en");
+    expect(text(stats)).toContain(listings);
+    expect(stats).toContain("Copy quote");
+    expect(stats).toMatch(/As of [A-Z][a-z]+ \d+, \d{4}, 3D Asset Server searches/);
+    const dataset = jsonLd(stats)["@graph"].find((n) => n["@type"] === "Dataset") as { distribution: { contentUrl: string }[] } | undefined;
+    expect(dataset?.distribution.map((d) => d.contentUrl)).toEqual(["https://3d.shep.bot/catalog.json", "https://3d.shep.bot/catalog-history.json"]);
+    expect(read("index.html")).toContain("free 3D assets");
+    expect(read("llms.txt")).toMatch(/\*\*Catalog \(counted \d{4}-\d{2}-\d{2}\)\.\*\* [\d,]+\+? asset listings/);
+    const md = read("stats.md");
+    expect(md).toContain("# 3D assets in numbers");
+    expect(md).toContain(`| ${listings}`.slice(0, 2)); // the by-source table
+    expect(md).toContain("/v1/catalog");
   });
 });
 

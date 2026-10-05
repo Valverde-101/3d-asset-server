@@ -7,13 +7,15 @@ import { Marquee } from "@/components/ui/marquee";
 import { EXAMPLE_PROMPTS } from "@/lib/agents";
 import { FAQ } from "@/lib/faq";
 import { faqPage, softwareApplication, webApi } from "@/lib/schema";
-import { CC0_COUNT, DIRECT_DOWNLOAD_COUNT, MCP_URL, PROVIDERS, SITE, SOURCE_COUNT } from "@/lib/site";
+import { CATALOG, fmt, fmtShort } from "@/lib/catalog";
+import { MCP_URL, PROVIDERS, SITE, SOURCE_COUNT } from "@/lib/site";
 
 const suggestions = ["low poly tree", "sunset hdri", "brick wall", "medieval barrel", "mossy rock", "sci-fi crate"];
+const totals = CATALOG.totals;
 const stats = [
   { value: SOURCE_COUNT, label: "asset sites in one search" },
-  { value: DIRECT_DOWNLOAD_COUNT, label: "with direct downloads" },
-  { value: CC0_COUNT, label: "CC0 / public-domain sources" },
+  { value: fmtShort(totals.free.count, totals.free.atLeast), exact: fmt(totals.free.count, totals.free.atLeast), label: "free 3D assets" },
+  { value: fmtShort(totals.cc0.count, totals.cc0.atLeast), exact: fmt(totals.cc0.count, totals.cc0.atLeast), label: "CC0 / public-domain assets" },
   { value: "0", label: "accounts or API keys needed" },
 ];
 const surfaces = [
@@ -102,11 +104,12 @@ const typeLinks = [
         {stats.map((s) => (
           <div>
             <dt class="sr-only">{s.label}</dt>
-            <dd class="text-3xl font-semibold tabular-nums tracking-tight">{s.value}</dd>
+            <dd class="text-3xl font-semibold tabular-nums tracking-tight" title={s.exact}>{s.value}</dd>
             <dd class="mt-1 text-xs text-muted-foreground">{s.label}</dd>
           </div>
         ))}
       </dl>
+      <p class="mt-6 text-sm"><a href="/stats" class="text-muted-foreground transition hover:text-foreground">Counted daily across every source · see the numbers →</a></p>
     </div>
 
     <div class="relative border-t border-border/60 py-6">

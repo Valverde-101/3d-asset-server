@@ -1,6 +1,7 @@
 import * as cheerio from "cheerio";
 import type { Asset, AssetDetails, AssetFile, License, Provider, ProviderContext, SearchQuery } from "../core/types.js";
 import { LICENSES, absoluteUrl, cleanText, makeAsset, matchScore, paginate, stem, tokenize, uniq, wantsType } from "../core/util.js";
+import { catalogueCensus } from "../core/census.js";
 
 /**
  * Quaternius (https://quaternius.com): ~80 free low-poly 3D packs and animated characters.
@@ -236,6 +237,10 @@ export const quaternius: Provider = {
   pricing: "free",
   // No uniform license: older packs are CC0, newer kits use the Quaternius Asset License (QAL).
   supportsDownload: false,
+
+  census(ctx) {
+    return catalogueCensus(this, ctx, "packs");
+  },
 
   // The site only has a client-side filter box; link to the homepage.
   buildSearchUrl(_q: SearchQuery) {
