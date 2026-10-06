@@ -1,19 +1,19 @@
 {
-  "countedAt": "2026-10-05T13:51:24.392Z",
+  "countedAt": "2026-10-06T11:29:50.521Z",
   "totals": {
     "listings": {
-      "count": 2951627,
+      "count": 2951964,
       "atLeast": true
     },
     "free": {
-      "count": 242986,
+      "count": 243061,
       "atLeast": true
     },
     "cc0": {
       "count": 8221
     },
     "directDownload": {
-      "count": 34164,
+      "count": 34176,
       "atLeast": true
     },
     "addedLast30Days": 30,
@@ -22,11 +22,11 @@
   },
   "byType": {
     "model": {
-      "count": 2737098,
+      "count": 2737131,
       "atLeast": true
     },
     "pack": {
-      "count": 118437
+      "count": 118697
     },
     "texture": {
       "count": 57115
@@ -40,7 +40,7 @@
       "atLeast": true
     },
     "other": {
-      "count": 8165,
+      "count": 8209,
       "atLeast": true
     },
     "sprite": {
@@ -74,7 +74,11 @@
         "model": 2719278
       },
       "method": "CGTrader listing: totalCount for all and free models",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-05T13:51:24.392Z",
+      "stale": {
+        "since": "2026-10-05T13:51:24.392Z",
+        "error": "CGTrader bot protection (AWS WAF challenge) blocked automated access from this network (common for cloud/datacenter IPs). Open https://www.cgtrader.com/free-3d-models in a browser instead."
+      }
     },
     {
       "id": "itchio",
@@ -82,22 +86,22 @@
       "homepage": "https://itch.io/game-assets",
       "pricing": "freemium",
       "supportsDownload": false,
-      "total": 118384,
-      "free": 55261,
+      "total": 118644,
+      "free": 55324,
       "byType": {
-        "pack": 118384
+        "pack": 118644
       },
       "categories": {
-        "3D": 16458,
-        "2D": 43815,
-        "Textures": 2466,
-        "UI / GUI": 3409,
-        "Audio": 4269,
-        "Fonts": 1988
+        "3D": 16505,
+        "2D": 43921,
+        "Textures": 2468,
+        "UI / GUI": 3425,
+        "Audio": 4297,
+        "Fonts": 1990
       },
       "unit": "packs",
       "method": "itch.io game-assets browse pages: result counts",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "texturescom",
@@ -126,7 +130,7 @@
         "Windows": 2156
       },
       "method": "Category tree: photo sets per top-level category",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "blenderkit",
@@ -134,27 +138,27 @@
       "homepage": "https://www.blendkit.com",
       "pricing": "freemium",
       "supportsDownload": true,
-      "total": 42967,
+      "total": 43044,
       "atLeast": true,
-      "free": 27795,
+      "free": 27807,
       "byType": {
-        "model": 14894,
+        "model": 14927,
         "material": 10000,
         "hdri": 10000,
-        "other": 8073
+        "other": 8117
       },
       "categories": {
         "model": 10000,
         "printable": 352,
-        "scene": 4542,
+        "scene": 4575,
         "material": 10000,
         "hdr": 10000,
-        "brush": 7073,
+        "brush": 7104,
         "nodegroup": 348,
-        "addon": 652
+        "addon": 665
       },
       "method": "BlenderKit search API: count per asset type, free and all (capped at 10,000 each)",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "ambientcg",
@@ -189,11 +193,11 @@
           "label": "Most downloaded this month",
           "title": "Wood 096",
           "url": "https://ambientcg.com/a/Wood096",
-          "value": 1976
+          "value": 2254
         }
       ],
       "method": "ambientCG API v3: totalResults per asset type",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "polyhaven",
@@ -224,29 +228,29 @@
         "medium contrast": 278
       },
       "addedLast30Days": 13,
-      "downloads": 123614162,
+      "downloads": 123671125,
       "highlights": [
         {
           "label": "Most downloaded HDRI",
           "title": "Kloofendal 48d Partly Cloudy (Pure Sky)",
           "url": "https://polyhaven.com/a/kloofendal_48d_partly_cloudy_puresky",
-          "value": 874417
+          "value": 874859
         },
         {
           "label": "Most downloaded texture",
           "title": "Plywood",
           "url": "https://polyhaven.com/a/plywood",
-          "value": 731636
+          "value": 731712
         },
         {
           "label": "Most downloaded model",
           "title": "Grass Medium 01",
           "url": "https://polyhaven.com/a/grass_medium_01",
-          "value": 241518
+          "value": 241756
         }
       ],
       "method": "Poly Haven API: every asset (/assets)",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "sharetextures",
@@ -274,11 +278,11 @@
           "label": "Most downloaded",
           "title": "Velvet 2",
           "url": "https://www.sharetextures.com/textures/fabric/velvet_2",
-          "value": 23499
+          "value": 23509
         }
       ],
       "method": "ShareTextures API: totalCount per item type",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "threedtextures",
@@ -294,7 +298,7 @@
       },
       "addedLast30Days": 4,
       "method": "WordPress REST API: X-WP-Total of material posts (excluding showcase posts)",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "hdrmaps",
@@ -322,7 +326,7 @@
         "Freebies": 214
       },
       "method": "WooCommerce Store API: X-WP-Total per shop category",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "texturecan",
@@ -338,7 +342,7 @@
         "model": 8
       },
       "method": "Listing pages: full pages × 20 + the last page, plus the models page",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "cgbookcase",
@@ -369,7 +373,7 @@
       },
       "addedLast30Days": 0,
       "method": "Every listing in the source's catalogue",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "hdrihub",
@@ -393,7 +397,11 @@
         "3d-models": 63
       },
       "method": "Sitemap: product pages per shop section",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-05T13:51:24.392Z",
+      "stale": {
+        "since": "2026-10-05T13:51:24.392Z",
+        "error": "HTTP 403 for https://www.hdri-hub.com/sitemap.xml"
+      }
     },
     {
       "id": "kenney",
@@ -429,7 +437,7 @@
       },
       "unit": "packs",
       "method": "Every listing in the source's catalogue",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     },
     {
       "id": "quaternius",
@@ -444,7 +452,7 @@
       },
       "unit": "packs",
       "method": "Every listing in the source's catalogue",
-      "countedAt": "2026-10-05T13:51:24.392Z"
+      "countedAt": "2026-10-06T11:29:50.521Z"
     }
   ],
   "linked": [
