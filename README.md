@@ -15,7 +15,7 @@
                          HTTP API  *  MCP server  *  web UI  *  CLI
 ```
 
-**3d-asset-server** searches 17 asset sites at once and downloads what you pick, ready to drop
+**3d-asset-server** searches 18 asset sites at once and downloads what you pick, ready to drop
 into a game or a website. Use it from a browser, from `curl`, from the command line, or let your AI
 assistant drive it over MCP.
 
@@ -140,6 +140,7 @@ and a link to the same search on that site.
 | [Kenney](https://kenney.nl/assets) | Low-poly 3D, 2D, UI and audio packs | scrape | yes: pack zips, auto-extracted | CC0 |
 | [Poliigon](https://www.poliigon.com) | Premium materials and models | link only (bot wall) | no | per listing |
 | [Quaternius](https://quaternius.com) | Low-poly models, animated characters | scrape | no: Google Drive / itch.io links | CC0 / QAL |
+| [Polyfork](https://polyfork.dev) | Low-poly models and themed kits for web and games | API | yes for free assets (GLB from Polyfork's CDN); FBX / USDZ / OBJ need an account | royalty free, no redistribution |
 | [3DTextures.me](https://3dtextures.me) | Realistic and stylized PBR | WordPress API | no: Google Drive folders | CC0 |
 | [TextureCan](https://www.texturecan.com) | PBR materials and a few models | scrape | yes: 1K-4K zips | CC0 |
 | [Textures.com](https://www.textures.com) | Photo textures, 3D foliage, decals, skies | JSON API | no: credit system | Textures.com licence |
@@ -151,7 +152,7 @@ and a link to the same search on that site.
 
 ```
   search + direct download    Poly Haven, ambientCG, BlenderKit (free), Kenney,
-                              TextureCan, HDRMaps (free)
+                              Polyfork (free), TextureCan, HDRMaps (free)
 
   search + link to the page   CGBookcase, ShareTextures, Quaternius, 3DTextures.me,
                               Textures.com, HDRI Hub, CGTrader, itch.io

@@ -1,0 +1,189 @@
+{
+ "total": 34,
+ "page": 1,
+ "per_page": 5,
+ "assets": [
+  {
+   "id": "rock-bommie-column-0f8a9b",
+   "title": "Rock Bommie Column",
+   "class": "prop",
+   "triangles": 334,
+   "kit": "office-reefscape-kit-1afd7c",
+   "free": true,
+   "plan": "free",
+   "price_usd": 0,
+   "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+   "owned": true,
+   "page": "https://polyfork.dev/asset/rock-bommie-column-0f8a9b",
+   "thumbnail": "https://polyfork.dev/files/rock-bommie-column-0f8a9b/renders/hero.png",
+   "preview_glb": "https://polyfork.dev/cdn/rock-bommie-column-0f8a9b-preview.glb",
+   "preview_triangles": 334,
+   "preview_fidelity": 1,
+   "has_rig": false,
+   "remixable": true,
+   "has_night": false,
+   "has_decals": false,
+   "has_ik": false,
+   "ik_type": null,
+   "has_skeleton": false,
+   "size_m": {
+    "x": 0.16,
+    "y": 0.45,
+    "z": 0.14
+   },
+   "origin_y": 0,
+   "download": {
+    "glb": "https://polyfork.dev/cdn/rock-bommie-column-0f8a9b.glb",
+    "mjs": "https://polyfork.dev/cdn/rock-bommie-column-0f8a9b.mjs",
+    "auth": "none"
+   }
+  },
+  {
+   "id": "rock-cave-ledge-2a9532",
+   "title": "Rock Cave Ledge",
+   "class": "prop",
+   "triangles": 510,
+   "kit": "office-reefscape-kit-1afd7c",
+   "free": true,
+   "plan": "free",
+   "price_usd": 0,
+   "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+   "owned": true,
+   "page": "https://polyfork.dev/asset/rock-cave-ledge-2a9532",
+   "thumbnail": "https://polyfork.dev/files/rock-cave-ledge-2a9532/renders/hero.png",
+   "preview_glb": "https://polyfork.dev/cdn/rock-cave-ledge-2a9532-preview.glb",
+   "preview_triangles": 510,
+   "preview_fidelity": 1,
+   "has_rig": false,
+   "remixable": true,
+   "has_night": false,
+   "has_decals": false,
+   "has_ik": false,
+   "ik_type": null,
+   "has_skeleton": false,
+   "size_m": {
+    "x": 0.41,
+    "y": 0.25,
+    "z": 0.23
+   },
+   "origin_y": 0,
+   "download": {
+    "glb": "https://polyfork.dev/cdn/rock-cave-ledge-2a9532.glb",
+    "mjs": "https://polyfork.dev/cdn/rock-cave-ledge-2a9532.mjs",
+    "auth": "none"
+   }
+  },
+  {
+   "id": "aquascape-rock-arch-48bf5e",
+   "title": "Aquascape Rock Arch",
+   "class": "prop",
+   "triangles": 536,
+   "kit": "office-reefscape-kit-1afd7c",
+   "free": true,
+   "plan": "free",
+   "price_usd": 0,
+   "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+   "owned": true,
+   "page": "https://polyfork.dev/asset/aquascape-rock-arch-48bf5e",
+   "thumbnail": "https://polyfork.dev/files/aquascape-rock-arch-48bf5e/renders/hero.png",
+   "preview_glb": "https://polyfork.dev/cdn/aquascape-rock-arch-48bf5e-preview.glb",
+   "preview_triangles": 536,
+   "preview_fidelity": 1,
+   "has_rig": false,
+   "remixable": true,
+   "has_night": false,
+   "has_decals": false,
+   "has_ik": false,
+   "ik_type": null,
+   "has_skeleton": false,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.34,
+    "z": 0.22
+   },
+   "origin_y": 0,
+   "download": {
+    "glb": "https://polyfork.dev/cdn/aquascape-rock-arch-48bf5e.glb",
+    "mjs": "https://polyfork.dev/cdn/aquascape-rock-arch-48bf5e.mjs",
+    "auth": "none"
+   }
+  },
+  {
+   "id": "garden-rock-7f5d60",
+   "title": "Garden Rock",
+   "class": "prop",
+   "triangles": 140,
+   "kit": "cozy-farm-cc979f",
+   "free": true,
+   "plan": "free",
+   "price_usd": 0,
+   "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+   "owned": true,
+   "page": "https://polyfork.dev/asset/garden-rock-7f5d60",
+   "thumbnail": "https://polyfork.dev/files/garden-rock-7f5d60/renders/hero.png",
+   "preview_glb": "https://polyfork.dev/cdn/garden-rock-7f5d60-preview.glb",
+   "preview_triangles": 140,
+   "preview_fidelity": 1,
+   "has_rig": false,
+   "remixable": true,
+   "has_night": false,
+   "has_decals": false,
+   "has_ik": false,
+   "ik_type": null,
+   "has_skeleton": false,
+   "size_m": {
+    "x": 0.72,
+    "y": 0.42,
+    "z": 0.64
+   },
+   "origin_y": 0,
+   "download": {
+    "glb": "https://polyfork.dev/cdn/garden-rock-7f5d60.glb",
+    "mjs": "https://polyfork.dev/cdn/garden-rock-7f5d60.mjs",
+    "auth": "none"
+   }
+  },
+  {
+   "id": "small-reef-rock-99062d",
+   "title": "Small Reef Rock",
+   "class": "prop",
+   "triangles": 441,
+   "kit": "coral-reef-a7128a",
+   "free": true,
+   "plan": "free",
+   "price_usd": 0,
+   "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+   "owned": true,
+   "page": "https://polyfork.dev/asset/small-reef-rock-99062d",
+   "thumbnail": "https://polyfork.dev/files/small-reef-rock-99062d/renders/hero.png",
+   "preview_glb": "https://polyfork.dev/cdn/small-reef-rock-99062d-preview.glb",
+   "preview_triangles": 430,
+   "preview_fidelity": 0.98,
+   "has_rig": false,
+   "remixable": true,
+   "has_night": true,
+   "has_decals": false,
+   "has_ik": false,
+   "ik_type": null,
+   "has_skeleton": false,
+   "size_m": {
+    "x": 0.5,
+    "y": 0.39,
+    "z": 0.46
+   },
+   "origin_y": 0,
+   "download": {
+    "glb": "https://polyfork.dev/cdn/small-reef-rock-99062d.glb",
+    "mjs": "https://polyfork.dev/cdn/small-reef-rock-99062d.mjs",
+    "auth": "none"
+   }
+  }
+ ],
+ "filters": {
+  "free": 1,
+  "sort": "relevance"
+ },
+ "coverage": "ok",
+ "strong_matches": 12,
+ "coverage_note": "12 results match everything you asked for; the rest match part of it"
+}

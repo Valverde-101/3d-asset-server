@@ -8,6 +8,7 @@ import { hdrmaps } from "./hdrmaps.js";
 import { itchio } from "./itchio.js";
 import { kenney } from "./kenney.js";
 import { fab, poliigon, turbosquid } from "./linked.js";
+import { polyfork } from "./polyfork.js";
 import { polyhaven } from "./polyhaven.js";
 import { quaternius } from "./quaternius.js";
 import { sharetextures } from "./sharetextures.js";
@@ -26,6 +27,7 @@ export const allProviders: Provider[] = [
   kenney,
   poliigon,
   quaternius,
+  polyfork,
   threedtextures,
   texturecan,
   texturescom,

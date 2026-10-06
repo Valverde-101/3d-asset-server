@@ -135,6 +135,14 @@
       "access": "scrape",
       "addedAt": "2026-10-04",
       "addedBy": "launch"
+    },
+    {
+      "id": "polyfork",
+      "name": "Polyfork",
+      "homepage": "https://polyfork.dev",
+      "access": "api",
+      "addedAt": "2026-10-06",
+      "addedBy": "human"
     }
   ],
   "rejected": [

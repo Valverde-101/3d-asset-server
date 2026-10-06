@@ -1,6 +1,13 @@
 {
   "integrations": [
     {
+      "id": "polyfork",
+      "name": "Polyfork",
+      "homepage": "https://polyfork.dev",
+      "addedAt": "2026-10-06",
+      "addedBy": "human"
+    },
+    {
       "id": "threedtextures",
       "name": "3DTextures.me",
       "homepage": "https://3dtextures.me",
@@ -120,5 +127,5 @@
       "addedBy": "launch"
     }
   ],
-  "rejected": 0
+  "rejected": 4
 }

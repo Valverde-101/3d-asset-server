@@ -143,6 +143,19 @@
     "supportsDownload": false
   },
   {
+    "id": "polyfork",
+    "name": "Polyfork",
+    "homepage": "https://polyfork.dev",
+    "description": "Low-poly, game- and web-ready 3D models (props, buildings, vehicles, characters, themed kits) with a public API; free assets download as GLB.",
+    "assetTypes": [
+      "model"
+    ],
+    "access": "api",
+    "pricing": "freemium",
+    "license": "Royalty Free",
+    "supportsDownload": true
+  },
+  {
     "id": "threedtextures",
     "name": "3DTextures.me",
     "homepage": "https://3dtextures.me",
