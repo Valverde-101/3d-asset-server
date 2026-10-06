@@ -328,6 +328,21 @@ describe("MCP tools", () => {
     expect(r.shareUrl).toBeUndefined();
     const linked = text(await (await connect(undefined, "https://3d.shep.bot/")).callTool({ name: "get_asset", arguments: { id: "fake:crate" } }));
     expect(linked.shareUrl).toBe("https://3d.shep.bot/search?asset=fake%3Acrate");
+    // glTF with companions is zipped; a self-contained file is redirected to and keeps its name.
+    expect(linked.selection.bundleFilename).toBe("fake-crate.zip");
+    const fbx = text(await (await connect(undefined, "https://3d.shep.bot")).callTool({ name: "get_asset", arguments: { id: "fake:crate", format: "fbx" } }));
+    expect(fbx.selection.bundleFilename).toBe("crate.fbx");
+  });
+
+  it("without local downloads, tells agents to fetch bundleUrl themselves", async () => {
+    const server = createMcpServer(service(), { allowLocalDownload: false, publicBaseUrl: "https://3d.shep.bot" });
+    const [a, b] = InMemoryTransport.createLinkedPair();
+    const client = new Client({ name: "test", version: "1" });
+    await Promise.all([server.connect(a), client.connect(b)]);
+    expect(client.getInstructions()).toContain("selection.bundleUrl");
+    expect(client.getInstructions()).not.toContain("download_asset");
+    const { tools } = await client.listTools();
+    expect(tools.find((t) => t.name === "get_asset")?.description).not.toContain("download_asset");
   });
 
   it("download_asset writes into <dest>/<provider>-<id>", async () => {

@@ -37,7 +37,14 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       instructions: [
         "Search and download 3D models, PBR materials/textures, HDRIs and game asset packs from many sources",
         "(Poly Haven, ambientCG, Kenney, Quaternius, BlenderKit, CGTrader, itch.io, Textures.com, and more).",
-        "Typical flow: search_assets -> get_asset (see formats/resolutions/licence) -> download_asset.",
+        ...(opts.allowLocalDownload
+          ? ["Typical flow: search_assets -> get_asset (see formats/resolutions/licence) -> download_asset."]
+          : [
+              "Typical flow: search_assets -> get_asset (see formats/resolutions/licence) -> fetch selection.bundleUrl.",
+              "This server cannot write to your disk: if you have a shell, download the bundle yourself",
+              "(`curl -L -o \"assets/<selection.bundleFilename>\" \"<selection.bundleUrl>\"`, then unzip it when it is a .zip);",
+              "otherwise give the user the bundleUrl link.",
+            ]),
         "Prefer CC0 sources for commercial projects; always report the licence and attribution requirement to the user.",
         "Results marked downloadable=false must be obtained from their `url` on the source site.",
       ].join(" "),
@@ -136,7 +143,10 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
       description:
         "Full details for an asset id from search_assets (e.g. 'polyhaven:ArmChair_01'): description, licence, " +
         "available formats and resolutions, and direct file URLs. Pass `format`/`resolution` to see exactly which " +
-        "files download_asset would fetch.",
+        (opts.allowLocalDownload
+          ? "files download_asset would fetch."
+          : "files to fetch; selection.bundleUrl downloads them in one request, saved as selection.bundleFilename " +
+            "(a zip with companion files, or a redirect to a single file, so follow redirects)."),
       inputSchema: {
         id: z.string().describe("Asset id in the form '<provider>:<id>'."),
         format: z.string().optional().describe("Preferred format or package: glb, gltf, fbx, blend, obj, usd, hdr, exr, jpg, png, zip."),
@@ -164,6 +174,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
               opts.publicBaseUrl && selected.length
                 ? `${opts.publicBaseUrl.replace(/\/$/, "")}/v1/assets/${encodeURIComponent(asset.id)}/download${query({ format: args.format, resolution: args.resolution })}`
                 : undefined,
+            bundleFilename: opts.publicBaseUrl && selected.length ? bundleFilename(asset, selected) : undefined,
           },
           note: asset.files.length
             ? undefined
@@ -306,6 +317,12 @@ function fileOptions(asset: AssetDetails) {
     packages: packages.size ? [...packages] : undefined,
     fileCount: asset.files.length,
   });
+}
+
+/** Name of what bundleUrl serves: the file itself when it is redirected to, otherwise the zip. */
+function bundleFilename(asset: Asset, files: AssetFile[]): string {
+  const only = files[0]!;
+  return files.length === 1 && !only.includes?.length ? only.filename : `${assetFolderName(asset)}.zip`;
 }
 
 function describeFile(f: AssetFile) {
