@@ -137,5 +137,33 @@
       "addedBy": "launch"
     }
   ],
-  "rejected": []
+  "rejected": [
+    {
+      "name": "Mixos",
+      "homepage": "https://www.mixos.io",
+      "checkedAt": "2026-10-06",
+      "reason": "free models and textures are sourced from Poly Haven, which we already search"
+    },
+    {
+      "name": "GobKit",
+      "homepage": "https://gobkit.com",
+      "checkedAt": "2026-10-06",
+      "reason": "only about 79 curated free models plus an AI generator service; too small for now",
+      "recheckAfter": "2027-01-04"
+    },
+    {
+      "name": "Open Source 3D Assets",
+      "homepage": "https://www.opensource3dassets.com",
+      "checkedAt": "2026-10-06",
+      "reason": "no documented public search API and mostly avatars; robots.txt served is for a sister site",
+      "recheckAfter": "2027-01-04"
+    },
+    {
+      "name": "3DTexel",
+      "homepage": "https://3dtexel.com",
+      "checkedAt": "2026-10-06",
+      "reason": "integration failed workflow verification: https://github.com/arielshad/3d-asset-server/actions/runs/37460682215",
+      "recheckAfter": "2026-11-05"
+    }
+  ]
 }
