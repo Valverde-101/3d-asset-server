@@ -34,10 +34,10 @@
   },
   {
     "date": "2026-10-06",
-    "listings": 2951964,
-    "free": 243061,
+    "listings": 2953975,
+    "free": 243882,
     "byType": {
-      "model": 2737131,
+      "model": 2739142,
       "pack": 118697,
       "texture": 57115,
       "hdri": 12890,
@@ -56,6 +56,7 @@
       "ambientcg": 2898,
       "polyhaven": 2383,
       "sharetextures": 2247,
+      "polyfork": 2011,
       "threedtextures": 1500,
       "hdrmaps": 875,
       "texturecan": 658,

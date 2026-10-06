@@ -7,7 +7,7 @@ description: Connect Claude Code, Cursor, VS Code, Windsurf, Codex or Gemini CLI
 
 # 3D Asset Server MCP server for coding agents
 
-3D Asset Server is a [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it once and your coding agent can search 18 asset sites, check licences and pull models, textures and HDRIs into your project while it writes the code that uses them.
+3D Asset Server is a [Model Context Protocol](https://modelcontextprotocol.io) server. Connect it once and your coding agent can search 19 asset sites, check licences and pull models, textures and HDRIs into your project while it writes the code that uses them.
 
 **MCP endpoint:** `https://3d.shep.bot/mcp` (Streamable HTTP, no authentication).
 

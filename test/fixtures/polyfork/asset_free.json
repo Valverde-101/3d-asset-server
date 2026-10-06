@@ -1,0 +1,114 @@
+{
+ "id": "geyser-cone-2b5033",
+ "title": "Geyser Cone",
+ "class": "prop",
+ "triangles": 524,
+ "kit": "prehistoric-valley-8638dc",
+ "free": true,
+ "plan": "free",
+ "price_usd": 0,
+ "price_note": "free: the /cdn links need no account and no key (an account adds the ready-to-serve zip)",
+ "owned": true,
+ "page": "https://polyfork.dev/asset/geyser-cone-2b5033",
+ "thumbnail": "https://polyfork.dev/files/geyser-cone-2b5033/renders/hero.png",
+ "preview_glb": "https://polyfork.dev/cdn/geyser-cone-2b5033-preview.glb",
+ "preview_triangles": 496,
+ "preview_fidelity": 0.95,
+ "has_rig": false,
+ "remixable": true,
+ "has_night": false,
+ "has_decals": false,
+ "has_ik": false,
+ "ik_type": null,
+ "has_skeleton": false,
+ "size_m": {
+  "x": 3,
+  "y": 1.21,
+  "z": 3
+ },
+ "origin_y": 0,
+ "download": {
+  "glb": "https://polyfork.dev/cdn/geyser-cone-2b5033.glb",
+  "mjs": "https://polyfork.dev/cdn/geyser-cone-2b5033.mjs",
+  "auth": "none"
+ },
+ "export_formats": {
+  "fbx": {
+   "url": "https://polyfork.dev/dl/geyser-cone-2b5033.fbx",
+   "for": "Unity, Unreal, Maya, 3ds Max",
+   "available": true
+  },
+  "usdz": {
+   "url": "https://polyfork.dev/dl/geyser-cone-2b5033.usdz",
+   "for": "iOS AR Quick Look, Omniverse",
+   "available": true
+  },
+  "obj": {
+   "url": "https://polyfork.dev/dl/geyser-cone-2b5033.obj",
+   "for": "universal, geometry only, no pivots",
+   "available": true
+  }
+ },
+ "export_note": "vertex colours become NAMED MATERIALS on export, named after this asset's own colour knobs; a plain format conversion would arrive white, because only three.js reads our COLOR_0. Built on first request (about a second), cached after. These are yours: send your key as Authorization: Bearer <key>.",
+ "params_url": "https://polyfork.dev/cdn/geyser-cone-2b5033-params.json",
+ "materials": 1,
+ "draw_calls": 9,
+ "palette": [
+  {
+   "hex": "#b7a584",
+   "share": 0.248
+  },
+  {
+   "hex": "#5f9e9a",
+   "share": 0.189
+  },
+  {
+   "hex": "#dccca3",
+   "share": 0.099
+  },
+  {
+   "hex": "#c48e4c",
+   "share": 0.086
+  },
+  {
+   "hex": "#e4d5b0",
+   "share": 0.084
+  },
+  {
+   "hex": "#f1e6cc",
+   "share": 0.08
+  }
+ ],
+ "style": "low-poly, flat-shaded vertex colors, no textures, single shared material, so any set of these merges to one draw call; shares palette and scale with its kit",
+ "origin": "ground level (minY = 0): the model sits on y=0 as-is",
+ "rigged_parts": [],
+ "detachable_parts": [],
+ "animation": "rigged parts are named groups with the pivot at the hinge/axle: obj.getObjectByName(part) then rotation[axis] (rotate, degrees) or position[axis] (slide, meters)",
+ "published_at": "2026-10-06 02:45:53",
+ "renders": [
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/back.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/compare.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/detail.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/front.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/hero-crop.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/hero.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/left.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/low-back.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/low.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/right.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/top.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-climate-ashfall.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-climate-dry.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-colorway-grey-sinter.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-colorway-iron-mat.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-colorway-sulphur.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-erupting-0.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-erupting-1.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-layers-1.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-layers-3.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-tone-0.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/variant-tone-1.png",
+  "https://polyfork.dev/files/geyser-cone-2b5033/renders/views.png"
+ ],
+ "license": "Use in commercial projects, no attribution. No redistribution of the files themselves. https://polyfork.dev/licensing"
+}

@@ -2,27 +2,27 @@
   "countedAt": "2026-10-06T11:29:50.521Z",
   "totals": {
     "listings": {
-      "count": 2951964,
+      "count": 2953975,
       "atLeast": true
     },
     "free": {
-      "count": 243061,
+      "count": 243882,
       "atLeast": true
     },
     "cc0": {
       "count": 8221
     },
     "directDownload": {
-      "count": 34176,
+      "count": 34997,
       "atLeast": true
     },
     "addedLast30Days": 30,
-    "sourcesCounted": 14,
+    "sourcesCounted": 15,
     "sourcesLinked": 3
   },
   "byType": {
     "model": {
-      "count": 2737131,
+      "count": 2739142,
       "atLeast": true
     },
     "pack": {
@@ -58,8 +58,8 @@
   },
   "byLicense": {
     "CC0": 8221,
-    "CC0 (ShareTextures custom terms)": 2247,
-    "Royalty Free": 1276
+    "Royalty Free": 3287,
+    "CC0 (ShareTextures custom terms)": 2247
   },
   "sources": [
     {
@@ -283,6 +283,32 @@
       ],
       "method": "ShareTextures API: totalCount per item type",
       "countedAt": "2026-10-06T11:29:50.521Z"
+    },
+    {
+      "id": "polyfork",
+      "name": "Polyfork",
+      "homepage": "https://polyfork.dev",
+      "license": "Royalty Free",
+      "pricing": "freemium",
+      "supportsDownload": true,
+      "total": 2011,
+      "free": 821,
+      "byType": {
+        "model": 2011
+      },
+      "categories": {
+        "prop": 1271,
+        "building": 294,
+        "vehicle": 126,
+        "character": 89,
+        "ultra": 86,
+        "animal": 82,
+        "attachment": 48,
+        "terrain": 13,
+        "hand": 2
+      },
+      "method": "Polyfork API: total, free and per-class counts (/api/assets)",
+      "countedAt": "2026-10-06T17:59:34.513Z"
     },
     {
       "id": "threedtextures",
