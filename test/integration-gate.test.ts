@@ -96,4 +96,12 @@ describe("integration gate", () => {
       { name: "New Site", homepage: "https://new.example", checkedAt: "2026-10-06", reason: "failed workflow verification", recheckAfter: "2026-11-05" },
     ]);
   });
+
+  it("demotes with a custom recheck delay", () => {
+    const patched = { integrated: [poly, neu], rejected: [] };
+    const next = (demote as (b: Registry, p: Registry, r: string, t: string, d: number) => Registry)(before, patched, "blocked from CI", "2026-10-06", 7);
+    expect(next.rejected).toEqual([
+      { name: "New Site", homepage: "https://new.example", checkedAt: "2026-10-06", reason: "blocked from CI", recheckAfter: "2026-10-13" },
+    ]);
+  });
 });

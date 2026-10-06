@@ -15,11 +15,11 @@
 //     Check the staged patch against base-ref (default HEAD). Prints the
 //     decision; with GITHUB_OUTPUT set, writes `added=<ids>` and
 //     `rejected=<count of newly rejected sites>`. Exits 1 when refused.
-//   node scripts/integration-gate.mjs demote <patched-registry.json> <reason>
+//   node scripts/integration-gate.mjs demote <patched-registry.json> <reason> [recheck-days]
 //     After a failed verification: write integrations/registry.json as the
 //     base version plus the agent's rejections, with the sources it tried to
-//     add moved to `rejected` (recheck in 30 days), so tomorrow's run does
-//     not retry the same site.
+//     add moved to `rejected` (recheck in recheck-days, default 30), so
+//     tomorrow's run does not retry the same site.
 
 import { execFileSync } from "node:child_process";
 import { appendFileSync, readFileSync, statSync, writeFileSync } from "node:fs";
@@ -82,9 +82,9 @@ export function checkChanges({ files, before, after }) {
 }
 
 /** Base registry + the agent's rejections, with its new sources demoted to `rejected`. */
-export function demote(base, patched, reason, today) {
+export function demote(base, patched, reason, today, recheckDays = 30) {
   const recheck = new Date(`${today}T00:00:00Z`);
-  recheck.setUTCDate(recheck.getUTCDate() + 30);
+  recheck.setUTCDate(recheck.getUTCDate() + recheckDays);
   const known = new Set(base.integrated.map((e) => e.id));
   const failed = patched.integrated
     .filter((e) => !known.has(e.id))
@@ -104,10 +104,10 @@ function git(...args) {
 
 function main() {
   if (process.argv[2] === "demote") {
-    const [, , , patchedPath, reason] = process.argv;
+    const [, , , patchedPath, reason, days] = process.argv;
     const base = JSON.parse(readFileSync("integrations/registry.json", "utf8"));
     const patched = JSON.parse(readFileSync(patchedPath, "utf8"));
-    const next = demote(base, patched, reason, new Date().toISOString().slice(0, 10));
+    const next = demote(base, patched, reason, new Date().toISOString().slice(0, 10), days ? Number(days) : undefined);
     writeFileSync("integrations/registry.json", JSON.stringify(next, null, 2) + "\n");
     console.log(`registry: ${next.rejected.length - base.rejected.length} site(s) recorded as rejected`);
     return;

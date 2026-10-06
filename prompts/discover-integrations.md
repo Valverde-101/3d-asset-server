@@ -149,6 +149,10 @@ npm test                                        # includes registry and source-c
 LIVE=1 npx vitest run test/live/<id>.live.test.ts
 ```
 
+Run the live test exactly as written above, as its own command: no `cd`, pipes
+or `&&`, which the sandbox refuses. Don't use `npm run test:live`, which runs
+every source's live test; other sites failing there says nothing about yours.
+
 Fix what fails. If you cannot make the integration pass within this run:
 1. Remove your provider, its tests and fixtures, and its registry, README and
    docs changes.

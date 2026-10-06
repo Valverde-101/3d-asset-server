@@ -15,7 +15,7 @@
                          HTTP API  *  MCP server  *  web UI  *  CLI
 ```
 
-**3d-asset-server** searches 17 asset sites at once and downloads what you pick, ready to drop
+**3d-asset-server** searches 18 asset sites at once and downloads what you pick, ready to drop
 into a game or a website. Use it from a browser, from `curl`, from the command line, or let your AI
 assistant drive it over MCP.
 
@@ -141,6 +141,7 @@ and a link to the same search on that site.
 | [Poliigon](https://www.poliigon.com) | Premium materials and models | link only (bot wall) | no | per listing |
 | [Quaternius](https://quaternius.com) | Low-poly models, animated characters | scrape | no: Google Drive / itch.io links | CC0 / QAL |
 | [3DTextures.me](https://3dtextures.me) | Realistic and stylized PBR | WordPress API | no: Google Drive folders | CC0 |
+| [3DTexel](https://3dtexel.com) | PBR materials, HDRIs, decals, 3D assets | API | no: downloads need a free account | CC0 |
 | [TextureCan](https://www.texturecan.com) | PBR materials and a few models | scrape | yes: 1K-4K zips | CC0 |
 | [Textures.com](https://www.textures.com) | Photo textures, 3D foliage, decals, skies | JSON API | no: credit system | Textures.com licence |
 | [HDRMaps](https://hdrmaps.com) | HDRIs and backplates | WooCommerce API | yes for free HDRIs (EXR) | royalty free |
@@ -154,7 +155,7 @@ and a link to the same search on that site.
                               TextureCan, HDRMaps (free)
 
   search + link to the page   CGBookcase, ShareTextures, Quaternius, 3DTextures.me,
-                              Textures.com, HDRI Hub, CGTrader, itch.io
+                              3DTexel, Textures.com, HDRI Hub, CGTrader, itch.io
 
   link to the site's search   Fab, Poliigon, TurboSquid
 ```
