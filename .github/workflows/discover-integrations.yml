@@ -10,12 +10,14 @@ name: Discover new sources
 #             gates it (scripts/integration-gate.mjs: allowlisted files only, no
 #             deletions, no edits to existing tests, at most one new source).
 #             Then build, typecheck, the full test suite and the new source's
-#             live test. If everything passes, it commits to main and starts the
-#             CI workflow, whose image and deploy jobs roll it out to 3d.shep.bot
-#             (pushes made with GITHUB_TOKEN don't trigger workflows by
-#             themselves, so CI is dispatched explicitly). If a check fails
-#             after the gate, the site is recorded as rejected with a 30-day
-#             recheck, so the next run doesn't retry it.
+#             live test (retried, since sites behind Cloudflare sometimes
+#             answer 403 to a runner IP). If everything passes, it commits to
+#             main and starts the CI workflow, whose image and deploy jobs roll
+#             it out to 3d.shep.bot (pushes made with GITHUB_TOKEN don't trigger
+#             workflows by themselves, so CI is dispatched explicitly). If a
+#             check fails after the gate, the site is recorded as rejected so
+#             the next run doesn't retry it: recheck in 30 days, or in 7 when
+#             the live test only failed with HTTP 403/429 (blocked from CI).
 #
 # Required secret, one of:
 #   CLAUDE_CODE_OAUTH_TOKEN  from `claude setup-token` (Claude subscription)
@@ -89,7 +91,7 @@ jobs:
           claude_args: |
             --max-turns 300
             --permission-mode acceptEdits
-            --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep,Bash(npm:*),Bash(npx:*),Bash(node:*),Bash(curl:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(wc:*),Bash(grep:*),Bash(mkdir:*),Bash(rm:*),Bash(git status:*),Bash(git diff:*)"
+            --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep,Bash(npm:*),Bash(npx:*),Bash(LIVE=1 npx vitest run:*),Bash(node:*),Bash(curl:*),Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(tail:*),Bash(wc:*),Bash(grep:*),Bash(mkdir:*),Bash(rm:*),Bash(git status:*),Bash(git diff:*)"
 
       - name: Collect changes
         id: patch
@@ -165,13 +167,30 @@ jobs:
         run: npm test
 
       - name: Live test the new source
+        id: live
         if: steps.gate.outputs.added != ''
         env:
           LIVE: "1"
           ADDED: ${{ steps.gate.outputs.added }}
+        # Up to 3 attempts, 1 and 3 minutes apart: a site's bot protection can
+        # briefly refuse a runner IP that the agent's run got through from.
+        # Each attempt leaves a JSON report for the rejection step below.
         run: |
-          set -euo pipefail
-          for id in ${ADDED//,/ }; do npx vitest run "test/live/${id}.live.test.ts"; done
+          set -uo pipefail
+          for id in ${ADDED//,/ }; do
+            for attempt in 1 2 3; do
+              if npx vitest run "test/live/${id}.live.test.ts" --reporter=default \
+                   --reporter=json --outputFile.json="$RUNNER_TEMP/live-${id}.json"; then
+                continue 2
+              fi
+              if (( attempt < 3 )); then
+                delay=$(( attempt == 1 ? 60 : 180 ))
+                echo "::warning::live test for ${id} failed (attempt ${attempt}/3); retrying in ${delay}s"
+                sleep "$delay"
+              fi
+            done
+            exit 1
+          done
 
       - name: Commit and push
         id: commit
@@ -213,11 +232,32 @@ jobs:
         # Only when a check after the gate failed (build, tests, live test), so
         # tomorrow's run moves on to another site instead of retrying this one.
         if: failure() && steps.gate.outcome == 'success' && steps.gate.outputs.added != '' && steps.commit.outcome == 'skipped'
+        env:
+          LIVE_FAILED: ${{ steps.live.outcome == 'failure' }}
         run: |
           set -euo pipefail
           git reset -q --hard HEAD
-          node scripts/integration-gate.mjs demote "$RUNNER_TEMP/patched-registry.json" \
-            "integration failed workflow verification: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          reason="integration failed workflow verification: ${run_url}"
+          days=30
+          # Every failed live test was an HTTP 403/429: the site blocked the
+          # runner rather than the integration being broken. Retry it sooner.
+          if [[ "$LIVE_FAILED" == "true" ]] && node -e '
+            const fs = require("fs"), dir = process.env.RUNNER_TEMP;
+            const msgs = [];
+            for (const f of fs.readdirSync(dir).filter((f) => /^live-.+\.json$/.test(f))) {
+              const r = JSON.parse(fs.readFileSync(`${dir}/${f}`, "utf8"));
+              for (const t of r.testResults) {
+                if (t.message) msgs.push(t.message);
+                for (const a of t.assertionResults) if (a.status === "failed") msgs.push(...a.failureMessages);
+              }
+            }
+            process.exit(msgs.length && msgs.every((m) => /^HttpError: HTTP (403|429)\b/.test(m)) ? 0 : 1);
+          '; then
+            reason="live test blocked from GitHub Actions (HTTP 403/429), not an integration bug: ${run_url}"
+            days=7
+          fi
+          node scripts/integration-gate.mjs demote "$RUNNER_TEMP/patched-registry.json" "$reason" "$days"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -qam "chore(integrations): record failed integration attempt (${{ steps.gate.outputs.added }})"

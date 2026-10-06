@@ -2,7 +2,7 @@
 layout: ../../layouts/DocsLayout.astro
 title: 3D Asset Server CLI
 crumb: CLI
-description: Use the 3d-asset-server command line tool to search 17 3D asset sites from a terminal, run the MCP server over stdio, or start your own HTTP server.
+description: Use the 3d-asset-server command line tool to search 18 3D asset sites from a terminal, run the MCP server over stdio, or start your own HTTP server.
 ---
 
 # 3D Asset Server CLI

@@ -156,6 +156,23 @@
     "supportsDownload": false
   },
   {
+    "id": "threedtexel",
+    "name": "3DTexel",
+    "homepage": "https://3dtexel.com",
+    "description": "Free handmade CC0 PBR materials, HDRIs, 3D assets, decals and atlases (search via its public API; download with a free account).",
+    "assetTypes": [
+      "material",
+      "texture",
+      "hdri",
+      "model",
+      "other"
+    ],
+    "access": "api",
+    "pricing": "free",
+    "license": null,
+    "supportsDownload": false
+  },
+  {
     "id": "texturecan",
     "name": "TextureCan",
     "homepage": "https://www.texturecan.com",
