@@ -59,6 +59,6 @@ How to behave:
 
 - Read `RateLimit-Remaining` (or `r=` in `RateLimit`) and slow down before it reaches zero.
 - On `429`, wait `Retry-After` seconds, then retry once. Don't retry in a tight loop.
-- Cache search results you reuse; a search fans out to 18 sites, so repeating it costs everyone.
+- Cache search results you reuse; a search fans out to 19 sites, so repeating it costs everyone.
 
 All rate-limit headers are exposed to browsers through CORS. Self-hosted servers set their own limit with `ASSET_SERVER_RATE_LIMIT` and `ASSET_SERVER_RATE_LIMIT_WINDOW` (see [Self-hosting](/docs/self-hosting)).

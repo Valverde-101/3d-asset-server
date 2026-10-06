@@ -81,6 +81,14 @@
       "addedBy": "launch"
     },
     {
+      "id": "threedtexel",
+      "name": "3DTexel",
+      "homepage": "https://3dtexel.com",
+      "access": "api",
+      "addedAt": "2026-10-06",
+      "addedBy": "agent"
+    },
+    {
       "id": "texturecan",
       "name": "TextureCan",
       "homepage": "https://www.texturecan.com",
@@ -165,13 +173,6 @@
       "checkedAt": "2026-10-06",
       "reason": "no documented public search API and mostly avatars; robots.txt served is for a sister site",
       "recheckAfter": "2027-01-04"
-    },
-    {
-      "name": "3DTexel",
-      "homepage": "https://3dtexel.com",
-      "checkedAt": "2026-10-06",
-      "reason": "integration failed workflow verification: https://github.com/arielshad/3d-asset-server/actions/runs/37460682215",
-      "recheckAfter": "2026-11-05"
     }
   ]
 }

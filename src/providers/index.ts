@@ -14,6 +14,7 @@ import { quaternius } from "./quaternius.js";
 import { sharetextures } from "./sharetextures.js";
 import { texturecan } from "./texturecan.js";
 import { texturescom } from "./texturescom.js";
+import { threedtexel } from "./threedtexel.js";
 import { threedtextures } from "./threedtextures.js";
 
 /** Every built-in provider, in the order results are reported. */
@@ -29,6 +30,7 @@ export const allProviders: Provider[] = [
   quaternius,
   polyfork,
   threedtextures,
+  threedtexel,
   texturecan,
   texturescom,
   hdrmaps,

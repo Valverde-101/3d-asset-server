@@ -1,6 +1,13 @@
 {
   "integrations": [
     {
+      "id": "threedtexel",
+      "name": "3DTexel",
+      "homepage": "https://3dtexel.com",
+      "addedAt": "2026-10-06",
+      "addedBy": "agent"
+    },
+    {
       "id": "polyfork",
       "name": "Polyfork",
       "homepage": "https://polyfork.dev",
@@ -127,5 +134,5 @@
       "addedBy": "launch"
     }
   ],
-  "rejected": 4
+  "rejected": 3
 }
