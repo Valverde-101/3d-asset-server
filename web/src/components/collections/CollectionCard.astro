@@ -1,0 +1,24 @@
+---
+// A collection in a hub or index grid: four thumbnails, title, description, count.
+import { countLabel, type Collection } from "@/lib/collections";
+
+interface Props {
+  collection: Collection;
+}
+const { collection: c } = Astro.props;
+const thumbs = c.assets.slice(0, 4);
+---
+<li class="group overflow-hidden rounded-xl border bg-card/50 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+  <a href={c.path} class="flex h-full flex-col focus-visible:outline-2 focus-visible:outline-ring">
+    <div class="grid aspect-[2/1] grid-cols-4 gap-px overflow-hidden bg-muted" aria-hidden="true">
+      {thumbs.map((a) => <img src={a.thumbnailUrl} alt="" width="160" height="160" loading="lazy" decoding="async" referrerpolicy="no-referrer" class="size-full object-cover" />)}
+    </div>
+    <div class="flex flex-1 flex-col gap-1.5 p-4">
+      <h3 class="font-medium leading-snug group-hover:text-primary">{c.topic.data.title}</h3>
+      <p class="line-clamp-2 text-sm text-muted-foreground">{c.topic.data.description}</p>
+      <p class="mt-auto pt-2 text-xs text-muted-foreground">
+        {countLabel(c.assets)} from {c.sources.length} {c.sources.length === 1 ? "source" : "sources"}
+      </p>
+    </div>
+  </a>
+</li>

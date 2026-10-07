@@ -1,0 +1,773 @@
+{
+  "slug": "free-plant-3d-models",
+  "search": {
+    "q": "plant",
+    "types": [
+      "model"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:40.113Z",
+  "assets": [
+    {
+      "id": "polyhaven:potted_plant_02",
+      "provider": "polyhaven",
+      "title": "Potted Plant 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/potted_plant_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/potted_plant_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 69806
+    },
+    {
+      "id": "polyfork:wheat-plant-7f29a1",
+      "provider": "polyfork",
+      "title": "Wheat Plant",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wheat-plant-7f29a1",
+      "thumbnailUrl": "https://polyfork.dev/files/wheat-plant-7f29a1/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 407
+    },
+    {
+      "id": "blenderkit:65ea3e91-b091-4f2c-97a4-d118c594a537",
+      "provider": "blenderkit",
+      "title": "Monstera plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/65ea3e91-b091-4f2c-97a4-d118c594a537/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/a085a84e7ea144fdad6b8a9b9846e570/files/thumbnail_a1bc796b-021b-4970-ac3c-ab037ef904dd.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matteo Pascale",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 84154
+    },
+    {
+      "id": "texturescom:143191",
+      "provider": "texturescom",
+      "title": "3D Plant Model - Small Balsam 1",
+      "type": "model",
+      "url": "https://www.textures.com/download/3d-plant-model-small-balsam-1-6-seeds/143191",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/3D Foliage/115076-Forest-Plants/ps143191/143191_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:kedco-assets/low-poly-3d-plant-game-ready",
+      "provider": "itchio",
+      "title": "Low Poly 3D Plant - Game Ready",
+      "type": "model",
+      "url": "https://kedco-assets.itch.io/low-poly-3d-plant-game-ready",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzc2NjkwODIucG5n/315x250%23c/opWJUl.png",
+      "downloadable": false,
+      "author": "Kedco Assets",
+      "free": true
+    },
+    {
+      "id": "polyhaven:potted_plant_04",
+      "provider": "polyhaven",
+      "title": "Potted Plant 04",
+      "type": "model",
+      "url": "https://polyhaven.com/a/potted_plant_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/potted_plant_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "James Ray Cock",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 6097
+    },
+    {
+      "id": "polyfork:wildflower-plant-cf4279",
+      "provider": "polyfork",
+      "title": "Wildflower plant",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wildflower-plant-cf4279",
+      "thumbnailUrl": "https://polyfork.dev/files/wildflower-plant-cf4279/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 516
+    },
+    {
+      "id": "blenderkit:230b3a45-736d-47e4-97d0-b92c0f0b332a",
+      "provider": "blenderkit",
+      "title": "Coffee Bar Plant Minimal Style",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/230b3a45-736d-47e4-97d0-b92c0f0b332a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2e7669202bce470083ea9e17daa4e8d3/files/thumbnail_28f51f73-460e-40b2-8ce0-22c3d196ad00.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "peeraphon viriyahirunpaiboon",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "texturescom:143969",
+      "provider": "texturescom",
+      "title": "3D Plant Model - Boston Fern 1",
+      "type": "model",
+      "url": "https://www.textures.com/download/3d-plant-model-boston-fern-1-3-seeds/143969",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/3D Foliage/115078-House-amp-Garden-Plants/ps143969/143969_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:tinytreats/house-plants",
+      "provider": "itchio",
+      "title": "Tiny Treats - House Plants set",
+      "type": "model",
+      "url": "https://tinytreats.itch.io/house-plants",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0OTA3MTk1LnBuZw==/315x250%23c/NDR3f8.png",
+      "downloadable": false,
+      "author": "Tiny Treats",
+      "free": true
+    },
+    {
+      "id": "polyhaven:potted_plant_01",
+      "provider": "polyhaven",
+      "title": "Potted Plant 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/potted_plant_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/potted_plant_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 96030
+    },
+    {
+      "id": "blenderkit:a8560359-f52b-4eea-a5ad-9a78eeb2a717",
+      "provider": "blenderkit",
+      "title": "Hanging Plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a8560359-f52b-4eea-a5ad-9a78eeb2a717/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/a382cb68a57f4d87a76699e7c82bef4f/files/thumbnail_723236e5-cf07-480c-aad9-caf30383bd75.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Daniela Padrón",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 259185
+    },
+    {
+      "id": "itchio:aquamea/low-poly-plantpot",
+      "provider": "itchio",
+      "title": "Low Poly Plant Pot",
+      "type": "model",
+      "url": "https://aquamea.itch.io/low-poly-plantpot",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI2MDc1Njg1LnBuZw==/315x250%23c/SVURep.png",
+      "downloadable": false,
+      "author": "AquaMea",
+      "free": true
+    },
+    {
+      "id": "polyhaven:nettle_plant",
+      "provider": "polyhaven",
+      "title": "Nettle Plant",
+      "type": "model",
+      "url": "https://polyhaven.com/a/nettle_plant",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/nettle_plant.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 46195
+    },
+    {
+      "id": "blenderkit:0c3c6a32-e42c-40a2-b100-cde9a55c4580",
+      "provider": "blenderkit",
+      "title": "Areca Palm Plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0c3c6a32-e42c-40a2-b100-cde9a55c4580/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/de4f2973c8494855bcd3208174582411/files/thumbnail_285019c7-99b1-4a9d-95c5-d8a8976ae363.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Ken Xie",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "1k",
+      "polyCount": 24156
+    },
+    {
+      "id": "itchio:free-game-assets/free-desert-plants-3d-low-poly-pack",
+      "provider": "itchio",
+      "title": "Free Desert Plants 3D Low Poly Pack",
+      "type": "model",
+      "url": "https://free-game-assets.itch.io/free-desert-plants-3d-low-poly-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4OTg3MjkuanBn/315x250%23c/feMEi4.jpg",
+      "downloadable": false,
+      "author": "Free Game Assets (GUI, Sprite, Tilesets)",
+      "free": true
+    },
+    {
+      "id": "polyhaven:weed_plant_02",
+      "provider": "polyhaven",
+      "title": "Weed Plant 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/weed_plant_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/weed_plant_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 17062
+    },
+    {
+      "id": "blenderkit:6ff6abf8-d2c4-40fc-ba6d-18f7638bc05a",
+      "provider": "blenderkit",
+      "title": "Indoor Table  Plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/6ff6abf8-d2c4-40fc-ba6d-18f7638bc05a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5e685ea90dca4c6f85725289cdbcb4b8/files/thumbnail_6f9d9aa9-5077-484a-b28d-176160ac4c10.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Anh Le",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 9748
+    },
+    {
+      "id": "polyhaven:periwinkle_plant",
+      "provider": "polyhaven",
+      "title": "Periwinkle Plant",
+      "type": "model",
+      "url": "https://polyhaven.com/a/periwinkle_plant",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/periwinkle_plant.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 67388
+    },
+    {
+      "id": "blenderkit:08b5ed51-1e64-466a-9c99-f73ebe9fb139",
+      "provider": "blenderkit",
+      "title": "Small Monstera plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/08b5ed51-1e64-466a-9c99-f73ebe9fb139/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/94cd93fcc3d94b53889ad5f455c8ab7c/files/thumbnail_7709b2fc-6bfd-445c-b26f-4f47d69712da.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matteo Pascale",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 32970
+    },
+    {
+      "id": "itchio:bl4nk-space/low-poly-plants",
+      "provider": "itchio",
+      "title": "Low-poly 3d plants pack",
+      "type": "model",
+      "url": "https://bl4nk-space.itch.io/low-poly-plants",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0MTU3NjQwLnBuZw==/315x250%23c/7GMUUx.png",
+      "downloadable": false,
+      "author": "BL4NK_SPACE",
+      "free": true
+    },
+    {
+      "id": "blenderkit:54987938-400a-4229-bc85-77cc2acfbccf",
+      "provider": "blenderkit",
+      "title": "Wall Artificial Hanging Plants",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/54987938-400a-4229-bc85-77cc2acfbccf/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/43b8b1b28cdf4bb89cb37faaa30e169e/files/thumbnail_995637cc-c2bb-4284-a939-e258a9c74568.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pandora Land",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 610821
+    },
+    {
+      "id": "itchio:polyyai/3d-desert-plants-pack",
+      "provider": "itchio",
+      "title": "[FREE] 3D Desert Plants Pack",
+      "type": "model",
+      "url": "https://polyyai.itch.io/3d-desert-plants-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI5Nzk3NzAyLnBuZw==/315x250%23c/NquuL%2B.png",
+      "downloadable": false,
+      "author": "Polyy.AI",
+      "free": true
+    },
+    {
+      "id": "blenderkit:7185ec5c-a1d0-419d-a0c6-844d8bb652c7",
+      "provider": "blenderkit",
+      "title": "banana Plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7185ec5c-a1d0-419d-a0c6-844d8bb652c7/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/84a426c307274cb39618fc7aafcc0f84/files/thumbnail_425c91f6-464d-4b12-890f-9e5e17648339.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Arsha Flora",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 41625
+    },
+    {
+      "id": "blenderkit:e6ddf713-19bd-4fff-9ac8-f157509f4858",
+      "provider": "blenderkit",
+      "title": "Calathea plant",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e6ddf713-19bd-4fff-9ac8-f157509f4858/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/11067f2aacb34e6c93147c21b149f579/files/thumbnail_6958fe35-70f3-4739-ad8a-839699c232dc.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matteo Pascale",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "0.5k",
+      "polyCount": 2936
+    },
+    {
+      "id": "polyhaven:grass_medium_01",
+      "provider": "polyhaven",
+      "title": "Grass Medium 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/grass_medium_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/grass_medium_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1606633
+    },
+    {
+      "id": "blenderkit:cd36347b-acd9-45bf-99bb-c3a27299dc52",
+      "provider": "blenderkit",
+      "title": "Plant indoor",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/cd36347b-acd9-45bf-99bb-c3a27299dc52/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d1487655593847a4af134201db80f576/files/thumbnail_fce6fcdb-ec66-4602-a1cd-68c397b933bd.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Anh Le",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 15425
+    },
+    {
+      "id": "polyhaven:tree_small_02",
+      "provider": "polyhaven",
+      "title": "Tree Small 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/tree_small_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/tree_small_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 4652585
+    },
+    {
+      "id": "polyhaven:jacaranda_tree",
+      "provider": "polyhaven",
+      "title": "Jacaranda Tree",
+      "type": "model",
+      "url": "https://polyhaven.com/a/jacaranda_tree",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/jacaranda_tree.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 312356
+    },
+    {
+      "id": "blenderkit:68330ea8-024e-4c7e-b007-aa456a564e0d",
+      "provider": "blenderkit",
+      "title": "Large Tropical Indoor Plant with Pot",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/68330ea8-024e-4c7e-b007-aa456a564e0d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/61f4b9da0c3142cfa19dbe8aa5a55a71/files/thumbnail_2debb4e7-7813-43d9-8ffa-e12051693689.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Zulian Firmansyah",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 38114
+    },
+    {
+      "id": "polyhaven:grass_bermuda_01",
+      "provider": "polyhaven",
+      "title": "Grass Bermuda 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/grass_bermuda_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/grass_bermuda_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 223596
+    },
+    {
+      "id": "blenderkit:d11e10fa-85c3-4833-8e21-27cee860d17b",
+      "provider": "blenderkit",
+      "title": "Wood Plant House",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/d11e10fa-85c3-4833-8e21-27cee860d17b/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3c8c812d33b042b095f0bd4c80f84d9d/files/thumbnail_60eae451-f9bf-4208-a467-210561a90c55.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 104404
+    },
+    {
+      "id": "polyhaven:island_tree_02",
+      "provider": "polyhaven",
+      "title": "Island Tree 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/island_tree_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/island_tree_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1762064
+    },
+    {
+      "id": "blenderkit:fafdbaf8-70f0-4965-a76d-5f096a22b7d5",
+      "provider": "blenderkit",
+      "title": "Indoor Plant  - Cuban Cigar",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/fafdbaf8-70f0-4965-a76d-5f096a22b7d5/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e942cd9153504aa39c4b8e75cf3b3cf6/files/thumbnail_4ad1b9ba-fbf1-41f3-a192-e328a37a9dc3.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pandora Land",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 16907
+    },
+    {
+      "id": "polyhaven:fern_02",
+      "provider": "polyhaven",
+      "title": "Fern 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/fern_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/fern_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 6232
+    },
+    {
+      "id": "blenderkit:251bbac9-0546-4215-b0f5-67df9498d8f2",
+      "provider": "blenderkit",
+      "title": "Plant set",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/251bbac9-0546-4215-b0f5-67df9498d8f2/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/091846804ca34e368178afa23ad1b00e/files/thumbnail_b7ff3bf7-9a5e-4dee-b740-271dc418cda6.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Arsha Flora",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 299359
+    }
+  ]
+}

@@ -3,9 +3,12 @@ name: Catalog census
 # Once a day, count what every source holds (scripts/census.mjs: each
 # provider's census(), a few requests per source) and save it to
 # web/src/data/catalog.json plus one point per day in catalog-history.json.
-# If the numbers changed, commit them to main and run CI, which builds the
-# image and pins it in deploy/ so ArgoCD rolls out the new /stats page,
-# /catalog.json and /v1/catalog. No secrets needed.
+# Then refresh the saved results behind every collection page
+# (scripts/snapshot-collections.mjs: one search per topic in
+# web/src/content/collections/, merged into web/src/data/collections/ so the
+# lists stay stable). If anything changed, commit it to main and run CI, which
+# builds the image and pins it in deploy/ so ArgoCD rolls out the new /stats
+# page, /catalog.json, /v1/catalog and /assets pages. No secrets needed.
 
 on:
   schedule:
@@ -42,19 +45,24 @@ jobs:
       - name: Count every source
         run: node scripts/census.mjs
 
+      - name: Refresh the collection pages
+        run: node scripts/snapshot-collections.mjs
+
       - name: Commit, push and deploy
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          if git diff --quiet -- web/src/data/catalog.json web/src/data/catalog-history.json; then
+          data="web/src/data/catalog.json web/src/data/catalog-history.json web/src/data/collections"
+          # --porcelain also sees new (untracked) snapshots and deleted ones.
+          if [[ -z "$(git status --porcelain -- $data)" ]]; then
             echo "No changes." >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add web/src/data/catalog.json web/src/data/catalog-history.json
-          git commit -q -m "chore(catalog): census $(date -u +%Y-%m-%d)"
+          git add -A -- $data
+          git commit -q -m "chore(catalog): census and collections $(date -u +%Y-%m-%d)"
           pushed=false
           for _ in 1 2 3; do
             if git push origin HEAD:main; then pushed=true; break; fi

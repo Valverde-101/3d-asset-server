@@ -1,0 +1,573 @@
+{
+  "slug": "free-car-3d-models",
+  "search": {
+    "q": "car",
+    "types": [
+      "model"
+    ],
+    "free": true,
+    "exclude": [
+      "road sign",
+      "showroom",
+      "car studio",
+      "car park",
+      "card",
+      "cart",
+      "cleaner",
+      "street tile",
+      "tyre",
+      "wheel rim",
+      "paint box",
+      "lego"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:06:13.890Z",
+  "assets": [
+    {
+      "id": "polyhaven:covered_car",
+      "provider": "polyhaven",
+      "title": "Covered Car",
+      "type": "model",
+      "url": "https://polyhaven.com/a/covered_car",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/covered_car.png?width=512&height=512",
+      "downloadable": true,
+      "author": "MP",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 12592
+    },
+    {
+      "id": "blenderkit:4146135b-e6e7-45f5-b81b-372d4bbb74e8",
+      "provider": "blenderkit",
+      "title": "Lamborghini Revuelto 3d model car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4146135b-e6e7-45f5-b81b-372d4bbb74e8/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f6fd9293241e4c1588a89185d6a85a3e/files/thumbnail_7f0f1609-02d5-4b20-a6e8-a98d5daf0c11.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 79950
+    },
+    {
+      "id": "kenney:car-kit",
+      "provider": "kenney",
+      "title": "Car Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/car-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/car-kit/81f9d77bc7-1775131953/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:cars",
+      "provider": "quaternius",
+      "title": "Cars Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/cars.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/cars.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:samuelesciacca/car-3d-fake",
+      "provider": "itchio",
+      "title": "Fake 3D Car",
+      "type": "model",
+      "url": "https://samuelesciacca.itch.io/car-3d-fake",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE5NDQ1MzkuZ2lm/315x250%23c/5118Zy.gif",
+      "downloadable": false,
+      "author": "Samuele Sciacca",
+      "free": true
+    },
+    {
+      "id": "kenney:toy-car-kit",
+      "provider": "kenney",
+      "title": "Toy Car Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/toy-car-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/toy-car-kit/17be15ec2b-1736346119/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:gaminglabplayz/car-3d-model-gltf",
+      "provider": "itchio",
+      "title": "Car 3d model (.gltf)",
+      "type": "model",
+      "url": "https://gaminglabplayz.itch.io/car-3d-model-gltf",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0NzQwMzk3LnBuZw==/315x250%23c/23On9Q.png",
+      "downloadable": false,
+      "author": "GaminglabplayZ",
+      "free": true
+    },
+    {
+      "id": "itchio:kobypierce123/car-3d",
+      "provider": "itchio",
+      "title": "Car 3D",
+      "type": "model",
+      "url": "https://kobypierce123.itch.io/car-3d",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzMxMjc3OTgucG5n/315x250%23c/4mmSG%2B.png",
+      "downloadable": false,
+      "author": "KobyPierec123",
+      "free": true
+    },
+    {
+      "id": "blenderkit:4f4621eb-54b8-4a28-9f19-05ce4f23d94d",
+      "provider": "blenderkit",
+      "title": "Ford bronco SUV car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4f4621eb-54b8-4a28-9f19-05ce4f23d94d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/85c777627a174fdd8628debbe3a8bc34/files/thumbnail_0ffd3ee4-ce24-45ed-9e3d-35fd2bdd3f9a.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 288651
+    },
+    {
+      "id": "itchio:yash-kumar-gupta/3d-car",
+      "provider": "itchio",
+      "title": "Car 3D Model",
+      "type": "model",
+      "url": "https://yash-kumar-gupta.itch.io/3d-car",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvMjc3MDY1LzEzNjcyMDkuanBn/315x250%23c/t%2FR2US.jpg",
+      "downloadable": false,
+      "author": "Yash Kumar Gupta",
+      "free": true
+    },
+    {
+      "id": "blenderkit:c3c28d91-3547-4b7b-9cc3-68d00d7a6993",
+      "provider": "blenderkit",
+      "title": "Luxury Electric Car – Black",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c3c28d91-3547-4b7b-9cc3-68d00d7a6993/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/dbb92b611147491eb13650da4ee5f98b/files/thumbnail_e8a64c35-527e-497a-a606-d846f3ddfa33.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Ibrohim Toxirov",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 177940
+    },
+    {
+      "id": "quaternius:publictransport",
+      "provider": "quaternius",
+      "title": "Public Transport Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/publictransport.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/publictransport.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:dani1667/sportscar3dmodel",
+      "provider": "itchio",
+      "title": "Sports Car 3D Model",
+      "type": "model",
+      "url": "https://dani1667.itch.io/sportscar3dmodel",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE0Njk2NjE4LmpwZw==/315x250%23c/MEZcIv.jpg",
+      "downloadable": false,
+      "author": "Dani1667",
+      "free": true
+    },
+    {
+      "id": "blenderkit:cd91cd75-be50-4e2a-a58f-4b497c93328a",
+      "provider": "blenderkit",
+      "title": "BMW E30 Car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/cd91cd75-be50-4e2a-a58f-4b497c93328a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/24f409eb569a4ac096759ebd3d90f92d/files/thumbnail_7d372870-0a12-4d97-8a66-60796564358d.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 69531
+    },
+    {
+      "id": "itchio:coynese/drill-car-3d-model",
+      "provider": "itchio",
+      "title": "Drill Car 3D model",
+      "type": "model",
+      "url": "https://coynese.itch.io/drill-car-3d-model",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzg1MTUzNDkucG5n/315x250%23c/3MAC81.png",
+      "downloadable": false,
+      "author": "Coynese",
+      "free": true
+    },
+    {
+      "id": "blenderkit:0c92f93d-f77a-482c-95cc-5bb9277a8920",
+      "provider": "blenderkit",
+      "title": "Car 004 - Porsche 911 3d model",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0c92f93d-f77a-482c-95cc-5bb9277a8920/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2cd70a81ec1e48df90210c09ba2dec92/files/thumbnail_113365e6-e12e-46c9-ab5f-003e7453cebe.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 114521
+    },
+    {
+      "id": "itchio:void1gaming/free-covered-car-3d-model-collection",
+      "provider": "itchio",
+      "title": "Free Covered Car 3D Model Collection",
+      "type": "model",
+      "url": "https://void1gaming.itch.io/free-covered-car-3d-model-collection",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzg4MTM4OTkuanBn/315x250%23c/E5qtel.jpg",
+      "downloadable": false,
+      "author": "VOiD1 Gaming",
+      "free": true
+    },
+    {
+      "id": "blenderkit:007bf900-e8c0-42ce-befb-1887bc03fdd6",
+      "provider": "blenderkit",
+      "title": "Apocalypse Police Car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/007bf900-e8c0-42ce-befb-1887bc03fdd6/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/66d5476a922d47bd883736c72e446baa/files/thumbnail_95a5da25-dfd5-42fa-be88-4094c358308e.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Suzanne studio",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 159244
+    },
+    {
+      "id": "itchio:fball-dev/2025-mclaren-artura-spider-realistic-pbr-sports-car-3d-model",
+      "provider": "itchio",
+      "title": "McLaren Artura Spider Realistic PBR Sports Car 3D Model",
+      "type": "model",
+      "url": "https://fball-dev.itch.io/2025-mclaren-artura-spider-realistic-pbr-sports-car-3d-model",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIzOTYzNTc1LnBuZw==/315x250%23c/IUz3pW.png",
+      "downloadable": false,
+      "author": "Fball Dev",
+      "free": true
+    },
+    {
+      "id": "blenderkit:7701f4be-16c6-4278-a8d2-66998f5c8d8f",
+      "provider": "blenderkit",
+      "title": "Car 006 - audi rs6 avant 2020",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7701f4be-16c6-4278-a8d2-66998f5c8d8f/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8509166a5cd94a329208a6789540ddf7/files/thumbnail_471b5fe9-2aba-41b6-856a-5c9b87833bda.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 368510
+    },
+    {
+      "id": "itchio:nyknck/3d-car",
+      "provider": "itchio",
+      "title": "3D Car",
+      "type": "model",
+      "url": "https://nyknck.itch.io/3d-car",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE3ODcxNzIucG5n/315x250%23c/7Girna.png",
+      "downloadable": false,
+      "author": "NYKNCK",
+      "free": true
+    },
+    {
+      "id": "itchio:drad0down/3d-car-template",
+      "provider": "itchio",
+      "title": "3D Car Template",
+      "type": "model",
+      "url": "https://drad0down.itch.io/3d-car-template",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4NDA2NjEyLnBuZw==/315x250%23c/ZHxYvb.png",
+      "downloadable": false,
+      "author": "Drad0down",
+      "free": true
+    },
+    {
+      "id": "itchio:aslan-design/low-polly-3d-car",
+      "provider": "itchio",
+      "title": "Low Polly 3D car",
+      "type": "model",
+      "url": "https://aslan-design.itch.io/low-polly-3d-car",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE5Njk2NzUzLnBuZw==/315x250%23c/gWc%2BrG.png",
+      "downloadable": false,
+      "author": "Aslan",
+      "free": true
+    },
+    {
+      "id": "blenderkit:25728fd1-7c2a-4e57-ab31-6f719f48b48a",
+      "provider": "blenderkit",
+      "title": "Batmobile Car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/25728fd1-7c2a-4e57-ab31-6f719f48b48a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/55560880f5084de6b0d204d3c3da7098/files/thumbnail_a69f3984-e2be-47fb-8212-dd22ed491aa9.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "PKO Studio",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 421868
+    },
+    {
+      "id": "itchio:dejunes/lowpoly-3d-car-31",
+      "provider": "itchio",
+      "title": "Lowpoly 3D Car 3.1",
+      "type": "model",
+      "url": "https://dejunes.itch.io/lowpoly-3d-car-31",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEyNjE4OTgxLnBuZw==/315x250%23c/5oGQLB.png",
+      "downloadable": false,
+      "author": "DeJunes",
+      "free": true
+    },
+    {
+      "id": "blenderkit:067b53b7-f96f-4270-ad7c-8731afa7435a",
+      "provider": "blenderkit",
+      "title": "Police Ford Car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/067b53b7-f96f-4270-ad7c-8731afa7435a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2a6562812a7a4479b6554920abda5fe9/files/thumbnail_abf8d045-5c03-43a7-84d2-88b925edb88b.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Suzanne studio",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 69335,
+      "rigged": true
+    },
+    {
+      "id": "itchio:dejunes/lowpoly-3d-car-v3",
+      "provider": "itchio",
+      "title": "Lowpoly 3D Car V3",
+      "type": "model",
+      "url": "https://dejunes.itch.io/lowpoly-3d-car-v3",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEyNjEyNzMyLnBuZw==/315x250%23c/m%2B3zIt.png",
+      "downloadable": false,
+      "author": "DeJunes",
+      "free": true
+    },
+    {
+      "id": "itchio:dejunes/lowpolycarv2",
+      "provider": "itchio",
+      "title": "Lowpoly 3D Car V2",
+      "type": "model",
+      "url": "https://dejunes.itch.io/lowpolycarv2",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEyNjA2ODk3LnBuZw==/315x250%23c/goygyp.png",
+      "downloadable": false,
+      "author": "DeJunes",
+      "free": true
+    },
+    {
+      "id": "blenderkit:1dcca4af-6e33-4225-8103-aee2ddf21cb1",
+      "provider": "blenderkit",
+      "title": "Hyundai veloster sport car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/1dcca4af-6e33-4225-8103-aee2ddf21cb1/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1191ea28f6594766aa800b454d8dc382/files/thumbnail_e77c501a-e5e1-429b-b508-10d31f21df81.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "AmJViZ",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 18168
+    },
+    {
+      "id": "blenderkit:07c32f87-3caa-4d68-b0f3-1054d3218bca",
+      "provider": "blenderkit",
+      "title": "Mars Rover Car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/07c32f87-3caa-4d68-b0f3-1054d3218bca/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/7e2ab864e08b4466840406b6b6b7c158/files/thumbnail_48125ceb-2f4c-4b8a-bfe9-6cbe644e2da1.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "PKO Studio",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1169190
+    },
+    {
+      "id": "blenderkit:350c70f5-c808-4a17-9f18-197e3a016150",
+      "provider": "blenderkit",
+      "title": "Lemon Bumper Cars Ride",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/350c70f5-c808-4a17-9f18-197e3a016150/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/bc512a03021a468782caadf74060fb18/files/thumbnail_e0c4a30f-5c11-41b2-8878-4b40a1d46b25.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Professor Franco Difilippo",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 774292
+    },
+    {
+      "id": "blenderkit:019030bb-74cc-451e-ad66-55ae7dda47ca",
+      "provider": "blenderkit",
+      "title": "Police Sheriff car",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/019030bb-74cc-451e-ad66-55ae7dda47ca/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1ac542409cb847e18e327645f4052730/files/thumbnail_8cdea5cd-ee10-4a56-b7f3-38eabaee4688.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Suzanne studio",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 38630,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:d7c452bf-0cfa-4e51-bb23-77cb092cb32f",
+      "provider": "blenderkit",
+      "title": "Car Shoot Studio Static and Animated",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/d7c452bf-0cfa-4e51-bb23-77cb092cb32f/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4905de58043a48e7a6c1ff86ef7006c2/files/thumbnail_9ac2735f-c50f-40cd-8b3a-5e2f584978e8.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nobody",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    }
+  ]
+}

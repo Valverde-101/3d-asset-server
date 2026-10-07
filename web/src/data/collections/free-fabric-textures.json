@@ -1,0 +1,654 @@
+{
+  "slug": "free-fabric-textures",
+  "search": {
+    "q": "fabric",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:31.468Z",
+  "assets": [
+    {
+      "id": "polyhaven:fabric_pattern_07",
+      "provider": "polyhaven",
+      "title": "Fabric Pattern 07",
+      "type": "material",
+      "url": "https://polyhaven.com/a/fabric_pattern_07",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/fabric_pattern_07.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:ed4605be-941b-439c-8fac-c5df7d8205bf",
+      "provider": "blenderkit",
+      "title": "Carpet fabric",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ed4605be-941b-439c-8fac-c5df7d8205bf/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0e3d204f234e4f4e9ff170ed337aece7/files/thumbnail_103fcc04-32c4-499a-a8f1-4a256146587e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Mat Karmon",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Fabric081C",
+      "provider": "ambientcg",
+      "title": "Fabric 081 C",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Fabric081C",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Fabric081C.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "cgbookcase:fabric-10-small",
+      "provider": "cgbookcase",
+      "title": "Fabric 10 small",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/fabric-10-small",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Fabric_10_small_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:fabric-lace-053",
+      "provider": "threedtextures",
+      "title": "Fabric Lace 053",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/07/23/fabric-lace-053/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/07/Material_2000.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:white-lace-pattern-pbr-material",
+      "provider": "threedtexel",
+      "title": "White Lace Fabric – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/white-lace-pattern-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/08/Untitled_Cloth-17-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:juliovii/fabricpk01",
+      "provider": "itchio",
+      "title": "Texture Pack: Fabric 01",
+      "type": "texture",
+      "url": "https://juliovii.itch.io/fabricpk01",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzM4MDgwNDEucG5n/315x250%23c/gOaPPA.png",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "texturecan:596",
+      "provider": "texturecan",
+      "title": "Brown and Camel Tartan Pattern Fabric",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/596/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/fabrics_0084/fabrics_0084_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:denmin_fabric_02",
+      "provider": "polyhaven",
+      "title": "Denim Fabric 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/denmin_fabric_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/denmin_fabric_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:7e4f9354-073c-4d06-b2bc-0d0e287a6a4b",
+      "provider": "blenderkit",
+      "title": "Black fabric",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7e4f9354-073c-4d06-b2bc-0d0e287a6a4b/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/80c29f61d9dc4515881417db07df2c33/files/thumbnail_5db9ddcc-8d32-47c1-b8ac-a359331970e7.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "sharetextures:fabric-51",
+      "provider": "sharetextures",
+      "title": "Fabric 51",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/fabric/fabric-51",
+      "thumbnailUrl": "https://images.sharetextures.com/u/fabric_51-1-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Fabric061",
+      "provider": "ambientcg",
+      "title": "Fabric 061",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Fabric061",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Fabric061.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "cgbookcase:fabric-10-medium",
+      "provider": "cgbookcase",
+      "title": "Fabric 10 medium",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/fabric-10-medium",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Fabric_10_medium_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:fabric-lace-052",
+      "provider": "threedtextures",
+      "title": "Fabric Lace 052",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/06/30/fabric-lace-052/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/06/Material_2001.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:black-lace-pattern-pbr-material",
+      "provider": "threedtexel",
+      "title": "Black Lace Fabric – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/black-lace-pattern-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/08/Untitled_Cloth-16-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:595",
+      "provider": "texturecan",
+      "title": "Red Tartan Pattern Fabric Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/595/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/fabrics_0083/fabrics_0083_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:juliovii/materials-fabric-05",
+      "provider": "itchio",
+      "title": "Materials Fabric 05",
+      "type": "material",
+      "url": "https://juliovii.itch.io/materials-fabric-05",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI5MDM3MjU5LmpwZw==/315x250%23c/faLq%2F1.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "sharetextures:fabric-188",
+      "provider": "sharetextures",
+      "title": "Fabric 188",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/fabric/fabric-188",
+      "thumbnailUrl": "https://images.sharetextures.com/u/27d62699-5ed1-4ca4-a34a-f761a719ae07.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:fabric_pattern_05",
+      "provider": "polyhaven",
+      "title": "Fabric Pattern 05",
+      "type": "material",
+      "url": "https://polyhaven.com/a/fabric_pattern_05",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/fabric_pattern_05.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:23c9cd3e-6892-4c29-add4-0cbaf429f451",
+      "provider": "blenderkit",
+      "title": "Beige linen fabric",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/23c9cd3e-6892-4c29-add4-0cbaf429f451/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c433953b89714bc0ab6c387bbf8ae85c/files/thumbnail_d8ec5c89-25e3-43d8-be8a-c0c63ebba8d7.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "antoine f",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Fabric066",
+      "provider": "ambientcg",
+      "title": "Fabric 066",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Fabric066",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Fabric066.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "cgbookcase:fabric-10-large",
+      "provider": "cgbookcase",
+      "title": "Fabric 10 large",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/fabric-10-large",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Fabric_10_large_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:fabric-lace-051",
+      "provider": "threedtextures",
+      "title": "Fabric Lace 051",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/05/30/fabric-lace-051/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/05/Material_2003-1.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:black-lace-floral-pbr-material-7",
+      "provider": "threedtexel",
+      "title": "Black Lace Floral Fabric – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/black-lace-floral-pbr-material-7/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/08/Untitled_Cloth-15-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:594",
+      "provider": "texturecan",
+      "title": "Washed Rough Cloth Fabric",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/594/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/fabrics_0082/fabrics_0082_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:juliovii/materials-fabric-04",
+      "provider": "itchio",
+      "title": "Materials Fabric 04",
+      "type": "material",
+      "url": "https://juliovii.itch.io/materials-fabric-04",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4NTkzMzY1LmpwZw==/315x250%23c/fIf%2FAs.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "sharetextures:fabric-167",
+      "provider": "sharetextures",
+      "title": "Fabric 167",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/fabric/fabric-167",
+      "thumbnailUrl": "https://images.sharetextures.com/u/18b3835f-810e-4b88-a910-78ab277dd702.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:fabric_leather_02",
+      "provider": "polyhaven",
+      "title": "Fabric Leather 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/fabric_leather_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/fabric_leather_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:02f1b200-afe4-4550-9da0-89143531a8f4",
+      "provider": "blenderkit",
+      "title": "Pbr Brown Fabric (Cotton Fabric)",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/02f1b200-afe4-4550-9da0-89143531a8f4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/aa785682c45d4a899c1e196533f2b7d7/files/thumbnail_07044aa1-f28d-4775-a654-dc7899efd11e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "yossif kh",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Fabric083",
+      "provider": "ambientcg",
+      "title": "Fabric 083",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Fabric083",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Fabric083.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "cgbookcase:fabric-09",
+      "provider": "cgbookcase",
+      "title": "Fabric 09",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/fabric-09",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Fabric_09_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:fabric-lace-050-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Fabric Lace 050",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/05/04/fabric-lace-050-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/05/Material_2001.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:white-lace-floral-pbr-material-7",
+      "provider": "threedtexel",
+      "title": "White Floral Lace Fabric – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/white-lace-floral-pbr-material-7/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/08/Untitled_Cloth-14-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:592",
+      "provider": "texturecan",
+      "title": "Braided Woven Cotton Fabric",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/592/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/fabrics_0081/fabrics_0081_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:juliovii/ftp-fabric-03",
+      "provider": "itchio",
+      "title": "Texture Pack: Fabric 03",
+      "type": "texture",
+      "url": "https://juliovii.itch.io/ftp-fabric-03",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI1NjYyNDE0LmpwZw==/315x250%23c/ENdelK.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "sharetextures:fabric_135",
+      "provider": "sharetextures",
+      "title": "Fabric 135",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/fabric/fabric_135",
+      "thumbnailUrl": "https://images.sharetextures.com/u/ffc5dac1-c298-4a90-b301-022c13802aee.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    }
+  ]
+}

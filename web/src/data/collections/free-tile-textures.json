@@ -1,0 +1,692 @@
+{
+  "slug": "free-tile-textures",
+  "search": {
+    "q": "tiles",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:44.796Z",
+  "assets": [
+    {
+      "id": "polyhaven:floor_tiles_06",
+      "provider": "polyhaven",
+      "title": "Floor Tiles 06",
+      "type": "material",
+      "url": "https://polyhaven.com/a/floor_tiles_06",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/floor_tiles_06.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:fcfff8ee-068f-4b04-a597-81ebcf69cc83",
+      "provider": "blenderkit",
+      "title": "White tiles with graffiti and stickers",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/fcfff8ee-068f-4b04-a597-81ebcf69cc83/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d39d86031313494797eb038dc8a5cc01/files/thumbnail_f75f5f41-a608-465b-8304-8f5605a4b4f6.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Steffen",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Tiles141",
+      "provider": "ambientcg",
+      "title": "Tiles 141",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Tiles141",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Tiles141.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:656",
+      "provider": "texturecan",
+      "title": "Seamless Tiles of Parallel Lines and Quarter Circles",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/656/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0133/tiles_0133_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:black-tiles-07",
+      "provider": "cgbookcase",
+      "title": "Black Tiles 07",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/black-tiles-07",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Black_Tiles_07_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:tiles-073",
+      "provider": "threedtextures",
+      "title": "Tiles 073",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/09/18/tiles-073/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/09/Material_2005.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-5",
+      "provider": "threedtexel",
+      "title": "Concrete Tile with Grime – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-5/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-17-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:granite_tile",
+      "provider": "polyhaven",
+      "title": "Granite Tile",
+      "type": "material",
+      "url": "https://polyhaven.com/a/granite_tile",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/granite_tile.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:220ff2c1-2728-4ef1-9f59-b64e90c27dec",
+      "provider": "blenderkit",
+      "title": "Ceramic Tiles (Floor Ceramic Tiles)",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/220ff2c1-2728-4ef1-9f59-b64e90c27dec/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/b74f844023c24a0ca2122eb3772a2dc7/files/thumbnail_7d2d7def-c1c8-4aca-930d-dca1832fb88e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "yossif kh",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ]
+    },
+    {
+      "id": "ambientcg:Tiles139",
+      "provider": "ambientcg",
+      "title": "Tiles 139",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Tiles139",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Tiles139.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "sharetextures:cement-tiles",
+      "provider": "sharetextures",
+      "title": "Cement Tiles",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/concrete/cement-tiles",
+      "thumbnailUrl": "https://images.sharetextures.com/u/cement_tiles-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:black-tiles-06",
+      "provider": "cgbookcase",
+      "title": "Black Tiles 06",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/black-tiles-06",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Black_Tiles_06_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:terracotta-floor-tiles-009",
+      "provider": "threedtextures",
+      "title": "Terracotta Floor Tiles 009",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/09/14/terracotta-floor-tiles-009/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/09/Material_2004.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-4",
+      "provider": "threedtexel",
+      "title": "Grey Concrete Tile – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-4/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-16-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:653",
+      "provider": "texturecan",
+      "title": "Yellow and Gray Concrete Tiles with Triangular and Stripy Pattern",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/653/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/concrete_0034/concrete_0034_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:stone_tiles_02",
+      "provider": "polyhaven",
+      "title": "Stone Tiles 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/stone_tiles_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/stone_tiles_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Tiles143",
+      "provider": "ambientcg",
+      "title": "Tiles 143",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Tiles143",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Tiles143.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:2e0a00f1-75a6-4c22-89a9-338453f4b638",
+      "provider": "blenderkit",
+      "title": "Concrete tiles",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2e0a00f1-75a6-4c22-89a9-338453f4b638/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1be6b977a7fb40f594a1fd5a050acf00/files/thumbnail_0adb2505-d06f-4ebe-81c4-86527be50ddc.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "sharetextures:tiles-9",
+      "provider": "sharetextures",
+      "title": "Tiles 9",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/tiles-9",
+      "thumbnailUrl": "https://images.sharetextures.com/u/tiles_9_mat-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:651",
+      "provider": "texturecan",
+      "title": "Severely Damaged Grey Tile Paving",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/651/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0130/tiles_0130_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:black-tiles-05",
+      "provider": "cgbookcase",
+      "title": "Black Tiles 05",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/black-tiles-05",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Black_Tiles_05_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:terracotta-floor-tiles-008",
+      "provider": "threedtextures",
+      "title": "Terracotta Floor Tiles 008",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/09/08/terracotta-floor-tiles-008/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/09/Material_2003.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-3",
+      "provider": "threedtexel",
+      "title": "Light Grey Concrete Tile – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-3/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-15-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:large_floor_tiles_02",
+      "provider": "polyhaven",
+      "title": "Large Floor Tiles 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/large_floor_tiles_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/large_floor_tiles_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Tiles140",
+      "provider": "ambientcg",
+      "title": "Tiles 140",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Tiles140",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Tiles140.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:91c609ef-8a6f-4cd0-a7ac-ea6825014c70",
+      "provider": "blenderkit",
+      "title": "Tiles Basic White",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/91c609ef-8a6f-4cd0-a7ac-ea6825014c70/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8f3702f9104349c888e0afde585136a2/files/thumbnail_47ee7aa2-29d6-478d-b9fa-6ecbe821e8b5.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Julio Sillet",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "sharetextures:pavement-tiles-1",
+      "provider": "sharetextures",
+      "title": "Pavement Tiles 1",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/road/pavement-tiles-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/pavement_tiles_1-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:643",
+      "provider": "texturecan",
+      "title": "Tiny Brown and White Wall Tiles",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/643/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0129/tiles_0129_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:black-tiles-04",
+      "provider": "cgbookcase",
+      "title": "Black Tiles 04",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/black-tiles-04",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Black_Tiles_04_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:wood-tiles-005",
+      "provider": "threedtextures",
+      "title": "Wood Tiles 005",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/08/24/wood-tiles-005/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/08/Material_2003.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-2",
+      "provider": "threedtexel",
+      "title": "Grey Concrete Floor Tiles – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-2/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-14-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:floor_tiles_02",
+      "provider": "polyhaven",
+      "title": "Floor Tiles 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/floor_tiles_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/floor_tiles_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Tiles142",
+      "provider": "ambientcg",
+      "title": "Tiles 142",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Tiles142",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Tiles142.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:14f90d8a-14c0-41c9-812a-8822eec70fc4",
+      "provider": "blenderkit",
+      "title": "Emerald Ceramic Concave Tiles",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/14f90d8a-14c0-41c9-812a-8822eec70fc4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/ac164d95cf73465eb6aee67eb4a57dac/files/thumbnail_4073aa00-586a-46eb-acfa-3f27becb1a62.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Textures Can",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "1k"
+    },
+    {
+      "id": "sharetextures:tiles-7",
+      "provider": "sharetextures",
+      "title": "Tiles 7",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/tiles-7",
+      "thumbnailUrl": "https://images.sharetextures.com/u/tiles_7_mat-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:640",
+      "provider": "texturecan",
+      "title": "Floor Pavement Tiles of Squares and Diamond Shapes",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/640/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0128/tiles_0128_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    }
+  ]
+}

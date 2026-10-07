@@ -1,0 +1,760 @@
+{
+  "slug": "free-night-sky-hdris",
+  "search": {
+    "q": "night",
+    "types": [
+      "hdri"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:38.747Z",
+  "assets": [
+    {
+      "id": "polyhaven:dikhololo_night",
+      "provider": "polyhaven",
+      "title": "Dikhololo Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/dikhololo_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/dikhololo_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:7f363bf6-652c-4bde-a14d-bab995704d68",
+      "provider": "blenderkit",
+      "title": "The moon in the night sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7f363bf6-652c-4bde-a14d-bab995704d68/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/7fed2ece1a9a4fdeba4d6cc2ea1f749e/files/thumbnail_4a697c7d-5a7a-4625-bb96-4282ca6890fc.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "PBR PLAN",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI003",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 003",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI003",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI003.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "hdrihub:free-samples/free-hdri-downloads/hdr-city-road-night-lights-free",
+      "provider": "hdrihub",
+      "title": "HDR City Road Night Lights (free)",
+      "type": "hdri",
+      "url": "https://www.hdri-hub.com/shop/free-samples/free-hdri-downloads/hdr-city-road-night-lights-free",
+      "thumbnailUrl": "https://www.hdri-hub.com/media/hdr-city-road-night-lights-free-featured-3-400x267.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.hdri-hub.com/terms-of-use",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:satara_night",
+      "provider": "polyhaven",
+      "title": "Satara Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/satara_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/satara_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:00e280f1-4ea3-4fa4-842f-62cd561c34a4",
+      "provider": "blenderkit",
+      "title": "Deep Space Stars Night Environment",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/00e280f1-4ea3-4fa4-842f-62cd561c34a4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1e2f62ab8ed9435a8a82aa444e99e9d0/files/thumbnail_374a6a18-e3db-4313-a8ad-378ec3e364f1.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI008",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 008",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI008",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI008.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "hdrihub:free-samples/free-hdri-downloads/hdr-night",
+      "provider": "hdrihub",
+      "title": "HDR Night (free)",
+      "type": "hdri",
+      "url": "https://www.hdri-hub.com/shop/free-samples/free-hdri-downloads/hdr-night",
+      "thumbnailUrl": "https://www.hdri-hub.com/media/hdr-night-featured-3-400x267.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.hdri-hub.com/terms-of-use",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:satara_night_no_lamps",
+      "provider": "polyhaven",
+      "title": "Satara Night (No Lamps)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/satara_night_no_lamps",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/satara_night_no_lamps.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:a9642ec5-df87-482b-aa23-8197383c6c29",
+      "provider": "blenderkit",
+      "title": "Night Sky with mountians HDRI",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a9642ec5-df87-482b-aa23-8197383c6c29/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/462dc227ee944f32a757c6d4f47fbe53/files/thumbnail_fc3a0d8d-39ff-4ce1-a28e-f3e7b5f6c248.PNG.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Iwasonthelastbus",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI001",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 001",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI001",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI001.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:rogland_clear_night",
+      "provider": "polyhaven",
+      "title": "Rogland Clear Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/rogland_clear_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rogland_clear_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:4b4c2672-6954-4d3b-bc32-cc1716bae4aa",
+      "provider": "blenderkit",
+      "title": "Moon fog star night Aurora",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4b4c2672-6954-4d3b-bc32-cc1716bae4aa/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/176e7b71759c4896b36a1b9d550922f6/files/thumbnail_f059b31d-3c4c-4026-8cde-6661f44b2132.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightEnvironmentHDRI008",
+      "provider": "ambientcg",
+      "title": "Night Environment HDRI 008",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightEnvironmentHDRI008",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightEnvironmentHDRI008.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:rooftop_night",
+      "provider": "polyhaven",
+      "title": "Rooftop Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/rooftop_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rooftop_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:18287a7b-9302-495d-9669-e3ceed571799",
+      "provider": "blenderkit",
+      "title": "Aurora dark night clouds",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/18287a7b-9302-495d-9669-e3ceed571799/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e706677c64ce4854b24624a751d3a6bc/files/thumbnail_5f3c14a4-8597-4a4a-a593-9dc4aab4a7bd.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI007",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 007",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI007",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI007.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:solitude_night",
+      "provider": "polyhaven",
+      "title": "Solitude Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/solitude_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/solitude_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:17c114fc-235e-4eac-b8c8-adbd2048d070",
+      "provider": "blenderkit",
+      "title": "Dark Galactic Night Space With Stars",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/17c114fc-235e-4eac-b8c8-adbd2048d070/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6600ec7258d440abbe8e308dc4dd3c65/files/thumbnail_f947e5f0-e620-4bb9-ad17-0c5a6a27b25a.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI014",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 014",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI014",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI014.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:clarens_night_02",
+      "provider": "polyhaven",
+      "title": "Clarens Night 02",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/clarens_night_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/clarens_night_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI016A",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 016 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI016A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI016A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:pond_bridge_night",
+      "provider": "polyhaven",
+      "title": "Pond Bridge Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/pond_bridge_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/pond_bridge_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:dcc6b494-01a9-47b0-8743-2a65a8b52699",
+      "provider": "blenderkit",
+      "title": "Cloudy night sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/dcc6b494-01a9-47b0-8743-2a65a8b52699/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5029e10e89c14ff19ed0c0b049979fb1/files/thumbnail_917afbc5-588f-411d-9d91-4a5d4b4c1e74.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "PBR PLAN",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI009",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 009",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI009",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI009.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:vignaioli_night",
+      "provider": "polyhaven",
+      "title": "Vignaioli Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/vignaioli_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/vignaioli_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:NightSkyHDRI004",
+      "provider": "ambientcg",
+      "title": "Night Sky HDRI 004",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightSkyHDRI004",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightSkyHDRI004.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:cobblestone_street_night",
+      "provider": "polyhaven",
+      "title": "Cobblestone Street Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/cobblestone_street_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/cobblestone_street_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:06b045be-8b1e-46e4-82ef-da35140332d9",
+      "provider": "blenderkit",
+      "title": "Night Sky #2",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/06b045be-8b1e-46e4-82ef-da35140332d9/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2b3108413ac64bcda1c17c7daab4a567/files/thumbnail_2d7a962e-fca2-4d4c-8b21-bfacb6da19ac.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mike Radjabov",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightEnvironmentHDRI002",
+      "provider": "ambientcg",
+      "title": "Night Environment HDRI 002",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightEnvironmentHDRI002",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightEnvironmentHDRI002.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:blue_lagoon_night",
+      "provider": "polyhaven",
+      "title": "Blue Lagoon Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/blue_lagoon_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/blue_lagoon_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:30a5eef8-f621-41ab-8fc0-ea0823aad5eb",
+      "provider": "blenderkit",
+      "title": "Starfield night",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/30a5eef8-f621-41ab-8fc0-ea0823aad5eb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/fd808b132a4f4a4e85d961410a48b050/files/thumbnail_26403979-4a37-4a29-b18d-e8ffea9777e0.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "antoine f",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightEnvironmentHDRI009",
+      "provider": "ambientcg",
+      "title": "Night Environment HDRI 009",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightEnvironmentHDRI009",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightEnvironmentHDRI009.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:blaubeuren_night",
+      "provider": "polyhaven",
+      "title": "Blaubeuren Night",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/blaubeuren_night",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/blaubeuren_night.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:8627c4a6-b9e5-42d5-af75-625adcfaa1bf",
+      "provider": "blenderkit",
+      "title": "Night",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8627c4a6-b9e5-42d5-af75-625adcfaa1bf/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/934a2a403626478d9f5fb085dd163055/files/thumbnail_de0e5dc1-5fb9-4b5a-b14c-ce96ce2111f8.jpg.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:NightEnvironmentHDRI010",
+      "provider": "ambientcg",
+      "title": "Night Environment HDRI 010",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/NightEnvironmentHDRI010",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/NightEnvironmentHDRI010.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    }
+  ]
+}

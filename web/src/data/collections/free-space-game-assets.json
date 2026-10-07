@@ -1,0 +1,714 @@
+{
+  "slug": "free-space-game-assets",
+  "search": {
+    "q": "space",
+    "types": [
+      "model",
+      "pack"
+    ],
+    "free": true,
+    "exclude": [
+      "liminal",
+      "macbook",
+      "space black"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:05:42.730Z",
+  "assets": [
+    {
+      "id": "polyfork:space-mine-3a1654",
+      "provider": "polyfork",
+      "title": "Space Mine",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/space-mine-3a1654",
+      "thumbnailUrl": "https://polyfork.dev/files/space-mine-3a1654/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 480
+    },
+    {
+      "id": "blenderkit:e7be3287-3f58-4d12-8111-84e69f60e858",
+      "provider": "blenderkit",
+      "title": "Space Station",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e7be3287-3f58-4d12-8111-84e69f60e858/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/134bf50003f249d29f6aada96f9f4854/files/thumbnail_255df701-9387-4f3c-859c-6fde9a33f82d.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Jordi Se-Cam",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "kenney:space-station-kit",
+      "provider": "kenney",
+      "title": "Space Station Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/space-station-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/space-station-kit/a795b59757-1712749915/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:ultimatespacekit",
+      "provider": "quaternius",
+      "title": "Ultimate Space Kit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatespacekit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatespacekit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:kaylousberg/space-base-bits",
+      "provider": "itchio",
+      "title": "KayKit : Space Base Bits",
+      "type": "model",
+      "url": "https://kaylousberg.itch.io/space-base-bits",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MzY3MzgzLmpwZw==/315x250%23c/zF8GIp.jpg",
+      "downloadable": false,
+      "author": "Kay Lousberg",
+      "free": true
+    },
+    {
+      "id": "kenney:space-kit",
+      "provider": "kenney",
+      "title": "Space Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/space-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/space-kit/28e67de6d9-1677698968/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:kenney-assets/space-kit",
+      "provider": "itchio",
+      "title": "Space Kit",
+      "type": "model",
+      "url": "https://kenney-assets.itch.io/space-kit",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzY3ODAzMzAucG5n/315x250%23c/i3iwZw.png",
+      "downloadable": false,
+      "author": "Kenney (Assets)",
+      "free": true
+    },
+    {
+      "id": "blenderkit:7d5d4580-7cde-4531-9b90-7bdcf9895533",
+      "provider": "blenderkit",
+      "title": "Procedural Space Junkyard",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7d5d4580-7cde-4531-9b90-7bdcf9895533/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/230dda22fa064032aa0b464930a464ea/files/thumbnail_9223c0e6-a8ca-4d88-beae-bc81947e3e74.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nicolai Prodromov",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 512
+    },
+    {
+      "id": "polyhaven:moon_rock_01",
+      "provider": "polyhaven",
+      "title": "Moon Rock 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers, Jenelle van Heerden, Dario Barresi",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 18668
+    },
+    {
+      "id": "kenney:modular-space-kit",
+      "provider": "kenney",
+      "title": "Modular Space Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/modular-space-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/modular-space-kit/0d6aef3da9-1771146082/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:cluly/space-eaters",
+      "provider": "itchio",
+      "title": "Space Eaters! Asset Pack",
+      "type": "pack",
+      "url": "https://cluly.itch.io/space-eaters",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI3MTA1NDIucG5n/315x250%23c/LkzEmI.png",
+      "downloadable": false,
+      "author": "Cluly",
+      "free": true
+    },
+    {
+      "id": "polyhaven:moon_rock_03",
+      "provider": "polyhaven",
+      "title": "Moon Rock 03",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 10492
+    },
+    {
+      "id": "polyfork:safety-railing-run-ba0603",
+      "provider": "polyfork",
+      "title": "Safety Railing Run",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/safety-railing-run-ba0603",
+      "thumbnailUrl": "https://polyfork.dev/files/safety-railing-run-ba0603/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 420
+    },
+    {
+      "id": "itchio:jestan/space-station-ada",
+      "provider": "itchio",
+      "title": "Space Station Ada",
+      "type": "pack",
+      "url": "https://jestan.itch.io/space-station-ada",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIzMTAwMzQucG5n/315x250%23c/CCZf0I.png",
+      "downloadable": false,
+      "author": "Jestan",
+      "free": true
+    },
+    {
+      "id": "polyhaven:moon_rock_06",
+      "provider": "polyhaven",
+      "title": "Moon Rock 06",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_06",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_06.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Jenelle van Heerden, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 12974
+    },
+    {
+      "id": "polyfork:access-ladder-dcc590",
+      "provider": "polyfork",
+      "title": "Access Ladder",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/access-ladder-dcc590",
+      "thumbnailUrl": "https://polyfork.dev/files/access-ladder-dcc590/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 424
+    },
+    {
+      "id": "itchio:modernmodron/space-madness",
+      "provider": "itchio",
+      "title": "Space Madness",
+      "type": "pack",
+      "url": "https://modernmodron.itch.io/space-madness",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvNjcyMzgvMzA1MzcxLnBuZw==/315x250%23c/jR1Y4X.png",
+      "downloadable": false,
+      "author": "Rose",
+      "free": true
+    },
+    {
+      "id": "blenderkit:c1e7bf82-45ab-4a5e-aa89-c287ec4ff7ee",
+      "provider": "blenderkit",
+      "title": "Cinematic Space Planet",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c1e7bf82-45ab-4a5e-aa89-c287ec4ff7ee/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/99083db541624948a56e419a0b234003/files/thumbnail_63c7ddcf-5a07-46e6-a2d5-5f0e8ea0e7a1.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "sivix gamer",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "polyhaven:moon_rock_04",
+      "provider": "polyhaven",
+      "title": "Moon Rock 04",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 14316
+    },
+    {
+      "id": "polyfork:weather-mast-7d088f",
+      "provider": "polyfork",
+      "title": "Weather Mast",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/weather-mast-7d088f",
+      "thumbnailUrl": "https://polyfork.dev/files/weather-mast-7d088f/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 502,
+      "rigged": true
+    },
+    {
+      "id": "itchio:sushmoygamedev/space-moonstar-assets",
+      "provider": "itchio",
+      "title": "Space MoonStar Assets",
+      "type": "pack",
+      "url": "https://sushmoygamedev.itch.io/space-moonstar-assets",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEwMDU4MTU1LnBuZw==/315x250%23c/5IwL7D.png",
+      "downloadable": false,
+      "author": "Hamimur Rahman",
+      "free": true
+    },
+    {
+      "id": "polyhaven:moon_rock_02",
+      "provider": "polyhaven",
+      "title": "Moon Rock 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rico Cilliers, Greg Zaal, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 6194
+    },
+    {
+      "id": "polyfork:surface-pipe-run-62c4b3",
+      "provider": "polyfork",
+      "title": "Surface Pipe Run",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/surface-pipe-run-62c4b3",
+      "thumbnailUrl": "https://polyfork.dev/files/surface-pipe-run-62c4b3/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 504
+    },
+    {
+      "id": "itchio:ranjeetsingh/space-combat",
+      "provider": "itchio",
+      "title": "Space Combat",
+      "type": "pack",
+      "url": "https://ranjeetsingh.itch.io/space-combat",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzk5NTE3MzEucG5n/315x250%23c/iAk5zl.png",
+      "downloadable": false,
+      "author": "Ranjeet Singh",
+      "free": true
+    },
+    {
+      "id": "blenderkit:0ae07c5a-106a-458e-9da3-c0c7aad0f59e",
+      "provider": "blenderkit",
+      "title": "Deep Space Star Cluster Environment",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0ae07c5a-106a-458e-9da3-c0c7aad0f59e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6b661056450440d99c601fbfd73e81b9/files/thumbnail_3c3148e7-2d03-4c3a-8a34-d0ea4578769b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "sivix gamer",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 12
+    },
+    {
+      "id": "polyhaven:moon_rock_05",
+      "provider": "polyhaven",
+      "title": "Moon Rock 05",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_05",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_05.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 18466
+    },
+    {
+      "id": "polyfork:rover-tracks-decal-865580",
+      "provider": "polyfork",
+      "title": "Rover Tracks Decal",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/rover-tracks-decal-865580",
+      "thumbnailUrl": "https://polyfork.dev/files/rover-tracks-decal-865580/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 544
+    },
+    {
+      "id": "blenderkit:dae5eb46-e7ee-43c5-8607-11db2a804f5c",
+      "provider": "blenderkit",
+      "title": "Red and Green Nebula Deep Space",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/dae5eb46-e7ee-43c5-8607-11db2a804f5c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/a9c59e910de046dd927be504f95a437b/files/thumbnail_3c4fd530-3223-4607-bdf8-9dda58aaeaae.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "sivix gamer",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 18
+    },
+    {
+      "id": "itchio:wenrexa/spacebq2",
+      "provider": "itchio",
+      "title": "Assets: Free Space Backgrounds in 10k",
+      "type": "pack",
+      "url": "https://wenrexa.itch.io/spacebq2",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzU0Nzc3NTEuanBn/315x250%23c/uD1maQ.jpg",
+      "downloadable": false,
+      "author": "Wenrexa",
+      "free": true
+    },
+    {
+      "id": "polyhaven:moon_rock_07",
+      "provider": "polyhaven",
+      "title": "Moon Rock 07",
+      "type": "model",
+      "url": "https://polyhaven.com/a/moon_rock_07",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/moon_rock_07.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Rico Cilliers, Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "16k",
+      "polyCount": 12786
+    },
+    {
+      "id": "polyfork:survey-flag-fa500f",
+      "provider": "polyfork",
+      "title": "Survey Flag",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/survey-flag-fa500f",
+      "thumbnailUrl": "https://polyfork.dev/files/survey-flag-fa500f/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 308,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:20eb8a2b-d6ba-4555-9a2a-1d8e2eacec28",
+      "provider": "blenderkit",
+      "title": "Heavy Space Cruise Ship 2",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/20eb8a2b-d6ba-4555-9a2a-1d8e2eacec28/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6b14caa6fc384944b4308afe417ce349/files/thumbnail_85a38ba8-3003-48ce-b873-6c1a8ad8b767.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Alexander Novgorodtsev",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 17649
+    },
+    {
+      "id": "itchio:souto/space-shooter-template",
+      "provider": "itchio",
+      "title": "Space Shooter Template - Game Maker Studio(1 & 2), Unity(5 & 2020) and Monogame",
+      "type": "pack",
+      "url": "https://souto.itch.io/space-shooter-template",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzUxNDkyODAucG5n/315x250%23c/3s7dTX.png",
+      "downloadable": false,
+      "author": "Lucas Souto",
+      "free": true
+    },
+    {
+      "id": "polyhaven:vintage_spacecraft_instrument",
+      "provider": "polyhaven",
+      "title": "Vintage Spacecraft Instrument",
+      "type": "model",
+      "url": "https://polyhaven.com/a/vintage_spacecraft_instrument",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/vintage_spacecraft_instrument.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Michał Wiśniewski",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 13279
+    },
+    {
+      "id": "polyfork:solar-array-rack-789c93",
+      "provider": "polyfork",
+      "title": "Solar Array Rack",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/solar-array-rack-789c93",
+      "thumbnailUrl": "https://polyfork.dev/files/solar-array-rack-789c93/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 510
+    },
+    {
+      "id": "blenderkit:d0dcde95-bb25-4a0a-b0fe-850f988e44ce",
+      "provider": "blenderkit",
+      "title": "Realistic Volumetric Deep Space Nebula",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/d0dcde95-bb25-4a0a-b0fe-850f988e44ce/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/bec377a263d1479c8a4274605a2fde76/files/thumbnail_94bcd7ed-7f5d-41af-9b26-fc01fd7a7eba.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "sivix gamer",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 19
+    }
+  ]
+}

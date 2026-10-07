@@ -9,6 +9,7 @@ import { FAQ } from "@/lib/faq";
 import { faqPage, softwareApplication, webApi } from "@/lib/schema";
 import { CATALOG, fmt, fmtShort } from "@/lib/catalog";
 import { MCP_URL, PROVIDERS, SITE, SOURCE_COUNT } from "@/lib/site";
+import { allCollections } from "@/lib/collections";
 
 const suggestions = ["low poly tree", "sunset hdri", "brick wall", "medieval barrel", "mossy rock", "sci-fi crate"];
 const totals = CATALOG.totals;
@@ -48,11 +49,12 @@ const steps = [
   ["Fetch", "Pick a format and resolution: glTF with its .bin and textures, a 2k PBR map set or an EXR. Multi-file assets arrive as one zip."],
 ];
 const typeLinks = [
-  ["Free 3D models", "/search?type=model&free=true", "glTF, GLB, FBX, Blend, OBJ"],
-  ["Free PBR materials", "/search?type=material&free=true", "Albedo, normal, roughness, AO, displacement"],
-  ["Free HDRIs", "/search?type=hdri&free=true", "HDR and EXR environment maps up to 16k"],
-  ["Free game asset packs", "/search?type=pack&free=true", "Kenney, Quaternius, itch.io bundles"],
+  ["Free 3D models", "/assets/3d-models", "glTF, GLB, FBX, Blend, OBJ"],
+  ["Free PBR materials", "/assets/textures", "Albedo, normal, roughness, AO, displacement"],
+  ["Free HDRIs", "/assets/hdris", "HDR and EXR environment maps up to 16k"],
+  ["Free game assets", "/assets/game-assets", "Kenney, Quaternius, itch.io kits and packs"],
 ];
+const collections = (await allCollections()).filter((c) => c.indexable);
 ---
 
 <BaseLayout
@@ -219,6 +221,17 @@ const typeLinks = [
         </a>
       ))}
     </div>
+    {collections.length > 0 && (
+      <div class="mt-8 text-center">
+        <h3 class="text-sm font-medium text-muted-foreground">Popular collections</h3>
+        <ul class="mx-auto mt-3 flex max-w-4xl flex-wrap justify-center gap-2 text-sm">
+          {collections.map((c) => (
+            <li><a href={c.path} class="inline-flex rounded-full border px-3 py-1 text-muted-foreground transition hover:border-primary/40 hover:text-foreground">{c.topic.data.title}</a></li>
+          ))}
+        </ul>
+        <p class="mt-4 text-sm"><a href="/assets" class="text-primary hover:underline">All asset collections →</a></p>
+      </div>
+    )}
   </section>
 
   <!-- FAQ -->

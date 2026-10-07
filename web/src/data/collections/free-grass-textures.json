@@ -1,0 +1,705 @@
+{
+  "slug": "free-grass-textures",
+  "search": {
+    "q": "grass",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:34.903Z",
+  "assets": [
+    {
+      "id": "polyhaven:aerial_grass_rock",
+      "provider": "polyhaven",
+      "title": "Aerial Grass Rock",
+      "type": "material",
+      "url": "https://polyhaven.com/a/aerial_grass_rock",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/aerial_grass_rock.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:3906f27c-da78-403b-a6df-a512999b5ed0",
+      "provider": "blenderkit",
+      "title": "Grass Rock Ground",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3906f27c-da78-403b-a6df-a512999b5ed0/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f9759a29762e4edc9a3842391b85ff60/files/thumbnail_6f64762c-ee88-4817-8041-7361b012b09e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Jonathan Ramos",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Grass005",
+      "provider": "ambientcg",
+      "title": "Grass 005",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Grass005",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Grass005.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:469",
+      "provider": "texturecan",
+      "title": "Football / Soccer Grass Field with Alternating Bands",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/469/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/ground_0040/ground_0040_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:grass-gravel-01",
+      "provider": "cgbookcase",
+      "title": "Grass Gravel 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/grass-gravel-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Grass_gravel_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "2k"
+    },
+    {
+      "id": "sharetextures:grass_1",
+      "provider": "sharetextures",
+      "title": "Grass 1",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/ground/grass_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/grass_1-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:paving-stones-pbr-material-3",
+      "provider": "threedtexel",
+      "title": "Grey Paving Stones With Grass – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/paving-stones-pbr-material-3/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-73-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturescom:132474",
+      "provider": "texturescom",
+      "title": "Grass",
+      "type": "texture",
+      "url": "https://www.textures.com/download/3d-scanned-grass-atlas-12/132474",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/Nature/114636-Grass/ps132474/132474_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "8K"
+    },
+    {
+      "id": "itchio:shadow-jems/jems-grass-16x16-tile-map",
+      "provider": "itchio",
+      "title": "16x16 Grass texture",
+      "type": "texture",
+      "url": "https://shadow-jems.itch.io/jems-grass-16x16-tile-map",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI1NDg3NTAwLnBuZw==/315x250%23c/Qjc3e%2F.png",
+      "downloadable": false,
+      "author": "Shadow_jems",
+      "free": true
+    },
+    {
+      "id": "polyhaven:leafy_grass",
+      "provider": "polyhaven",
+      "title": "Leafy Grass",
+      "type": "material",
+      "url": "https://polyhaven.com/a/leafy_grass",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/leafy_grass.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:30392eeb-2126-46ea-8193-1bfc589d98d0",
+      "provider": "blenderkit",
+      "title": "Grass Dirt Clovers (Cycles)",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/30392eeb-2126-46ea-8193-1bfc589d98d0/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c98b5e4428be46708b1ea3e9cbe18122/files/thumbnail_14484e34-cade-45d9-a4a0-e08ba138b34f.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "z1",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Grass001",
+      "provider": "ambientcg",
+      "title": "Grass 001",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Grass001",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Grass001.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtextures:stylized-grass-003",
+      "provider": "threedtextures",
+      "title": "Stylized Grass 003",
+      "type": "material",
+      "url": "https://3dtextures.me/2021/03/19/stylized-grass-003/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2021/03/Material_1553.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "texturecan:468",
+      "provider": "texturecan",
+      "title": "Square Concrete Tiles with Grass",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/468/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0065/tiles_0065_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:grass-01",
+      "provider": "cgbookcase",
+      "title": "Grass 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/grass-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Grass_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "2k"
+    },
+    {
+      "id": "threedtexel:paving-stones-mossy-pbr-material",
+      "provider": "threedtexel",
+      "title": "Herringbone Paving Stones With Grass – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/paving-stones-mossy-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-70-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:grass_path_2",
+      "provider": "polyhaven",
+      "title": "Grass Path 2",
+      "type": "material",
+      "url": "https://polyhaven.com/a/grass_path_2",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/grass_path_2.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:3d87003c-dc5b-4e24-a257-32b557d7cae3",
+      "provider": "blenderkit",
+      "title": "Meadow with grass and Rocks",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3d87003c-dc5b-4e24-a257-32b557d7cae3/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/bb3f1518402041b8a1a83824e987577f/files/thumbnail_29b70d12-08de-4afe-80f7-4f67c3b59a91.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Steffen",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Grass004",
+      "provider": "ambientcg",
+      "title": "Grass 004",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Grass004",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Grass004.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtextures:grass-005",
+      "provider": "threedtextures",
+      "title": "Grass 005",
+      "type": "material",
+      "url": "https://3dtextures.me/2020/08/28/grass-005/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2020/08/Material_1617.jpg?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "texturecan:287",
+      "provider": "texturecan",
+      "title": "Stylized Meadow Grass Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/287/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/ground_0037/ground_0037_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:grass-surface-pbr-material-4",
+      "provider": "threedtexel",
+      "title": "Green Grass Surface – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/grass-surface-pbr-material-4/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-112-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:sparse_grass",
+      "provider": "polyhaven",
+      "title": "Sparse Grass",
+      "type": "material",
+      "url": "https://polyhaven.com/a/sparse_grass",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sparse_grass.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:8536c6e6-3f43-4922-a2d2-3d697ad6f28a",
+      "provider": "blenderkit",
+      "title": "Green grass or lawn",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8536c6e6-3f43-4922-a2d2-3d697ad6f28a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5bbb2f46e97a4006bf38de3d86d381e4/files/thumbnail_3d4517f5-ce07-46b4-93a4-2770238b220e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Steffen",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "threedtextures:stylized-grass-002",
+      "provider": "threedtextures",
+      "title": "Stylized Grass 002",
+      "type": "material",
+      "url": "https://3dtextures.me/2020/07/28/stylized-grass-002/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2020/07/Material_1597.jpg?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "ambientcg:Grass008",
+      "provider": "ambientcg",
+      "title": "Grass 008",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Grass008",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Grass008.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:242",
+      "provider": "texturecan",
+      "title": "Long Grass Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/242/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/plants_0003/plants_0003_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:grass_path_3",
+      "provider": "polyhaven",
+      "title": "Grass Path 3",
+      "type": "material",
+      "url": "https://polyhaven.com/a/grass_path_3",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/grass_path_3.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:3785d472-e55d-401d-b301-e777e1409a6a",
+      "provider": "blenderkit",
+      "title": "Grass",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3785d472-e55d-401d-b301-e777e1409a6a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c14b0ab921644285a585d51c0c182c2e/files/thumbnail_d7ee005f-7336-45ab-a2f1-23f11b5abdd0.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "James Middleton",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "sharetextures:garden-walk-way",
+      "provider": "sharetextures",
+      "title": "Garden Walk Way",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/road/garden-walk-way",
+      "thumbnailUrl": "https://images.sharetextures.com/u/road_8_mat-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtextures:stylized-grass-001",
+      "provider": "threedtextures",
+      "title": "Stylized Grass 001",
+      "type": "material",
+      "url": "https://3dtextures.me/2020/06/02/stylized-grass-001/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2020/06/Material_1786.jpg.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "ambientcg:Grass006",
+      "provider": "ambientcg",
+      "title": "Grass 006",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Grass006",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Grass006.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:238",
+      "provider": "texturecan",
+      "title": "Grass Texture Generator",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/238/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/plants_0002/plants_0002_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:grass-surface-pbr-material-2",
+      "provider": "threedtexel",
+      "title": "Green Grass With Twigs – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/grass-surface-pbr-material-2/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-110-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:withered_grass",
+      "provider": "polyhaven",
+      "title": "Withered Grass",
+      "type": "material",
+      "url": "https://polyhaven.com/a/withered_grass",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/withered_grass.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:94a5b72a-6401-44de-8580-29b636d42595",
+      "provider": "blenderkit",
+      "title": "Stylized Grass",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/94a5b72a-6401-44de-8580-29b636d42595/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/7ed1c0c494844559883ca044afdd33e9/files/thumbnail_238b35d3-56dc-491e-a17e-799528ca9a60.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Julio Sillet",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    }
+  ]
+}

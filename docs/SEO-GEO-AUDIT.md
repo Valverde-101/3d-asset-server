@@ -127,8 +127,11 @@ The crawlable content for the API lives in `/docs/api` and `/openapi.json`.
    `3d-assets`, `gltf`, `pbr-textures`, `hdri`, `polyhaven`, `threejs`, `game-assets`).
 4. **Backlinks**: post on r/threejs, r/gamedev, r/blender, Hacker News (Show HN) and Product Hunt; ask
    the CC0 sources (Poly Haven, ambientCG, Kenney) whether they list tools that use their APIs.
-5. **Indexable landing pages per intent** if search data shows demand: e.g. `/free-hdri`,
-   `/cc0-textures`, `/free-low-poly-models` with server-rendered top results.
+5. ~~**Indexable landing pages per intent**~~ Done: `/assets` collections (25 at launch, such as
+   `/assets/free-sunset-hdris`), four hubs and `/sources/<id>` pages, pre-rendered with real results and
+   refreshed daily; new topics are drafted weekly from frequent searches through a reviewed pull request.
+   The sitemap now carries real `lastmod` dates (collections, hubs, census pages) instead of the build
+   time on every URL. See the README's "Asset collections" section.
 6. **Watch the Grafana "3D Asset Server" dashboard**: zero-result queries show content gaps, and the
    MCP client breakdown shows which agent setup docs matter most.
 

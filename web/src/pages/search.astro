@@ -3,6 +3,9 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import SearchApp from "@/components/search/SearchApp";
 import { breadcrumbs } from "@/lib/schema";
 import { PROVIDERS, SOURCE_COUNT } from "@/lib/site";
+import { allCollections } from "@/lib/collections";
+
+const collections = (await allCollections()).filter((c) => c.indexable);
 ---
 
 <BaseLayout
@@ -18,6 +21,10 @@ import { PROVIDERS, SOURCE_COUNT } from "@/lib/site";
       Live search needs JavaScript. You can also use the JSON API directly:
       <code>/v1/search?q=wooden+chair&type=model&free=true</code>. Sources searched:
       {PROVIDERS.map((p) => p.name).join(", ")}.
+      <p class="mt-4">Or browse the curated collections, which work without JavaScript:</p>
+      <ul class="mt-2 list-disc pl-5">
+        {collections.map((c) => <li><a href={c.path} class="text-primary hover:underline">{c.topic.data.title}</a></li>)}
+      </ul>
     </div>
   </noscript>
 </BaseLayout>

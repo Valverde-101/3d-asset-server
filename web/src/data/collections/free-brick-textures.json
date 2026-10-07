@@ -1,0 +1,682 @@
+{
+  "slug": "free-brick-textures",
+  "search": {
+    "q": "brick",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:28.378Z",
+  "assets": [
+    {
+      "id": "polyhaven:red_brick",
+      "provider": "polyhaven",
+      "title": "Red Brick",
+      "type": "material",
+      "url": "https://polyhaven.com/a/red_brick",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/red_brick.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:919a309f-552f-4b1e-80fb-2108c27337e4",
+      "provider": "blenderkit",
+      "title": "Brick Building Wall",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/919a309f-552f-4b1e-80fb-2108c27337e4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5f4ff54f2b9547a7ae40e3ca5433b44f/files/thumbnail_035c3121-0816-4619-b789-58a220b60d12.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Julio Sillet",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Bricks097",
+      "provider": "ambientcg",
+      "title": "Bricks 097",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Bricks097",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Bricks097.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "sharetextures:red-brick-wall-7",
+      "provider": "sharetextures",
+      "title": "Red Brick Wall 7",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wall/red-brick-wall-7",
+      "thumbnailUrl": "https://images.sharetextures.com/u/brick_wall_7-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brick-wall-29",
+      "provider": "cgbookcase",
+      "title": "Brick Wall 29",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brick-wall-29",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brick_wall_29_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:brick-wall-pbr-material-7",
+      "provider": "threedtexel",
+      "title": "Light Beige Brick Wall – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/brick-wall-pbr-material-7/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-82-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:kiuistudio/bricks-and-stone-textures",
+      "provider": "itchio",
+      "title": "Bricks and Stone Textures",
+      "type": "texture",
+      "url": "https://kiuistudio.itch.io/bricks-and-stone-textures",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIyNTc5MzYxLnBuZw==/315x250%23c/V4mM0n.png",
+      "downloadable": false,
+      "author": "Kiui Studio",
+      "free": true
+    },
+    {
+      "id": "polyhaven:red_brick_03",
+      "provider": "polyhaven",
+      "title": "Red Brick 03",
+      "type": "material",
+      "url": "https://polyhaven.com/a/red_brick_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/red_brick_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:63558c30-91fa-4744-97d6-e0f7cddb626c",
+      "provider": "blenderkit",
+      "title": "Old Brick",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/63558c30-91fa-4744-97d6-e0f7cddb626c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d2bb33bb5f3c4528926d4a5269196add/files/thumbnail_8960f2ea-db8a-41a9-8a29-a275cca8a964.webp.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "texturecan:493",
+      "provider": "texturecan",
+      "title": "Old Y-Shape Concrete Bricks for Pavement",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/493/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0083/tiles_0083_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Bricks060",
+      "provider": "ambientcg",
+      "title": "Bricks 060",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Bricks060",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Bricks060.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "sharetextures:brick-wall-21",
+      "provider": "sharetextures",
+      "title": "Brick Wall 21",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wall/brick-wall-21",
+      "thumbnailUrl": "https://images.sharetextures.com/u/brick_wall_21-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brick-wall-28",
+      "provider": "cgbookcase",
+      "title": "Brick Wall 28",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brick-wall-28",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brick_wall_28_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:brick-wall-pbr-material-6",
+      "provider": "threedtexel",
+      "title": "Rectangular Brick Wall – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/brick-wall-pbr-material-6/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-81-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:wall-brick-terracotta-003-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Wall Brick Terracotta 003",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/05/11/wall-brick-terracotta-003-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/05/Material_2003.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:juliovii/materials-bricks-walls",
+      "provider": "itchio",
+      "title": "Materials Bricks & Walls",
+      "type": "material",
+      "url": "https://juliovii.itch.io/materials-bricks-walls",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI5ODkyMjQ2LmpwZw==/315x250%23c/qO4qGh.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "polyhaven:brick_4",
+      "provider": "polyhaven",
+      "title": "Brick 4",
+      "type": "material",
+      "url": "https://polyhaven.com/a/brick_4",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/brick_4.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:384678ce-fd4c-4854-9ad5-2f82d5ccef44",
+      "provider": "blenderkit",
+      "title": "Proceural Painted Brick Wall",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/384678ce-fd4c-4854-9ad5-2f82d5ccef44/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c6e574fafa1b4cfda626f5203fb91b5d/files/thumbnail_8203208c-16fc-4467-bce2-f261fad9d1f6.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matheus Godoi",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ]
+    },
+    {
+      "id": "texturecan:492",
+      "provider": "texturecan",
+      "title": "Dirty Zigzag Unipaver Bricks in Herringbone",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/492/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0082/tiles_0082_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Bricks100",
+      "provider": "ambientcg",
+      "title": "Bricks 100",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Bricks100",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Bricks100.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtextures:wall-brick-028-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Wall Brick 028",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/04/29/wall-brick-028-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/04/Material_2000.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:brick_wall_22",
+      "provider": "sharetextures",
+      "title": "Brick Wall 22",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wall/brick_wall_22",
+      "thumbnailUrl": "https://images.sharetextures.com/u/brick_wall_22-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brick-wall-27",
+      "provider": "cgbookcase",
+      "title": "Brick Wall 27",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brick-wall-27",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brick_wall_27_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:brick-wall-pbr-material-5",
+      "provider": "threedtexel",
+      "title": "Grey Brick Wall – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/brick-wall-pbr-material-5/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-80-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:castle_brick_02_red",
+      "provider": "polyhaven",
+      "title": "Castle Brick 02 Red",
+      "type": "material",
+      "url": "https://polyhaven.com/a/castle_brick_02_red",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/castle_brick_02_red.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:b6e8ab34-8257-4363-a887-450a4838d287",
+      "provider": "blenderkit",
+      "title": "Wall bricks",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/b6e8ab34-8257-4363-a887-450a4838d287/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/82566f3ceded404f8bf274846ce5e58e/files/thumbnail_7f8f72e0-34e8-4844-8e76-f0ee0a8a8a4d.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:491",
+      "provider": "texturecan",
+      "title": "Zigzag Unipaver Bricks with Diagonal Pattern",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/491/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0081/tiles_0081_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Bricks089",
+      "provider": "ambientcg",
+      "title": "Bricks 089",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Bricks089",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Bricks089.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtextures:wall-brick-027-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Wall Brick 027",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/03/27/wall-brick-027-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/03/Material_2000-1.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:brick-wall-5",
+      "provider": "sharetextures",
+      "title": "Brick Wall 5",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wall/brick-wall-5",
+      "thumbnailUrl": "https://images.sharetextures.com/u/brick_wall_5-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brick-wall-26",
+      "provider": "cgbookcase",
+      "title": "Brick Wall 26",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brick-wall-26",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brick_wall_26_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:brick-wall-pbr-material-4",
+      "provider": "threedtexel",
+      "title": "White and Grey Brick Wall – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/brick-wall-pbr-material-4/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-79-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:brick_wall_001",
+      "provider": "polyhaven",
+      "title": "Brick Wall 001",
+      "type": "material",
+      "url": "https://polyhaven.com/a/brick_wall_001",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/brick_wall_001.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Dimitrios Savva",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:49aa8b4e-b75e-4e5c-813d-4b51496c7415",
+      "provider": "blenderkit",
+      "title": "Glass bricks",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/49aa8b4e-b75e-4e5c-813d-4b51496c7415/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1b29372d9c5a4b72add09fbe69e69401/files/thumbnail_8536684b-862d-45d5-a697-415917bbd2f7.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "OyezCubed TITRE",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:483",
+      "provider": "texturecan",
+      "title": "Zig Zag Unipaver Concrete Bricks in Herringbone",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/483/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0075/tiles_0075_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Bricks051",
+      "provider": "ambientcg",
+      "title": "Bricks 051",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Bricks051",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Bricks051.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "16k"
+    }
+  ]
+}

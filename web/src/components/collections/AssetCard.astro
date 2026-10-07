@@ -1,0 +1,48 @@
+---
+// One saved search result on a collection or source page. The card opens the
+// asset in the search app (preview, files, download); the footer links to the
+// asset's page on its source site.
+import { providerName, typeNoun, type SnapshotAsset } from "@/lib/collections";
+
+interface Props {
+  asset: SnapshotAsset;
+  /** Load eagerly (the first row is above the fold). */
+  eager?: boolean;
+}
+const { asset: a, eager = false } = Astro.props;
+const source = providerName(a.provider);
+const details = [a.maxResolution?.toUpperCase(), a.formats?.slice(0, 3).join(", ").toUpperCase(), a.animated ? "Animated" : a.rigged ? "Rigged" : undefined].filter(Boolean).join(" · ");
+---
+<li class="group flex flex-col overflow-hidden rounded-xl border bg-card/50 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+  <a href={`/search?asset=${encodeURIComponent(a.id)}`} class="flex flex-1 flex-col focus-visible:outline-2 focus-visible:outline-ring">
+    <div class="relative aspect-[4/3] w-full overflow-hidden bg-muted">
+      <img
+        src={a.thumbnailUrl}
+        alt={`${a.title}: ${typeNoun(a.type)} on ${source}`}
+        width="400"
+        height="300"
+        loading={eager ? "eager" : "lazy"}
+        decoding="async"
+        referrerpolicy="no-referrer"
+        class="size-full object-cover transition duration-500 group-hover:scale-[1.04]"
+      />
+      {a.downloadable && <span class="absolute right-2 top-2 rounded-md bg-black/60 px-1.5 py-0.5 text-[10px] font-medium text-white backdrop-blur">Direct download</span>}
+    </div>
+    <div class="flex flex-1 flex-col gap-2 p-3">
+      <h3 class="line-clamp-2 text-sm font-medium leading-snug">{a.title}</h3>
+      <p class="text-xs text-muted-foreground">
+        {source}{a.author && <> · {a.author}</>}
+      </p>
+      {details && <p class="text-[11px] text-muted-foreground">{details}</p>}
+      <div class="mt-auto flex flex-wrap gap-1">
+        {a.license && <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium">{a.license.name}</span>}
+        {a.free !== undefined && (
+          <span class:list={["inline-flex items-center rounded-full border px-2 py-0.5 text-[10px] font-medium", a.free ? "border-success/40 text-success" : "border-warning/40 text-warning"]}>{a.free ? "Free" : "Paid"}</span>
+        )}
+      </div>
+    </div>
+  </a>
+  <a href={a.url} rel="noopener" class="border-t px-3 py-2 text-xs text-muted-foreground transition hover:text-foreground">
+    View on {source} <span aria-hidden="true">↗</span>
+  </a>
+</li>

@@ -1,0 +1,631 @@
+{
+  "slug": "free-dungeon-game-assets",
+  "search": {
+    "q": "dungeon",
+    "types": [
+      "model",
+      "pack"
+    ],
+    "free": true,
+    "exclude": [
+      "dojo",
+      "dungeon and dragons"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:06:20.971Z",
+  "assets": [
+    {
+      "id": "blenderkit:bb93c779-bf60-439b-96d2-99167435443d",
+      "provider": "blenderkit",
+      "title": "Old Medieval Dungeon Room",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/bb93c779-bf60-439b-96d2-99167435443d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4ed04401c2734a65b15dbc53c621d674/files/thumbnail_e96da6ed-4afe-471f-bdbd-efee301fbc11.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Dennis Hafemann",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "kenney:mini-dungeon",
+      "provider": "kenney",
+      "title": "Mini Dungeon",
+      "type": "model",
+      "url": "https://kenney.nl/assets/mini-dungeon",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/mini-dungeon/5b23e91c6e-1785314288/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:bestiarydungeonmonsterskit",
+      "provider": "quaternius",
+      "title": "Bestiary - Dungeon Monsters Kit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/bestiarydungeonmonsterskit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/bestiarydungeonmonsterskit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "rigged": true
+    },
+    {
+      "id": "itchio:snowhex/dungeon-gathering-fire-zone-expansion",
+      "provider": "itchio",
+      "title": "Dungeon Gathering - Fire Zone Expansion + Updates",
+      "type": "pack",
+      "url": "https://snowhex.itch.io/dungeon-gathering-fire-zone-expansion",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE1NTY1MzYwLmdpZg==/315x250%23c/SMRq5Q.gif",
+      "downloadable": false,
+      "author": "SnowHex 🌱",
+      "free": true
+    },
+    {
+      "id": "blenderkit:388c30d1-8351-46a9-b2f0-18f557fcea31",
+      "provider": "blenderkit",
+      "title": "Occult Dungeon Scene",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/388c30d1-8351-46a9-b2f0-18f557fcea31/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c01dfc9078e74c748392c805aa688867/files/thumbnail_aebca424-3c61-4dfb-aeb0-1e08ca02d544.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Joyble",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "kenney:modular-dungeon-kit",
+      "provider": "kenney",
+      "title": "Modular Dungeon Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/modular-dungeon-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/modular-dungeon-kit/fe4b7d1cba-1771926047/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:modulardungeon",
+      "provider": "quaternius",
+      "title": "Modular Dungeons Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/modulardungeon.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/updatedmodulardungeon.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:snowhex/dungeon-gathering",
+      "provider": "itchio",
+      "title": "Dungeon Gathering - Under The Castle Set + Updates",
+      "type": "pack",
+      "url": "https://snowhex.itch.io/dungeon-gathering",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI2MDk3NzA3LmdpZg==/315x250%23c/mrec8c.gif",
+      "downloadable": false,
+      "author": "SnowHex 🌱",
+      "free": true
+    },
+    {
+      "id": "blenderkit:62660373-f5a4-4c81-9c77-adb0bd5b4694",
+      "provider": "blenderkit",
+      "title": "Stylized Dungeon with Snow",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/62660373-f5a4-4c81-9c77-adb0bd5b4694/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3d1a2f18d72341dc9833c604840a7b2a/files/thumbnail_29489a01-2b5c-4059-b271-7cdad5563c29.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Bipro Fx",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "polyfork:loose-faceted-gem-d88a5b",
+      "provider": "polyfork",
+      "title": "Loose Faceted Gem",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/loose-faceted-gem-d88a5b",
+      "thumbnailUrl": "https://polyfork.dev/files/loose-faceted-gem-d88a5b/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 254
+    },
+    {
+      "id": "quaternius:medievaldungeon",
+      "provider": "quaternius",
+      "title": "Modular Dungeon Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/medievaldungeon.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/modulardungeon.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:s13games/s13-vector-dungeon-pack",
+      "provider": "itchio",
+      "title": "S13 Vector Dungeon Pack",
+      "type": "pack",
+      "url": "https://s13games.itch.io/s13-vector-dungeon-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI5ODM0NzQ4LnBuZw==/315x250%23c/p2S4F4.png",
+      "downloadable": false,
+      "author": "S13Games",
+      "free": true
+    },
+    {
+      "id": "polyfork:stone-water-trough-aeabaa",
+      "provider": "polyfork",
+      "title": "Stone Water Trough",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/stone-water-trough-aeabaa",
+      "thumbnailUrl": "https://polyfork.dev/files/stone-water-trough-aeabaa/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 550
+    },
+    {
+      "id": "itchio:kevins-moms-house/dungeon",
+      "provider": "itchio",
+      "title": "dungeon_",
+      "type": "pack",
+      "url": "https://kevins-moms-house.itch.io/dungeon",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzcyNDU0ODAuZ2lm/315x250%23c/1Nfl0z.gif",
+      "downloadable": false,
+      "author": "Kevin's Mom's House",
+      "free": true
+    },
+    {
+      "id": "polyfork:wall-manacle-fitting-e80d3a",
+      "provider": "polyfork",
+      "title": "Wall Manacle Fitting",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wall-manacle-fitting-e80d3a",
+      "thumbnailUrl": "https://polyfork.dev/files/wall-manacle-fitting-e80d3a/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 554,
+      "rigged": true
+    },
+    {
+      "id": "itchio:farm-animal/dungeon-pack",
+      "provider": "itchio",
+      "title": "Super Retro World • Dungeon Pack",
+      "type": "pack",
+      "url": "https://farm-animal.itch.io/dungeon-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzkxNTU0MDkucG5n/315x250%23c/Baa%2BEw.png",
+      "downloadable": false,
+      "author": "Gif",
+      "free": true
+    },
+    {
+      "id": "blenderkit:8ec57911-21dd-422c-95ef-e072961ac5e9",
+      "provider": "blenderkit",
+      "title": "Cultist Victim",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8ec57911-21dd-422c-95ef-e072961ac5e9/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f84df3f6d26a42a9bc4a50392746a0ff/files/thumbnail_0ca880e8-23ec-4749-9217-7c7edc297410.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Hesoyam 3dart",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 6679
+    },
+    {
+      "id": "polyfork:standing-water-pool-daafcb",
+      "provider": "polyfork",
+      "title": "Standing Water Pool",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/standing-water-pool-daafcb",
+      "thumbnailUrl": "https://polyfork.dev/files/standing-water-pool-daafcb/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 379
+    },
+    {
+      "id": "polyfork:hooded-lantern-b60021",
+      "provider": "polyfork",
+      "title": "Hooded Lantern",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/hooded-lantern-b60021",
+      "thumbnailUrl": "https://polyfork.dev/files/hooded-lantern-b60021/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 597,
+      "rigged": true
+    },
+    {
+      "id": "itchio:bigbuckbunny/dungeon-assets-pack",
+      "provider": "itchio",
+      "title": "Dungeon assets pack",
+      "type": "pack",
+      "url": "https://bigbuckbunny.itch.io/dungeon-assets-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIxMjA4ODkucG5n/315x250%23c/dYs2VC.png",
+      "downloadable": false,
+      "author": "BigBuckBunny",
+      "free": true
+    },
+    {
+      "id": "blenderkit:ca86168c-64d6-4334-847f-3d7f8c101db7",
+      "provider": "blenderkit",
+      "title": "Fallen Victim",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ca86168c-64d6-4334-847f-3d7f8c101db7/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e5706cb7175a480089bd720e6105e7a0/files/thumbnail_4542a5b0-3e20-486a-a074-4b6c0525b06d.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Hesoyam 3dart",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 6690
+    },
+    {
+      "id": "polyfork:moss-patch-3ecaf4",
+      "provider": "polyfork",
+      "title": "Moss Patch",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/moss-patch-3ecaf4",
+      "thumbnailUrl": "https://polyfork.dev/files/moss-patch-3ecaf4/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 565
+    },
+    {
+      "id": "itchio:stealthix/32-x-32-dungeon-assets",
+      "provider": "itchio",
+      "title": "Dungeon Assets 32 x 32 px",
+      "type": "pack",
+      "url": "https://stealthix.itch.io/32-x-32-dungeon-assets",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE4NDI1NjcucG5n/315x250%23c/EfCqyV.png",
+      "downloadable": false,
+      "author": "Stealthix",
+      "free": true
+    },
+    {
+      "id": "blenderkit:17607113-73aa-4822-bb7d-1aa6546e25f7",
+      "provider": "blenderkit",
+      "title": "10 dice",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/17607113-73aa-4822-bb7d-1aa6546e25f7/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/747a887243b7474d888a15d903b34a19/files/thumbnail_b22ce3d9-8af5-4ac8-9b06-7fe733c386a8.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nicolas Prigent",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 180
+    },
+    {
+      "id": "polyfork:spear-e9824e",
+      "provider": "polyfork",
+      "title": "Spear",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/spear-e9824e",
+      "thumbnailUrl": "https://polyfork.dev/files/spear-e9824e/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 586
+    },
+    {
+      "id": "itchio:prominent/8x8-dungeon",
+      "provider": "itchio",
+      "title": "Dungeon 8x8",
+      "type": "model",
+      "url": "https://prominent.itch.io/8x8-dungeon",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzkzOTc4NzIuZ2lm/315x250%23c/rehh%2BW.gif",
+      "downloadable": false,
+      "author": "Alex",
+      "free": true
+    },
+    {
+      "id": "polyfork:timber-crate-ba0739",
+      "provider": "polyfork",
+      "title": "Timber Crate",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/timber-crate-ba0739",
+      "thumbnailUrl": "https://polyfork.dev/files/timber-crate-ba0739/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 588,
+      "rigged": true
+    },
+    {
+      "id": "polyfork:mushroom-cluster-18dc1d",
+      "provider": "polyfork",
+      "title": "Mushroom Cluster",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/mushroom-cluster-18dc1d",
+      "thumbnailUrl": "https://polyfork.dev/files/mushroom-cluster-18dc1d/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 587
+    },
+    {
+      "id": "polyfork:timber-trestle-table-024d88",
+      "provider": "polyfork",
+      "title": "Timber Trestle Table",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/timber-trestle-table-024d88",
+      "thumbnailUrl": "https://polyfork.dev/files/timber-trestle-table-024d88/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 540
+    },
+    {
+      "id": "polyfork:hand-axe-cee9e7",
+      "provider": "polyfork",
+      "title": "Hand Axe",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/hand-axe-cee9e7",
+      "thumbnailUrl": "https://polyfork.dev/files/hand-axe-cee9e7/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 532
+    },
+    {
+      "id": "polyfork:goblet-87c3ba",
+      "provider": "polyfork",
+      "title": "Goblet",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/goblet-87c3ba",
+      "thumbnailUrl": "https://polyfork.dev/files/goblet-87c3ba/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 528
+    },
+    {
+      "id": "polyfork:flagstone-floor-tile-2a04ea",
+      "provider": "polyfork",
+      "title": "Flagstone Floor Tile",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/flagstone-floor-tile-2a04ea",
+      "thumbnailUrl": "https://polyfork.dev/files/flagstone-floor-tile-2a04ea/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 138
+    },
+    {
+      "id": "polyfork:fallen-ashlar-block-87824e",
+      "provider": "polyfork",
+      "title": "Fallen Ashlar Block",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/fallen-ashlar-block-87824e",
+      "thumbnailUrl": "https://polyfork.dev/files/fallen-ashlar-block-87824e/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 576
+    }
+  ]
+}

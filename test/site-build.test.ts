@@ -165,5 +165,48 @@ describe.skipIf(!built)("built website", () => {
     expect(md).toContain(`| ${listings}`.slice(0, 2)); // the by-source table
     expect(md).toContain("/v1/catalog");
   });
-});
 
+  describe("collections", () => {
+    const slug = "free-sunset-hdris";
+    const sitemap = () => read("sitemap-0.xml");
+    const entry = (path: string) => sitemap().match(new RegExp(`<url><loc>https://3d\\.shep\\.bot${path}</loc>(.*?)</url>`))?.[1];
+
+    it("pre-renders a collection with its assets, copy, FAQ and structured data", () => {
+      const html = read(`assets/${slug}/index.html`);
+      expect(html).toMatch(/<h1[^>]*>Free sunset HDRIs<\/h1>/);
+      expect(html).toContain('content="index, follow');
+      expect((html.match(/href="\/search\?asset=/g) ?? []).length).toBeGreaterThanOrEqual(12);
+      expect(text(html)).toContain("How to choose one");
+      const graph = jsonLd(html)["@graph"];
+      expect(graph.map((n) => n["@type"])).toEqual(expect.arrayContaining(["CollectionPage", "BreadcrumbList", "FAQPage"]));
+      const page = graph.find((n) => n["@type"] === "CollectionPage") as { dateModified: string; mainEntity: { numberOfItems: number } };
+      expect(page.mainEntity.numberOfItems).toBeGreaterThanOrEqual(12);
+      expect(page.dateModified).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+    });
+
+    it("publishes hubs, the index and source pages, each with a Markdown twin", () => {
+      for (const page of ["assets", "assets/hdris", "sources/polyhaven"]) {
+        expect(text(read(`${page}/index.html`)).length, page).toBeGreaterThan(500);
+        expect(read(`${page}.md`).length, page).toBeGreaterThan(300);
+      }
+      expect(read(`assets/${slug}.md`)).toContain("| `polyhaven:");
+      expect(read("llms.txt")).toContain(`https://3d.shep.bot/assets/${slug}.md`);
+      expect(read("index.html")).toContain(`href="/assets/${slug}"`);
+      expect(read("docs/sources/index.html")).toContain('href="/sources/polyhaven"');
+    });
+
+    it("dates only what it can date in the sitemap", () => {
+      expect(entry(`/assets/${slug}`)).toMatch(/<lastmod>\d{4}-\d{2}-\d{2}T/);
+      expect(entry("/assets/hdris")).toContain("<lastmod>");
+      expect(entry("/stats")).toContain("<lastmod>");
+      expect(entry("/docs/mcp")).not.toContain("<lastmod>");
+      expect(entry("/")).not.toContain("<lastmod>");
+    });
+
+    it("keeps thin source pages out of the index and the sitemap", () => {
+      expect(read("sources/fab/index.html")).toContain('content="noindex, follow"');
+      expect(sitemap()).not.toContain("/sources/fab<");
+      expect(sitemap()).toContain("/sources/polyhaven<");
+    });
+  });
+});

@@ -1,0 +1,451 @@
+{
+  "slug": "free-animated-character-models",
+  "search": {
+    "q": "animated character",
+    "types": [
+      "model"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:27.300Z",
+  "assets": [
+    {
+      "id": "kenney:animated-characters-protagonists",
+      "provider": "kenney",
+      "title": "Animated Characters Protagonists",
+      "type": "model",
+      "url": "https://kenney.nl/assets/animated-characters-protagonists",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/animated-characters-protagonists/98921ae406-1674931821/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:ultimatedanimatedcharacter",
+      "provider": "quaternius",
+      "title": "Ultimate Animated Character Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatedanimatedcharacter.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimateanimatedcharacter.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "itchio:lisanise/3d-animated-character-model",
+      "provider": "itchio",
+      "title": "3D Animated Character Model",
+      "type": "model",
+      "url": "https://lisanise.itch.io/3d-animated-character-model",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI5MjAwNjU4LnBuZw==/315x250%23c/8mtikG.png",
+      "downloadable": false,
+      "author": "lisanise",
+      "free": true,
+      "animated": true
+    },
+    {
+      "id": "kenney:animated-characters-retro",
+      "provider": "kenney",
+      "title": "Animated Characters Retro",
+      "type": "model",
+      "url": "https://kenney.nl/assets/animated-characters-retro",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/animated-characters-retro/a25bc0a3d2-1670690130/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "blenderkit:31e48cdc-c6bd-4efd-ba2a-9f2bd953b60b",
+      "provider": "blenderkit",
+      "title": "Anime Cute Girl (Rigged/Animated)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/31e48cdc-c6bd-4efd-ba2a-9f2bd953b60b/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0b0fdfcc1359466e9d599e1c871c2f0b/files/thumbnail_dcb76709-646d-42ec-a3fa-fa8ac49f0a80.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 41027,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "itchio:seamless3d/lucy-3d-animated-character-pack",
+      "provider": "itchio",
+      "title": "Lucy 3D Animated Character Pack",
+      "type": "model",
+      "url": "https://seamless3d.itch.io/lucy-3d-animated-character-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI1MjkzNjI1LnBuZw==/315x250%23c/7gjTJ4.png",
+      "downloadable": false,
+      "author": "Seamless3d",
+      "free": true,
+      "animated": true
+    },
+    {
+      "id": "kenney:animated-characters-survivors",
+      "provider": "kenney",
+      "title": "Animated Characters Survivors",
+      "type": "model",
+      "url": "https://kenney.nl/assets/animated-characters-survivors",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/animated-characters-survivors/de34934a09-1674931680/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:rgsdev/animated-voxel-character-for-3d-shooter-games-by-rgsdev",
+      "provider": "itchio",
+      "title": "Animated Voxel Character",
+      "type": "model",
+      "url": "https://rgsdev.itch.io/animated-voxel-character-for-3d-shooter-games-by-rgsdev",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzUzMDMzMjUucG5n/315x250%23c/rzc3MK.png",
+      "downloadable": false,
+      "author": "RGS_Dev",
+      "free": true,
+      "animated": true
+    },
+    {
+      "id": "quaternius:rpgcharacters",
+      "provider": "quaternius",
+      "title": "RPG Character Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/rpgcharacters.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/rpgcharacter.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:f0776afb-32bd-450e-a879-047711954301",
+      "provider": "blenderkit",
+      "title": "Rigged Caucasian Female Character",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/f0776afb-32bd-450e-a879-047711954301/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6b5e6d16516d498ab69ffab7b7e24008/files/thumbnail_9dea5004-0753-4b9b-852d-cd04caccd915.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mohammed Hossain",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 104211,
+      "rigged": true
+    },
+    {
+      "id": "itchio:sr-studios-kerala/crocodile-2d-rigged-unity",
+      "provider": "itchio",
+      "title": "Crocodile 2D Animated Character for Unity Game.",
+      "type": "model",
+      "url": "https://sr-studios-kerala.itch.io/crocodile-2d-rigged-unity",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MjUxNTEuZ2lm/315x250%23c/QAnm2P.gif",
+      "downloadable": false,
+      "author": "SR Studios Kerala",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:animatedalien",
+      "provider": "quaternius",
+      "title": "Animated Alien Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedalien.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedalien.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:b4d306c5-1a3e-41f1-8e43-bb8081ff3e9c",
+      "provider": "blenderkit",
+      "title": "Rigged Caucasian Character",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/b4d306c5-1a3e-41f1-8e43-bb8081ff3e9c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3a621812fa3e4dfa93609176494ccd65/files/thumbnail_198a83bd-42f8-4040-a92f-378575438f32.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mohammed Hossain",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 20127,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:animatedwomen",
+      "provider": "quaternius",
+      "title": "Animated Women Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedwomen.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedwomen.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:26c4e5a8-4ba5-44e9-96bf-028bddfdffd6",
+      "provider": "blenderkit",
+      "title": "Horror monster Bloodfang-Rigged-Animated",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/26c4e5a8-4ba5-44e9-96bf-028bddfdffd6/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/baa444fcc6a04ae292e3bcc82e2e71ad/files/thumbnail_c33666b4-9b64-4cf6-866c-8e1ec4352330.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Silent Wolf",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 10350,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "itchio:woshi-gang-studio-gaming/lowpoly-dungeon-kit-animated-3d",
+      "provider": "itchio",
+      "title": "Free — Low-Poly Dungeon Kit — Animated 3D Characters & Modular Environment (Woshi)",
+      "type": "model",
+      "url": "https://woshi-gang-studio-gaming.itch.io/lowpoly-dungeon-kit-animated-3d",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4NzY0NjI1LnBuZw==/315x250%23c/WlOydP.png",
+      "downloadable": false,
+      "author": "Woshi Gang Studio Gaming",
+      "free": true,
+      "animated": true
+    },
+    {
+      "id": "quaternius:animatedmen",
+      "provider": "quaternius",
+      "title": "Animated Men Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedmen.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedmen.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:e61181dc-0035-4868-867c-5a77e3d50753",
+      "provider": "blenderkit",
+      "title": "Anime Sci-fi Girl (Rigged/Animated)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e61181dc-0035-4868-867c-5a77e3d50753/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/78c4032aa2924b6e9a19d58dca4abbd2/files/thumbnail_5a11def5-b0b6-454d-9a8d-cf7ed1b910cb.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 39201,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:animatedrobot",
+      "provider": "quaternius",
+      "title": "Animated Robot Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedrobot.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedrobot.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:8857456d-d91b-4002-879e-2333728a3d72",
+      "provider": "blenderkit",
+      "title": "Anime Samurai with Katana (Rigged/Animated)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8857456d-d91b-4002-879e-2333728a3d72/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1949ee57ebef4312b6d704d42b69a6ea/files/thumbnail_2cde6cbc-c46e-4de2-b3fb-621972995f32.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 83098,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:02dd566b-538d-4ba1-942f-868aa58264d5",
+      "provider": "blenderkit",
+      "title": "Anime Cat Woman (Rigged/Animated)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/02dd566b-538d-4ba1-942f-868aa58264d5/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2966465b99144569a7e8a575a20213c7/files/thumbnail_b1d865d7-56f9-4fe2-88d3-d51db8674ca2.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 51218,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:knightcharacter",
+      "provider": "quaternius",
+      "title": "Animated Knight Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/knightcharacter.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedknight.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:c2572a4b-dcdc-4fcc-b983-d1b70a2e7291",
+      "provider": "blenderkit",
+      "title": "Anime Schoolgirl (Rigged/Animated)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c2572a4b-dcdc-4fcc-b983-d1b70a2e7291/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/7d481318fab145f3a590643f7757574d/files/thumbnail_c867d54f-661b-4ecd-9a62-ad24d0ffb2c0.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "animated": true
+    },
+    {
+      "id": "quaternius:animatedzombie",
+      "provider": "quaternius",
+      "title": "Animated Zombie Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedzombie.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/zombie.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:animatedwoman",
+      "provider": "quaternius",
+      "title": "Animated Woman Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedwoman.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedwoman.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "quaternius:animatedman",
+      "provider": "quaternius",
+      "title": "Animated Man Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedman.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedman.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    }
+  ]
+}

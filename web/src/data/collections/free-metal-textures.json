@@ -1,0 +1,694 @@
+{
+  "slug": "free-metal-textures",
+  "search": {
+    "q": "metal",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:38.035Z",
+  "assets": [
+    {
+      "id": "polyhaven:metal_plate",
+      "provider": "polyhaven",
+      "title": "Metal Plate",
+      "type": "material",
+      "url": "https://polyhaven.com/a/metal_plate",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/metal_plate.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:e0353592-36d2-4744-84b8-9ebf6df638f3",
+      "provider": "blenderkit",
+      "title": "Old Metal (Rust Metal)",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e0353592-36d2-4744-84b8-9ebf6df638f3/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5c656d73da8b48bc9e36d06d4cddd303/files/thumbnail_d502b0c7-f5a0-4da2-bb24-c25ae460f059.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "yossif kh",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Metal063",
+      "provider": "ambientcg",
+      "title": "Metal 063",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Metal063",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Metal063.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:657",
+      "provider": "texturecan",
+      "title": "Hexagonal Silver Metal Plates Tilted in Random Directions",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/657/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/metal_0084/metal_0084_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brushed-metal-tiles-04",
+      "provider": "cgbookcase",
+      "title": "Brushed Metal Tiles 04",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brushed-metal-tiles-04",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brushed_Metal_Tiles_04_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:dirty-metal-pbr-material",
+      "provider": "threedtexel",
+      "title": "Dirty Weathered Metal – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/dirty-metal-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-55-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:metal-base-scratched-001",
+      "provider": "threedtextures",
+      "title": "Metal Base Scratched 001",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/09/30/metal-base-scratched-001/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/09/Material_2001.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:green_metal_rust",
+      "provider": "polyhaven",
+      "title": "Green Metal Rust",
+      "type": "material",
+      "url": "https://polyhaven.com/a/green_metal_rust",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/green_metal_rust.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:8594a733-737a-4b0d-9c3c-2b9e86593fce",
+      "provider": "blenderkit",
+      "title": "Black metal",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8594a733-737a-4b0d-9c3c-2b9e86593fce/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e3886b2b387e4ffba9f574edd192535b/files/thumbnail_8a84c08f-30a7-4e52-8b25-2a86e8086c13.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Metal049A",
+      "provider": "ambientcg",
+      "title": "Metal 049 A",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Metal049A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Metal049A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "sharetextures:metal-9",
+      "provider": "sharetextures",
+      "title": "Metal 9",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/metal/metal-9",
+      "thumbnailUrl": "https://images.sharetextures.com/u/6fdd4e96-8eb9-406e-9e5c-d00a941c2a4a.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:648",
+      "provider": "texturecan",
+      "title": "Woven Steel Metal",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/648/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/metal_0083/metal_0083_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brushed-metal-tiles-03",
+      "provider": "cgbookcase",
+      "title": "Brushed Metal Tiles 03",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brushed-metal-tiles-03",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brushed_Metal_Tiles_03_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:bumpy-metal-rusty-pbr-material",
+      "provider": "threedtexel",
+      "title": "Bumpy Rusty Metal – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/bumpy-metal-rusty-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-53-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:rusty_metal_02",
+      "provider": "polyhaven",
+      "title": "Rusty Metal 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/rusty_metal_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rusty_metal_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:47060ad3-24a0-4bf9-ba8b-e173f1544741",
+      "provider": "blenderkit",
+      "title": "Silver metal",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/47060ad3-24a0-4bf9-ba8b-e173f1544741/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/11782a5c0d984480a5defef347eda343/files/thumbnail_439aca69-cc55-49b3-aa14-b4999df90986.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Metal055A",
+      "provider": "ambientcg",
+      "title": "Metal 055 A",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Metal055A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Metal055A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:644",
+      "provider": "texturecan",
+      "title": "Cube Shape Patterned Perforated Metal Plate",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/644/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/metal_0082/metal_0082_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:metal-roof",
+      "provider": "sharetextures",
+      "title": "Metal Roof",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/metal/metal-roof",
+      "thumbnailUrl": "https://images.sharetextures.com/u/metal_roof_1-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brushed-metal-tiles-02",
+      "provider": "cgbookcase",
+      "title": "Brushed Metal Tiles 02",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brushed-metal-tiles-02",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brushed_Metal_Tiles_02_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:sci-fi-metal-plate-005",
+      "provider": "threedtextures",
+      "title": "Sci-fi Metal Plate 005",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/08/11/sci-fi-metal-plate-005/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/08/Material_2001.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:bumpy-metal-pbr-material-2",
+      "provider": "threedtexel",
+      "title": "Bumpy Dark Metal Surface – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/bumpy-metal-pbr-material-2/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-52-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:rusty_metal_04",
+      "provider": "polyhaven",
+      "title": "Rusty Metal 04",
+      "type": "material",
+      "url": "https://polyhaven.com/a/rusty_metal_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rusty_metal_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:e08b2593-fb7f-4da4-afe6-2a772619b565",
+      "provider": "blenderkit",
+      "title": "Stylized Metal Base",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e08b2593-fb7f-4da4-afe6-2a772619b565/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f9b0e1bf57e04deeae6a1cd0759b5e1d/files/thumbnail_a9a5fb59-c163-4ee0-8734-2ae65d2a5a24.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Julio Sillet",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Metal046B",
+      "provider": "ambientcg",
+      "title": "Metal 046 B",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Metal046B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Metal046B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:635",
+      "provider": "texturecan",
+      "title": "Silver Metal Plate with Scratches, Rust and Dents",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/635/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/metal_0081/metal_0081_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:black-metal-3",
+      "provider": "sharetextures",
+      "title": "Black Metal",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/metal/black-metal-3",
+      "thumbnailUrl": "https://images.sharetextures.com/u/Metal_5-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:brushed-metal-tiles-01",
+      "provider": "cgbookcase",
+      "title": "Brushed Metal Tiles 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/brushed-metal-tiles-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Brushed_Metal_Tiles_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:metal-tilling-pbr-material-5",
+      "provider": "threedtexel",
+      "title": "Dark Metal Tiling – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/metal-tilling-pbr-material-5/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-18-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:blue_metal_plate",
+      "provider": "polyhaven",
+      "title": "Blue Metal Plate",
+      "type": "material",
+      "url": "https://polyhaven.com/a/blue_metal_plate",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/blue_metal_plate.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:14d8278b-9c10-4f5f-9611-89645f64d917",
+      "provider": "blenderkit",
+      "title": "Black matte metal",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/14d8278b-9c10-4f5f-9611-89645f64d917/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/7d296a960e3a4885bf4de151ac91089a/files/thumbnail_7bdb96ee-d7c1-4f5e-976f-653cd33a974b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:metal-grill-027",
+      "provider": "threedtextures",
+      "title": "Metal Grill 027",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/06/16/metal-grill-027/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/06/material_2002.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "ambientcg:Metal048A",
+      "provider": "ambientcg",
+      "title": "Metal 048 A",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Metal048A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Metal048A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "sharetextures:metal-11",
+      "provider": "sharetextures",
+      "title": "Metal 11",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/metal/metal-11",
+      "thumbnailUrl": "https://images.sharetextures.com/u/b0ea68c9-0928-450e-a014-86aa93813943.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:628",
+      "provider": "texturecan",
+      "title": "Hexagonal Metal Frames with Concave Rubber",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/628/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/metal_0079/metal_0079_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:striped-metal-wall-01",
+      "provider": "cgbookcase",
+      "title": "Striped Metal Wall 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/striped-metal-wall-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Striped_metal_wall_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    }
+  ]
+}

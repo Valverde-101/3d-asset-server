@@ -129,6 +129,8 @@ only the interactive parts hydrate.
 | `/docs/api` | REST API guide with curl, JavaScript and Python examples |
 | `/docs/api/reference` | Interactive OpenAPI reference ([Scalar](https://scalar.com), self-hosted) |
 | `/docs/sources` | All sources with licences, generated from the provider registry |
+| `/assets` | Curated asset collections (see [below](#asset-collections)): an index, four hubs (`/assets/hdris`, `/assets/textures`, `/assets/3d-models`, `/assets/game-assets`) and one page per topic, such as `/assets/free-sunset-hdris` |
+| `/sources/<id>` | One page per source: licence, pricing, how it is searched, census numbers and its assets in the collections |
 | `/docs/self-hosting` | Docker, Node, configuration, metrics |
 
 - **Search state in the URL.** `/search?q=sunset&type=hdri&free=true` can be bookmarked or shared.
@@ -394,6 +396,54 @@ schema.org `Dataset`.
 - Counts the source caps (BlenderKit stops at 10,000 per type) are marked as lower bounds.
 - A source whose count fails keeps its last good numbers, marked `stale`.
 
+The same workflow then refreshes the [asset collections](#asset-collections)
+(`scripts/snapshot-collections.mjs`) and commits both.
+
+### Asset collections
+
+Search pages (`/search?q=…`) are `noindex`: they are share links, not landing pages. The pages that rank
+are the collections: one page per thing people search for ("free sunset HDRIs", "free brick textures",
+"free low-poly trees"), pre-rendered with real results, editorial copy, an FAQ and `CollectionPage` /
+`ItemList` / `FAQPage` JSON-LD, plus a Markdown twin for agents (`/assets/<slug>.md`, with asset ids).
+
+- **Topic:** [`web/src/content/collections/<slug>.md`](web/src/content/collections/). The frontmatter holds
+  the title, description, hub, the search (`q`, `types`, `free`, and an `exclude` list of title phrases
+  or asset ids that never belong on the page), aliases, related pages and the FAQ. The body is the copy.
+  [`scripts/lib/topics.mjs`](scripts/lib/topics.mjs) holds the editorial rules (lengths, links, FAQ), and
+  the tests apply them to every topic.
+- **Results:** `web/src/data/collections/<slug>.json`, written by
+  [`scripts/snapshot-collections.mjs`](scripts/snapshot-collections.mjs) (logic in
+  [`src/core/collections.ts`](src/core/collections.ts)). It keeps relevant, free results that have a
+  working thumbnail, at most 40% from one source. Assets already on a page keep their place, so pages
+  don't reshuffle daily, and `updatedAt` (the sitemap's `lastmod`) moves only when the list changes. A
+  page with fewer than 12 assets or a single source is `noindex` and left out of the sitemap.
+- **Adding one by hand:** write the topic file, run `npm run build:server && node scripts/snapshot-collections.mjs <slug>`,
+  read the titles in the snapshot, add `exclude` phrases for anything off-topic, and commit both files.
+
+#### Weekly drafting
+
+[`.github/workflows/draft-collections.yml`](.github/workflows/draft-collections.yml) proposes up to 3 new
+collections every Monday:
+
+1. [`scripts/collection-ideas.mjs`](scripts/collection-ideas.mjs) reads the last week's searches from
+   Loki through Grafana. It keeps queries made at least 3 times that look like plain topics and that no
+   collection or open pull request covers.
+2. A Claude Code agent ([`prompts/draft-collections.md`](prompts/draft-collections.md)) writes the topic
+   files and checks their results. It works in a read-only checkout, and its transcript stays out of the
+   public log because it reads search terms.
+3. A job without Claude credentials gates the patch
+   ([`scripts/collection-gate.mjs`](scripts/collection-gate.mjs): new topic files only, editorial rules,
+   no duplicates). It re-runs each search itself, withdraws topics with too few results, runs the build,
+   typecheck and tests, and opens a pull request labelled `collections`.
+4. A second Claude Code run reviews the pages ([`prompts/review-collections.md`](prompts/review-collections.md)).
+   Approved pages are squash-merged and deployed. Otherwise the pull request is labelled `needs-editor`
+   and left for a human.
+
+It needs the same Claude secret as source discovery. It also needs the repository setting **Allow GitHub
+Actions to create and approve pull requests** (Settings → Actions → General). The optional
+`GRAFANA_TOKEN` secret is a Viewer service-account token for grafana.shep.bot; without it, the agent
+picks topics from its own research.
+
 ### Share previews (Open Graph)
 
 Every page has its own 1200×630 card (`og:image` = `/og/<page>.png`), rendered at build time by
@@ -456,19 +506,21 @@ src/
 │   ├── site.ts          serves the pre-rendered site: caching, 404, markdown twins for agents
 │   └── openapi.ts       OpenAPI 3.1 with full schemas (rendered at /docs/api/reference)
 ├── core/analytics.ts    Prometheus metrics + JSON event log
+├── core/collections.ts  collection snapshots: relevance, stable order, thumbnail checks
 ├── core/stats.ts        /v1/stats: Prometheus queries or in-process tallies
 └── mcp/
     └── server.ts        MCP tool definitions (shared by stdio and HTTP)
 web/                     the website (Astro + React + Tailwind + shadcn/ui)
-├── src/pages/           index, search, stats, docs (markdown), sources, API reference, 404
+├── src/pages/           index, search, stats, assets (collections), sources, docs (markdown), API reference, 404
 ├── src/components/      ui/ (shadcn + Magic UI), search/ (the search app), home/
-├── src/content/         AGENTS.md and the Claude Code skill
+├── src/content/         AGENTS.md, the Claude Code skill and collections/ (one topic per page)
+├── src/data/            generated data: providers, census, collections/ (saved results)
 ├── src/lib/             site constants, schema.org JSON-LD, agent client configs, FAQ
 └── integrations/        emits AGENTS.md, llms.txt, llms-full.txt, markdown twins, Scalar bundle
 deploy/                  Kubernetes manifests for 3d.shep.bot (synced by ArgoCD)
 integrations/            registry.json: live sources (with date added) and evaluated/rejected sites
-prompts/                 instructions for the daily source-discovery agent
-scripts/                 site data export, integration gate
+prompts/                 instructions for the source-discovery, collection-drafting and review agents
+scripts/                 site data export, census, collection snapshots/ideas, integration and collection gates
 test/
 ├── providers/           offline tests per site, against trimmed fixtures
 ├── live/                live smoke tests (LIVE=1)

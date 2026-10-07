@@ -147,6 +147,14 @@ export default function agentFiles() {
         write("stats.md", `${stats}\n---\nSource: ${site}/stats\n`);
         docs.push({ route: "/stats", title: "3D assets in numbers", description: "How many models, materials, HDRIs and packs every source holds (counted daily), plus live usage.", md: stats });
 
+        // Curated collections (/assets/<slug>.md, built by src/pages/assets/[slug].md.ts).
+        const hubs = JSON.parse(read("src/data/collection-hubs.json"));
+        const collectionsDir = join(root, "src/content/collections");
+        const collections = readdirSync(collectionsDir)
+          .filter((f) => f.endsWith(".md"))
+          .map((f) => ({ slug: f.slice(0, -3), ...stripFrontmatter(readFileSync(join(collectionsDir, f), "utf8")).meta }))
+          .sort((a, b) => hubs.findIndex((h) => h.id === a.hub) - hubs.findIndex((h) => h.id === b.hub) || a.title.localeCompare(b.title));
+
         const order = ["/docs", "/docs/mcp", "/docs/api", "/docs/api/versioning", "/docs/sources", "/docs/cli", "/docs/self-hosting", "/about", "/stats", "/contact", "/privacy"];
         const rank = (r) => (order.indexOf(r) === -1 ? order.length : order.indexOf(r));
         docs.sort((a, b) => rank(a.route) - rank(b.route));
@@ -189,6 +197,12 @@ export default function agentFiles() {
             `- [API playground](${site}/docs/api/playground): send live requests from the browser (interactive Scalar client)`,
             `- [MCP endpoint](${site}/mcp): Streamable HTTP; tools search_assets, get_asset, list_providers`,
             `- [Search endpoint](${site}/v1/search?q=wooden+chair&type=model&free=true): example search`,
+            "",
+            "## Collections",
+            "",
+            `- [All asset collections](${site}/assets.md): curated, daily-refreshed lists of free assets by topic, with licences and asset ids`,
+            ...hubs.map((h) => `- [${h.title}](${site}/assets/${h.id}.md): ${h.description}`),
+            ...collections.map((c) => `- [${c.title}](${site}/assets/${c.slug}.md): ${c.description}`),
             "",
             "## About",
             "",

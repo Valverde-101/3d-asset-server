@@ -1,0 +1,400 @@
+name: Draft collection pages
+
+# Once a week, a Claude Code agent drafts up to 3 new collection pages
+# (/assets/<slug>) from what people search for on the site, and they go
+# through a reviewed pull request (prompts/draft-collections.md):
+#
+#   draft    Reads last week's frequent searches from Loki through Grafana
+#            (scripts/collection-ideas.mjs: only queries made at least 3 times,
+#            not covered by a collection or an open pull request) and writes topic
+#            files. Read-only checkout, no push credentials; the search terms
+#            stay out of the public log and artifacts. Hands over a patch.
+#   verify   No Claude credentials. Applies the patch, gates it
+#            (scripts/collection-gate.mjs: new topic files only, editorial
+#            rules, no duplicates), re-runs every new search itself, withdraws
+#            topics with too few results, builds, typechecks and tests, then
+#            opens a pull request labelled `collections`.
+#   review   A second Claude Code run reviews the pages against an editorial
+#            checklist (prompts/review-collections.md) and writes a verdict.
+#   merge    No Claude credentials. Approved: withdraws the pages the reviewer
+#            removed, squash-merges and starts CI on main, whose image and
+#            deploy jobs roll the pages out. Rejected, or no verdict: comments,
+#            labels the pull request `needs-editor` and leaves it for a human.
+#
+# Secrets:
+#   CLAUDE_CODE_OAUTH_TOKEN or ANTHROPIC_API_KEY   as for discover-integrations.yml
+#   GRAFANA_TOKEN (optional)   a Grafana service-account token with the Viewer
+#                              role on grafana.shep.bot. Without it the agent
+#                              picks topics from its own research.
+# Repository setting: Settings > Actions > General > "Allow GitHub Actions to
+# create and approve pull requests" must be on for the verify job to open the PR.
+#
+# Run it by hand from the Actions tab ("Run workflow").
+
+on:
+  schedule:
+    # Mondays at 06:23 UTC, after the census (04:41) and source discovery (05:17).
+    - cron: "23 6 * * 1"
+  workflow_dispatch: {}
+
+concurrency:
+  group: draft-collections
+  cancel-in-progress: false
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      # gh pr list (collections already proposed)
+      pull-requests: read
+      # anthropics/claude-code-action fetches an OIDC token during setup.
+      id-token: write
+    outputs:
+      changed: ${{ steps.patch.outputs.changed }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install and build the server
+        run: npm ci && npm run build:server
+
+      - name: Collections already proposed in open pull requests
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh pr list --repo "$GITHUB_REPOSITORY" --label collections --state open --limit 50 --json files \
+            --jq '[.[].files[].path | capture("^web/src/content/collections/(?<slug>[a-z0-9-]+)\\.md$") | .slug]' \
+            > "$RUNNER_TEMP/pending.json"
+
+      - name: Candidate topics from last week's searches
+        env:
+          GRAFANA_TOKEN: ${{ secrets.GRAFANA_TOKEN }}
+        # Prints only counts; the file itself (search terms) is read by the agent and never uploaded.
+        run: node scripts/collection-ideas.mjs --pending "$RUNNER_TEMP/pending.json" > collection-ideas.json
+
+      - name: Capture current date
+        id: now
+        run: echo "date=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Draft collection pages with Claude Code
+        uses: anthropics/claude-code-action@v1
+        timeout-minutes: 45
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ github.token }}
+          # The run reads search terms; keep its transcript and report out of the public log.
+          show_full_output: "false"
+          display_report: "false"
+          # The real instructions live in prompts/draft-collections.md.
+          prompt: |
+            You are the 3D Asset Server collection editor running in GitHub Actions.
+            Working dir is the repo root.
+
+            TODAY'S DATE IS ${{ steps.now.outputs.date }} (real UTC). Use it for addedAt.
+
+            Read `prompts/draft-collections.md` and follow it exactly.
+            Do NOT commit or push; the next job verifies and does that.
+          claude_args: |
+            --max-turns 150
+            --permission-mode acceptEdits
+            --allowedTools "WebSearch,WebFetch,Read,Write,Edit,Glob,Grep,Bash(npm run build:server),Bash(node scripts/snapshot-collections.mjs:*),Bash(node scripts/collection-gate.mjs:*),Bash(cat:*),Bash(ls:*),Bash(head:*),Bash(wc:*),Bash(grep:*),Bash(rm:*),Bash(git status:*),Bash(git diff:*)"
+
+      - name: Collect the new topics
+        id: patch
+        # Only topic files travel on; the verify job re-runs their searches itself.
+        run: |
+          set -euo pipefail
+          git add -A -- web/src/content/collections
+          git diff --cached --stat
+          git diff --cached --binary -- web/src/content/collections > "$RUNNER_TEMP/collections.patch"
+          if [[ -s "$RUNNER_TEMP/collections.patch" ]]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No new collection pages this week." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: steps.patch.outputs.changed == 'true'
+        with:
+          name: collections-patch
+          path: ${{ runner.temp }}/collections.patch
+          retention-days: 14
+
+  verify:
+    needs: draft
+    if: needs.draft.outputs.changed == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    outputs:
+      pr: ${{ steps.pr.outputs.number }}
+      branch: ${{ steps.pr.outputs.branch }}
+      kept: ${{ steps.snap.outputs.kept }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: |
+            package-lock.json
+            web/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci && npm --prefix web ci
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: collections-patch
+          path: ${{ runner.temp }}
+
+      - name: Apply the agent's patch
+        run: git apply --index --binary "$RUNNER_TEMP/collections.patch"
+
+      - name: Gate the patch
+        id: gate
+        run: node scripts/collection-gate.mjs HEAD
+
+      - name: Build the server
+        run: npm run build:server
+
+      - name: Run each new search
+        env:
+          ADDED: ${{ steps.gate.outputs.added }}
+        run: node scripts/snapshot-collections.mjs ${ADDED//,/ }
+
+      - name: Withdraw topics with too few results
+        id: snap
+        env:
+          ADDED: ${{ steps.gate.outputs.added }}
+        run: node scripts/collection-gate.mjs snapshots ${ADDED//,/ }
+
+      - name: Build
+        if: steps.snap.outputs.kept != ''
+        env:
+          ASTRO_TELEMETRY_DISABLED: "1"
+        run: npm run build
+
+      - name: Generated site data is up to date
+        if: steps.snap.outputs.kept != ''
+        run: git diff --exit-code -- web/src/data/providers.json web/src/data/integrations.json web/src/data/openapi.json
+
+      - name: Typecheck
+        if: steps.snap.outputs.kept != ''
+        run: npm run typecheck
+
+      - name: Test
+        if: steps.snap.outputs.kept != ''
+        run: npm test
+
+      - name: Open the pull request
+        id: pr
+        if: steps.snap.outputs.kept != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          KEPT: ${{ steps.snap.outputs.kept }}
+          DROPPED: ${{ steps.snap.outputs.dropped }}
+        run: |
+          set -euo pipefail
+          branch="collections/$(date -u +%Y-%m-%d)-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b "$branch"
+          git add -A -- web/src/content/collections web/src/data/collections
+          titles=$(node --input-type=module -e '
+            const { readTopics } = await import("./scripts/lib/topics.mjs");
+            const kept = process.env.KEPT.split(",");
+            console.log(readTopics().filter((t) => kept.includes(t.slug)).map((t) => t.data.title).join(", "));
+          ')
+          run_url="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}"
+          git commit -q -F - <<EOF
+          feat(collections): add ${titles}
+
+          Drafted by the weekly collection workflow: ${run_url}
+
+          Verified: collection gate, fresh search per topic, build, typecheck, full test suite.
+
+          Co-Authored-By: Claude Code Action <noreply@anthropic.com>
+          EOF
+          git push -q origin "$branch"
+          gh label create collections --color 7c3aed --description "Agent-drafted collection pages" 2>/dev/null || true
+          export RUN_URL="$run_url"
+          node --input-type=module -e '
+            const { readTopics, readSnapshot } = await import("./scripts/lib/topics.mjs");
+            const kept = process.env.KEPT.split(",");
+            const rows = readTopics().filter((t) => kept.includes(t.slug)).map((t) => {
+              const s = readSnapshot(t.slug);
+              const sources = new Set(s.assets.map((a) => a.provider)).size;
+              return `| [${t.data.title}](https://3d.shep.bot/assets/${t.slug}) | \`${t.data.search.q}\` | ${t.data.hub} | ${s.assets.length} from ${sources} sources |`;
+            });
+            console.log([
+              "New collection pages drafted by the weekly workflow (`.github/workflows/draft-collections.yml`).",
+              "",
+              "| Page (live after merge) | Search | Hub | Assets |",
+              "| --- | --- | --- | --- |",
+              ...rows,
+              "",
+              process.env.DROPPED ? `Withdrawn before review (too few results): ${process.env.DROPPED}` : "",
+              "",
+              "Checked by the workflow: collection gate, a fresh search per topic, build, typecheck and the full test suite (pull requests opened by GitHub Actions do not start CI themselves).",
+              "",
+              "Next: an editorial review by a second agent. Approved pages are merged and deployed automatically; otherwise this pull request is labelled `needs-editor` and left for a human.",
+              "",
+              `Run: ${process.env.RUN_URL}`,
+            ].join("\n"));
+          ' > "$RUNNER_TEMP/body.md"
+          url=$(gh pr create --base main --head "$branch" --label collections \
+            --title "feat(collections): add ${titles}" --body-file "$RUNNER_TEMP/body.md")
+          echo "Opened ${url}" >> "$GITHUB_STEP_SUMMARY"
+          echo "number=${url##*/}" >> "$GITHUB_OUTPUT"
+          echo "branch=${branch}" >> "$GITHUB_OUTPUT"
+
+  review:
+    needs: verify
+    if: needs.verify.outputs.pr != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.verify.outputs.branch }}
+          persist-credentials: false
+
+      - name: Tell the reviewer what is new
+        env:
+          KEPT: ${{ needs.verify.outputs.kept }}
+        run: |
+          node -e 'console.log(JSON.stringify({ added: process.env.KEPT.split(",") }))' > review-input.json
+
+      - name: Review the pages with Claude Code
+        uses: anthropics/claude-code-action@v1
+        timeout-minutes: 25
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          github_token: ${{ github.token }}
+          show_full_output: "true"
+          display_report: "true"
+          prompt: |
+            You are the 3D Asset Server collection reviewer running in GitHub Actions.
+            Working dir is a checkout of pull request #${{ needs.verify.outputs.pr }}.
+
+            Read `prompts/review-collections.md` and follow it exactly.
+          claude_args: |
+            --max-turns 60
+            --permission-mode acceptEdits
+            --allowedTools "Read,Glob,Grep,Write,Bash(ls:*),Bash(cat:*),Bash(head:*),Bash(git diff:*),Bash(git log:*)"
+
+      - name: Keep the verdict
+        if: always()
+        run: |
+          if [[ -f review.json ]]; then cp review.json "$RUNNER_TEMP/review.json"; else echo '{}' > "$RUNNER_TEMP/review.json"; fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: collections-review
+          path: ${{ runner.temp }}/review.json
+          retention-days: 30
+
+  merge:
+    needs: [verify, review]
+    # Also after a failed review: the pull request is then labelled for a human.
+    if: always() && needs.verify.outputs.pr != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+      pull-requests: write
+      # gh workflow run ci.yml
+      actions: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.verify.outputs.branch }}
+
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: collections-review
+          path: ${{ runner.temp }}
+
+      - name: Read the verdict
+        id: verdict
+        env:
+          KEPT: ${{ needs.verify.outputs.kept }}
+        # Anything but a well-formed approval counts as "reject" (left for a human).
+        run: |
+          node -e '
+            const fs = require("fs");
+            const file = `${process.env.RUNNER_TEMP}/review.json`;
+            let r = {};
+            try { r = JSON.parse(fs.readFileSync(file, "utf8")); } catch {}
+            const kept = process.env.KEPT.split(",");
+            const verdict = r.verdict === "approve" ? "approve" : "reject";
+            const remove = Array.isArray(r.remove) ? r.remove.filter((s) => kept.includes(s)) : [];
+            const keep = kept.filter((s) => !remove.includes(s));
+            const summary = typeof r.summary === "string" && r.summary.trim() ? r.summary.trim().slice(0, 3000) : "The review job did not produce a verdict.";
+            fs.writeFileSync(`${process.env.RUNNER_TEMP}/summary.md`, `**Editorial review: ${verdict}**\n\n${summary}\n`);
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, `verdict=${verdict}\nremove=${remove.join(" ")}\nkeep=${keep.join(",")}\n`);
+          '
+
+      - name: Hold for a human
+        if: steps.verdict.outputs.verdict != 'approve'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ needs.verify.outputs.pr }}
+        run: |
+          gh label create needs-editor --color d97706 --description "Needs a human editor" 2>/dev/null || true
+          gh pr comment "$PR" --body-file "$RUNNER_TEMP/summary.md"
+          gh pr edit "$PR" --add-label needs-editor
+          echo "Review did not approve; pull request #$PR left for a human." >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Withdraw the pages the reviewer removed
+        if: steps.verdict.outputs.verdict == 'approve' && steps.verdict.outputs.remove != ''
+        env:
+          REMOVE: ${{ steps.verdict.outputs.remove }}
+          BRANCH: ${{ needs.verify.outputs.branch }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          for slug in $REMOVE; do
+            git rm -q "web/src/content/collections/${slug}.md" "web/src/data/collections/${slug}.json"
+          done
+          git commit -q -m "chore(collections): withdraw ${REMOVE// /, } after review"
+          git push -q origin "HEAD:${BRANCH}"
+
+      - name: Merge and deploy
+        if: steps.verdict.outputs.verdict == 'approve'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PR: ${{ needs.verify.outputs.pr }}
+          KEEP: ${{ steps.verdict.outputs.keep }}
+        run: |
+          set -euo pipefail
+          gh pr comment "$PR" --body-file "$RUNNER_TEMP/summary.md"
+          if [[ -z "$KEEP" ]]; then
+            gh pr close "$PR" --delete-branch --comment "Every page was withdrawn in review; nothing to merge."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch
+          # Merges made with GITHUB_TOKEN don't trigger workflows; start the deploy explicitly.
+          gh workflow run ci.yml --ref main
+          echo "Merged #$PR ($KEEP) and started CI on main to deploy." >> "$GITHUB_STEP_SUMMARY"

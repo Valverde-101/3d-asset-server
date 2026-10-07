@@ -1,0 +1,750 @@
+{
+  "slug": "free-overcast-sky-hdris",
+  "search": {
+    "q": "overcast",
+    "types": [
+      "hdri"
+    ],
+    "free": true,
+    "exclude": [
+      "cannon"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:06:21.932Z",
+  "assets": [
+    {
+      "id": "polyhaven:overcast_soil_puresky",
+      "provider": "polyhaven",
+      "title": "Overcast Soil (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/overcast_soil_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/overcast_soil_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Jarod Guest, Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:285016aa-1123-4bc0-a199-089153d42f44",
+      "provider": "blenderkit",
+      "title": "Kitchen Rainy Overcast Day",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/285016aa-1123-4bc0-a199-089153d42f44/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/cbff6ecdb1084042ab7a30c63c8e8e7a/files/thumbnail_e39f1bbb-cd33-43ce-bbb5-4d122fa0704f.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Blender Akademie",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtexel:canal-boat-ramp-overcast-022-hdri",
+      "provider": "threedtexel",
+      "title": "Canal Boat Ramp Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/canal-boat-ramp-overcast-022-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/06/Untitled-7-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:kloofendal_overcast_puresky",
+      "provider": "polyhaven",
+      "title": "Kloofendal Overcast (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/kloofendal_overcast_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/kloofendal_overcast_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:6631fef0-1ca1-4863-81c5-ed03241941bb",
+      "provider": "blenderkit",
+      "title": "Overcast Sunrise Sky in Vancouver City",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/6631fef0-1ca1-4863-81c5-ed03241941bb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/fe6192b19cd6427e927dcacacef6f19f/files/thumbnail_8d9e5e3f-02c3-4810-ba4d-11018a77f294.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtexel:emptyparking-overcast-hdri",
+      "provider": "threedtexel",
+      "title": "Empty Parking Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/emptyparking-overcast-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/06/Untitled-5-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:overcast_soil",
+      "provider": "polyhaven",
+      "title": "Overcast Soil",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/overcast_soil",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/overcast_soil.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:354046ef-b2b5-400a-9afc-dd30da12e297",
+      "provider": "blenderkit",
+      "title": "Overcast Soil Pure Sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/354046ef-b2b5-400a-9afc-dd30da12e297/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3e2615c5e28e42688f7b427c822ccb3f/files/thumbnail_5da82e34-e328-4d40-99d1-ba0a890b1a57.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI047B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 047 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI047B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI047B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:park-path-fork-overcast-hdri",
+      "provider": "threedtexel",
+      "title": "Park Path Fork Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/park-path-fork-overcast-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/06/Untitled-2-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:kloofendal_overcast",
+      "provider": "polyhaven",
+      "title": "Kloofendal Overcast",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/kloofendal_overcast",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/kloofendal_overcast.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:c7ce2fdf-04a5-491e-89cd-9113d0cfc449",
+      "provider": "blenderkit",
+      "title": "Infinite Sky HDR - Overcast Cloud Sunset",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c7ce2fdf-04a5-491e-89cd-9113d0cfc449/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/91c74d8760544f2b86db1edae64512ba/files/thumbnail_58b4287f-0720-4161-b4f8-95793d81a699.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI047A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 047 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI047A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI047A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:canalbank_overcast-hdri",
+      "provider": "threedtexel",
+      "title": "Canal Bank Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/canalbank_overcast-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-22-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:farmland_overcast",
+      "provider": "polyhaven",
+      "title": "Farmland Overcast",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/farmland_overcast",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/farmland_overcast.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Grzegorz Wronkowski",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:fb201776-945b-4651-8451-78ec7dc79ab8",
+      "provider": "blenderkit",
+      "title": "Kloofendal Overcast Pure Sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/fb201776-945b-4651-8451-78ec7dc79ab8/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5a56495ab93c40438a40c32099325a5f/files/thumbnail_497ca000-3089-4129-885d-6ef7b3ec5e62.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DaySkyHDRI068B",
+      "provider": "ambientcg",
+      "title": "Day Sky HDRI 068 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DaySkyHDRI068B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DaySkyHDRI068B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:canalside_overcast-hdri",
+      "provider": "threedtexel",
+      "title": "Canal Side Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/canalside_overcast-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-21-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:overcast_soil_2",
+      "provider": "polyhaven",
+      "title": "Overcast Soil 2",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/overcast_soil_2",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/overcast_soil_2.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:2b38cd1c-d408-43f0-8782-da525788bb6f",
+      "provider": "blenderkit",
+      "title": "Aerial Overcast Clouds in Mountains",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2b38cd1c-d408-43f0-8782-da525788bb6f/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/493fd26bcff34eafb1e6c229d24d52fe/files/thumbnail_1e843af4-263a-422d-a7b7-3bd740e82ac6.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DaySkyHDRI068A",
+      "provider": "ambientcg",
+      "title": "Day Sky HDRI 068 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DaySkyHDRI068A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DaySkyHDRI068A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:harbor_cloudy-hdri",
+      "provider": "threedtexel",
+      "title": "Harbor Overcast – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/harbor_cloudy-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-20-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:rogland_overcast",
+      "provider": "polyhaven",
+      "title": "Rogland Overcast",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/rogland_overcast",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rogland_overcast.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:250fb4ab-b771-432d-ab43-82041e2a6d8c",
+      "provider": "blenderkit",
+      "title": "Snowscape Overcast Skydome",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/250fb4ab-b771-432d-ab43-82041e2a6d8c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/752745d059f84c528de25c700a324bd6/files/thumbnail_06f7983e-3755-49d6-8a63-91021b117feb.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mr_Lamppost",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI045B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 045 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI045B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI045B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:overcast_industrial_courtyard",
+      "provider": "polyhaven",
+      "title": "Overcast Industrial Courtyard",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/overcast_industrial_courtyard",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/overcast_industrial_courtyard.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Grzegorz Wronkowski",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:c6ad96bf-27e6-4f4f-a3fd-a4a6a1761888",
+      "provider": "blenderkit",
+      "title": "Overcast sky over the Atlantic",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c6ad96bf-27e6-4f4f-a3fd-a4a6a1761888/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9f2b20e8941b4fdc82dfe63199bf2b21/files/thumbnail_aca20530-1f91-49f3-84be-4da2048293b6.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "antoine f",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI109",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 109",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI109",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI109.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:6ea18090-f509-4552-99b6-1327fb35c9dd",
+      "provider": "blenderkit",
+      "title": "Overcast Forest Clearing (Netherlands)",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/6ea18090-f509-4552-99b6-1327fb35c9dd/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1dcab9c12e1f4e48a02c726111482a8c/files/thumbnail_8e38af9a-04d0-4e1d-9dab-f5408b786cda.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "3d-render.nl",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:MorningSkyHDRI014B",
+      "provider": "ambientcg",
+      "title": "Morning Sky HDRI 014 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/MorningSkyHDRI014B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/MorningSkyHDRI014B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:3ebfca8c-6905-433a-8f9c-4453562c3414",
+      "provider": "blenderkit",
+      "title": "Benther Berg Overcast Day",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3ebfca8c-6905-433a-8f9c-4453562c3414/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9611308ac4ef4c6482fb0e34ab30325a/files/thumbnail_1bf3f1bf-2724-4b38-8197-32327a4cdbf1.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Blender Akademie",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:MorningSkyHDRI014A",
+      "provider": "ambientcg",
+      "title": "Morning Sky HDRI 014 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/MorningSkyHDRI014A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/MorningSkyHDRI014A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:bac3254b-d3d3-4086-beed-d0c00e58b616",
+      "provider": "blenderkit",
+      "title": "High Noon Bright Overcast Skydome",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/bac3254b-d3d3-4086-beed-d0c00e58b616/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4bc67820fe94453c9867e3c3591006aa/files/thumbnail_92ed1da1-b588-465c-8656-b2ed54c1407b.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mr_Lamppost",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI067",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 067",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI067",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI067.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:7d49cac7-78af-48df-96ab-3f767125ee05",
+      "provider": "blenderkit",
+      "title": "Cloud Overcast Diffused Sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7d49cac7-78af-48df-96ab-3f767125ee05/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0846144ac4e949338f945846eedf47a6/files/thumbnail_2b39bd84-e1dd-4c8e-b726-de2353ea1c8e.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "YULIN LAND",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:mud_road_puresky",
+      "provider": "polyhaven",
+      "title": "Mud Road (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/mud_road_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/mud_road_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergey Rudavin, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    }
+  ]
+}

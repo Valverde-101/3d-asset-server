@@ -1,0 +1,756 @@
+{
+  "slug": "free-sunset-hdris",
+  "search": {
+    "q": "sunset",
+    "types": [
+      "hdri"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:44.026Z",
+  "assets": [
+    {
+      "id": "polyhaven:belfast_sunset_puresky",
+      "provider": "polyhaven",
+      "title": "Belfast Sunset (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/belfast_sunset_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/belfast_sunset_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:2f62aff5-3a19-43e1-9c6b-f52a898bf676",
+      "provider": "blenderkit",
+      "title": "Dramatic Twilight Sunset Landscape",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2f62aff5-3a19-43e1-9c6b-f52a898bf676/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/388784c5ece34b12b4435c5f9f0f4b6a/files/thumbnail_4ff75282-19e3-4643-9022-451feb4bf366.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtexel:village-path-sunset-hdri",
+      "provider": "threedtexel",
+      "title": "Village Path Sunset Environment – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/village-path-sunset-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled-7-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:venice_sunset",
+      "provider": "polyhaven",
+      "title": "Venice Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/venice_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/venice_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:ca7c25a2-ad8e-48a9-8851-178db3755192",
+      "provider": "blenderkit",
+      "title": "City Sunset HighSky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ca7c25a2-ad8e-48a9-8851-178db3755192/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/07876ef404894e80aac982915d840a90/files/thumbnail_17adbd65-a0de-4e5b-bcde-284a52076e47.jpeg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:river-harbor-sunset-hdri",
+      "provider": "threedtexel",
+      "title": "River Harbor Sunset – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/river-harbor-sunset-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled-6-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:industrial_sunset_puresky",
+      "provider": "polyhaven",
+      "title": "Industrial Sunset (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/industrial_sunset_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/industrial_sunset_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Jarod Guest, Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:613bef6b-6aa7-49dd-95d1-12b7810a7f9a",
+      "provider": "blenderkit",
+      "title": "Aerial Dramatic Mountain Sunset",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/613bef6b-6aa7-49dd-95d1-12b7810a7f9a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9f32933a58a94a00ae34b183be2c2720/files/thumbnail_1d11cbba-a14b-413e-b9fc-499576335827.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI046B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 046 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI046B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI046B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:break-area-sunset-hdri",
+      "provider": "threedtexel",
+      "title": "Park Break Area Sunset – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/break-area-sunset-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled-4-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:sunset_jhbcentral",
+      "provider": "polyhaven",
+      "title": "Joburg Central Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/sunset_jhbcentral",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sunset_jhbcentral.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Dimitrios Savva",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:0faf2ed6-cef7-48d3-9a49-8059c27572b8",
+      "provider": "blenderkit",
+      "title": "Red Clouds Sunset Sky",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0faf2ed6-cef7-48d3-9a49-8059c27572b8/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3dc189ad46134f8db6dae60b3dd795cf/files/thumbnail_26216ace-cdb4-4296-8ef6-24c2afa865de.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI046A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 046 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI046A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI046A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:stationlot_subsetclear-hdri",
+      "provider": "threedtexel",
+      "title": "Station Lot Sunset Environment – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/stationlot_subsetclear-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-26-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:sunset_in_the_chalk_quarry",
+      "provider": "polyhaven",
+      "title": "Sunset in the Chalk Quarry",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/sunset_in_the_chalk_quarry",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sunset_in_the_chalk_quarry.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:67f57948-6a2c-4e18-afc3-49ad95452e70",
+      "provider": "blenderkit",
+      "title": "Sunset, sea, water, sky, clouds",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/67f57948-6a2c-4e18-afc3-49ad95452e70/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9c4e75ae29b144ddafa55646c96b157f/files/thumbnail_21aec9ac-6d56-4982-b33d-d1e90d71efc5.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "衍平 add",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI032A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 032 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI032A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI032A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:sunset_fairway",
+      "provider": "polyhaven",
+      "title": "Sunset Fairway",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/sunset_fairway",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sunset_fairway.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:5c99ca95-ff6c-4569-9c3b-da9df957ec30",
+      "provider": "blenderkit",
+      "title": "Sunset",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5c99ca95-ff6c-4569-9c3b-da9df957ec30/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e6391fd65c284042927548f44afdda09/files/thumbnail_5544c9d6-3366-4195-9ce4-0fbc1b7502fa.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI022B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 022 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI022B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI022B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:belfast_sunset",
+      "provider": "polyhaven",
+      "title": "Belfast Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/belfast_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/belfast_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal, Dimitrios Savva",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI044B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 044 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI044B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI044B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:industrial_sunset_02_puresky",
+      "provider": "polyhaven",
+      "title": "Industrial Sunset 02 (Pure Sky)",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/industrial_sunset_02_puresky",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/industrial_sunset_02_puresky.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Jarod Guest, Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI045A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 045 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI045A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI045A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:grasslands_sunset",
+      "provider": "polyhaven",
+      "title": "Grasslands Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/grasslands_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/grasslands_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI044A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 044 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI044A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI044A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:bambanani_sunset",
+      "provider": "polyhaven",
+      "title": "Bambanani Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/bambanani_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/bambanani_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI005B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 005 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI005B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI005B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:kiara_8_sunset",
+      "provider": "polyhaven",
+      "title": "Kiara 8 Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/kiara_8_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/kiara_8_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI026B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 026 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI026B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI026B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:industrial_sunset_02",
+      "provider": "polyhaven",
+      "title": "Industrial Sunset 02",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/industrial_sunset_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/industrial_sunset_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI037A",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 037 A",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI037A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI037A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:plains_sunset",
+      "provider": "polyhaven",
+      "title": "Plains Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/plains_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/plains_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:1fea9f5f-d51e-4046-b2de-7083a7fa278a",
+      "provider": "blenderkit",
+      "title": "Dramatic Sunset  Sky Aerial Ocean",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/1fea9f5f-d51e-4046-b2de-7083a7fa278a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e55f5c00fec6471f84b7c14be1dae9e9/files/thumbnail_7cf18756-4273-4d1a-b6e4-4fda2a8916f3.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:EveningSkyHDRI040B",
+      "provider": "ambientcg",
+      "title": "Evening Sky HDRI 040 B",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/EveningSkyHDRI040B",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/EveningSkyHDRI040B.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:rosendal_park_sunset",
+      "provider": "polyhaven",
+      "title": "Rosendal Park Sunset",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/rosendal_park_sunset",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rosendal_park_sunset.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Jarod Guest",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    }
+  ]
+}

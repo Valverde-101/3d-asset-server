@@ -1,0 +1,17 @@
+---
+// Visible breadcrumb trail; the same trail goes into the page's BreadcrumbList JSON-LD.
+interface Props {
+  trail: { name: string; path: string }[];
+}
+const { trail } = Astro.props;
+---
+<nav aria-label="Breadcrumb" class="text-sm text-muted-foreground">
+  <ol class="flex flex-wrap items-center gap-1.5">
+    {trail.map((t, i) => (
+      <li class="flex items-center gap-1.5">
+        {i > 0 && <span aria-hidden="true">/</span>}
+        {i === trail.length - 1 ? <span aria-current="page" class="text-foreground">{t.name}</span> : <a href={t.path} class="hover:text-foreground">{t.name}</a>}
+      </li>
+    ))}
+  </ol>
+</nav>

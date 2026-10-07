@@ -1,0 +1,194 @@
+---
+// /assets/<hub> (a group of collections) and /assets/<slug> (one collection).
+import { render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import AssetCard from "@/components/collections/AssetCard.astro";
+import Breadcrumbs from "@/components/collections/Breadcrumbs.astro";
+import CollectionCard from "@/components/collections/CollectionCard.astro";
+import {
+  HUBS,
+  allCollections,
+  apiHref,
+  collectionsInHub,
+  countLabel,
+  dateFmt,
+  hubPath,
+  latest,
+  relatedTo,
+  searchHref,
+  sourcePath,
+  type Collection,
+  type Hub,
+} from "@/lib/collections";
+import { breadcrumbs, collectionPage, faqPage } from "@/lib/schema";
+import { MCP_URL, SOURCE_COUNT } from "@/lib/site";
+
+export async function getStaticPaths() {
+  const all = await allCollections();
+  return [
+    ...HUBS.map((hub) => ({ params: { slug: hub.id }, props: { hub } })),
+    ...all.map((collection) => ({ params: { slug: collection.slug }, props: { collection } })),
+  ];
+}
+
+interface Props {
+  hub?: Hub;
+  collection?: Collection;
+}
+const { hub, collection: c } = Astro.props;
+
+const home = { name: "Home", path: "/" };
+const index = { name: "Asset collections", path: "/assets" };
+
+let hubCollections: Collection[] = [];
+let related: Collection[] = [];
+let Content: Awaited<ReturnType<typeof render>>["Content"] | undefined;
+if (hub) hubCollections = await collectionsInHub(hub);
+if (c) {
+  related = await relatedTo(c);
+  Content = (await render(c.topic)).Content;
+}
+const otherHubs = HUBS.filter((h) => h.id !== (hub ?? c?.hub)?.id);
+const hubUpdated = hub ? latest(hubCollections) : undefined;
+---
+
+{hub && (
+  <BaseLayout
+    title={hub.title}
+    description={hub.description}
+    markdown={`${hubPath(hub)}.md`}
+    schema={[
+      collectionPage({ title: hub.title, description: hub.description, path: hubPath(hub), dateModified: hubUpdated, links: hubCollections.map((x) => ({ name: x.topic.data.title, path: x.path })) }),
+      breadcrumbs([home, index, { name: hub.name, path: hubPath(hub) }]),
+    ]}
+  >
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <Breadcrumbs trail={[home, index, { name: hub.name, path: hubPath(hub) }]} />
+      <header class="mt-6 max-w-3xl">
+        <p class="text-sm font-medium text-primary">Asset collections</p>
+        <h1 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">{hub.title}</h1>
+        <p class="mt-4 text-pretty text-muted-foreground">{hub.intro}</p>
+        {hubUpdated && <p class="mt-3 text-sm text-muted-foreground">Updated <time datetime={hubUpdated.toISOString()}>{dateFmt.format(hubUpdated)}</time>, from a live search of {SOURCE_COUNT} sites.</p>}
+      </header>
+      <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {hubCollections.map((x) => <CollectionCard collection={x} />)}
+      </ul>
+      <section class="mt-16" aria-labelledby="more">
+        <h2 id="more" class="text-xl font-semibold tracking-tight">More collections</h2>
+        <ul class="mt-4 flex flex-wrap gap-2 text-sm">
+          {otherHubs.map((h) => <li><a href={hubPath(h)} class="inline-flex rounded-full border px-3 py-1 text-muted-foreground transition hover:border-primary/40 hover:text-foreground">{h.title}</a></li>)}
+          <li><a href="/search" class="inline-flex rounded-full border px-3 py-1 text-muted-foreground transition hover:border-primary/40 hover:text-foreground">Search everything</a></li>
+        </ul>
+      </section>
+    </div>
+  </BaseLayout>
+)}
+
+{c && Content && (
+  <BaseLayout
+    title={c.topic.data.title}
+    description={c.topic.data.description}
+    markdown={`${c.path}.md`}
+    noindex={!c.indexable}
+    schema={[
+      collectionPage({ title: c.topic.data.title, description: c.topic.data.description, path: c.path, dateModified: c.updatedAt, about: [c.topic.data.search.q, c.hub.name], assets: c.assets }),
+      breadcrumbs([home, index, { name: c.hub.name, path: hubPath(c.hub) }, { name: c.topic.data.title, path: c.path }]),
+      faqPage(c.topic.data.faq),
+    ]}
+  >
+    <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+      <Breadcrumbs trail={[home, index, { name: c.hub.name, path: hubPath(c.hub) }, { name: c.topic.data.title, path: c.path }]} />
+
+      <header class="mt-6 max-w-3xl">
+        <p class="text-sm font-medium text-primary"><a href={hubPath(c.hub)} class="hover:underline">{c.hub.name}</a></p>
+        <h1 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">{c.topic.data.title}</h1>
+        <p class="mt-4 text-pretty text-lg text-muted-foreground">{c.topic.data.description}</p>
+        <dl class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+          <div><dt class="sr-only">Assets</dt><dd class="font-medium">{countLabel(c.assets)}</dd></div>
+          <div><dt class="sr-only">Sources</dt><dd>from {c.sources.length} {c.sources.length === 1 ? "source" : "sources"}</dd></div>
+          {c.facts.cc0 > 0 && <div><dt class="sr-only">CC0</dt><dd>{c.facts.cc0} CC0</dd></div>}
+          {c.facts.direct > 0 && <div><dt class="sr-only">Direct downloads</dt><dd>{c.facts.direct} with direct download</dd></div>}
+          {c.updatedAt && <div><dt class="inline text-muted-foreground">Updated </dt><dd class="inline"><time datetime={c.updatedAt.toISOString()}>{dateFmt.format(c.updatedAt)}</time></dd></div>}
+        </dl>
+        <p class="mt-6 flex flex-wrap gap-3">
+          <a href={searchHref(c.topic.data.search)} class="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:bg-primary/90">Search live for “{c.topic.data.search.q}”</a>
+          <a href="#from-code" class="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium transition hover:bg-accent">Use it from code or an agent</a>
+        </p>
+      </header>
+
+      <section class="mt-10" aria-labelledby="assets">
+        <h2 id="assets" class="sr-only">{countLabel(c.assets)}</h2>
+        {c.assets.length ? (
+          <ul class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+            {c.assets.map((a, i) => <AssetCard asset={a} eager={i < 4} />)}
+          </ul>
+        ) : (
+          <p class="rounded-xl border p-6 text-sm text-muted-foreground">This collection is being refreshed. <a href={searchHref(c.topic.data.search)} class="text-primary hover:underline">Run the search live</a> in the meantime.</p>
+        )}
+        <p class="mt-4 text-sm text-muted-foreground">
+          Picked automatically from a live search of {SOURCE_COUNT} sites and refreshed daily. Each asset belongs to its creator: check its licence on the source page before you ship it.
+        </p>
+      </section>
+
+      <div class="mt-16 grid gap-12 lg:grid-cols-[1fr_18rem]">
+        <article class="prose-docs min-w-0 max-w-3xl">
+          <Content />
+        </article>
+        <aside class="min-w-0 space-y-8 text-sm">
+          <section aria-labelledby="sources">
+            <h2 id="sources" class="font-medium">Where these come from</h2>
+            <ul class="mt-3 divide-y rounded-xl border">
+              {c.sources.map((s) => (
+                <li class="flex items-center justify-between gap-2 px-3 py-2">
+                  <a href={sourcePath(s.id)} class="hover:text-primary hover:underline">{s.name}</a>
+                  <span class="text-muted-foreground">{s.count}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+          {c.facts.licences.length > 0 && (
+            <section aria-labelledby="licences">
+              <h2 id="licences" class="font-medium">Licences</h2>
+              <ul class="mt-3 space-y-1 text-muted-foreground">
+                {c.facts.licences.map((l) => <li>{l.name}: {l.count}</li>)}
+              </ul>
+              <p class="mt-2 text-xs text-muted-foreground">CC0 means public domain: commercial use, no credit needed. <a href="/docs/sources#licences" class="text-primary hover:underline">About licences</a></p>
+            </section>
+          )}
+          <section id="from-code" aria-labelledby="code" class="scroll-mt-24">
+            <h2 id="code" class="font-medium">From code or an agent</h2>
+            <p class="mt-2 text-muted-foreground">The same search over the REST API:</p>
+            <pre class="mt-2 overflow-x-auto rounded-lg border bg-muted/50 p-3 text-xs"><code>curl "{apiHref(c.topic.data.search)}"</code></pre>
+            <p class="mt-3 text-muted-foreground">
+              Or give your coding agent the MCP server <code class="text-xs">{MCP_URL}</code> and ask for “{c.topic.data.search.q}” {c.topic.data.search.free ? "free " : ""}assets. <a href="/docs/mcp" class="text-primary hover:underline">Setup</a>
+            </p>
+          </section>
+        </aside>
+      </div>
+
+      <section class="mt-16 max-w-3xl" aria-labelledby="faq">
+        <h2 id="faq" class="text-2xl font-semibold tracking-tight">Questions</h2>
+        <dl class="mt-6 divide-y rounded-xl border">
+          {c.topic.data.faq.map((f) => (
+            <div class="p-5">
+              <dt class="font-medium">{f.q}</dt>
+              <dd class="mt-2 text-sm text-muted-foreground">{f.a}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      {related.length > 0 && (
+        <section class="mt-16" aria-labelledby="related">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h2 id="related" class="text-2xl font-semibold tracking-tight">Related collections</h2>
+            <a href="/assets" class="text-sm text-primary hover:underline">All collections →</a>
+          </div>
+          <ul class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((x) => <CollectionCard collection={x} />)}
+          </ul>
+        </section>
+      )}
+    </div>
+  </BaseLayout>
+)}

@@ -1,0 +1,691 @@
+{
+  "slug": "free-marble-textures",
+  "search": {
+    "q": "marble",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:36.463Z",
+  "assets": [
+    {
+      "id": "polyhaven:marble_01",
+      "provider": "polyhaven",
+      "title": "Marble 01",
+      "type": "material",
+      "url": "https://polyhaven.com/a/marble_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/marble_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:b55555d2-1fb1-4540-8b26-a676c2cf4a9b",
+      "provider": "blenderkit",
+      "title": "Onyx marble",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/b55555d2-1fb1-4540-8b26-a676c2cf4a9b/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/883c0cc54be94f878eeb8d03231be12b/files/thumbnail_61de8833-2bdf-43a4-ad88-42dd37f362d4.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "antoine f",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Marble012",
+      "provider": "ambientcg",
+      "title": "Marble 012",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Marble012",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Marble012.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:603",
+      "provider": "texturecan",
+      "title": "Fan-Shaped Grey Pavement Tiles with Marble Chips",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/603/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0116/tiles_0116_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:marble-09",
+      "provider": "cgbookcase",
+      "title": "Marble 09",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/marble-09",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Marble_09_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:green-marble-gold-encrusted-001",
+      "provider": "threedtextures",
+      "title": "Green Marble Gold Encrusted 001",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/09/02/green-marble-gold-encrusted-001/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/09/Material_2002.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:statuari_marble_2",
+      "provider": "sharetextures",
+      "title": "Statuari Marble 2",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/statuari_marble_2",
+      "thumbnailUrl": "https://images.sharetextures.com/u/statuari_marble_2-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:marble-surface-pbr-material-7",
+      "provider": "threedtexel",
+      "title": "White Marble Surface – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/marble-surface-pbr-material-7/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-68-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:marble_tiles",
+      "provider": "polyhaven",
+      "title": "Marble Tiles",
+      "type": "material",
+      "url": "https://polyhaven.com/a/marble_tiles",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/marble_tiles.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:68992d83-977c-4b60-ae4f-37ecd497b3cb",
+      "provider": "blenderkit",
+      "title": "Marble",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/68992d83-977c-4b60-ae4f-37ecd497b3cb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5c27b4e415774fec8a76a1cfb639ef9f/files/thumbnail_136c1bd3-f5d4-4121-aa5e-32130d9d1d84.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Steffen",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Marble016",
+      "provider": "ambientcg",
+      "title": "Marble 016",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Marble016",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Marble016.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:586",
+      "provider": "texturecan",
+      "title": "3D Illusion Marble Tiles",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/586/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/marble_0018/marble_0018_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:marble-08",
+      "provider": "cgbookcase",
+      "title": "Marble 08",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/marble-08",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Marble_08_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:white-marble-006",
+      "provider": "threedtextures",
+      "title": "White Marble 006",
+      "type": "material",
+      "url": "https://3dtextures.me/2025/05/07/white-marble-006/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2025/05/Material_1937.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:king-white-marble",
+      "provider": "sharetextures",
+      "title": "King White Marble",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/king-white-marble",
+      "thumbnailUrl": "https://images.sharetextures.com/u/KING-WHITE-POLISHED-MARBLE-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:marble-surface-pbr-material-6",
+      "provider": "threedtexel",
+      "title": "Dark Cracked Marble Surface – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/marble-surface-pbr-material-6/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-67-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:marble_cliff_05",
+      "provider": "polyhaven",
+      "title": "Marble Cliff 05",
+      "type": "material",
+      "url": "https://polyhaven.com/a/marble_cliff_05",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/marble_cliff_05.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Marble021",
+      "provider": "ambientcg",
+      "title": "Marble 021",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Marble021",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Marble021.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:543",
+      "provider": "texturecan",
+      "title": "Vintage Marble Floor Texture with Fan-Shaped Pattern",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/543/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/tiles_0099/tiles_0099_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:marble-07",
+      "provider": "cgbookcase",
+      "title": "Marble 07",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/marble-07",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Marble_07_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:marble-white-008",
+      "provider": "threedtextures",
+      "title": "Marble White 008",
+      "type": "material",
+      "url": "https://3dtextures.me/2022/06/20/marble-white-008/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2022/06/Material_2084.jpg?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "sharetextures:grey-vision-marble-2",
+      "provider": "sharetextures",
+      "title": "Grey Vision Marble-2",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/grey-vision-marble-2",
+      "thumbnailUrl": "https://images.sharetextures.com/u/GREY-VISION-2.SELECTION-POLISHED-MARBLE-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:marble_cliff_03",
+      "provider": "polyhaven",
+      "title": "Marble Cliff 03",
+      "type": "material",
+      "url": "https://polyhaven.com/a/marble_cliff_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/marble_cliff_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:2666c9a1-f08e-431b-b4f9-25413028a952",
+      "provider": "blenderkit",
+      "title": "Travertine marble",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2666c9a1-f08e-431b-b4f9-25413028a952/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1081288de2b44d549f2f4a6e072f33ec/files/thumbnail_43cda1d5-b766-4cbc-af4f-859e2d72060b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "antoine f",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Marble006",
+      "provider": "ambientcg",
+      "title": "Marble 006",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Marble006",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Marble006.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:415",
+      "provider": "texturecan",
+      "title": "Jade Marble for Walls and Floors",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/415/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/marble_0017/marble_0017_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:marble-06",
+      "provider": "cgbookcase",
+      "title": "Marble 06",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/marble-06",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Marble_06_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:marble-grey-002",
+      "provider": "threedtextures",
+      "title": "Marble Grey 002",
+      "type": "material",
+      "url": "https://3dtextures.me/2022/01/09/marble-grey-002/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2022/01/Material_2003.jpg?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    },
+    {
+      "id": "sharetextures:marble_36",
+      "provider": "sharetextures",
+      "title": "Marble 36",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/marble_36",
+      "thumbnailUrl": "https://images.sharetextures.com/u/cd14d86c-b490-4a3f-ac86-fcd832f449a3.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:marble-surface-pbr-material-4",
+      "provider": "threedtexel",
+      "title": "Cracked White Marble Surface – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/marble-surface-pbr-material-4/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-65-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:marble_mosaic_tiles",
+      "provider": "polyhaven",
+      "title": "Marble Mosaic Tiles",
+      "type": "material",
+      "url": "https://polyhaven.com/a/marble_mosaic_tiles",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/marble_mosaic_tiles.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Amal Kumar",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:96bfd28d-45eb-4616-86c0-a077f6dba2f4",
+      "provider": "blenderkit",
+      "title": "Black Marble Floor Tiling",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/96bfd28d-45eb-4616-86c0-a077f6dba2f4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/81837edabd7b4fd1b3b7f04bd2f14b20/files/thumbnail_8fc8fa72-2d5a-46df-9b6b-d8a9b6a19034.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Share Textures",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Marble014",
+      "provider": "ambientcg",
+      "title": "Marble 014",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Marble014",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Marble014.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:334",
+      "provider": "texturecan",
+      "title": "Orange Marble Tile Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/334/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/marble_0016/marble_0016_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:marble-05",
+      "provider": "cgbookcase",
+      "title": "Marble 05",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/marble-05",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Marble_05_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:marble-white-007",
+      "provider": "threedtextures",
+      "title": "Marble White 007",
+      "type": "material",
+      "url": "https://3dtextures.me/2021/10/04/marble-white-007/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2021/10/Material_1939.jpg?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "1k"
+    }
+  ]
+}

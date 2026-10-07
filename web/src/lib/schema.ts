@@ -198,3 +198,63 @@ export const graph = (nodes: JsonLd[], page?: PageMeta): string => {
   }
   return JSON.stringify({ "@context": "https://schema.org", "@graph": [website(), organization(), ...out] }).replace(/</g, "\\u003c");
 };
+
+interface ListedAsset {
+  id: string;
+  provider: string;
+  title: string;
+  type: string;
+  url: string;
+  thumbnailUrl: string;
+  author?: string;
+  license?: { name: string; url?: string };
+  free?: boolean;
+}
+
+/** One asset in a collection's ItemList: a 3DModel for models, a CreativeWork otherwise, credited to its source. */
+const listedAsset = (a: ListedAsset, providers: { id: string; name: string; homepage: string }[]): JsonLd => {
+  const source = providers.find((p) => p.id === a.provider);
+  return {
+    "@type": a.type === "model" ? "3DModel" : "CreativeWork",
+    name: a.title,
+    url: a.url,
+    image: a.thumbnailUrl,
+    thumbnailUrl: a.thumbnailUrl,
+    ...(a.author ? { author: { "@type": "Person", name: a.author } } : {}),
+    ...(a.license ? { license: a.license.url ?? a.license.name } : {}),
+    ...(a.free !== undefined ? { isAccessibleForFree: a.free } : {}),
+    ...(source ? { provider: { "@type": "Organization", name: source.name, url: source.homepage } } : {}),
+  };
+};
+
+/**
+ * A curated collection (or hub, or source page): CollectionPage whose main
+ * entity is an ItemList of its assets or of the collections it groups.
+ */
+export const collectionPage = (c: {
+  title: string;
+  description: string;
+  path: string;
+  dateModified?: Date;
+  about?: string[];
+  assets?: ListedAsset[];
+  links?: { name: string; path: string }[];
+}): JsonLd => {
+  const url = abs(c.path);
+  const items = c.assets
+    ? c.assets.map((a, i) => ({ "@type": "ListItem", position: i + 1, item: listedAsset(a, PROVIDERS) }))
+    : (c.links ?? []).map((l, i) => ({ "@type": "ListItem", position: i + 1, name: l.name, url: abs(l.path) }));
+  return {
+    "@type": "CollectionPage",
+    "@id": `${url}#page`,
+    name: c.title,
+    description: c.description,
+    url,
+    inLanguage: "en",
+    isPartOf: { "@id": SITE_ID },
+    publisher: { "@id": ORG_ID },
+    ...(c.dateModified ? { dateModified: c.dateModified.toISOString() } : {}),
+    ...(c.about?.length ? { about: c.about.map((name) => ({ "@type": "Thing", name })) } : {}),
+    mainEntity: { "@type": "ItemList", numberOfItems: items.length, itemListElement: items },
+  };
+};

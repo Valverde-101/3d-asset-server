@@ -151,4 +151,9 @@ vite.config.ts.timestamp-*
 # build output
 dist/
 downloads/
-assets/
+/assets/
+
+# Scratch files of the weekly collection workflow (.github/workflows/draft-collections.yml)
+collection-ideas.json
+review-input.json
+review.json

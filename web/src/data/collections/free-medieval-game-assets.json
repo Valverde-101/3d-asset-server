@@ -1,0 +1,650 @@
+{
+  "slug": "free-medieval-game-assets",
+  "search": {
+    "q": "medieval",
+    "types": [
+      "model",
+      "pack"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:37.232Z",
+  "assets": [
+    {
+      "id": "polyhaven:ornate_medieval_dagger",
+      "provider": "polyhaven",
+      "title": "Ornate Medieval Dagger",
+      "type": "model",
+      "url": "https://polyhaven.com/a/ornate_medieval_dagger",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/ornate_medieval_dagger.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sofia Pahaoja",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 6290
+    },
+    {
+      "id": "blenderkit:bb93c779-bf60-439b-96d2-99167435443d",
+      "provider": "blenderkit",
+      "title": "Old Medieval Dungeon Room",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/bb93c779-bf60-439b-96d2-99167435443d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4ed04401c2734a65b15dbc53c621d674/files/thumbnail_e96da6ed-4afe-471f-bdbd-efee301fbc11.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Dennis Hafemann",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "quaternius:medievalvillagemegakit",
+      "provider": "quaternius",
+      "title": "Medieval Village MegaKit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/medievalvillagemegakit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/medievalvillagemegakit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:maxparata/medievaltown-monogon",
+      "provider": "itchio",
+      "title": "Voxel Medieval Town - monogon",
+      "type": "model",
+      "url": "https://maxparata.itch.io/medievaltown-monogon",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEyNTg3ODEwLnBuZw==/315x250%23c/TdhVlm.png",
+      "downloadable": false,
+      "author": "monogon",
+      "free": true
+    },
+    {
+      "id": "polyhaven:ornate_medieval_mace",
+      "provider": "polyhaven",
+      "title": "Ornate Medieval Mace",
+      "type": "model",
+      "url": "https://polyhaven.com/a/ornate_medieval_mace",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/ornate_medieval_mace.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Ulan Cabanilla",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 14762
+    },
+    {
+      "id": "blenderkit:5a406774-ee4c-47a4-bde3-fcce5cb0b4bd",
+      "provider": "blenderkit",
+      "title": "Medieval Retreat",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5a406774-ee4c-47a4-bde3-fcce5cb0b4bd/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2a34700a09ee4d4ca516186f90baf0f9/files/thumbnail_c6243f42-b41c-421f-b7f5-fa91630b641e.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Toby Noby",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "quaternius:medievalvillage",
+      "provider": "quaternius",
+      "title": "Medieval Village Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/medievalvillage.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/medievalvillage.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:quaternius/medieval-village-megakit",
+      "provider": "itchio",
+      "title": "Medieval Village MegaKit",
+      "type": "model",
+      "url": "https://quaternius.itch.io/medieval-village-megakit",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0MzM2NTQyLmpwZw==/315x250%23c/Hxsajx.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:2f102e63-d493-45a7-8880-8795c336167a",
+      "provider": "blenderkit",
+      "title": "Medieval door",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2f102e63-d493-45a7-8880-8795c336167a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f6fc318ee36946e3a0201aa9e5d9f4ca/files/thumbnail_ca326cb3-4ee8-4790-b555-e3d5a8c0a53f.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Jordi Se-Cam",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 19362
+    },
+    {
+      "id": "polyfork:wall-torch-sconce-6ddb52",
+      "provider": "polyfork",
+      "title": "Wall Torch Sconce",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wall-torch-sconce-6ddb52",
+      "thumbnailUrl": "https://polyfork.dev/files/wall-torch-sconce-6ddb52/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 457
+    },
+    {
+      "id": "sharetextures:pot-6",
+      "provider": "sharetextures",
+      "title": "Pot 6",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/equipments/pot-6",
+      "thumbnailUrl": "https://images.sharetextures.com/u/21dd1ddf-1a90-4e54-b984-025ce99e691e-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:modularmedievalbuildings",
+      "provider": "quaternius",
+      "title": "Modular Medieval Building Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/modularmedievalbuildings.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/medievalbuildings.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:alstrainfinite/medieval-swords",
+      "provider": "itchio",
+      "title": "Medieval Swords - PolyPack Asset",
+      "type": "pack",
+      "url": "https://alstrainfinite.itch.io/medieval-swords",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzY0NTgxODQucG5n/315x250%23c/WRYjV2.png",
+      "downloadable": false,
+      "author": "ALSTRA INFINITE",
+      "free": true
+    },
+    {
+      "id": "blenderkit:d1a54956-ffc7-4891-9745-3a039ff51f69",
+      "provider": "blenderkit",
+      "title": "Medieval House",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/d1a54956-ffc7-4891-9745-3a039ff51f69/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8f13c78d5e604faabcf6684e85c857d6/files/thumbnail_b4c6e866-5f79-46ff-8571-6f3c83aaf3a8.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nana Nurzhau",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 20916
+    },
+    {
+      "id": "polyfork:wheat-plant-7f29a1",
+      "provider": "polyfork",
+      "title": "Wheat Plant",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wheat-plant-7f29a1",
+      "thumbnailUrl": "https://polyfork.dev/files/wheat-plant-7f29a1/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 407
+    },
+    {
+      "id": "itchio:oco/medieval-fantasy-character-pack",
+      "provider": "itchio",
+      "title": "Medieval Fantasy Character Pack",
+      "type": "model",
+      "url": "https://oco.itch.io/medieval-fantasy-character-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIyMzgwMTIuZ2lm/315x250%23c/CEcset.gif",
+      "downloadable": false,
+      "author": "OcO",
+      "free": true
+    },
+    {
+      "id": "sharetextures:goblet-1",
+      "provider": "sharetextures",
+      "title": "Goblet 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/decorative/goblet-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/22b9a02a-ad2d-4667-a4eb-ebd2eee78fea-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:gothic_coffee_table",
+      "provider": "polyhaven",
+      "title": "Gothic Coffee Table",
+      "type": "model",
+      "url": "https://polyhaven.com/a/gothic_coffee_table",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/gothic_coffee_table.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Ulan Cabanilla",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 23836
+    },
+    {
+      "id": "polyfork:tate-standing-shield-e5513e",
+      "provider": "polyfork",
+      "title": "Tate Standing Shield",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/tate-standing-shield-e5513e",
+      "thumbnailUrl": "https://polyfork.dev/files/tate-standing-shield-e5513e/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 444,
+      "rigged": true
+    },
+    {
+      "id": "itchio:joszs/medieval-item-pack",
+      "provider": "itchio",
+      "title": "Joszs' Medieval Item Pack",
+      "type": "pack",
+      "url": "https://joszs.itch.io/medieval-item-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvNjcxOTAvNDY5MTYzLnBuZw==/315x250%23c/OvPkY0.png",
+      "downloadable": false,
+      "author": "Joszs",
+      "free": true
+    },
+    {
+      "id": "sharetextures:candleholder-7",
+      "provider": "sharetextures",
+      "title": "Candleholder 7",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/decorative/candleholder-7",
+      "thumbnailUrl": "https://images.sharetextures.com/u/2f3ccf80-d9ac-43be-9481-00989c449c7d-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:gothic_statue",
+      "provider": "polyhaven",
+      "title": "Gothic Statue",
+      "type": "model",
+      "url": "https://polyhaven.com/a/gothic_statue",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/gothic_statue.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Benny Weimer",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 27739
+    },
+    {
+      "id": "polyfork:sculpted-pine-e45d4f",
+      "provider": "polyfork",
+      "title": "Sculpted Pine",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/sculpted-pine-e45d4f",
+      "thumbnailUrl": "https://polyfork.dev/files/sculpted-pine-e45d4f/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 510
+    },
+    {
+      "id": "itchio:mtpixls/medieval-army-pack",
+      "provider": "itchio",
+      "title": "Medieval Army Pack",
+      "type": "pack",
+      "url": "https://mtpixls.itch.io/medieval-army-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIwNDMxNzMwLnBuZw==/315x250%23c/%2BjD6qe.png",
+      "downloadable": false,
+      "author": "MtPixls",
+      "free": true
+    },
+    {
+      "id": "blenderkit:5d6c963e-7625-4ece-803a-3fa8327fba71",
+      "provider": "blenderkit",
+      "title": "Medieval Covered Wagon",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5d6c963e-7625-4ece-803a-3fa8327fba71/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6030fce897bd437a9ac116cc1e99d985/files/thumbnail_d8a661ba-ce6f-4b4f-ae82-928ba8b9758f.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Hesoyam 3dart",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 105883
+    },
+    {
+      "id": "sharetextures:brazier-3",
+      "provider": "sharetextures",
+      "title": "Brazier 3",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/equipments/brazier-3",
+      "thumbnailUrl": "https://images.sharetextures.com/u/5d6d52bc-2743-4ef5-a1b6-510c34856909-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:ornate_war_hammer",
+      "provider": "polyhaven",
+      "title": "Ornate War Hammer",
+      "type": "model",
+      "url": "https://polyhaven.com/a/ornate_war_hammer",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/ornate_war_hammer.png?width=512&height=512",
+      "downloadable": true,
+      "author": "James Ray Cock, Ulan Cabanilla",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 5192
+    },
+    {
+      "id": "polyfork:nobori-banner-ae4d88",
+      "provider": "polyfork",
+      "title": "Nobori Banner",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/nobori-banner-ae4d88",
+      "thumbnailUrl": "https://polyfork.dev/files/nobori-banner-ae4d88/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 582
+    },
+    {
+      "id": "quaternius:ultimatefantasyrts",
+      "provider": "quaternius",
+      "title": "Ultimate Fantasy RTS",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatefantasyrts.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatefantasyrts.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:oco/medieval-fantasy-character-pack-6",
+      "provider": "itchio",
+      "title": "Medieval Fantasy Character Pack 6",
+      "type": "model",
+      "url": "https://oco.itch.io/medieval-fantasy-character-pack-6",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEwODEzNjAwLmdpZg==/315x250%23c/M1fUDf.gif",
+      "downloadable": false,
+      "author": "OcO",
+      "free": true
+    },
+    {
+      "id": "sharetextures:3d-candleholder-6",
+      "provider": "sharetextures",
+      "title": "Candleholder 6",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/decorative/3d-candleholder-6",
+      "thumbnailUrl": "https://images.sharetextures.com/u/27e854d4-c70a-46a5-9a07-bb34dc8e1185-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyfork:wooden-teoke-bucket-e65f35",
+      "provider": "polyfork",
+      "title": "Wooden Teoke Bucket",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/wooden-teoke-bucket-e65f35",
+      "thumbnailUrl": "https://polyfork.dev/files/wooden-teoke-bucket-e65f35/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 526
+    },
+    {
+      "id": "quaternius:ultimatemodularruins",
+      "provider": "quaternius",
+      "title": "Ultimate Modular Ruins Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatemodularruins.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatemodularruins.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:3b0fd85f-58f4-49bb-8d5a-cb39b2e0c207",
+      "provider": "blenderkit",
+      "title": "Medieval Door Gate",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3b0fd85f-58f4-49bb-8d5a-cb39b2e0c207/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/a197b9acdbfd424d86489f55dc78c485/files/thumbnail_f9f920a3-3c70-4aad-8c9a-7ab0968bf330.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Dal Roron",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 3324
+    },
+    {
+      "id": "itchio:studiosetoril/medieval-weapons",
+      "provider": "itchio",
+      "title": "Medieval Weapons",
+      "type": "model",
+      "url": "https://studiosetoril.itch.io/medieval-weapons",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzk5NTY1MTYucG5n/315x250%23c/LGWNUp.png",
+      "downloadable": false,
+      "author": "Studio Setoril",
+      "free": true
+    },
+    {
+      "id": "sharetextures:pot-10",
+      "provider": "sharetextures",
+      "title": "Pot 10",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/equipments/pot-10",
+      "thumbnailUrl": "https://images.sharetextures.com/u/569829f7-338a-4679-8520-fc4cee821a77-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    }
+  ]
+}

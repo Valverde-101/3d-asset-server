@@ -1,0 +1,756 @@
+{
+  "slug": "free-forest-hdris",
+  "search": {
+    "q": "forest",
+    "types": [
+      "hdri"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:32.949Z",
+  "assets": [
+    {
+      "id": "polyhaven:autumn_forest_04",
+      "provider": "polyhaven",
+      "title": "Autumn Forest 04",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/autumn_forest_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/autumn_forest_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Alexander Scholten",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:321d310c-3a09-4f50-9c52-4b8b45da9a70",
+      "provider": "blenderkit",
+      "title": "Clouds green forest green lake",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/321d310c-3a09-4f50-9c52-4b8b45da9a70/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d6dff037b15541f39900e314b9204159/files/thumbnail_3acf01c2-2ffc-4ad5-a45a-96be8af5b9a4.jpg.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtexel:picnicpath-sunny-hdri",
+      "provider": "threedtexel",
+      "title": "Sunny Forest Picnic Path – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/picnicpath-sunny-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-28-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "texturescom:133992",
+      "provider": "texturescom",
+      "title": "Norway Forest",
+      "type": "hdri",
+      "url": "https://www.textures.com/download/hdr-panorama-0087-norway-forest-hdri-light-probe/133992",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/HDR Environments/115068-Nature/ps133992/133992_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16K+"
+    },
+    {
+      "id": "polyhaven:forest_slope",
+      "provider": "polyhaven",
+      "title": "Forest Slope",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/forest_slope",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/forest_slope.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:957d802c-bf48-4bf4-a241-60f1fc29d7c6",
+      "provider": "blenderkit",
+      "title": "Old Forest Green Tree",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/957d802c-bf48-4bf4-a241-60f1fc29d7c6/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/30c30093a21d4719906e2ad18362a5b1/files/thumbnail_6b52be14-137e-473a-8713-37d77afb4c56.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Esparza Rudy",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "threedtexel:gathering-tree-forst-hdri",
+      "provider": "threedtexel",
+      "title": "Forest Clearing With Large Tree – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/gathering-tree-forst-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-15-768x432.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:phalzer_forest_01",
+      "provider": "polyhaven",
+      "title": "Pfälzer Forest 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/phalzer_forest_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/phalzer_forest_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:dab6540c-c7bf-4870-8437-c745f0fd35af",
+      "provider": "blenderkit",
+      "title": "Sunny Meadow Forest",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/dab6540c-c7bf-4870-8437-c745f0fd35af/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e28c6cdd171f4156a5b7b01d54b889d2/files/thumbnail_ecc0db38-3d5c-4c91-9482-6f0ff3a6290f.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Elin FL",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI107",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 107",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI107",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI107.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "threedtexel:brick-gazebo-hdri",
+      "provider": "threedtexel",
+      "title": "Brick Gazebo In Forest – HDRI",
+      "type": "hdri",
+      "url": "https://3dtexel.com/product/brick-gazebo-hdri/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/05/Untitled-14-768x432.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:mossy_forest",
+      "provider": "polyhaven",
+      "title": "Mossy Forest",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/mossy_forest",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/mossy_forest.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:212dd40e-7633-46b0-9473-3b6dc93ddc3d",
+      "provider": "blenderkit",
+      "title": "Dutch Forest Lane with Beech Trees",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/212dd40e-7633-46b0-9473-3b6dc93ddc3d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/bf937db49f654f4ba1df88ef7e7cc27a/files/thumbnail_0e9008ae-db45-489e-8936-056e6b8b64e5.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "3d-render.nl",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI087",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 087",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI087",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI087.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:snowy_forest_path_01",
+      "provider": "polyhaven",
+      "title": "Snowy Forest Path 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/snowy_forest_path_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/snowy_forest_path_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliksiy Yakovlyev",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:2b56bb8e-8368-4323-a37c-9eafa67ee69d",
+      "provider": "blenderkit",
+      "title": "Fall Forest Dirt Road",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2b56bb8e-8368-4323-a37c-9eafa67ee69d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/ea08185163034a889aa0e4afe56c10a2/files/thumbnail_46822185-f5b9-47a6-be93-7eec1c812611.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Elin FL",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI078",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 078",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI078",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI078.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:snowy_forest_path_02",
+      "provider": "polyhaven",
+      "title": "Snowy Forest Path 02",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/snowy_forest_path_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/snowy_forest_path_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliksiy Yakovlyev",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:fe3d1ed1-a66e-4ea5-a0d3-e113185bb989",
+      "provider": "blenderkit",
+      "title": "Highsky green forest clouds",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/fe3d1ed1-a66e-4ea5-a0d3-e113185bb989/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/377462ce592f43219f490a299bd1586b/files/thumbnail_4dfe1ddf-230a-4713-8977-900a78b5ae3c.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI067",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 067",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI067",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI067.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:monks_forest",
+      "provider": "polyhaven",
+      "title": "Monk's forest",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/monks_forest",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/monks_forest.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI091",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 091",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI091",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI091.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:epping_forest_02",
+      "provider": "polyhaven",
+      "title": "Epping Forest 02",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/epping_forest_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/epping_forest_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:bd559bdf-834f-4d92-8af9-2b977aef856e",
+      "provider": "blenderkit",
+      "title": "Trees in Forest by Waterfall",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/bd559bdf-834f-4d92-8af9-2b977aef856e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/dcb031b4e25741d3bbba200fd5985229/files/thumbnail_494be0db-b88b-4838-b853-1271c8890bc2.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI061",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 061",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI061",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI061.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:autumn_forest_01",
+      "provider": "polyhaven",
+      "title": "Autumn Forest 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/autumn_forest_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/autumn_forest_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:1c91aa65-92f0-475a-8585-65f4e20783a1",
+      "provider": "blenderkit",
+      "title": "Forest Sunset",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/1c91aa65-92f0-475a-8585-65f4e20783a1/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1806ff0c68634e57ad60ef978b60b75e/files/thumbnail_76ec69da-931b-41c3-95ee-082b0231ca85.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Andreas Chaniotis",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI003",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 003",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI003",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI003.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:epping_forest_01",
+      "provider": "polyhaven",
+      "title": "Epping Forest 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/epping_forest_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/epping_forest_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:a88635d1-c736-480d-84c1-0685c1732753",
+      "provider": "blenderkit",
+      "title": "Hiking Path in Lush Forest",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a88635d1-c736-480d-84c1-0685c1732753/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/41193035f0ae466e810a747355364dd2/files/thumbnail_48bb1257-cdc7-427b-a487-c5c7e39f43d0.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI076",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 076",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI076",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI076.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:sunset_forest",
+      "provider": "polyhaven",
+      "title": "Sunset Forest",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/sunset_forest",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sunset_forest.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:add7a4a6-b34d-453a-b2ad-55dc03d6fbda",
+      "provider": "blenderkit",
+      "title": "Ferny Forest Lane in the Netherlands",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/add7a4a6-b34d-453a-b2ad-55dc03d6fbda/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0636e1ca752b4061a676feb8a680599b/files/thumbnail_30070e65-ae57-4264-9673-85359b8c9ad0.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "3d-render.nl",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:DayEnvironmentHDRI015",
+      "provider": "ambientcg",
+      "title": "Day Environment HDRI 015",
+      "type": "hdri",
+      "url": "https://ambientcg.com/a/DayEnvironmentHDRI015",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/DayEnvironmentHDRI015.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:forest_cave",
+      "provider": "polyhaven",
+      "title": "Forest Cave",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/forest_cave",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/forest_cave.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Andreas Mischok",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:a2a9739e-1acc-4704-aea3-b525bc8245bf",
+      "provider": "blenderkit",
+      "title": "Forest Nature",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a2a9739e-1acc-4704-aea3-b525bc8245bf/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/79dfe0e222324a8fa0a8f1a00c35786a/files/thumbnail_6f2f2038-b3c4-4e26-8c17-429b1d6b2109.webp.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    }
+  ]
+}

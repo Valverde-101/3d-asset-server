@@ -1,0 +1,616 @@
+{
+  "slug": "free-studio-hdris",
+  "search": {
+    "q": "studio",
+    "types": [
+      "hdri"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:43.362Z",
+  "assets": [
+    {
+      "id": "polyhaven:studio_small_09",
+      "provider": "polyhaven",
+      "title": "Studio Small 09",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_09",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_09.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:5650c0fd-17bd-48e5-a938-af5ca40b978e",
+      "provider": "blenderkit",
+      "title": "White Studio Lighting",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5650c0fd-17bd-48e5-a938-af5ca40b978e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/65cf945fabcf435fb75a2d2053e38739/files/thumbnail_d5d701aa-30f1-468c-93fc-4f5a4035dfa4.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Jon 13",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_small_08",
+      "provider": "polyhaven",
+      "title": "Studio Small 08",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_08",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_08.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:11189708-37ed-4a82-acc9-7ec6bc2e6868",
+      "provider": "blenderkit",
+      "title": "Studio with Soft Panel Lights HDRI",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/11189708-37ed-4a82-acc9-7ec6bc2e6868/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/17bd0562308d48f79ffb7a616980b6a3/files/thumbnail_7fcf61da-8f0d-4ea6-981f-c9726b3d024e.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_small_03",
+      "provider": "polyhaven",
+      "title": "Studio Small 03",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:0a96a62e-1f45-4619-a11b-bbef49069c01",
+      "provider": "blenderkit",
+      "title": "Car Showroom Studio HDRI",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0a96a62e-1f45-4619-a11b-bbef49069c01/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d2522d96f51a411c9a6c6a4e98b83ab4/files/thumbnail_5f834e16-e47b-4434-a977-296ae7266e9b.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:photo_studio_01",
+      "provider": "polyhaven",
+      "title": "Photo Studio 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/photo_studio_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/photo_studio_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:0a76949c-d8c6-4828-975e-d71dd894cbca",
+      "provider": "blenderkit",
+      "title": "Studio Light Black White Light",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0a76949c-d8c6-4828-975e-d71dd894cbca/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0edd2429cbf74c57829c883253afc3f2/files/thumbnail_2c2315a5-b564-479f-86a3-4fcef07731fc.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_garden",
+      "provider": "polyhaven",
+      "title": "Studio Garden",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_garden",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_garden.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:bed1fafc-6f6f-4b01-9a45-054261e1ef08",
+      "provider": "blenderkit",
+      "title": "Studio - Interior Glow studio",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/bed1fafc-6f6f-4b01-9a45-054261e1ef08/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/52a62e4921e644749bb918e496d791db/files/thumbnail_57cb8dd6-c503-4060-969c-a1a3fa418bd4.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:christmas_photo_studio_01",
+      "provider": "polyhaven",
+      "title": "Christmas Photo Studio 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/christmas_photo_studio_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/christmas_photo_studio_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:4b6bed11-0025-4eb4-8491-6ffc1b25fb07",
+      "provider": "blenderkit",
+      "title": "Studio Small 09",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4b6bed11-0025-4eb4-8491-6ffc1b25fb07/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d1907945064a4125abe4e9248ec078fc/files/thumbnail_fb7e2aea-4f57-4681-8555-acf90bde33de.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:photo_studio_loft_hall",
+      "provider": "polyhaven",
+      "title": "Photo Studio Loft Hall",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/photo_studio_loft_hall",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/photo_studio_loft_hall.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:cb395fa7-9bff-4545-aa43-88574ef07bc2",
+      "provider": "blenderkit",
+      "title": "White Studio Product Light HDRI",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/cb395fa7-9bff-4545-aa43-88574ef07bc2/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/766e8899bff64ff49bc5b0697bd450a5/files/thumbnail_69da1958-84ef-479b-b3ed-680ede27d399.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_small_02",
+      "provider": "polyhaven",
+      "title": "Studio Small 02",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:3f9334b3-3030-471c-9ed1-2319ff11cd22",
+      "provider": "blenderkit",
+      "title": "Arch Pillar Studio light HDRI",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3f9334b3-3030-471c-9ed1-2319ff11cd22/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9bbc93c0f9994b94b9568d98b051de2a/files/thumbnail_6473ffa4-05cd-4e5c-9170-2166bee7ac06.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nandu M",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_small_05",
+      "provider": "polyhaven",
+      "title": "Studio Small 05",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_05",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_05.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "polyhaven:studio_small_04",
+      "provider": "polyhaven",
+      "title": "Studio Small 04",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:7a564701-df6d-407b-9059-dd416a02b8a0",
+      "provider": "blenderkit",
+      "title": "Studio Product Silver",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7a564701-df6d-407b-9059-dd416a02b8a0/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/0b28b025acdd481bbd0d696ecae2a03e/files/thumbnail_4e30cd32-e69e-4ec3-b2b7-111fcd1d717d.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Jon 13",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_small_01",
+      "provider": "polyhaven",
+      "title": "Studio Small 01",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:7a7a2941-2c7e-446b-9a53-97b3a67b765c",
+      "provider": "blenderkit",
+      "title": "Studio Light 7",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/7a7a2941-2c7e-446b-9a53-97b3a67b765c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c213ee11759a4e61839899e7d26a35e0/files/thumbnail_7cd590e4-00ad-4984-8af4-d8ea216fa2e9.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:blue_photo_studio",
+      "provider": "polyhaven",
+      "title": "Blue Photo Studio",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/blue_photo_studio",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/blue_photo_studio.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:42f3a72c-2532-4f2f-9336-48bb703152cb",
+      "provider": "blenderkit",
+      "title": "Studio Small 03",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/42f3a72c-2532-4f2f-9336-48bb703152cb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1531fa9d5afd4add8a22d4315183ab61/files/thumbnail_eaf4d5c0-6930-408e-83e7-4552843c9ff2.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "polyhaven:studio_country_hall",
+      "provider": "polyhaven",
+      "title": "Studio Country Hall",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_country_hall",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_country_hall.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Sergej Majboroda",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:1b144cf3-751e-410f-8f07-57a596c2c684",
+      "provider": "blenderkit",
+      "title": "Studio Light",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/1b144cf3-751e-410f-8f07-57a596c2c684/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/3b6c9d1ff617471db0d2529d0e585f3d/files/thumbnail_438ed257-1152-4748-93f2-b9ff8485d837.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Free poly",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "polyhaven:studio_small_07",
+      "provider": "polyhaven",
+      "title": "Studio Small 07",
+      "type": "hdri",
+      "url": "https://polyhaven.com/a/studio_small_07",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/studio_small_07.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Greg Zaal",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "hdr",
+        "exr"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:724d0505-18d3-445d-b47c-49514c03975c",
+      "provider": "blenderkit",
+      "title": "Arc Panel Studio",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/724d0505-18d3-445d-b47c-49514c03975c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8e5f93bd0d1143969a58381c530d2914/files/thumbnail_7ba606c8-bbb0-4530-89ff-8bd5d4b99edc.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Elin FL",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:d9e44f4d-92c0-46f6-badb-6d726ffa4e6d",
+      "provider": "blenderkit",
+      "title": "360 Studio Window",
+      "type": "hdri",
+      "url": "https://www.blendkit.com/asset-gallery-detail/d9e44f4d-92c0-46f6-badb-6d726ffa4e6d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6b8a0cb3b5ff48958350a4bb68d6d298/files/thumbnail_43eb9321-ca82-485d-8960-cc4b90b67249.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Elin FL",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "8k"
+    }
+  ]
+}

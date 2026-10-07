@@ -1,0 +1,34 @@
+[
+  {
+    "id": "hdris",
+    "name": "HDRIs",
+    "title": "Free HDRIs by mood and setting",
+    "description": "Free HDRI environment maps grouped by setting: sunsets, studios, night skies, overcast days and forests, as HDR and EXR files with clear licences.",
+    "intro": "An HDRI lights a whole 3D scene from one panoramic image and doubles as its background. These collections group free HDRIs by the light they give: low warm sun, soft overcast fill, controlled studio softboxes or the dark blue of a night sky. Most come from Poly Haven, ambientCG and BlenderKit under CC0, so you can use them in commercial work without credit.",
+    "types": ["hdri"]
+  },
+  {
+    "id": "textures",
+    "name": "Textures",
+    "title": "Free PBR textures by material",
+    "description": "Free PBR textures and materials by surface: brick, wood, concrete, metal, fabric, marble, tiles and grass, with colour, normal and roughness maps up to 8K.",
+    "intro": "A PBR material is a set of image maps (colour, normal, roughness, often ambient occlusion and displacement) that tells a renderer how a surface reacts to light. These collections group free materials by surface, from twelve texture sites at once, so you can compare a brick wall from Poly Haven with one from ambientCG, TextureCan or CGBookcase without opening every site.",
+    "types": ["material", "texture"]
+  },
+  {
+    "id": "3d-models",
+    "name": "3D models",
+    "title": "Free 3D models by subject",
+    "description": "Free 3D models by subject: trees, furniture, cars, animated characters, rocks, plants and food, as glTF, GLB, FBX and Blend files with their licences.",
+    "intro": "Free 3D models range from photoscanned props to stylised low-poly game pieces. These collections group them by subject across Poly Haven, BlenderKit, Kenney, Quaternius, Polyfork, itch.io and more, and show each model's licence and formats up front, so you can tell what drops straight into Three.js, Godot, Unity or Blender.",
+    "types": ["model"]
+  },
+  {
+    "id": "game-assets",
+    "name": "Game assets",
+    "title": "Free game assets by theme",
+    "description": "Free game assets by theme: sci-fi, medieval, dungeon and space kits, low-poly packs and UI kits from Kenney, Quaternius, Polyfork, itch.io and BlenderKit.",
+    "intro": "Game assets are most useful as matching sets: a dungeon kit whose walls, doors and props share one scale and style, or a UI kit whose buttons and panels fit together. These collections group free models and packs by theme, mostly low-poly and stylised, and say for each one whether it is CC0 or needs credit.",
+    "types": ["model", "pack", "sprite", "ui"]
+  }
+]

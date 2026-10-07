@@ -1,0 +1,648 @@
+{
+  "slug": "free-furniture-3d-models",
+  "search": {
+    "q": "furniture",
+    "types": [
+      "model"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:33.578Z",
+  "assets": [
+    {
+      "id": "blenderkit:0f1918d7-7350-43a8-a012-469ddc446b35",
+      "provider": "blenderkit",
+      "title": "Kitchen Furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/0f1918d7-7350-43a8-a012-469ddc446b35/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6c4d7a80baab41a4b8fe066134d2f7f5/files/thumbnail_e39d86db-2d45-485b-91b9-969de9811cce.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Abubakr Hamidov",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 2159356
+    },
+    {
+      "id": "kenney:furniture-kit",
+      "provider": "kenney",
+      "title": "Furniture Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/furniture-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/furniture-kit/4573c6a40b-1677580842/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:ultimatefurniture",
+      "provider": "quaternius",
+      "title": "Ultimate Furniture Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatefurniture.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatefurniture.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:makesterajp/furniture-3d-props-pack-low-poly",
+      "provider": "itchio",
+      "title": "Furniture 3D Props Pack – Low Poly",
+      "type": "model",
+      "url": "https://makesterajp.itch.io/furniture-3d-props-pack-low-poly",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIxODc0MTQ2LnBuZw==/315x250%23c/SpiECG.png",
+      "downloadable": false,
+      "author": "MakesterAJP",
+      "free": true
+    },
+    {
+      "id": "blenderkit:34d86962-61f9-4903-a981-564941ff9632",
+      "provider": "blenderkit",
+      "title": "Modern Kitchen Furniture Set Minimalist",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/34d86962-61f9-4903-a981-564941ff9632/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e3e2bc7b27bd42df82fabe19bc99254e/files/thumbnail_2fb7c429-cf0b-4a9a-99f3-982255000e07.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Zulian Firmansyah",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "1k",
+      "polyCount": 50262
+    },
+    {
+      "id": "quaternius:furniture",
+      "provider": "quaternius",
+      "title": "Furniture Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/furniture.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/furniture.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:ayu10/furniture-pack",
+      "provider": "itchio",
+      "title": "3D Furniture",
+      "type": "model",
+      "url": "https://ayu10.itch.io/furniture-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzM3MjcyNTMucG5n/315x250%23c/I4TrOs.png",
+      "downloadable": false,
+      "author": "Ayu10",
+      "free": true
+    },
+    {
+      "id": "polyhaven:Television_01",
+      "provider": "polyhaven",
+      "title": "Television 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/Television_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/Television_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Gabriel Radić",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 1918
+    },
+    {
+      "id": "blenderkit:77ff235a-cf20-4407-b830-ac5d7126b5b5",
+      "provider": "blenderkit",
+      "title": "Small kitchen furniture set",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/77ff235a-cf20-4407-b830-ac5d7126b5b5/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/b415983979004ee5a96775fb38c672ad/files/thumbnail_3526ebcb-db88-40a0-850b-d41d7a088088.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Paweł Wałasiewicz",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 5372
+    },
+    {
+      "id": "sharetextures:sofa_1",
+      "provider": "sharetextures",
+      "title": "Sofa 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/sofa_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/35601dee-f79e-44e5-ab60-1a00b8b106ad.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:mehrasaur/3d-furnitre-pack",
+      "provider": "itchio",
+      "title": "3D Furniture Pack",
+      "type": "model",
+      "url": "https://mehrasaur.itch.io/3d-furnitre-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvMjEzOTE5LzEwMDgzMjIucG5n/315x250%23c/Si%2BpP6.png",
+      "downloadable": false,
+      "author": "mehrasaur",
+      "free": true
+    },
+    {
+      "id": "blenderkit:28249b5c-0b99-4759-bfd9-32a0e05c7e22",
+      "provider": "blenderkit",
+      "title": "Wenge Finish Nightstand Wooden Bedside Table 2 Drawer End Side Storage Furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/28249b5c-0b99-4759-bfd9-32a0e05c7e22/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/10822725247c41a58ab8c6bdc248870a/files/thumbnail_2e3bc60a-0ded-43e1-b92e-be8e4fcc0355.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Squid Paster",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 3404
+    },
+    {
+      "id": "polyhaven:sofa_02",
+      "provider": "polyhaven",
+      "title": "Sofa 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/sofa_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sofa_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Kirill Sannikov",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 2728
+    },
+    {
+      "id": "sharetextures:chair_19",
+      "provider": "sharetextures",
+      "title": "Chair 19",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/chair_19",
+      "thumbnailUrl": "https://images.sharetextures.com/u/cb96e0a1-c2ab-4729-8d01-711f5684af16.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:tmtenma/little-cozy-room",
+      "provider": "itchio",
+      "title": "Little Cozy Room — Cozy 3D Furniture & Decor + Matching Icons",
+      "type": "model",
+      "url": "https://tmtenma.itch.io/little-cozy-room",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzMwNDA2NDM5LnBuZw==/315x250%23c/GLM1Ip.png",
+      "downloadable": false,
+      "author": "TMTenma",
+      "free": true
+    },
+    {
+      "id": "blenderkit:a9a7de3d-971c-4450-8aa2-0b2a273b617a",
+      "provider": "blenderkit",
+      "title": "BOASTAD furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a9a7de3d-971c-4450-8aa2-0b2a273b617a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/df2c035ac54a4feb86ecb1234d0d2b6c/files/thumbnail_13ba676d-3b85-4099-bd90-b8fce1e3652b.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Lowpolylines Parussa",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 886
+    },
+    {
+      "id": "polyhaven:wooden_table_02",
+      "provider": "polyhaven",
+      "title": "Wooden Table 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/wooden_table_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/wooden_table_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Serhii Khromov",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 196
+    },
+    {
+      "id": "itchio:kaylousberg/furniture-bits",
+      "provider": "itchio",
+      "title": "KayKit : Furniture Bits",
+      "type": "model",
+      "url": "https://kaylousberg.itch.io/furniture-bits",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MzY3MzU1LmpwZw==/315x250%23c/0jTPYa.jpg",
+      "downloadable": false,
+      "author": "Kay Lousberg",
+      "free": true
+    },
+    {
+      "id": "blenderkit:03d8fc7e-6a15-4110-844d-7615635998e9",
+      "provider": "blenderkit",
+      "title": "Office Desk | Table Furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/03d8fc7e-6a15-4110-844d-7615635998e9/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c6021338fd87470abcc1345df43e020c/files/thumbnail_cfeda8e5-ce61-41f4-a306-fec88067100c.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Wondie A.",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 1326
+    },
+    {
+      "id": "sharetextures:chair_21",
+      "provider": "sharetextures",
+      "title": "Chair 21",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/chair_21",
+      "thumbnailUrl": "https://images.sharetextures.com/u/f86e8ddc-a3e1-41df-89c1-11762a2a649f.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:sofa_03",
+      "provider": "polyhaven",
+      "title": "Sofa 03",
+      "type": "model",
+      "url": "https://polyhaven.com/a/sofa_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sofa_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Fran Calvente",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 8004
+    },
+    {
+      "id": "quaternius:fantasypropsmegakit",
+      "provider": "quaternius",
+      "title": "Fantasy Props MegaKit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/fantasypropsmegakit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/fantasypropsmegakit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:mst-creator/furniture-pack-1",
+      "provider": "itchio",
+      "title": "Furniture Pack 1",
+      "type": "model",
+      "url": "https://mst-creator.itch.io/furniture-pack-1",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzUxODM5NzUucG5n/315x250%23c/Zxn9bj.png",
+      "downloadable": false,
+      "author": "MST_Creator",
+      "free": true
+    },
+    {
+      "id": "blenderkit:8ec4fc81-166e-4d33-83bf-e985335ccadc",
+      "provider": "blenderkit",
+      "title": "Bathroom Furniture Set",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8ec4fc81-166e-4d33-83bf-e985335ccadc/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/03ef9abe3280459d8b33d959c0446523/files/thumbnail_5fc1af8d-3131-498c-ae7f-ae05c584cd60.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nobody",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 70321
+    },
+    {
+      "id": "sharetextures:sofa_3",
+      "provider": "sharetextures",
+      "title": "Sofa 3",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/sofa_3",
+      "thumbnailUrl": "https://images.sharetextures.com/u/12f7f47d-5da8-4eaf-ad24-890af3ca70c2.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:modern_arm_chair_01",
+      "provider": "polyhaven",
+      "title": "Modern Arm Chair 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/modern_arm_chair_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/modern_arm_chair_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Vibrant Nordic",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 8916
+    },
+    {
+      "id": "quaternius:ultimatehomeinterior",
+      "provider": "quaternius",
+      "title": "Ultimate House Interior Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatehomeinterior.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatehouseinterior.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:375867d4-b002-44ac-ba59-e2764f68b15d",
+      "provider": "blenderkit",
+      "title": "Sofa Set Furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/375867d4-b002-44ac-ba59-e2764f68b15d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/cf6f3bf349734652923a33e48f617b44/files/thumbnail_c3ded1ce-7c81-4f1f-8fa5-d004dd90e512.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Wondie A.",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "polyCount": 10192
+    },
+    {
+      "id": "itchio:ladoncha/furniture-asset-pack",
+      "provider": "itchio",
+      "title": "Furniture Asset Pack 3D - Free",
+      "type": "model",
+      "url": "https://ladoncha.itch.io/furniture-asset-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEzMDM5NDc5LnBuZw==/315x250%23c/70JW5q.png",
+      "downloadable": false,
+      "author": "Aline",
+      "free": true
+    },
+    {
+      "id": "sharetextures:armchair_1",
+      "provider": "sharetextures",
+      "title": "Armchair 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/armchair_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/33e439cb-1763-4780-9da1-d7ef51bbfc77.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:Sofa_01",
+      "provider": "polyhaven",
+      "title": "Sofa 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/Sofa_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/Sofa_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Kirill Sannikov",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 4101
+    },
+    {
+      "id": "itchio:mariaisme/3d-voxel-furniture",
+      "provider": "itchio",
+      "title": "3D Voxel Interior Furniture",
+      "type": "model",
+      "url": "https://mariaisme.itch.io/3d-voxel-furniture",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzczNTcxNjgucG5n/315x250%23c/GE9Gq1.png",
+      "downloadable": false,
+      "author": "MariaIsMe",
+      "free": true
+    },
+    {
+      "id": "sharetextures:chaiselongue_1",
+      "provider": "sharetextures",
+      "title": "Chaise Longue 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/furniture/chaiselongue_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/e62e2222-95be-4e3b-af33-2804e8b619b4.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:round_wooden_table_01",
+      "provider": "polyhaven",
+      "title": "Round Wooden Table 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/round_wooden_table_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/round_wooden_table_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Ulan Cabanilla",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 8640
+    },
+    {
+      "id": "blenderkit:2b167922-e1f7-4f05-b28b-4b4cc4862599",
+      "provider": "blenderkit",
+      "title": "Open shelves furniture",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2b167922-e1f7-4f05-b28b-4b4cc4862599/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c40ebd05cc5f4b99b24dbded017804c4/files/thumbnail_c28ce96e-cc81-4fd2-9880-ccd84cb2274e.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "/Unwrapped",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 606
+    },
+    {
+      "id": "itchio:eclair-assets/furniture-kit-glb-pack-140-free-cc0-3d-models",
+      "provider": "itchio",
+      "title": "Furniture Kit GLB Pack - 140 Free CC0 3D Models",
+      "type": "model",
+      "url": "https://eclair-assets.itch.io/furniture-kit-glb-pack-140-free-cc0-3d-models",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI3MTQzNjU4LnBuZw==/315x250%23c/vicOjl.png",
+      "downloadable": false,
+      "author": "Eclair Assets",
+      "free": true
+    }
+  ]
+}

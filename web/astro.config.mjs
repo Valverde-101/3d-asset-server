@@ -1,13 +1,18 @@
 // @ts-check
 import react from "@astrojs/react";
-import sitemap from "@astrojs/sitemap";
+import sitemap, { ChangeFreqEnum } from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 import { defineConfig } from "astro/config";
 import agentFiles from "./integrations/agent-files.mjs";
 import ogImages from "./integrations/og-images.mjs";
+import { sitemapMeta } from "./integrations/sitemap-meta.mjs";
 
 // Canonical origin baked into canonical URLs, sitemap, Open Graph and JSON-LD.
 const site = process.env.SITE_URL ?? "https://3d.shep.bot";
+// Real per-page lastmod dates and the thin pages to leave out (see the module).
+const pages = sitemapMeta();
+/** @param {string} url */
+const pathOf = (url) => new URL(url).pathname.replace(/\/$/, "") || "/";
 
 export default defineConfig({
   site,
@@ -19,9 +24,12 @@ export default defineConfig({
     agentFiles(),
     ogImages(),
     sitemap({
-      filter: (page) => !page.includes("/404") && !page.includes("/docs/api/playground"),
-      changefreq: "weekly",
-      lastmod: new Date(),
+      filter: (page) => !page.includes("/404") && !page.includes("/docs/api/playground") && !pages.noindex.has(pathOf(page)),
+      serialize(item) {
+        const path = pathOf(item.url);
+        const lastmod = pages.lastmod.get(path);
+        return { ...item, lastmod, changefreq: path.startsWith("/assets") || path === "/stats" ? ChangeFreqEnum.DAILY : ChangeFreqEnum.WEEKLY };
+      },
     }),
   ],
   vite: {

@@ -1,0 +1,114 @@
+---
+// /sources/<id>: one asset site as 3D Asset Server sees it: what it holds
+// (from the daily census), how it is searched, its licence, and its assets in
+// the curated collections.
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import AssetCard from "@/components/collections/AssetCard.astro";
+import Breadcrumbs from "@/components/collections/Breadcrumbs.astro";
+import { countLabel, sourcePages, sourcePath, type SourcePage } from "@/lib/collections";
+import { COUNTED_ON, TYPE_NAMES, fmt } from "@/lib/catalog";
+import { breadcrumbs, collectionPage } from "@/lib/schema";
+import { SOURCE_COUNT } from "@/lib/site";
+
+export async function getStaticPaths() {
+  return (await sourcePages()).map((page) => ({ params: { id: page.provider.id }, props: { page } }));
+}
+
+interface Props {
+  page: SourcePage;
+}
+const { page: s } = Astro.props;
+const p = s.provider;
+const t = s.census;
+const path = sourcePath(p.id);
+const access = { api: "Official or public API", scrape: "The site's public pages, read politely and cached", link: "Not searched directly: the site blocks automated access, so results link to the same search on the site" } as const;
+const pricing = { free: "Free", freemium: "Free and paid", paid: "Paid" } as const;
+const clip = (x: string, n: number) => (x.length > n ? `${x.slice(0, n - 1).trimEnd()}…` : x);
+const title = `${p.name}: assets, licence and downloads`;
+const description = clip(`${p.name} (${p.description.replace(/\.$/, "")}): ${p.license ?? "licence per asset"}, ${p.supportsDownload ? "direct downloads" : "links to each asset page"}. Searched with ${SOURCE_COUNT - 1} other 3D asset sites.`, 160);
+const trail = [{ name: "Home", path: "/" }, { name: "Sources", path: "/docs/sources" }, { name: p.name, path }];
+const types = t ? Object.entries(t.byType).sort((a, b) => b[1] - a[1]) : [];
+const categories = t?.categories ? Object.keys(t.categories).slice(0, 10) : [];
+const searchLink = `/search?providers=${p.id}${p.assetTypes[0] ? `&type=${p.assetTypes[0]}` : ""}`;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  markdown={`${path}.md`}
+  noindex={!s.indexable}
+  schema={[
+    collectionPage({ title, description, path, about: [p.name], assets: s.assets }),
+    breadcrumbs(trail),
+  ]}
+>
+  <div class="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+    <Breadcrumbs trail={trail} />
+    <header class="mt-6 max-w-3xl">
+      <p class="text-sm font-medium text-primary">Source</p>
+      <h1 class="mt-2 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">{p.name}</h1>
+      <p class="mt-4 text-pretty text-lg text-muted-foreground">{p.description}</p>
+      <p class="mt-6 flex flex-wrap gap-3">
+        {p.access !== "link" && <a href={searchLink} class="inline-flex items-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition hover:bg-primary/90">Search {p.name}</a>}
+        <a href={p.homepage} rel="noopener" class="inline-flex items-center rounded-md border px-4 py-2 text-sm font-medium transition hover:bg-accent">Visit {p.name} <span aria-hidden="true" class="ml-1">↗</span></a>
+      </p>
+    </header>
+
+    <dl class="mt-10 grid gap-px overflow-hidden rounded-xl border bg-border text-sm sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-background p-4"><dt class="text-muted-foreground">Licence</dt><dd class="mt-1 font-medium">{p.license ?? "Set per asset"}</dd></div>
+      <div class="bg-background p-4"><dt class="text-muted-foreground">Pricing</dt><dd class="mt-1 font-medium">{pricing[p.pricing as keyof typeof pricing]}</dd></div>
+      <div class="bg-background p-4"><dt class="text-muted-foreground">Direct download here</dt><dd class="mt-1 font-medium">{p.supportsDownload ? "Yes" : "No, results link to the asset page"}</dd></div>
+      <div class="bg-background p-4"><dt class="text-muted-foreground">Asset types</dt><dd class="mt-1 font-medium">{p.assetTypes.map((x) => TYPE_NAMES[x] ?? x).join(", ")}</dd></div>
+      <div class="bg-background p-4 sm:col-span-2"><dt class="text-muted-foreground">How it is searched</dt><dd class="mt-1 font-medium">{access[p.access as keyof typeof access]}</dd></div>
+      {t && (
+        <div class="bg-background p-4"><dt class="text-muted-foreground">Listings (counted {COUNTED_ON})</dt><dd class="mt-1 font-medium">{fmt(t.total, t.atLeast)}{t.unit === "packs" ? " packs" : ""}{t.free !== undefined && t.pricing !== "free" ? `, ${fmt(t.free)} free` : ""}</dd></div>
+      )}
+      {t && types.length > 0 && (
+        <div class="bg-background p-4"><dt class="text-muted-foreground">By type</dt><dd class="mt-1 font-medium">{types.slice(0, 4).map(([k, n]) => `${TYPE_NAMES[k] ?? k} ${fmt(n)}`).join(", ")}</dd></div>
+      )}
+      {t?.addedLast30Days !== undefined && (
+        <div class="bg-background p-4"><dt class="text-muted-foreground">New in the last 30 days</dt><dd class="mt-1 font-medium">{fmt(t.addedLast30Days)}</dd></div>
+      )}
+    </dl>
+    {categories.length > 0 && (
+      <p class="mt-4 text-sm text-muted-foreground">Biggest categories: {categories.join(", ")}.</p>
+    )}
+
+    {s.assets.length > 0 && (
+      <section class="mt-14" aria-labelledby="examples">
+        <h2 id="examples" class="text-2xl font-semibold tracking-tight">{p.name} in the collections</h2>
+        <p class="mt-2 text-sm text-muted-foreground">A sample of {p.name} assets picked for the curated collections below.</p>
+        <ul class="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {s.assets.map((a, i) => <AssetCard asset={a} eager={i < 4} />)}
+        </ul>
+      </section>
+    )}
+
+    {s.collections.length > 0 && (
+      <section class="mt-14 max-w-3xl" aria-labelledby="collections">
+        <h2 id="collections" class="text-xl font-semibold tracking-tight">Collections with {p.name} assets</h2>
+        <ul class="mt-4 divide-y rounded-xl border text-sm">
+          {s.collections.map(({ collection: c, count }) => (
+            <li class="flex items-center justify-between gap-3 px-4 py-3">
+              <a href={c.path} class="font-medium hover:text-primary hover:underline">{c.topic.data.title}</a>
+              <span class="text-muted-foreground">{count} of {countLabel(c.assets)}</span>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {t?.highlights?.length ? (
+      <section class="mt-14 max-w-3xl" aria-labelledby="popular">
+        <h2 id="popular" class="text-xl font-semibold tracking-tight">Most downloaded on {p.name}</h2>
+        <ul class="mt-4 list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+          {t.highlights.map((h) => <li>{h.label}: <a href={h.url} rel="noopener" class="text-primary hover:underline">{h.title}</a>{h.value !== undefined && ` (${fmt(h.value)} downloads)`}</li>)}
+        </ul>
+      </section>
+    ) : null}
+
+    <p class="mt-16 text-sm text-muted-foreground">
+      See <a href={`/docs/sources#${p.id}`} class="text-primary hover:underline">all {SOURCE_COUNT} sources and their licences</a>, the <a href="/stats" class="text-primary hover:underline">daily catalog census</a>, or <a href="/assets" class="text-primary hover:underline">browse the collections</a>.
+    </p>
+  </div>
+</BaseLayout>

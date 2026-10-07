@@ -1,0 +1,286 @@
+{
+  "slug": "free-game-ui-kits",
+  "search": {
+    "q": "ui",
+    "types": [
+      "ui"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:33.950Z",
+  "assets": [
+    {
+      "id": "kenney:ui-pack",
+      "provider": "kenney",
+      "title": "UI Pack",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/ui-pack",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/ui-pack/249266460a-1718203984/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui-user-interface-mega-pack",
+      "provider": "itchio",
+      "title": "UI User Interface MEGA PACK",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui-user-interface-mega-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIwNDA3ODI4LnBuZw==/315x250%23c/%2F1qE%2FS.png",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "kenney:ui-pack-adventure",
+      "provider": "kenney",
+      "title": "UI Pack - Adventure",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/ui-pack-adventure",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/ui-pack-adventure/6ee19514ca-1723597272/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui",
+      "provider": "itchio",
+      "title": "UI User Interface Pack - Retro",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE5NDM3MTk1LmdpZg==/315x250%23c/XeKEXz.gif",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "kenney:ui-pack-pixel-adventure",
+      "provider": "kenney",
+      "title": "UI Pack - Pixel Adventure",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/ui-pack-pixel-adventure",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/ui-pack-pixel-adventure/07714c9849-1725434429/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui-user-interface-medieval",
+      "provider": "itchio",
+      "title": "UI User Interface Pack - Medieval",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui-user-interface-medieval",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIwMTY3MjE0LmdpZg==/315x250%23c/%2BoQIw8.gif",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "kenney:ui-pack-sci-fi",
+      "provider": "kenney",
+      "title": "UI Pack - Sci-Fi",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/ui-pack-sci-fi",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/ui-pack-sci-fi/00227142e5-1724181103/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:admurin/ui-steel-theme",
+      "provider": "itchio",
+      "title": "UI: 05 Steel",
+      "type": "ui",
+      "url": "https://admurin.itch.io/ui-steel-theme",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzU3NDIxMzYucG5n/315x250%23c/8B2GEF.png",
+      "downloadable": false,
+      "author": "Admurin",
+      "free": true
+    },
+    {
+      "id": "kenney:ui-pack-rpg-expansion",
+      "provider": "kenney",
+      "title": "UI Pack (RPG Expansion)",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/ui-pack-rpg-expansion",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/ui-pack-rpg-expansion/3cbd16d800-1677661820/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:admurin/ui-iron-theme",
+      "provider": "itchio",
+      "title": "UI: 03 Iron Theme",
+      "type": "ui",
+      "url": "https://admurin.itch.io/ui-iron-theme",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzU3MzMzNjcucG5n/315x250%23c/Rkt3JK.png",
+      "downloadable": false,
+      "author": "Admurin",
+      "free": true
+    },
+    {
+      "id": "kenney:fantasy-ui-borders",
+      "provider": "kenney",
+      "title": "Fantasy UI Borders",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/fantasy-ui-borders",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/fantasy-ui-borders/ac36214d33-1701602364/sample-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:admurin/ui-wood-theme",
+      "provider": "itchio",
+      "title": "UI: 02 Wood Theme",
+      "type": "ui",
+      "url": "https://admurin.itch.io/ui-wood-theme",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzU3MzMzNzMucG5n/315x250%23c/KAcc6R.png",
+      "downloadable": false,
+      "author": "Admurin",
+      "free": true
+    },
+    {
+      "id": "kenney:pixel-ui-pack",
+      "provider": "kenney",
+      "title": "Pixel UI Pack",
+      "type": "ui",
+      "url": "https://kenney.nl/assets/pixel-ui-pack",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/pixel-ui-pack/0ac499be0d-1677661504/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:kicked-in-teeth/button-ui",
+      "provider": "itchio",
+      "title": "UI Buttons",
+      "type": "ui",
+      "url": "https://kicked-in-teeth.itch.io/button-ui",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvMTk3MzY5LzkyMjkwMS5naWY=/315x250%23c/XdP4%2FD.gif",
+      "downloadable": false,
+      "author": "Kicked-in-Teeth",
+      "free": true
+    },
+    {
+      "id": "itchio:black-spot-tm/ui-pack-1-cars-ui",
+      "provider": "itchio",
+      "title": "UI PACK #1 (CARS UI)",
+      "type": "ui",
+      "url": "https://black-spot-tm.itch.io/ui-pack-1-cars-ui",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MDcwMjM2LnBuZw==/315x250%23c/S13mQC.png",
+      "downloadable": false,
+      "author": "BLACK SPOT",
+      "free": true
+    },
+    {
+      "id": "itchio:nedokontent/ui-wooden-controls",
+      "provider": "itchio",
+      "title": "UI: Wooden Controls for Gamepad/Keyboard",
+      "type": "ui",
+      "url": "https://nedokontent.itch.io/ui-wooden-controls",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0MDM3MjQ2LmdpZg==/315x250%23c/nPx9yn.gif",
+      "downloadable": false,
+      "author": "NedoKontent",
+      "free": true
+    },
+    {
+      "id": "itchio:loudeyes/paper-ui-pack-for-games",
+      "provider": "itchio",
+      "title": "Paper UI Asset Pack for Games",
+      "type": "ui",
+      "url": "https://loudeyes.itch.io/paper-ui-pack-for-games",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE4NzA2NzUucG5n/315x250%23c/q%2BGE1S.png",
+      "downloadable": false,
+      "author": "LoudEyes",
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui-user-interface-pack-horror",
+      "provider": "itchio",
+      "title": "UI User Interface Pack - Horror",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui-user-interface-pack-horror",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIwMDcxOTA4LmdpZg==/315x250%23c/ueFOpd.gif",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui-user-interface-pack-black-and-white",
+      "provider": "itchio",
+      "title": "UI User Interface Pack - Black and White",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui-user-interface-pack-black-and-white",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE5OTQzMDU1LmdpZg==/315x250%23c/jGTXSv.gif",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "itchio:toffeecraft/ui-user-interface-pack-elegant",
+      "provider": "itchio",
+      "title": "UI User Interface Pack - Elegant",
+      "type": "ui",
+      "url": "https://toffeecraft.itch.io/ui-user-interface-pack-elegant",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE5OTE5OTM2LmdpZg==/315x250%23c/GKSlzM.gif",
+      "downloadable": false,
+      "author": "ToffeeCraft",
+      "free": true
+    },
+    {
+      "id": "itchio:rlolo88/game-buttons",
+      "provider": "itchio",
+      "title": "UI Asset Pack with buttons and panels - HD",
+      "type": "ui",
+      "url": "https://rlolo88.itch.io/game-buttons",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEzMTEwNjA1LnBuZw==/315x250%23c/W76Kxg.png",
+      "downloadable": false,
+      "author": "rlolo88",
+      "free": true
+    }
+  ]
+}

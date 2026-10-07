@@ -1,0 +1,682 @@
+{
+  "slug": "free-food-3d-models",
+  "search": {
+    "q": "food",
+    "types": [
+      "model"
+    ],
+    "free": true,
+    "exclude": [
+      "dog",
+      "delivery bag"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:05:32.192Z",
+  "assets": [
+    {
+      "id": "polyhaven:food_apple_01",
+      "provider": "polyhaven",
+      "title": "Food Apple 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_apple_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_apple_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 7012
+    },
+    {
+      "id": "blenderkit:5f2a6cd4-1860-4b9d-907c-86d9ce186eea",
+      "provider": "blenderkit",
+      "title": "Food Apple",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5f2a6cd4-1860-4b9d-907c-86d9ce186eea/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9b22bf54e62e439f8ddc02029eab375e/files/thumbnail_ef0b2fdb-6d5f-42c6-be13-8ab7d25d9a4a.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "kenney:food-kit",
+      "provider": "kenney",
+      "title": "Food Kit",
+      "type": "model",
+      "url": "https://kenney.nl/assets/food-kit",
+      "thumbnailUrl": "https://kenney.nl/media/pages/assets/food-kit/7a37477a9c-1719418523/preview-400x.png",
+      "downloadable": true,
+      "author": "Kenney",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:ultimatefood",
+      "provider": "quaternius",
+      "title": "Ultimate Food Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatefood.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatefood.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:styloo/3dfood",
+      "provider": "itchio",
+      "title": "3D Food Asset Pack",
+      "type": "model",
+      "url": "https://styloo.itch.io/3dfood",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4NTgxMjczLmpwZw==/315x250%23c/rTGZUB.jpg",
+      "downloadable": false,
+      "author": "styloo",
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_lime_01",
+      "provider": "polyhaven",
+      "title": "Food Lime 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_lime_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_lime_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 8100
+    },
+    {
+      "id": "blenderkit:a1d9549e-4807-4c69-a258-08bdd0a74cba",
+      "provider": "blenderkit",
+      "title": "Food Storage Container(beans)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a1d9549e-4807-4c69-a258-08bdd0a74cba/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/37785d68345b40e68290a05c6dfd2919/files/thumbnail_1be083f7-498b-4331-bbe0-b16f7203694b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "belaid ziane",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "quaternius:junkfood",
+      "provider": "quaternius",
+      "title": "Junk Food Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/junkfood.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/junkfood.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:flockygame/foodcans",
+      "provider": "itchio",
+      "title": "Food Cans",
+      "type": "model",
+      "url": "https://flockygame.itch.io/foodcans",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzE4MDA0MzU1LnBuZw==/315x250%23c/AlO2ki.png",
+      "downloadable": false,
+      "author": "FlockyGame",
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_pomegranate_01",
+      "provider": "polyhaven",
+      "title": "Food Pomegranate 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_pomegranate_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_pomegranate_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 8142
+    },
+    {
+      "id": "blenderkit:30218610-0467-403c-8455-c30c84d3753a",
+      "provider": "blenderkit",
+      "title": "Food Storage Container(Macaroni)",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/30218610-0467-403c-8455-c30c84d3753a/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2c6b80fac64e46d59ee8fbdf553ea6e3/files/thumbnail_1ac6d0d7-708b-455e-baa2-c8877266850b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "belaid ziane",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ]
+    },
+    {
+      "id": "ambientcg:3DApple002",
+      "provider": "ambientcg",
+      "title": "3D Apple 002",
+      "type": "model",
+      "url": "https://ambientcg.com/a/3DApple002",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/3DApple002.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "obj",
+        "png"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:model-311",
+      "provider": "texturecan",
+      "title": "Cookie with Chocolate Chips 3D Model",
+      "type": "model",
+      "url": "https://www.texturecan.com/models/details/311/",
+      "thumbnailUrl": "https://www.texturecan.com/img/models/Cookie_0001/Cookie_0001_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:banana-1",
+      "provider": "sharetextures",
+      "title": "Banana 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/banana-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/3a30b0c5-1a45-4c1a-83ef-829d3bf54729.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:russian_food_cans_01",
+      "provider": "polyhaven",
+      "title": "Russian Food Cans 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/russian_food_cans_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/russian_food_cans_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Kosan Aziz",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 1348
+    },
+    {
+      "id": "itchio:binbun3d/food-mega-pack",
+      "provider": "itchio",
+      "title": "Food Mega Pack - 3D Asset Pack",
+      "type": "model",
+      "url": "https://binbun3d.itch.io/food-mega-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI0OTU2NTMzLmpwZw==/315x250%23c/o768W5.jpg",
+      "downloadable": false,
+      "author": "Binbun",
+      "free": true
+    },
+    {
+      "id": "texturecan:model-309",
+      "provider": "texturecan",
+      "title": "Blue Cheese 3D Model",
+      "type": "model",
+      "url": "https://www.texturecan.com/models/details/309/",
+      "thumbnailUrl": "https://www.texturecan.com/img/models/Cheese_0002/Cheese_0002_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_avocado_01",
+      "provider": "polyhaven",
+      "title": "Food Avocado 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_avocado_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_avocado_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 7743
+    },
+    {
+      "id": "blenderkit:23974eae-faf8-4676-bb94-abfa1ed772c0",
+      "provider": "blenderkit",
+      "title": "Junk Food",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/23974eae-faf8-4676-bb94-abfa1ed772c0/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/95b6f3e2bda6429d8733f8cf2ea434e9/files/thumbnail_45745621-8634-4644-a084-ec2d69cb0e68.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nobody",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 30048
+    },
+    {
+      "id": "sharetextures:potatoes_1",
+      "provider": "sharetextures",
+      "title": "Potatoes 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/potatoes_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/98e30afe-e688-4573-bf2d-4af10425ac80.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturecan:model-308",
+      "provider": "texturecan",
+      "title": "Cheddar Cheese 3D Model",
+      "type": "model",
+      "url": "https://www.texturecan.com/models/details/308/",
+      "thumbnailUrl": "https://www.texturecan.com/img/models/Cheese_0001/Cheese_0001_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_lychee_01",
+      "provider": "polyhaven",
+      "title": "Food Lychee 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_lychee_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_lychee_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 6783
+    },
+    {
+      "id": "blenderkit:a2e7a90f-c7c9-4b07-be9a-d674bb4da25d",
+      "provider": "blenderkit",
+      "title": "Food Container",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a2e7a90f-c7c9-4b07-be9a-d674bb4da25d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/b73d26dec90d41faad49578892466497/files/thumbnail_cf4792e4-b884-4242-a08f-0f57025bdd92.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Rex Hans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 4488
+    },
+    {
+      "id": "itchio:stxrberries/japanese-food",
+      "provider": "itchio",
+      "title": "Japanese Food",
+      "type": "model",
+      "url": "https://stxrberries.itch.io/japanese-food",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIxMDEwNTYwLnBuZw==/315x250%23c/kacolt.png",
+      "downloadable": false,
+      "author": "StxrBerries",
+      "free": true
+    },
+    {
+      "id": "sharetextures:pear-1",
+      "provider": "sharetextures",
+      "title": "Pear 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/pear-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/ba77a438-995f-4883-9a39-2eccf3db29d9.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_kiwi_01",
+      "provider": "polyhaven",
+      "title": "Food Kiwi 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_kiwi_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_kiwi_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 7748
+    },
+    {
+      "id": "itchio:gualtierisgg/low-poly-food",
+      "provider": "itchio",
+      "title": "3D Low Poly Food Assets",
+      "type": "model",
+      "url": "https://gualtierisgg.itch.io/low-poly-food",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzQ5MjYwNTEucG5n/315x250%23c/fEAkYP.png",
+      "downloadable": false,
+      "author": "GualtierisGG",
+      "free": true
+    },
+    {
+      "id": "sharetextures:mandarin_1",
+      "provider": "sharetextures",
+      "title": "Mandarin 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/mandarin_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/5ac84eb3-243d-421c-ae53-00dbc2b51517.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:food_ginger_01",
+      "provider": "polyhaven",
+      "title": "Food Ginger 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/food_ginger_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/food_ginger_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Oliver Harries",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 7205
+    },
+    {
+      "id": "blenderkit:f38107e2-a4ef-4ea3-bc0b-30bb764497a8",
+      "provider": "blenderkit",
+      "title": "Space food packaging bag 02",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/f38107e2-a4ef-4ea3-bc0b-30bb764497a8/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d6e95e248db34623ba2cf5019d12956c/files/thumbnail_b5751f12-fd3d-433c-934f-5f50c358818b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Aleksandra Beglik",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "0.5k",
+      "polyCount": 715
+    },
+    {
+      "id": "itchio:amipolygon/3d-low-poly-food-pack",
+      "provider": "itchio",
+      "title": "3D Low Poly Food Pack",
+      "type": "model",
+      "url": "https://amipolygon.itch.io/3d-low-poly-food-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MTYyNDQ0LnBuZw==/315x250%23c/JGv9Pp.png",
+      "downloadable": false,
+      "author": "AmiPolygon",
+      "free": true
+    },
+    {
+      "id": "sharetextures:carrot-2",
+      "provider": "sharetextures",
+      "title": "Carrot 2",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/carrot-2",
+      "thumbnailUrl": "https://images.sharetextures.com/u/ebbcacc7-74d5-4355-b3be-c855f2e1841d.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:long_life_food",
+      "provider": "polyhaven",
+      "title": "Long Life Food",
+      "type": "model",
+      "url": "https://polyhaven.com/a/long_life_food",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/long_life_food.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Mia Pecina Zorko",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 4712
+    },
+    {
+      "id": "blenderkit:e67cf02a-2770-469d-87d6-8dd31a087c36",
+      "provider": "blenderkit",
+      "title": "Food Lime",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e67cf02a-2770-469d-87d6-8dd31a087c36/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1a324b4c2d164718a461221b8e658a19/files/thumbnail_6a71b514-4e99-4db4-88fd-e460cda15524.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "sharetextures:carrot-1",
+      "provider": "sharetextures",
+      "title": "Carrot 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/food/carrot-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/ced3dd99-85a1-4f12-89b0-396c41d1990d.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "blenderkit:c81487cc-11c1-48af-94fb-4a4433804452",
+      "provider": "blenderkit",
+      "title": "Food Kiwi",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/c81487cc-11c1-48af-94fb-4a4433804452/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/6e530d58567d450797858a3e4730b3f5/files/thumbnail_1b7825ae-d2f1-4850-b3ca-22b2d036dbbd.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    }
+  ]
+}

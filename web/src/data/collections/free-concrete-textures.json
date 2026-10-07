@@ -1,0 +1,662 @@
+{
+  "slug": "free-concrete-textures",
+  "search": {
+    "q": "concrete",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:30.106Z",
+  "assets": [
+    {
+      "id": "polyhaven:concrete_floor_worn_001",
+      "provider": "polyhaven",
+      "title": "Concrete Floor Worn 001",
+      "type": "material",
+      "url": "https://polyhaven.com/a/concrete_floor_worn_001",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_floor_worn_001.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:3f5918cb-297d-45fa-a3aa-7d048725d894",
+      "provider": "blenderkit",
+      "title": "Concrete wall",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/3f5918cb-297d-45fa-a3aa-7d048725d894/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f68ea3c0e40d455bbbda01ce3fae56d4/files/thumbnail_fa8a134b-0b14-40e1-89f2-5dbe28ad9147.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Mat Karmon",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Concrete034",
+      "provider": "ambientcg",
+      "title": "Concrete 034",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Concrete034",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Concrete034.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "texturecan:653",
+      "provider": "texturecan",
+      "title": "Yellow and Gray Concrete Tiles with Triangular and Stripy Pattern",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/653/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/concrete_0034/concrete_0034_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:polished-concrete-01",
+      "provider": "cgbookcase",
+      "title": "Polished Concrete 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/polished-concrete-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Polished_concrete_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:concrete-tiles-003",
+      "provider": "threedtextures",
+      "title": "Concrete Tiles 003",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/07/14/concrete-tiles-003/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/07/Material_2003.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:concrete_tile_3",
+      "provider": "sharetextures",
+      "title": "Concrete Tile 3",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/concrete/concrete_tile_3",
+      "thumbnailUrl": "https://images.sharetextures.com/u/concrete_tile_3-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:gravel-concrete-pbr-material",
+      "provider": "threedtexel",
+      "title": "Light Grey Gravel Concrete – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/gravel-concrete-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-61-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:juliovii/concretepk01",
+      "provider": "itchio",
+      "title": "Texture Pack: Concrete 01",
+      "type": "texture",
+      "url": "https://juliovii.itch.io/concretepk01",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzM4Mjc5NTEuanBn/315x250%23c/qxXZk4.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "polyhaven:concrete_floor_02",
+      "provider": "polyhaven",
+      "title": "Concrete Floor 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/concrete_floor_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_floor_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:dd24a3f3-c195-4dc2-8706-d88580641154",
+      "provider": "blenderkit",
+      "title": "Concrete",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/dd24a3f3-c195-4dc2-8706-d88580641154/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/36c04697aa80469390766698b68f4008/files/thumbnail_b6fd6f9d-143a-414e-8ec7-8ae07e4e85cc.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Alexandr Droid",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
+    },
+    {
+      "id": "ambientcg:Concrete048",
+      "provider": "ambientcg",
+      "title": "Concrete 048",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Concrete048",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Concrete048.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:652",
+      "provider": "texturecan",
+      "title": "Damaged Concrete with Deep Cracks",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/652/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/ground_0046/ground_0046_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:concrete-wall-02",
+      "provider": "cgbookcase",
+      "title": "Concrete Wall 02",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/concrete-wall-02",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Concrete_wall_02_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "sharetextures:seamless_concrete_48",
+      "provider": "sharetextures",
+      "title": "Seamless Concrete 48",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/concrete/seamless_concrete_48",
+      "thumbnailUrl": "https://images.sharetextures.com/u/seamless_concrete_48-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:gravel-concrete-brickwall-pbr-material",
+      "provider": "threedtexel",
+      "title": "Gravel Concrete Brickwall – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/gravel-concrete-brickwall-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-59-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:evalynn/concrete-set-a-pbr",
+      "provider": "itchio",
+      "title": "Concrete Set A + PBR Maps ~ Freebie! 15 x Seamless, Handmade Concrete Textures",
+      "type": "material",
+      "url": "https://evalynn.itch.io/concrete-set-a-pbr",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI3MjMzMTg2LmpwZw==/315x250%23c/d8nJ1f.jpg",
+      "downloadable": false,
+      "author": "Evalynn",
+      "free": true
+    },
+    {
+      "id": "threedtextures:concrete-wall-formwork-016-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Concrete Wall Formwork 016",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/04/02/concrete-wall-formwork-016-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/04/Material_2001.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:concrete_layers_02",
+      "provider": "polyhaven",
+      "title": "Concrete Layers 02",
+      "type": "material",
+      "url": "https://polyhaven.com/a/concrete_layers_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/concrete_layers_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:Concrete047A",
+      "provider": "ambientcg",
+      "title": "Concrete 047 A",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Concrete047A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Concrete047A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:645",
+      "provider": "texturecan",
+      "title": "Beige Concrete Wall with Vertical Wavy Stripes",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/645/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/concrete_0032/concrete_0032_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:concrete-wall-01",
+      "provider": "cgbookcase",
+      "title": "Concrete Wall 01",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/concrete-wall-01",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Concrete_wall_01_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "2k"
+    },
+    {
+      "id": "sharetextures:concrete-58",
+      "provider": "sharetextures",
+      "title": "Concrete 58",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/concrete/concrete-58",
+      "thumbnailUrl": "https://images.sharetextures.com/u/135a923d-7cb5-4fbc-a0ff-8baba75a1c14.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-5",
+      "provider": "threedtexel",
+      "title": "Concrete Tile with Grime – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-5/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-17-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:nafgames/concretes-textures-pbr",
+      "provider": "itchio",
+      "title": "Concretes - Textures PBR",
+      "type": "material",
+      "url": "https://nafgames.itch.io/concretes-textures-pbr",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEwMzM4NTA1LnBuZw==/315x250%23c/TPc9XG.png",
+      "downloadable": false,
+      "author": "nafgames",
+      "free": true
+    },
+    {
+      "id": "threedtextures:concrete-blocks-017",
+      "provider": "threedtextures",
+      "title": "Concrete Blocks 017",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/02/20/concrete-blocks-017/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/02/Material_2000-1.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:cracked_concrete_wall",
+      "provider": "polyhaven",
+      "title": "Cracked Concrete Wall",
+      "type": "material",
+      "url": "https://polyhaven.com/a/cracked_concrete_wall",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/cracked_concrete_wall.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Concrete046",
+      "provider": "ambientcg",
+      "title": "Concrete 046",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Concrete046",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Concrete046.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "texturecan:641",
+      "provider": "texturecan",
+      "title": "Concrete Wall of Stacked Rectangular Stones",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/641/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/concrete_0031/concrete_0031_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:concrete_53",
+      "provider": "sharetextures",
+      "title": "Concrete 53",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/concrete/concrete_53",
+      "thumbnailUrl": "https://images.sharetextures.com/u/concrete_53-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:concrete-tile-pbr-material-4",
+      "provider": "threedtexel",
+      "title": "Grey Concrete Tile – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/concrete-tile-pbr-material-4/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/Untitled_Sphere-Camera-16-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:juliovii/fmp-stylized-concrete",
+      "provider": "itchio",
+      "title": "Materials Stylized Concrete",
+      "type": "material",
+      "url": "https://juliovii.itch.io/fmp-stylized-concrete",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI3OTAyNzUyLmpwZw==/315x250%23c/Yj59MU.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "threedtextures:concrete-wall-015",
+      "provider": "threedtextures",
+      "title": "Concrete Wall 015",
+      "type": "material",
+      "url": "https://3dtextures.me/2025/11/18/concrete-wall-015/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2025/11/Material_2016.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:gravel_embedded_concrete",
+      "provider": "polyhaven",
+      "title": "Gravel Embedded Concrete",
+      "type": "material",
+      "url": "https://polyhaven.com/a/gravel_embedded_concrete",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/gravel_embedded_concrete.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Charlotte Baglioni",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:2e0a00f1-75a6-4c22-89a9-338453f4b638",
+      "provider": "blenderkit",
+      "title": "Concrete tiles",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2e0a00f1-75a6-4c22-89a9-338453f4b638/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1be6b977a7fb40f594a1fd5a050acf00/files/thumbnail_0adb2505-d06f-4ebe-81c4-86527be50ddc.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "ydd 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "ambientcg:Concrete042A",
+      "provider": "ambientcg",
+      "title": "Concrete 042 A",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Concrete042A",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Concrete042A.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    }
+  ]
+}

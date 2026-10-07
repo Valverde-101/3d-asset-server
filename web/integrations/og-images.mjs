@@ -23,6 +23,12 @@ const KICKERS = [
   ["/docs/sources", "Sources & licences"],
   ["/docs", "Docs"],
   ["/stats", "Live stats"],
+  ["/assets/hdris", "HDRIs"],
+  ["/assets/textures", "PBR textures"],
+  ["/assets/3d-models", "3D models"],
+  ["/assets/game-assets", "Game assets"],
+  ["/assets", "Asset collections"],
+  ["/sources", "Source"],
   ["/search", "Search"],
   ["/about", "About"],
   ["/contact", "Contact"],
@@ -90,7 +96,15 @@ export default function ogImages() {
                   kicker,
                   title,
                   subtitle: description,
-                  chips: CHIPS[route] ?? (route === "/docs/sources" || route === "/search" ? providers.slice(0, 4).map((p) => p.name) : ["3D models", "PBR textures", "HDRIs"]),
+                  chips:
+                    CHIPS[route] ??
+                    (route === "/docs/sources" || route === "/search"
+                      ? providers.slice(0, 4).map((p) => p.name)
+                      : route.startsWith("/assets")
+                        ? ["Free", "Licence on every asset", "Updated daily"]
+                        : route.startsWith("/sources/")
+                          ? ["Search", "Licences", "Downloads"]
+                          : ["3D models", "PBR textures", "HDRIs"]),
                   site: host,
                 });
           const png = await renderPng(card);

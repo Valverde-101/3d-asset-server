@@ -1,0 +1,678 @@
+{
+  "slug": "free-wood-textures",
+  "search": {
+    "q": "wood",
+    "types": [
+      "material",
+      "texture"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:45.624Z",
+  "assets": [
+    {
+      "id": "polyhaven:wood_table_001",
+      "provider": "polyhaven",
+      "title": "Wood Table 001",
+      "type": "material",
+      "url": "https://polyhaven.com/a/wood_table_001",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/wood_table_001.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:Wood096",
+      "provider": "ambientcg",
+      "title": "Wood 096",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Wood096",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood096.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:6e7e0719-cc22-441d-b392-48a0c3e26762",
+      "provider": "blenderkit",
+      "title": "Warm Oak Wood",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/6e7e0719-cc22-441d-b392-48a0c3e26762/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8c17be7ce5d94cbd817687a1392f0bb9/files/thumbnail_5458b249-e1a2-46c9-8f95-61c1d9210ff5.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "yossif kh",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:591",
+      "provider": "texturecan",
+      "title": "Laminated Long Brown Wood Planks",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/591/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/wood_0066/wood_0066_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:wood-10",
+      "provider": "cgbookcase",
+      "title": "Wood 10",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/wood-10",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Wood_10_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:wood-base-beech-001",
+      "provider": "threedtextures",
+      "title": "Wood Base Beech 001",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/10/06/wood-base-beech-001/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/10/Material_2002.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:tile-roof-pbr-material-3",
+      "provider": "threedtexel",
+      "title": "Wood Shingle Roof – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/tile-roof-pbr-material-3/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-82-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:juliovii/woodpk02",
+      "provider": "itchio",
+      "title": "Texture Pack: Wood 02",
+      "type": "texture",
+      "url": "https://juliovii.itch.io/woodpk02",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzUzODUxNDMuanBn/315x250%23c/EkB5%2B0.jpg",
+      "downloadable": false,
+      "author": "JulioVII",
+      "free": true
+    },
+    {
+      "id": "sharetextures:wood-parquet-13",
+      "provider": "sharetextures",
+      "title": "Wood Parquet 13",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wood/wood-parquet-13",
+      "thumbnailUrl": "https://images.sharetextures.com/u/wood_plank_13-min.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:wood_table_worn",
+      "provider": "polyhaven",
+      "title": "Wood Table Worn",
+      "type": "material",
+      "url": "https://polyhaven.com/a/wood_table_worn",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/wood_table_worn.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Wood095",
+      "provider": "ambientcg",
+      "title": "Wood 095",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Wood095",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood095.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "blenderkit:ad9e8552-2007-408d-82b2-cddcf8483b8c",
+      "provider": "blenderkit",
+      "title": "Wood (Brown Polished Oak Wood)",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ad9e8552-2007-408d-82b2-cddcf8483b8c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2abe3ba94b5e46aab9a9aefd7aed402e/files/thumbnail_c98a0f1e-28b8-4b55-94d1-46dfd39ddf6c.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "yossif kh",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:590",
+      "provider": "texturecan",
+      "title": "Cross Section of Wood Log Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/590/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/wood_0065/wood_0065_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "cgbookcase:wood-09",
+      "provider": "cgbookcase",
+      "title": "Wood 09",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/wood-09",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Wood_09_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:wood-tiles-005",
+      "provider": "threedtextures",
+      "title": "Wood Tiles 005",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/08/24/wood-tiles-005/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/08/Material_2003.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:stylized-wood-wall-pbr-material",
+      "provider": "threedtexel",
+      "title": "Stylized Wood Barrel – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/stylized-wood-wall-pbr-material/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-54-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "itchio:owletrius/wood-texture-pack",
+      "provider": "itchio",
+      "title": "Wood Texture Pack",
+      "type": "texture",
+      "url": "https://owletrius.itch.io/wood-texture-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzMwNzY4MDUucG5n/315x250%23c/8lIDIn.png",
+      "downloadable": false,
+      "author": "Owletrius",
+      "free": true
+    },
+    {
+      "id": "sharetextures:woodparquet_83",
+      "provider": "sharetextures",
+      "title": "Wood Parquet 83",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/floor/woodparquet_83",
+      "thumbnailUrl": "https://images.sharetextures.com/u/ce80f64f-f224-47cc-a84f-44b2f776c020.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:wood_floor",
+      "provider": "polyhaven",
+      "title": "Wood Floor",
+      "type": "material",
+      "url": "https://polyhaven.com/a/wood_floor",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/wood_floor.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:Wood094",
+      "provider": "ambientcg",
+      "title": "Wood 094",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Wood094",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood094.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:35421bc9-a49d-4979-8d93-0c13e9eba371",
+      "provider": "blenderkit",
+      "title": "Wood",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/35421bc9-a49d-4979-8d93-0c13e9eba371/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/fc4a30fa9fe14a5ba78b40920c4486f0/files/thumbnail_724e3831-c4b1-48d8-91a0-8c9e9d281683.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Share Textures",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "cgbookcase:wood-08",
+      "provider": "cgbookcase",
+      "title": "Wood 08",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/wood-08",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Wood_08_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtextures:wood-wicker-013-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Wood Wicker 013",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/05/29/wood-wicker-013-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/05/Material_2006.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:stylized-wood-pbr-material-3",
+      "provider": "threedtexel",
+      "title": "Woven Wood Planks – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/stylized-wood-pbr-material-3/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-53-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:572",
+      "provider": "texturecan",
+      "title": "Laminated Brown Wood Plank Texture",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/572/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/wood_0061/wood_0061_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:wood-plank-15",
+      "provider": "sharetextures",
+      "title": "Wood Plank 15",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wood/wood-plank-15",
+      "thumbnailUrl": "https://images.sharetextures.com/u/5eb6ed6d-11b7-49da-8392-885b1f72313c.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:wood_cabinet_worn_long",
+      "provider": "polyhaven",
+      "title": "Wood Cabinet Worn Long",
+      "type": "material",
+      "url": "https://polyhaven.com/a/wood_cabinet_worn_long",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/wood_cabinet_worn_long.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Dimitrios Savva, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "16k"
+    },
+    {
+      "id": "ambientcg:Wood092",
+      "provider": "ambientcg",
+      "title": "Wood 092",
+      "type": "material",
+      "url": "https://ambientcg.com/a/Wood092",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/Wood092.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "blenderkit:a739a62b-a0ed-4dc4-9c6f-c51912e9b167",
+      "provider": "blenderkit",
+      "title": "Wood Floor Walnut",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a739a62b-a0ed-4dc4-9c6f-c51912e9b167/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/dd21e3d11f484012902036b81dc353d7/files/thumbnail_1aa5fa73-494a-46a7-8375-119a9be654fa.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "James Middleton",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "cgbookcase:wood-07",
+      "provider": "cgbookcase",
+      "title": "Wood 07",
+      "type": "material",
+      "url": "https://www.cgbookcase.com/textures/wood-07",
+      "thumbnailUrl": "https://cdn.cgbookcase.cloud/file/cgbookcase/textures/renders/bg_white/480w/Wood_07_default.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "threedtexel:stylized-wood-pbr-material-2",
+      "provider": "threedtexel",
+      "title": "Reinforced Wood Panels – PBR Material",
+      "type": "material",
+      "url": "https://3dtexel.com/product/stylized-wood-pbr-material-2/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/10/Untitled_Sphere-Camera-52-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "maxResolution": "4k"
+    },
+    {
+      "id": "texturecan:571",
+      "provider": "texturecan",
+      "title": "Rough Wood Planks",
+      "type": "material",
+      "url": "https://www.texturecan.com/details/571/",
+      "thumbnailUrl": "https://www.texturecan.com/img/textures/wood_0060/wood_0060_sphere_300.png",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtextures:wood-floor-parquet-walnut-016-free-seamless-pbr-texture",
+      "provider": "threedtextures",
+      "title": "Wood Floor Parquet Walnut 016",
+      "type": "material",
+      "url": "https://3dtextures.me/2026/03/23/wood-floor-parquet-walnut-016-free-seamless-pbr-texture/",
+      "thumbnailUrl": "https://i0.wp.com/3dtextures.me/wp-content/uploads/2026/03/Material_2003-1.png?fit=600%2C800&ssl=1",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "sharetextures:fine-wood-27",
+      "provider": "sharetextures",
+      "title": "Fine Wood 27",
+      "type": "material",
+      "url": "https://www.sharetextures.com/textures/wood/fine-wood-27",
+      "thumbnailUrl": "https://images.sharetextures.com/u/3d4eafe4-514a-4a31-b950-ac549e1e33d2.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:rough_wood",
+      "provider": "polyhaven",
+      "title": "Rough Wood",
+      "type": "material",
+      "url": "https://polyhaven.com/a/rough_wood",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rough_wood.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png",
+        "exr",
+        "blend",
+        "gltf"
+      ],
+      "maxResolution": "8k"
+    },
+    {
+      "id": "ambientcg:WoodFloor051",
+      "provider": "ambientcg",
+      "title": "Wood Floor 051",
+      "type": "material",
+      "url": "https://ambientcg.com/a/WoodFloor051",
+      "thumbnailUrl": "https://acg-media.struffelproductions.com/file/ambientCG-Web/media/thumbnail/256-JPG-242424/WoodFloor051.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "jpg",
+        "png"
+      ],
+      "maxResolution": "8k"
+    }
+  ]
+}

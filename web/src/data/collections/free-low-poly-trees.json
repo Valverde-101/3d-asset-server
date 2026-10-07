@@ -1,0 +1,663 @@
+{
+  "slug": "free-low-poly-trees",
+  "search": {
+    "q": "low poly tree",
+    "types": [
+      "model"
+    ],
+    "free": true
+  },
+  "updatedAt": "2026-10-07T09:05:35.723Z",
+  "assets": [
+    {
+      "id": "blenderkit:72fac4cb-901c-4a48-8fc8-84a0baa0bd21",
+      "provider": "blenderkit",
+      "title": "Low poly tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/72fac4cb-901c-4a48-8fc8-84a0baa0bd21/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4ab2223744f94959b51052c51458d791/files/thumbnail_223bbfab-f232-4a0c-8004-d96e17346fa0.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Dr Blender",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 82
+    },
+    {
+      "id": "itchio:brokenvector/low-poly-tree-pack",
+      "provider": "itchio",
+      "title": "Low Poly Tree Pack",
+      "type": "model",
+      "url": "https://brokenvector.itch.io/low-poly-tree-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvOTAxMTIvNDIyOTQxLmpwZw==/315x250%23c/5TGejw.jpg",
+      "downloadable": false,
+      "author": "Broken Vector",
+      "free": true
+    },
+    {
+      "id": "itchio:mark-auman/low-poly-trees-asset-pack",
+      "provider": "itchio",
+      "title": "Low-Poly Trees Asset Pack",
+      "type": "model",
+      "url": "https://mark-auman.itch.io/low-poly-trees-asset-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzg0Njc5NjQucG5n/315x250%23c/ji061u.png",
+      "downloadable": false,
+      "author": "Aumarka",
+      "free": true
+    },
+    {
+      "id": "polyfork:ornamental-front-yard-tree-c6781a",
+      "provider": "polyfork",
+      "title": "Ornamental Front-Yard Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/ornamental-front-yard-tree-c6781a",
+      "thumbnailUrl": "https://polyfork.dev/files/ornamental-front-yard-tree-c6781a/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 526
+    },
+    {
+      "id": "quaternius:stylizedtree",
+      "provider": "quaternius",
+      "title": "Stylized Tree Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/stylizedtree.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/stylizedtree.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:indieriffic/low-poly-tree-pack",
+      "provider": "itchio",
+      "title": "Low Poly Tree Pack Smooth",
+      "type": "model",
+      "url": "https://indieriffic.itch.io/low-poly-tree-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzQ5NDA1NDIucG5n/315x250%23c/IwX7q6.png",
+      "downloadable": false,
+      "author": "CBsix",
+      "free": true
+    },
+    {
+      "id": "polyfork:broad-canopy-shade-tree-e7c4a2",
+      "provider": "polyfork",
+      "title": "Broad Canopy Shade Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/broad-canopy-shade-tree-e7c4a2",
+      "thumbnailUrl": "https://polyfork.dev/files/broad-canopy-shade-tree-e7c4a2/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 394
+    },
+    {
+      "id": "itchio:indieriffic/low-poly-tree-pack-flat",
+      "provider": "itchio",
+      "title": "Low Poly Tree Pack Flat",
+      "type": "model",
+      "url": "https://indieriffic.itch.io/low-poly-tree-pack-flat",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzQ5NDA2MDcucG5n/315x250%23c/eXA5J9.png",
+      "downloadable": false,
+      "author": "CBsix",
+      "free": true
+    },
+    {
+      "id": "polyfork:sculptural-canopy-tree-681c3d",
+      "provider": "polyfork",
+      "title": "Sculptural Canopy Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/sculptural-canopy-tree-681c3d",
+      "thumbnailUrl": "https://polyfork.dev/files/sculptural-canopy-tree-681c3d/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 492
+    },
+    {
+      "id": "blenderkit:85557228-237c-4dff-9aeb-091bd96ba60d",
+      "provider": "blenderkit",
+      "title": "Low Poly Tree Trunk 01",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/85557228-237c-4dff-9aeb-091bd96ba60d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/a2e6d77f89a74fa2aa2237c87b55b6f3/files/thumbnail_a669986a-182e-416f-a53a-3fb27536e1c2.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Rex Hans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 480
+    },
+    {
+      "id": "itchio:gros-coquin/low-poly-trees-and-rocks",
+      "provider": "itchio",
+      "title": "Low poly trees and rocks",
+      "type": "model",
+      "url": "https://gros-coquin.itch.io/low-poly-trees-and-rocks",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzQ1NDYyMzkuanBn/315x250%23c/B6iuGj.jpg",
+      "downloadable": false,
+      "author": "Gros coquin",
+      "free": true
+    },
+    {
+      "id": "polyfork:potted-olive-tree-7eee05",
+      "provider": "polyfork",
+      "title": "Potted Olive Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/potted-olive-tree-7eee05",
+      "thumbnailUrl": "https://polyfork.dev/files/potted-olive-tree-7eee05/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 547
+    },
+    {
+      "id": "itchio:godgoldfear/low-poly-trees",
+      "provider": "itchio",
+      "title": "Low Poly trees",
+      "type": "model",
+      "url": "https://godgoldfear.itch.io/low-poly-trees",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI4MzAxMTcucG5n/315x250%23c/QwLuXr.png",
+      "downloadable": false,
+      "author": "godgoldfear",
+      "free": true
+    },
+    {
+      "id": "blenderkit:cd695f32-2299-4733-9d97-b0fd7636d5ee",
+      "provider": "blenderkit",
+      "title": "Low Poly Tree Trunk 02",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/cd695f32-2299-4733-9d97-b0fd7636d5ee/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/bcbdf3e303e947cc858ef853a00df148/files/thumbnail_b5a1f485-deda-424d-bb47-f7ca2c4bcf99.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Rex Hans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 3847
+    },
+    {
+      "id": "polyfork:maple-tree-65fa12",
+      "provider": "polyfork",
+      "title": "Maple Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/maple-tree-65fa12",
+      "thumbnailUrl": "https://polyfork.dev/files/maple-tree-65fa12/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 548
+    },
+    {
+      "id": "itchio:divby00/low-poly-tree",
+      "provider": "itchio",
+      "title": "Low Poly Forest - Trees / Stones",
+      "type": "model",
+      "url": "https://divby00.itch.io/low-poly-tree",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIwNzMwMjUuZ2lm/315x250%23c/nROhGG.gif",
+      "downloadable": false,
+      "author": "divby00",
+      "free": true
+    },
+    {
+      "id": "blenderkit:a98f6958-7da1-4b04-bc15-480ebeaf98da",
+      "provider": "blenderkit",
+      "title": "Low Poly Sheesham Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a98f6958-7da1-4b04-bc15-480ebeaf98da/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/ca25c72e954e4986a9290bbdb428458f/files/thumbnail_18ae7eee-ef73-41c5-afce-b2f03256235f.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Mohammed Hossain",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "polyCount": 36000
+    },
+    {
+      "id": "polyfork:tree-stump-ec3f48",
+      "provider": "polyfork",
+      "title": "Tree Stump",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/tree-stump-ec3f48",
+      "thumbnailUrl": "https://polyfork.dev/files/tree-stump-ec3f48/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 505
+    },
+    {
+      "id": "blenderkit:addb6dad-d860-4a29-8f5b-8dee4539268e",
+      "provider": "blenderkit",
+      "title": "Low Poly Pine Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/addb6dad-d860-4a29-8f5b-8dee4539268e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2a53e951699540df91523a8345304aa1/files/thumbnail_5c7f8096-6f95-4d46-9f41-b9da44faf089.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Liam Xee",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 106
+    },
+    {
+      "id": "polyfork:tall-pine-tree-ab4108",
+      "provider": "polyfork",
+      "title": "Tall Pine Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/tall-pine-tree-ab4108",
+      "thumbnailUrl": "https://polyfork.dev/files/tall-pine-tree-ab4108/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 350
+    },
+    {
+      "id": "itchio:direeclat/low-poly-tree-3-pack",
+      "provider": "itchio",
+      "title": "Low Poly Tree 3 Pack",
+      "type": "model",
+      "url": "https://direeclat.itch.io/low-poly-tree-3-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvMTU2MTc1LzcxNjU1Mi5wbmc=/315x250%23c/Zh4g%2Fs.png",
+      "downloadable": false,
+      "author": "direeclat",
+      "free": true
+    },
+    {
+      "id": "blenderkit:5269bc39-fa1e-4be3-9a84-b1596caa5bc4",
+      "provider": "blenderkit",
+      "title": "Low Poly Fire Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/5269bc39-fa1e-4be3-9a84-b1596caa5bc4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f25dd07b9d0c442fb6d386db363e8465/files/thumbnail_73330164-f660-4067-99a3-ea49bf91d2f6.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Liam Xee",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 150
+    },
+    {
+      "id": "polyfork:dead-tree-6795fa",
+      "provider": "polyfork",
+      "title": "Dead Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/dead-tree-6795fa",
+      "thumbnailUrl": "https://polyfork.dev/files/dead-tree-6795fa/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 536
+    },
+    {
+      "id": "itchio:josephriches/low-poly-tree",
+      "provider": "itchio",
+      "title": "Low Poly Tree",
+      "type": "model",
+      "url": "https://josephriches.itch.io/low-poly-tree",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvNjc2NzIvMzA3NTI5LnBuZw==/315x250%23c/fvOsju.png",
+      "downloadable": false,
+      "author": "Joseph Riches",
+      "free": true
+    },
+    {
+      "id": "blenderkit:6ed9d45f-ba80-4bfe-8598-eb3a8dae86c2",
+      "provider": "blenderkit",
+      "title": "Low Poly Lemon Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/6ed9d45f-ba80-4bfe-8598-eb3a8dae86c2/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5a38b314bb4b4df597bddfe5729f98f6/files/thumbnail_0992e459-a045-45ac-bd07-cb4ed3812ed7.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Liam Xee",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 100
+    },
+    {
+      "id": "blenderkit:84edbfbc-5cd8-4fd8-bbbe-a4a597142908",
+      "provider": "blenderkit",
+      "title": "Low Poly Kalamansi Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/84edbfbc-5cd8-4fd8-bbbe-a4a597142908/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/67515a089de24c41a3c8453fd6460aba/files/thumbnail_648fad0f-ec73-4eeb-86d6-b8a055624a13.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Liam Xee",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 140
+    },
+    {
+      "id": "polyfork:street-tree-0d33f3",
+      "provider": "polyfork",
+      "title": "Street Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/street-tree-0d33f3",
+      "thumbnailUrl": "https://polyfork.dev/files/street-tree-0d33f3/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 272
+    },
+    {
+      "id": "blenderkit:e1757b38-4bb3-4e92-a0ec-d2d45f9653fd",
+      "provider": "blenderkit",
+      "title": "Low Poly Mango Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e1757b38-4bb3-4e92-a0ec-d2d45f9653fd/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e8df70fc7c5b4e0cbf114896c0b85b9e/files/thumbnail_d1f66356-dcd4-42f5-a574-4ea0893f3b9a.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Liam Xee",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 140
+    },
+    {
+      "id": "blenderkit:2a8d431f-b7e0-4926-86fa-6f331b5793eb",
+      "provider": "blenderkit",
+      "title": "Low poly tree 4",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2a8d431f-b7e0-4926-86fa-6f331b5793eb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5d701b20c1c947fbba50769c95b438c1/files/thumbnail_2826496b-07c4-4e8c-af9b-d6adb5df5964.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 660
+    },
+    {
+      "id": "polyfork:pine-tree-3ea075",
+      "provider": "polyfork",
+      "title": "Pine Tree",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/pine-tree-3ea075",
+      "thumbnailUrl": "https://polyfork.dev/files/pine-tree-3ea075/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 70
+    },
+    {
+      "id": "blenderkit:38e978d8-c41c-44c2-9bdc-0711d508b8be",
+      "provider": "blenderkit",
+      "title": "Low poly tree 2",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/38e978d8-c41c-44c2-9bdc-0711d508b8be/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f23d32cbdd4a45b9bbf7f32f336c4d16/files/thumbnail_605fc985-d4e0-4317-89bb-ee55627c662b.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 374
+    },
+    {
+      "id": "itchio:qwerxia/low-poly-trees-nature-props",
+      "provider": "itchio",
+      "title": "Low Poly Trees / Nature Props",
+      "type": "model",
+      "url": "https://qwerxia.itch.io/low-poly-trees-nature-props",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI3Mjk0OTk5LnBuZw==/315x250%23c/3NSzQD.png",
+      "downloadable": false,
+      "author": "QWERXIA",
+      "free": true
+    },
+    {
+      "id": "itchio:fonsoul/low-poly-tree-pack",
+      "provider": "itchio",
+      "title": "Low-Poly Tree Pack",
+      "type": "model",
+      "url": "https://fonsoul.itch.io/low-poly-tree-pack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI2NjE5NTM1LnBuZw==/315x250%23c/rpVGBr.png",
+      "downloadable": false,
+      "author": "FonSoul",
+      "free": true
+    },
+    {
+      "id": "blenderkit:aef5208e-de98-48e4-a9e3-e7438f90ecbb",
+      "provider": "blenderkit",
+      "title": "Low poly tree 1",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/aef5208e-de98-48e4-a9e3-e7438f90ecbb/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c6c75ad758fa45be8c4bd8685c2721b5/files/thumbnail_8e7814ff-74fe-4f64-9b26-614475498e08.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 299
+    },
+    {
+      "id": "itchio:shop-dream/low-poly-tree-pack-starter-kit",
+      "provider": "itchio",
+      "title": "Low Poly Tree pack Starter Kit",
+      "type": "model",
+      "url": "https://shop-dream.itch.io/low-poly-tree-pack-starter-kit",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzI2NTgwOTk4LnBuZw==/315x250%23c/mY5ynN.png",
+      "downloadable": false,
+      "author": "shop dream",
+      "free": true
+    },
+    {
+      "id": "blenderkit:b702bdff-a1ac-41d7-8bec-2fd6221c4af0",
+      "provider": "blenderkit",
+      "title": "Low Poly Apple Tree",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/b702bdff-a1ac-41d7-8bec-2fd6221c4af0/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d5a891f1ce2e4d58a5408a9de0296e1f/files/thumbnail_f8cbfb83-3eeb-48e5-93b6-0b8497309697.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Mohammed Hossain",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "polyCount": 5164
+    }
+  ]
+}

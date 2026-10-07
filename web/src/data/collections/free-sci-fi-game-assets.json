@@ -1,0 +1,489 @@
+{
+  "slug": "free-sci-fi-game-assets",
+  "search": {
+    "q": "sci-fi",
+    "types": [
+      "model",
+      "pack"
+    ],
+    "free": true,
+    "exclude": [
+      "metaballs",
+      "motion graphics",
+      "portraits",
+      "visualization"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:05:42.015Z",
+  "assets": [
+    {
+      "id": "blenderkit:f856dc91-1475-40de-8aa0-d29cfa48a583",
+      "provider": "blenderkit",
+      "title": "Large scale sci-fi environment",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/f856dc91-1475-40de-8aa0-d29cfa48a583/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/180a32b2400f4834b7b6d630fbfe7e36/files/thumbnail_449a88d2-9d30-4762-86ae-77665852b032.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matteo Pascale",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 1
+    },
+    {
+      "id": "quaternius:scifiessentialskit",
+      "provider": "quaternius",
+      "title": "Sci-Fi Essentials Kit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/scifiessentialskit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/scifiessentialskit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "itchio:penusbmic/sci-fi-character-pack-12",
+      "provider": "itchio",
+      "title": "Sci-fi Character Pack 12",
+      "type": "model",
+      "url": "https://penusbmic.itch.io/sci-fi-character-pack-12",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzU2MzY1NTgucG5n/315x250%23c/9%2Bw5pX.png",
+      "downloadable": false,
+      "author": "Penusbmic",
+      "free": true
+    },
+    {
+      "id": "blenderkit:e11a1a26-1a62-448e-8499-9f78b2fab69e",
+      "provider": "blenderkit",
+      "title": "Sci-fi Tablet",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/e11a1a26-1a62-448e-8499-9f78b2fab69e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e28ca2d7343141a2bfe671b63ff139c3/files/thumbnail_d8b3f0a3-cb23-4533-aef5-bf5a32408547.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nick Kotik",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "1k",
+      "polyCount": 2033
+    },
+    {
+      "id": "quaternius:modularscifimegakit",
+      "provider": "quaternius",
+      "title": "Modular Sci-Fi Megakit",
+      "type": "model",
+      "url": "https://quaternius.com/packs/modularscifimegakit.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/modularscifimegakit.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:thkaspar/sci-fi-robot-parts",
+      "provider": "itchio",
+      "title": "Sci Fi Robot Parts",
+      "type": "pack",
+      "url": "https://thkaspar.itch.io/sci-fi-robot-parts",
+      "thumbnailUrl": "https://img.itch.zone/aW1hZ2UvMjgzODU1LzEzODA1NTIucG5n/315x250%23c/%2Bs6mjg.png",
+      "downloadable": false,
+      "author": "Kacper Woźniak",
+      "free": true
+    },
+    {
+      "id": "sharetextures:lantern_1",
+      "provider": "sharetextures",
+      "title": "Lantern 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/sci-fi/lantern_1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/fd53c3ce-c9de-4e44-a5a9-e021af04ddb4.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "quaternius:scifimodularguns",
+      "provider": "quaternius",
+      "title": "Sci-Fi Modular Gun Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/scifimodularguns.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/modularscifiguns.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:3darknight/sci-fi-modular-sentry-gun",
+      "provider": "itchio",
+      "title": "Sci-fi Modular Sentry Gun",
+      "type": "model",
+      "url": "https://3darknight.itch.io/sci-fi-modular-sentry-gun",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzIzODYyOTM4LnBuZw==/315x250%23c/o6oQ4g.png",
+      "downloadable": false,
+      "author": "3Darknight",
+      "free": true
+    },
+    {
+      "id": "blenderkit:a96dd576-cc23-45b7-96e0-35605e31c2f7",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Medkit",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/a96dd576-cc23-45b7-96e0-35605e31c2f7/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e203faa257934751b26a0e9aca6d4fdf/files/thumbnail_b00095cc-19f7-4c35-9dcd-cf354841a473.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Matteo Pascale",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 20798
+    },
+    {
+      "id": "quaternius:ultimatemodularscifi",
+      "provider": "quaternius",
+      "title": "Ultimate Modular Sci-Fi Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatemodularscifi.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatemodularscifi.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:00de98b1-2397-40ad-a4d6-171772d5c2c4",
+      "provider": "blenderkit",
+      "title": "Sci-fi floor panel",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/00de98b1-2397-40ad-a4d6-171772d5c2c4/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8dd0a8f6d4434d5e9613317ab17719c6/files/thumbnail_e30d2c23-9624-4f69-9a0c-e0b752da97ba.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Cosmo",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 163472
+    },
+    {
+      "id": "quaternius:scifigun",
+      "provider": "quaternius",
+      "title": "Sci-Fi Gun Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/scifigun.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/scifigun.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "itchio:ishansawant/sci-fi-3d-models",
+      "provider": "itchio",
+      "title": "Sci-Fi 3D Models",
+      "type": "model",
+      "url": "https://ishansawant.itch.io/sci-fi-3d-models",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzg3MjA0NzYucG5n/315x250%23c/QH9aZX.png",
+      "downloadable": false,
+      "author": "Ishan",
+      "free": true
+    },
+    {
+      "id": "blenderkit:b180fdbd-668f-4081-ad51-f364e829f11d",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Station",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/b180fdbd-668f-4081-ad51-f364e829f11d/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/83d164c82aa14be4bcebebb4f2cdc280/files/thumbnail_36f9b0b7-9f50-443b-b395-fbf1918c83a5.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 119303,
+      "animated": true
+    },
+    {
+      "id": "itchio:welenwhite/sci-fi-character-blue-wanderer",
+      "provider": "itchio",
+      "title": "Sci-fi character: Blue Wanderer",
+      "type": "model",
+      "url": "https://welenwhite.itch.io/sci-fi-character-blue-wanderer",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzc4MjY1NzEucG5n/315x250%23c/zQYXSd.png",
+      "downloadable": false,
+      "author": "WelenWhite",
+      "free": true,
+      "animated": true
+    },
+    {
+      "id": "blenderkit:8c43c322-b7ea-4897-b373-af94cae8dfcd",
+      "provider": "blenderkit",
+      "title": "Sci-fi rifle",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8c43c322-b7ea-4897-b373-af94cae8dfcd/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/d5a0188a7a2c4272b1349484a76a2e0d/files/thumbnail_75a163f9-3571-4e83-9579-fd1d0818def8.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Eleanie",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 33267
+    },
+    {
+      "id": "blenderkit:43a381f3-15e2-4dc7-be82-61770c5fe729",
+      "provider": "blenderkit",
+      "title": "Sci-fi Device PBR",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/43a381f3-15e2-4dc7-be82-61770c5fe729/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1c1bf75217b848149fc93177d1e95911/files/thumbnail_07dd63b6-c2f2-4ef9-8b96-d61993e90ae3.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nicolai Prodromov",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 7062
+    },
+    {
+      "id": "quaternius:ultimatespaceships",
+      "provider": "quaternius",
+      "title": "Ultimate Spaceships Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/ultimatespaceships.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/ultimatespaceships.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:893fca4d-d299-4884-a59b-82c9d61c7104",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Drone 1",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/893fca4d-d299-4884-a59b-82c9d61c7104/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8c6f5a39c3084949aa3dc3c7a83ef280/files/thumbnail_6075ef05-49cc-434e-bd94-4ee113bb3899.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 2653
+    },
+    {
+      "id": "blenderkit:4068546c-9a3c-4c31-a1a2-c4f0f84f1f5c",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Drone 2",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4068546c-9a3c-4c31-a1a2-c4f0f84f1f5c/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5453c19fa6454ed28dcca78d357b703c/files/thumbnail_1b8181b1-0c4b-4a17-9582-8575d1a57d59.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Pastean Narcis Dan",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "polyCount": 5295
+    },
+    {
+      "id": "quaternius:animatedmech",
+      "provider": "quaternius",
+      "title": "Animated Mech Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/animatedmech.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/animatedmech.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true,
+      "animated": true,
+      "rigged": true
+    },
+    {
+      "id": "blenderkit:fec515f4-1f72-4869-b355-70abb48c6fb3",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Doors for Research Lab",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/fec515f4-1f72-4869-b355-70abb48c6fb3/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/2055df98d2e249ca9a6bef18eb704faa/files/thumbnail_316a75ed-8f77-456e-8b98-8675d8ce9594.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nobody",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 32278
+    },
+    {
+      "id": "quaternius:spaceships",
+      "provider": "quaternius",
+      "title": "Spaceships Pack",
+      "type": "model",
+      "url": "https://quaternius.com/packs/spaceships.html",
+      "thumbnailUrl": "https://quaternius.com/assets/images/thumbnails/spaceships.jpg",
+      "downloadable": false,
+      "author": "Quaternius",
+      "free": true
+    },
+    {
+      "id": "blenderkit:ee6a9a80-16fe-4f1e-a1c8-de1c788d49fa",
+      "provider": "blenderkit",
+      "title": "Sci-fi Device PBR White",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ee6a9a80-16fe-4f1e-a1c8-de1c788d49fa/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/293e1347884b4f61835fc29a579e8ac9/files/thumbnail_4b7d7c2a-e35c-45c1-86e0-9ea7b255e019.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Nicolai Prodromov",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 7062
+    },
+    {
+      "id": "blenderkit:2b7ab5b9-771c-47e4-b5e5-61859ac5303f",
+      "provider": "blenderkit",
+      "title": "Street Lamp Sci-Fi",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/2b7ab5b9-771c-47e4-b5e5-61859ac5303f/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/9d6478054c664cba810eee7b832144f9/files/thumbnail_8f262fc3-e732-40b5-b1c1-0702d291a916.jpg.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "Klo Works",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k",
+      "polyCount": 2362
+    },
+    {
+      "id": "blenderkit:684513ba-95f5-4f76-bda7-b0ff3c149e19",
+      "provider": "blenderkit",
+      "title": "Sci-Fi Wall/Ceiling Turret",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/684513ba-95f5-4f76-bda7-b0ff3c149e19/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/abfbb4280ccd43e891c6985491af4124/files/thumbnail_356d4c56-fde6-44de-97eb-d4682fb2c888.png.512x512_q85_crop-%2C.jpg",
+      "downloadable": true,
+      "author": "OuterSpaceSimon",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 71175
+    },
+    {
+      "id": "blenderkit:eb8d11d2-5ee1-43c6-8a75-5579fecb8f4e",
+      "provider": "blenderkit",
+      "title": "Sci-Fi-Crates",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/eb8d11d2-5ee1-43c6-8a75-5579fecb8f4e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c215b23655a24025b4a46adca79225f7/files/thumbnail_6724b26d-99c8-4552-9fbc-588368e21f32.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Raymond Gabriel",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "1k",
+      "polyCount": 3956
+    }
+  ]
+}

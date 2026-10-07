@@ -1,0 +1,755 @@
+{
+  "slug": "free-rock-3d-models",
+  "search": {
+    "q": "rock",
+    "types": [
+      "model"
+    ],
+    "free": true,
+    "exclude": [
+      "road sign",
+      "product display",
+      "sprites",
+      "textures",
+      "rock character",
+      "preview for"
+    ]
+  },
+  "updatedAt": "2026-10-07T09:06:22.858Z",
+  "assets": [
+    {
+      "id": "polyhaven:rock_moss_set_02",
+      "provider": "polyhaven",
+      "title": "Rock Moss Set 02",
+      "type": "model",
+      "url": "https://polyhaven.com/a/rock_moss_set_02",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rock_moss_set_02.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Kless Gyzen",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 57647
+    },
+    {
+      "id": "polyfork:rock-bommie-column-0f8a9b",
+      "provider": "polyfork",
+      "title": "Rock Bommie Column",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/rock-bommie-column-0f8a9b",
+      "thumbnailUrl": "https://polyfork.dev/files/rock-bommie-column-0f8a9b/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 334
+    },
+    {
+      "id": "blenderkit:11e7b11c-87ac-4aa0-b2da-aa3b00ced7ad",
+      "provider": "blenderkit",
+      "title": "Rocks",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/11e7b11c-87ac-4aa0-b2da-aa3b00ced7ad/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4ced12f8802143d78a3f270600510a42/files/thumbnail_adad3069-ce87-4888-932c-e16bf0a001f7.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Patrik",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "1k",
+      "polyCount": 57647
+    },
+    {
+      "id": "sharetextures:rock_5",
+      "provider": "sharetextures",
+      "title": "Rock 5",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_5",
+      "thumbnailUrl": "https://images.sharetextures.com/u/458e0ddf-81fa-4f1f-8382-3254c91c239d.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "texturescom:140759",
+      "provider": "texturescom",
+      "title": "Small Sandstone Rock 11",
+      "type": "model",
+      "url": "https://www.textures.com/download/3d-object-small-sandstone-rock-11/140759",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/3D Objects/114579-Rocks/ps140759/140759_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:rock_moss_set_01",
+      "provider": "polyhaven",
+      "title": "Rock Moss Set 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/rock_moss_set_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rock_moss_set_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Kless Gyzen",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 63127
+    },
+    {
+      "id": "polyfork:rock-cave-ledge-2a9532",
+      "provider": "polyfork",
+      "title": "Rock Cave Ledge",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/rock-cave-ledge-2a9532",
+      "thumbnailUrl": "https://polyfork.dev/files/rock-cave-ledge-2a9532/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 510
+    },
+    {
+      "id": "blenderkit:505d1690-43a2-4dc3-8a26-a7da9485105e",
+      "provider": "blenderkit",
+      "title": "Rock Rugged Arch Formation",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/505d1690-43a2-4dc3-8a26-a7da9485105e/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f4ac05c5d876422188ec5a9223ac27d1/files/thumbnail_d9b95fe5-b0b6-4c96-8e4a-aa3b7cd89d29.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "EB Adventure Photoscans",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 86784
+    },
+    {
+      "id": "sharetextures:3d-rock-1",
+      "provider": "sharetextures",
+      "title": "Rock 1",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/3d-rock-1",
+      "thumbnailUrl": "https://images.sharetextures.com/u/bf879bf4-368c-40b9-841f-6569bc195d65.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:rock-01",
+      "provider": "threedtexel",
+      "title": "Rock 01 – 3D Asset",
+      "type": "model",
+      "url": "https://3dtexel.com/product/rock-01/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2026/06/3d-model-29514-rendu-f-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "3DTexel License",
+        "url": "https://3dtexel.com/asset-license/",
+        "commercialUse": true,
+        "attributionRequired": true
+      },
+      "free": true
+    },
+    {
+      "id": "texturescom:141874",
+      "provider": "texturescom",
+      "title": "Boulder Rock 22",
+      "type": "model",
+      "url": "https://www.textures.com/download/3d-object-boulder-rock-22/141874",
+      "thumbnailUrl": "https://www.textures.com/system/gallery/photos/3D Objects/114574-Boulders/ps141874/141874_thumbnail_small.jpg",
+      "downloadable": false,
+      "license": {
+        "name": "Textures.com License",
+        "url": "https://www.textures.com/about/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "itchio:johanjimenex/fieldpack",
+      "provider": "itchio",
+      "title": "3D Voxel - trees, grass, rocks and ground",
+      "type": "model",
+      "url": "https://johanjimenex.itch.io/fieldpack",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzQyNDc2NTcuanBn/315x250%23c/QjLwFZ.jpg",
+      "downloadable": false,
+      "author": "JohanMangu",
+      "free": true
+    },
+    {
+      "id": "polyhaven:coast_land_rocks_04",
+      "provider": "polyhaven",
+      "title": "Coast Land Rocks 04",
+      "type": "model",
+      "url": "https://polyhaven.com/a/coast_land_rocks_04",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/coast_land_rocks_04.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 2037497
+    },
+    {
+      "id": "polyfork:aquascape-rock-arch-48bf5e",
+      "provider": "polyfork",
+      "title": "Aquascape Rock Arch",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/aquascape-rock-arch-48bf5e",
+      "thumbnailUrl": "https://polyfork.dev/files/aquascape-rock-arch-48bf5e/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 536
+    },
+    {
+      "id": "sharetextures:rock_6",
+      "provider": "sharetextures",
+      "title": "Rock 6",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_6",
+      "thumbnailUrl": "https://images.sharetextures.com/u/62ca0472-7214-4723-aa7c-980cbf488d83.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:mossy-rock-3d-asset-3",
+      "provider": "threedtexel",
+      "title": "Mossy Rock – 3D Asset",
+      "type": "model",
+      "url": "https://3dtexel.com/product/mossy-rock-3d-asset-3/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/3d-model-26330-rendu-f-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:sand_rocks_small_01",
+      "provider": "polyhaven",
+      "title": "Sand Rocks Small 01",
+      "type": "model",
+      "url": "https://polyhaven.com/a/sand_rocks_small_01",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/sand_rocks_small_01.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1386500
+    },
+    {
+      "id": "polyfork:garden-rock-7f5d60",
+      "provider": "polyfork",
+      "title": "Garden Rock",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/garden-rock-7f5d60",
+      "thumbnailUrl": "https://polyfork.dev/files/garden-rock-7f5d60/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 140
+    },
+    {
+      "id": "blenderkit:8ab9b241-1d30-41a8-8673-2a5aa4f8ef47",
+      "provider": "blenderkit",
+      "title": "Mossy Boulder Rock",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/8ab9b241-1d30-41a8-8673-2a5aa4f8ef47/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/8cd8385080e645c5b1414e5bc17fb7b4/files/thumbnail_0c0a0a6d-cfad-4b74-9d9a-c40cbbd87d9b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Guinter Ramos",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k",
+      "polyCount": 326599
+    },
+    {
+      "id": "itchio:cosmo-art/low-poly-rocks",
+      "provider": "itchio",
+      "title": "Low Poly rocks",
+      "type": "model",
+      "url": "https://cosmo-art.itch.io/low-poly-rocks",
+      "thumbnailUrl": "https://img.itch.zone/aW1nLzEwODk4OTUxLmpwZw==/315x250%23c/ZEA%2B4n.jpg",
+      "downloadable": false,
+      "author": "Cosmo",
+      "free": true
+    },
+    {
+      "id": "sharetextures:rock_10",
+      "provider": "sharetextures",
+      "title": "Rock 10",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_10",
+      "thumbnailUrl": "https://images.sharetextures.com/u/c90196aa-2198-4561-b57d-cadd57505090.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:coast_rocks_05",
+      "provider": "polyhaven",
+      "title": "Coast Rocks 05",
+      "type": "model",
+      "url": "https://polyhaven.com/a/coast_rocks_05",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/coast_rocks_05.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1446981
+    },
+    {
+      "id": "polyfork:small-reef-rock-99062d",
+      "provider": "polyfork",
+      "title": "Small Reef Rock",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/small-reef-rock-99062d",
+      "thumbnailUrl": "https://polyfork.dev/files/small-reef-rock-99062d/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 441
+    },
+    {
+      "id": "blenderkit:4391bbfc-5ecf-4cbc-91f4-ba7caa2b7d05",
+      "provider": "blenderkit",
+      "title": "Big Flat Rock",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/4391bbfc-5ecf-4cbc-91f4-ba7caa2b7d05/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/1b797a314d9641439dfd42e3b6a3b9a3/files/thumbnail_34d45037-328a-46f1-9d71-fd16769c928b.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Tedd Šámal",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 139209
+    },
+    {
+      "id": "sharetextures:rock_8",
+      "provider": "sharetextures",
+      "title": "Rock 8",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_8",
+      "thumbnailUrl": "https://images.sharetextures.com/u/fac22ed1-f9ea-469e-833b-79a7576eb843.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "threedtexel:desert-rock-3d-asset-26",
+      "provider": "threedtexel",
+      "title": "Desert Rock – 3D Asset",
+      "type": "model",
+      "url": "https://3dtexel.com/product/desert-rock-3d-asset-26/",
+      "thumbnailUrl": "https://3dtexel.com/wp-content/uploads/2025/11/3d-model-26319-rendu-f-768x768.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:coast_land_rocks_03",
+      "provider": "polyhaven",
+      "title": "Coast Land Rocks 03",
+      "type": "model",
+      "url": "https://polyhaven.com/a/coast_land_rocks_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/coast_land_rocks_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 2056223
+    },
+    {
+      "id": "polyfork:small-rock-db33a7",
+      "provider": "polyfork",
+      "title": "Small Rock",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/small-rock-db33a7",
+      "thumbnailUrl": "https://polyfork.dev/files/small-rock-db33a7/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 202
+    },
+    {
+      "id": "blenderkit:ba58c673-2e56-40e8-a489-1ffd88d3e6ad",
+      "provider": "blenderkit",
+      "title": "Rock",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/ba58c673-2e56-40e8-a489-1ffd88d3e6ad/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/578cdbc7d4324e08921905b50931ee52/files/thumbnail_06822209-069d-4872-960f-b0de8e8a48d4.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Poly Haven",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "4k"
+    },
+    {
+      "id": "sharetextures:rock_4",
+      "provider": "sharetextures",
+      "title": "Rock 4",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_4",
+      "thumbnailUrl": "https://images.sharetextures.com/u/8a8497f7-5612-4702-be39-c2d147bab9ec.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:rock_09",
+      "provider": "polyhaven",
+      "title": "Rock 09",
+      "type": "model",
+      "url": "https://polyhaven.com/a/rock_09",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/rock_09.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Jenelle van Heerden",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 23280
+    },
+    {
+      "id": "polyfork:rock-spire-13819c",
+      "provider": "polyfork",
+      "title": "Rock Spire",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/rock-spire-13819c",
+      "thumbnailUrl": "https://polyfork.dev/files/rock-spire-13819c/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 378
+    },
+    {
+      "id": "blenderkit:aa353f15-8446-4d89-8d97-f9bdfc1ccd17",
+      "provider": "blenderkit",
+      "title": "Beach rock scan from protugal",
+      "type": "model",
+      "url": "https://www.blendkit.com/asset-gallery-detail/aa353f15-8446-4d89-8d97-f9bdfc1ccd17/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4163d748b9084826b4b20ff3bc5853d3/files/thumbnail_b93f333d-43fa-41e4-81f0-d87fb4dcbab2.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "Tedd Šámal",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend",
+        "glb"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 235073
+    },
+    {
+      "id": "sharetextures:rock_9",
+      "provider": "sharetextures",
+      "title": "Rock 9",
+      "type": "model",
+      "url": "https://www.sharetextures.com/models/nature/rock_9",
+      "thumbnailUrl": "https://images.sharetextures.com/u/43c86a15-fc6f-4c6e-85ae-62441e421b0e.webp",
+      "downloadable": false,
+      "license": {
+        "name": "CC0 (ShareTextures custom terms)",
+        "url": "https://www.sharetextures.com/p/license",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true
+    },
+    {
+      "id": "polyhaven:coast_rocks_03",
+      "provider": "polyhaven",
+      "title": "Coast Rocks 03",
+      "type": "model",
+      "url": "https://polyhaven.com/a/coast_rocks_03",
+      "thumbnailUrl": "https://cdn.polyhaven.com/asset_img/thumbs/coast_rocks_03.png?width=512&height=512",
+      "downloadable": true,
+      "author": "Rob Tuytel, Rico Cilliers",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "gltf",
+        "blend",
+        "fbx",
+        "usd"
+      ],
+      "maxResolution": "8k",
+      "polyCount": 1525242
+    },
+    {
+      "id": "polyfork:medium-rock-e08405",
+      "provider": "polyfork",
+      "title": "Medium Rock",
+      "type": "model",
+      "url": "https://polyfork.dev/asset/medium-rock-e08405",
+      "thumbnailUrl": "https://polyfork.dev/files/medium-rock-e08405/renders/hero.png",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://polyfork.dev/licensing",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb",
+        "fbx",
+        "usdz",
+        "obj"
+      ],
+      "polyCount": 173
+    }
+  ]
+}
