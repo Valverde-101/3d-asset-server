@@ -151,6 +151,14 @@
       "access": "api",
       "addedAt": "2026-10-06",
       "addedBy": "human"
+    },
+    {
+      "id": "threedassets",
+      "name": "3DAssets.dev",
+      "homepage": "https://3dassets.dev",
+      "access": "api",
+      "addedAt": "2026-10-07",
+      "addedBy": "agent"
     }
   ],
   "rejected": [

@@ -2,12 +2,12 @@
 layout: ../../layouts/DocsLayout.astro
 title: Quick start
 crumb: Docs
-description: Get started with 3D Asset Server in two minutes. Search 19 asset sites in the browser, connect Claude Code or Cursor over MCP, or call the REST API.
+description: Get started with 3D Asset Server in two minutes. Search 20 asset sites in the browser, connect Claude Code or Cursor over MCP, or call the REST API.
 ---
 
 # 3D Asset Server quick start
 
-**3D Asset Server** searches 19 3D asset sites at once and downloads what you pick, ready to drop into a game or a website. Results cover 3D models, PBR materials, textures, HDRIs and game asset packs, and every result shows its licence.
+**3D Asset Server** searches 20 3D asset sites at once and downloads what you pick, ready to drop into a game or a website. Results cover 3D models, PBR materials, textures, HDRIs and game asset packs, and every result shows its licence.
 
 The public server at **https://3d.shep.bot** is free and needs no account or API key.
 

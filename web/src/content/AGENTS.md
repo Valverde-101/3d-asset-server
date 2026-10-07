@@ -1,12 +1,12 @@
 # 3D Asset Server: guide for AI agents
 
-> You are reading the agent guide for https://3d.shep.bot. This service searches 19 3D asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io, Textures.com, HDRMaps and more) and returns 3D models, PBR materials/textures, HDRIs and game asset packs with their licences, plus direct downloads where the source allows. It is free and needs no account or API key.
+> You are reading the agent guide for https://3d.shep.bot. This service searches 20 3D asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io, Textures.com, HDRMaps and more) and returns 3D models, PBR materials/textures, HDRIs and game asset packs with their licences, plus direct downloads where the source allows. It is free and needs no account or API key.
 
 ## When to use this
 
 Reach for 3D Asset Server when the job is one of these:
 
-- **Find an asset for a project**: "get me a low-poly tree", "I need a wooden crate model", "find a sci-fi corridor kit". Search models, packs and sprites across 19 sites in one call instead of browsing each.
+- **Find an asset for a project**: "get me a low-poly tree", "I need a wooden crate model", "find a sci-fi corridor kit". Search models, packs and sprites across 20 sites in one call instead of browsing each.
 - **Get PBR textures or materials**: "mossy rock material", "brick wall 2k textures". Returns map sets (color, normal, roughness, AO, displacement) at 1k–8k.
 - **Light a scene with an HDRI**: "sunset HDRI for three.js", "studio environment map". Returns HDR/EXR files at the resolution you ask for.
 - **Put files into a codebase**: download glTF/GLB, FBX, Blend, OBJ, textures or HDRIs straight into `./assets` or `./public` for Three.js, Babylon.js, React Three Fiber, Godot, Unity, Unreal, Blender or a website.

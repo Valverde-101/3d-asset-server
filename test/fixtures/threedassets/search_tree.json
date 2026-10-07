@@ -1,0 +1,247 @@
+{
+ "data": [
+  {
+   "id": "32932",
+   "slug": "bellroot-fen-floodward-marches-ceremonial-bellroot-tre-aec588ae",
+   "title": "Ceremonial Bellroot Tree (Bellroot Fen Floodward Marches)",
+   "summary": "Original living bellroot tree with three hollow bell-shaped root chambers, continuously buttressed bole and tapering ceremonial crown branches. No generic tree design credit.",
+   "status": "published",
+   "url": "https://3dassets.dev/assets/bellroot-fen-floodward-marches-ceremonial-bellroot-tre-aec588ae",
+   "cdnUrl": "https://cdn.3dassets.dev/assets/32932/v1/model.glb",
+   "downloadUrl": "https://3dassets.dev/download/bellroot-fen-floodward-marches-ceremonial-bellroot-tre-aec588ae",
+   "thumbnailUrl": "https://cdn.3dassets.dev/assets/32932/v1/thumb.webp",
+   "posterUrl": "https://cdn.3dassets.dev/assets/32932/v1/poster.webp",
+   "blurhash": "U15}24~U0002#WrvEfOl57I:-.={^jOr5Sw0",
+   "category": {
+    "slug": "nature",
+    "title": "Nature & Landscape"
+   },
+   "tags": [
+    {
+     "slug": "fantasy",
+     "title": "Fantasy"
+    },
+    {
+     "slug": "stylized",
+     "title": "Stylized"
+    },
+    {
+     "slug": "kit",
+     "title": "Kit / Set"
+    }
+   ],
+   "license": {
+    "slug": "cc0-1.0",
+    "name": "CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false
+   },
+   "contributor": {
+    "username": "3dassets",
+    "name": "3D Assets",
+    "url": "https://3dassets.dev/u/3dassets"
+   },
+   "stats": {
+    "fileSize": 294112,
+    "triangles": 13736,
+    "vertices": 7552,
+    "meshes": 2,
+    "materials": 2,
+    "textures": 3,
+    "animations": [],
+    "boundingBox": {
+     "min": [
+      -0.9343194222060618,
+      0,
+      -1.2419296201287466
+     ],
+     "max": [
+      1.4290317153541026,
+      3.932957172393799,
+      1.2419296201287466
+     ]
+    },
+    "sizeMeters": [
+     2.363,
+     3.933,
+     2.484
+    ],
+    "hasDraco": false,
+    "hasMeshopt": false,
+    "hasKTX2": false,
+    "extensionsUsed": [
+     "KHR_mesh_quantization",
+     "EXT_texture_webp"
+    ]
+   },
+   "aiGenerated": true,
+   "aiModel": "GPT-6",
+   "downloads": 20,
+   "publishedAt": "2026-09-08T14:52:55.103Z",
+   "updatedAt": "2026-10-05T20:42:53.725Z"
+  },
+  {
+   "id": "30082",
+   "slug": "japanese-school-and-city-street-cherry-tree-blossom-618a9f6d",
+   "title": "Cherry Tree in Blossom (Japanese School and City Street)",
+   "summary": "Flowering cherry tree 4.6 m tall with a forked trunk, four main limbs and five blossom masses over a circular concrete tree pit, for a school yard or a street kerb.",
+   "status": "published",
+   "url": "https://3dassets.dev/assets/japanese-school-and-city-street-cherry-tree-blossom-618a9f6d",
+   "cdnUrl": "https://cdn.3dassets.dev/assets/30082/v1/model.glb",
+   "downloadUrl": "https://3dassets.dev/download/japanese-school-and-city-street-cherry-tree-blossom-618a9f6d",
+   "thumbnailUrl": "https://cdn.3dassets.dev/assets/30082/v1/thumb.webp",
+   "posterUrl": "https://cdn.3dassets.dev/assets/30082/v1/poster.webp",
+   "blurhash": "UFBWJSbG00WB~XofD%Rj9Fofxtay00ja-;of",
+   "category": {
+    "slug": "nature",
+    "title": "Nature & Landscape"
+   },
+   "tags": [
+    {
+     "slug": "modern",
+     "title": "Modern"
+    },
+    {
+     "slug": "realistic",
+     "title": "Realistic"
+    },
+    {
+     "slug": "exterior",
+     "title": "Exterior"
+    }
+   ],
+   "license": {
+    "slug": "cc0-1.0",
+    "name": "CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false
+   },
+   "contributor": {
+    "username": "3dassets",
+    "name": "3D Assets",
+    "url": "https://3dassets.dev/u/3dassets"
+   },
+   "stats": {
+    "fileSize": 152156,
+    "triangles": 2294,
+    "vertices": 4386,
+    "meshes": 3,
+    "materials": 3,
+    "textures": 2,
+    "animations": [],
+    "boundingBox": {
+     "min": [
+      -2.1063544750213623,
+      0,
+      -1.9521758470907238
+     ],
+     "max": [
+      1.9845643043518066,
+      4.560077512042692,
+      2.1362459574117687
+     ]
+    },
+    "sizeMeters": [
+     4.091,
+     4.56,
+     4.088
+    ],
+    "hasDraco": false,
+    "hasMeshopt": false,
+    "hasKTX2": false,
+    "extensionsUsed": [
+     "KHR_mesh_quantization",
+     "EXT_texture_webp"
+    ]
+   },
+   "aiGenerated": true,
+   "aiModel": "Claude Fable 5.1",
+   "downloads": 14,
+   "publishedAt": "2026-09-08T05:12:24.927Z",
+   "updatedAt": "2026-10-06T11:23:52.007Z"
+  },
+  {
+   "id": "38135",
+   "slug": "desert-mosque-and-madrasa-courtyard-courtyard-tree-in--7057a18b",
+   "title": "Courtyard Tree In A Well (Desert Mosque and Madrasa Courtyard)",
+   "summary": "Free 3D model of a courtyard tree in a stone planting well for a desert mosque or madrasa: a 2.4 m kerbed well of sand with a broad crowned tree, 4.6 m tall.",
+   "status": "published",
+   "url": "https://3dassets.dev/assets/desert-mosque-and-madrasa-courtyard-courtyard-tree-in--7057a18b",
+   "cdnUrl": "https://cdn.3dassets.dev/assets/38135/v1/model.glb",
+   "downloadUrl": "https://3dassets.dev/download/desert-mosque-and-madrasa-courtyard-courtyard-tree-in--7057a18b",
+   "thumbnailUrl": "https://cdn.3dassets.dev/assets/38135/v1/thumb.webp",
+   "posterUrl": "https://cdn.3dassets.dev/assets/38135/v1/poster.webp",
+   "blurhash": "U6B:.^?u004n00IU}]xuDkt7tjM{dvxZyVkW",
+   "category": {
+    "slug": "nature",
+    "title": "Nature & Landscape"
+   },
+   "tags": [
+    {
+     "slug": "historical",
+     "title": "Historical"
+    },
+    {
+     "slug": "realistic",
+     "title": "Realistic"
+    },
+    {
+     "slug": "exterior",
+     "title": "Exterior"
+    }
+   ],
+   "license": {
+    "slug": "cc0-1.0",
+    "name": "CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false
+   },
+   "contributor": {
+    "username": "3dassets",
+    "name": "3D Assets",
+    "url": "https://3dassets.dev/u/3dassets"
+   },
+   "stats": {
+    "fileSize": 24808,
+    "triangles": 968,
+    "vertices": 958,
+    "meshes": 4,
+    "materials": 4,
+    "textures": 0,
+    "animations": [],
+    "boundingBox": {
+     "min": [
+      -1.8510565757751465,
+      0.00001250762232862801,
+      -1.8429420144025264
+     ],
+     "max": [
+      1.8937008380889893,
+      4.329988140908094,
+      1.4049067646924434
+     ]
+    },
+    "sizeMeters": [
+     3.745,
+     4.33,
+     3.248
+    ],
+    "hasDraco": false,
+    "hasMeshopt": false,
+    "hasKTX2": false,
+    "extensionsUsed": [
+     "KHR_mesh_quantization"
+    ]
+   },
+   "aiGenerated": true,
+   "aiModel": "Claude Opus 5",
+   "downloads": 11,
+   "publishedAt": "2026-09-12T14:01:24.794Z",
+   "updatedAt": "2026-10-06T08:51:41.418Z"
+  }
+ ],
+ "page": 1,
+ "totalPages": 182,
+ "total": 545,
+ "limit": 3
+}

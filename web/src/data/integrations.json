@@ -1,6 +1,13 @@
 {
   "integrations": [
     {
+      "id": "threedassets",
+      "name": "3DAssets.dev",
+      "homepage": "https://3dassets.dev",
+      "addedAt": "2026-10-07",
+      "addedBy": "agent"
+    },
+    {
       "id": "threedtexel",
       "name": "3DTexel",
       "homepage": "https://3dtexel.com",

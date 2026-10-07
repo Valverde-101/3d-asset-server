@@ -1,0 +1,88 @@
+{
+ "data": [
+  {
+   "id": "39465",
+   "slug": "beach-surf-and-paddle-kit-surf-beach-cov-c569902d-starter-scene",
+   "title": "Surf Beach Cove (Beach Surf and Paddle Kit)",
+   "summary": "A busy surf beach cove: lifeguard tower and patrol flags, a hire hut with stocked board racks, shower and changing tents, sunbathers under umbrellas with towels, chairs and coolers, a volleyball court and sand castle, and paddleboards, a kayak and a jet ski inside the buoyed...",
+   "status": "published",
+   "url": "https://3dassets.dev/assets/beach-surf-and-paddle-kit-surf-beach-cov-c569902d-starter-scene",
+   "cdnUrl": "https://cdn.3dassets.dev/assets/39465/v1/model.glb",
+   "downloadUrl": "https://3dassets.dev/download/beach-surf-and-paddle-kit-surf-beach-cov-c569902d-starter-scene",
+   "thumbnailUrl": "https://cdn.3dassets.dev/assets/39465/v1/thumb.webp",
+   "posterUrl": "https://cdn.3dassets.dev/assets/39465/v1/poster.webp",
+   "blurhash": "UACZeHtl00ovH?%2tSM|00R4~Vb0?^9tVr-U",
+   "category": {
+    "slug": "environments",
+    "title": "Environments & Scenes"
+   },
+   "tags": [
+    {
+     "slug": "modern",
+     "title": "Modern"
+    },
+    {
+     "slug": "stylized",
+     "title": "Stylized"
+    },
+    {
+     "slug": "kit",
+     "title": "Kit / Set"
+    }
+   ],
+   "license": {
+    "slug": "cc0-1.0",
+    "name": "CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false
+   },
+   "contributor": {
+    "username": "3dassets",
+    "name": "3D Assets",
+    "url": "https://3dassets.dev/u/3dassets"
+   },
+   "stats": {
+    "fileSize": 4127016,
+    "triangles": 208396,
+    "vertices": 182135,
+    "meshes": 248,
+    "materials": 13,
+    "textures": 0,
+    "animations": [],
+    "boundingBox": {
+     "min": [
+      -17.200000762939453,
+      -0.065,
+      -11.689229214031723
+     ],
+     "max": [
+      16.979999542236328,
+      6.477625179290771,
+      11.000959598858383
+     ]
+    },
+    "sizeMeters": [
+     34.18,
+     6.543,
+     22.69
+    ],
+    "hasDraco": false,
+    "hasMeshopt": false,
+    "hasKTX2": false,
+    "extensionsUsed": [
+     "KHR_materials_transmission",
+     "KHR_mesh_quantization"
+    ]
+   },
+   "aiGenerated": true,
+   "aiModel": "Claude Opus 5.5",
+   "downloads": 94,
+   "publishedAt": "2026-09-23T15:10:50.424Z",
+   "updatedAt": "2026-10-07T10:09:17.668Z"
+  }
+ ],
+ "page": 1,
+ "totalPages": 22849,
+ "total": 22849,
+ "limit": 1
+}

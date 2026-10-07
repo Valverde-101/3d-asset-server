@@ -1,11 +1,11 @@
 ---
 name: 3d-assets
-description: Find and download free 3D models, PBR textures/materials, HDRIs and game asset packs (glTF, FBX, Blend, EXR) from 19 sites like Poly Haven, ambientCG, Kenney and BlenderKit via https://3d.shep.bot, with licences. Use when the user needs 3D assets, textures, environment maps or game art for a project.
+description: Find and download free 3D models, PBR textures/materials, HDRIs and game asset packs (glTF, FBX, Blend, EXR) from 20 sites like Poly Haven, ambientCG, Kenney and BlenderKit via https://3d.shep.bot, with licences. Use when the user needs 3D assets, textures, environment maps or game art for a project.
 ---
 
 # 3D assets via 3d.shep.bot
 
-Search 19 asset sites in one call and download files into the project. No API key needed.
+Search 20 asset sites in one call and download files into the project. No API key needed.
 
 ## Workflow
 

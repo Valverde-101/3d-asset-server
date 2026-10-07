@@ -1,13 +1,13 @@
 ---
 layout: ../layouts/PageLayout.astro
 title: About 3D Asset Server
-description: What 3D Asset Server is, who runs it, how it finds assets across 19 sites, and how it treats licences and the sites it searches.
+description: What 3D Asset Server is, who runs it, how it finds assets across 20 sites, and how it treats licences and the sites it searches.
 schemaType: AboutPage
 ---
 
 # About 3D Asset Server
 
-**3D Asset Server** (https://3d.shep.bot) is a free search engine and API for 3D assets. One query searches 19 asset sites at once, including Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader and itch.io, and returns 3D models, PBR materials and textures, HDRIs and game asset packs with the licence of every result. Where a source allows it, the server also downloads the files: glTF/GLB, FBX or Blend models with their textures, PBR texture maps at 1k–8k, and HDR/EXR environment maps.
+**3D Asset Server** (https://3d.shep.bot) is a free search engine and API for 3D assets. One query searches 20 asset sites at once, including Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader and itch.io, and returns 3D models, PBR materials and textures, HDRIs and game asset packs with the licence of every result. Where a source allows it, the server also downloads the files: glTF/GLB, FBX or Blend models with their textures, PBR texture maps at 1k–8k, and HDR/EXR environment maps.
 
 It exists because finding a usable asset usually means opening a dozen tabs, comparing licences by hand, and unpacking archives in different layouts. 3D Asset Server does that comparison once and hands back files that are ready to drop into a game, a website or a Blender scene.
 

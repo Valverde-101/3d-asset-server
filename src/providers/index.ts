@@ -14,6 +14,7 @@ import { quaternius } from "./quaternius.js";
 import { sharetextures } from "./sharetextures.js";
 import { texturecan } from "./texturecan.js";
 import { texturescom } from "./texturescom.js";
+import { threedassets } from "./threedassets.js";
 import { threedtexel } from "./threedtexel.js";
 import { threedtextures } from "./threedtextures.js";
 
@@ -29,6 +30,7 @@ export const allProviders: Provider[] = [
   poliigon,
   quaternius,
   polyfork,
+  threedassets,
   threedtextures,
   threedtexel,
   texturecan,

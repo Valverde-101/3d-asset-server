@@ -156,6 +156,19 @@
     "supportsDownload": true
   },
   {
+    "id": "threedassets",
+    "name": "3DAssets.dev",
+    "homepage": "https://3dassets.dev",
+    "description": "Open catalogue of web-optimised CC0 GLB models (props, nature, buildings, vehicles, characters) with a public API.",
+    "assetTypes": [
+      "model"
+    ],
+    "access": "api",
+    "pricing": "free",
+    "license": "CC0",
+    "supportsDownload": true
+  },
+  {
     "id": "threedtextures",
     "name": "3DTextures.me",
     "homepage": "https://3dtextures.me",

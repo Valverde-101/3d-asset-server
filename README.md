@@ -2,7 +2,7 @@
   <img src="docs/images/banner.svg" width="100%" alt="3D Asset Server: one search box for 3D models, materials, textures, HDRIs and game assets. HTTP API, MCP server, web UI and CLI.">
 </p>
 
-**3d-asset-server** searches 19 asset sites at once and downloads what you pick, ready to drop
+**3d-asset-server** searches 20 asset sites at once and downloads what you pick, ready to drop
 into a game or a website. Use it from a browser, from `curl`, from the command line, or let your AI
 assistant drive it over MCP.
 
@@ -40,7 +40,7 @@ assistant drive it over MCP.
 
 ## How it works
 
-![Architecture: the web UI, curl, AI assistants (MCP) and the CLI all reach one server. Its REST API and MCP server call AssetService, which searches 19 sources through a caching HTTP client: 10 via APIs, 6 scraped, 3 link-only.](docs/images/architecture.svg)
+![Architecture: the web UI, curl, AI assistants (MCP) and the CLI all reach one server. Its REST API and MCP server call AssetService, which searches 20 sources through a caching HTTP client: 11 via APIs, 6 scraped, 3 link-only.](docs/images/architecture.svg)
 
 What a single search does:
 
@@ -65,6 +65,7 @@ and a link to the same search on that site.
 | [Poliigon](https://www.poliigon.com) | Premium materials and models | link only (bot wall) | no | per listing |
 | [Quaternius](https://quaternius.com) | Low-poly models, animated characters | scrape | no: Google Drive / itch.io links | CC0 / QAL |
 | [Polyfork](https://polyfork.dev) | Low-poly models and themed kits for web and games | API | yes for free assets (GLB from Polyfork's CDN); FBX / USDZ / OBJ need an account | royalty free, no redistribution |
+| [3DAssets.dev](https://3dassets.dev) | Web-optimised GLB models: props, nature, buildings, vehicles | API | yes: GLB from its CDN | CC0 |
 | [3DTextures.me](https://3dtextures.me) | Realistic and stylized PBR | WordPress API | no: Google Drive folders | CC0 |
 | [3DTexel](https://3dtexel.com) | PBR materials, HDRIs, decals, 3D assets | API | no: downloads need a free account | CC0 |
 | [TextureCan](https://www.texturecan.com) | PBR materials and a few models | scrape | yes: 1K-4K zips | CC0 |
@@ -75,7 +76,7 @@ and a link to the same search on that site.
 | [TurboSquid](https://www.turbosquid.com) | Free and paid models | link only (bot wall) | no | per listing |
 | [itch.io](https://itch.io/game-assets) | Indie art, 3D packs, UI, audio | scrape | no: itch's download flow | per listing |
 
-![Sources by what they give you: 7 with search and direct download, 9 with search and a link to the asset page, 3 linked to their own search.](docs/images/source-access.svg)
+![Sources by what they give you: 8 with search and direct download, 9 with search and a link to the asset page, 3 linked to their own search.](docs/images/source-access.svg)
 
 Notes:
 

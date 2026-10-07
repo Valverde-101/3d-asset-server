@@ -2,7 +2,7 @@
 layout: ../../layouts/DocsLayout.astro
 title: REST API guide
 crumb: REST API guide
-description: Search 3D models, textures and HDRIs across 19 sites with one REST call, read licences and file lists, and download glTF, FBX, PBR maps or EXR files.
+description: Search 3D models, textures and HDRIs across 20 sites with one REST call, read licences and file lists, and download glTF, FBX, PBR maps or EXR files.
 ---
 
 # 3D Asset Server REST API guide

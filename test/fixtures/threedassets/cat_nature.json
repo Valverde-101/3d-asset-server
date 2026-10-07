@@ -1,0 +1,91 @@
+{
+ "data": [
+  {
+   "id": "39464",
+   "slug": "beach-surf-and-paddle-kit-surf-cove-base-c5f15a02",
+   "title": "Surf Cove Base (Beach Surf and Paddle Kit)",
+   "summary": "33 by 22 m surf cove terrain: sand beach running down a wet sand slope into shallow water, broken shore foam and two outer surf lines, a seaweed wrack line, marram topped dune ridge with a plank boardwalk through it, a rocky point and scattered shells.",
+   "status": "published",
+   "url": "https://3dassets.dev/assets/beach-surf-and-paddle-kit-surf-cove-base-c5f15a02",
+   "cdnUrl": "https://cdn.3dassets.dev/assets/39464/v1/model.glb",
+   "downloadUrl": "https://3dassets.dev/download/beach-surf-and-paddle-kit-surf-cove-base-c5f15a02",
+   "thumbnailUrl": "https://cdn.3dassets.dev/assets/39464/v1/thumb.webp",
+   "posterUrl": "https://cdn.3dassets.dev/assets/39464/v1/poster.webp",
+   "blurhash": "UAC%EUtn00s.$#%LS6IV00Z}~pNG9}9G#k-o",
+   "category": {
+    "slug": "nature",
+    "title": "Nature & Landscape"
+   },
+   "tags": [
+    {
+     "slug": "modern",
+     "title": "Modern"
+    },
+    {
+     "slug": "stylized",
+     "title": "Stylized"
+    },
+    {
+     "slug": "exterior",
+     "title": "Exterior"
+    },
+    {
+     "slug": "kit",
+     "title": "Kit / Set"
+    }
+   ],
+   "license": {
+    "slug": "cc0-1.0",
+    "name": "CC0 1.0 Universal",
+    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "attributionRequired": false
+   },
+   "contributor": {
+    "username": "3dassets",
+    "name": "3D Assets",
+    "url": "https://3dassets.dev/u/3dassets"
+   },
+   "stats": {
+    "fileSize": 344140,
+    "triangles": 15752,
+    "vertices": 15212,
+    "meshes": 7,
+    "materials": 7,
+    "textures": 0,
+    "animations": [],
+    "boundingBox": {
+     "min": [
+      -17.200000762939453,
+      -0.000039638749563697395,
+      -11.689229214031723
+     ],
+     "max": [
+      16.979999542236328,
+      1.540039600602591,
+      11.000959598858383
+     ]
+    },
+    "sizeMeters": [
+     34.18,
+     1.54,
+     22.69
+    ],
+    "hasDraco": false,
+    "hasMeshopt": false,
+    "hasKTX2": false,
+    "extensionsUsed": [
+     "KHR_mesh_quantization"
+    ]
+   },
+   "aiGenerated": true,
+   "aiModel": "Claude Opus 5.5",
+   "downloads": 51,
+   "publishedAt": "2026-09-23T15:10:48.846Z",
+   "updatedAt": "2026-10-07T04:25:25.209Z"
+  }
+ ],
+ "page": 1,
+ "totalPages": 1520,
+ "total": 1520,
+ "limit": 1
+}
