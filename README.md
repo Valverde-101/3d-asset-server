@@ -1,19 +1,6 @@
-```
-       +------------+
-      /            /|      _____ ____       _                 _
-     /            / |     |___ /|  _ \     / \   ___ ___  ___| |_
-    +------------+  |       |_ \| | | |   / _ \ / __/ __|/ _ \ __|
-    |            |  |      ___) | |_| |  / ___ \\__ \__ \  __/ |_
-    |            |  +     |____/|____/  /_/   \_\___/___/\___|\__|
-    |            | /       ____
-    |            |/       / ___|  ___ _ ____   _____ _ __
-    +------------+        \___ \ / _ \ '__\ \ / / _ \ '__|
-                           ___) |  __/ |   \ V /  __/ |
-                          |____/ \___|_|    \_/ \___|_|
-
-        one search box for 3D models, materials, textures, HDRIs & game assets
-                         HTTP API  *  MCP server  *  web UI  *  CLI
-```
+<p align="center">
+  <img src="docs/images/banner.svg" width="100%" alt="3D Asset Server: one search box for 3D models, materials, textures, HDRIs and game assets. HTTP API, MCP server, web UI and CLI.">
+</p>
 
 **3d-asset-server** searches 19 asset sites at once and downloads what you pick, ready to drop
 into a game or a website. Use it from a browser, from `curl`, from the command line, or let your AI
@@ -53,74 +40,11 @@ assistant drive it over MCP.
 
 ## How it works
 
-```
-   +-----------+   +-----------+   +-----------+   +-----------+
-   |  Web UI   |   |   curl /  |   |  Claude,  |   |    CLI    |
-   | (browser) |   |  your app |   |  Cursor.. |   |           |
-   +-----+-----+   +-----+-----+   +-----+-----+   +-----+-----+
-         |               |               |               |
-         |   GET /       |  /v1/*        | MCP           | search
-         |               |               | stdio or /mcp |
-         v               v               v               v
-   +-----------------------------------------------------------+
-   |                      3d-asset-server                      |
-   |                                                           |
-   |   +-----------------+   +-------------------------------+ |
-   |   |  REST API (Hono)|   |  MCP tools                    | |
-   |   |  /v1/search     |   |  search_assets   get_asset    | |
-   |   |  /v1/assets/..  |   |  download_asset  list_provid..| |
-   |   +--------+--------+   +---------------+---------------+ |
-   |            |                            |                 |
-   |            +-------------+--------------+                 |
-   |                          v                                |
-   |   +-------------------------------------------------------+
-   |   |  AssetService                                         |
-   |   |   fan-out --> per-site timeout --> rank --> dedupe    |
-   |   +-------------------------------------------------------+
-   |                          |                                |
-   |   +----------------------+--------------------------------+
-   |   |  HTTP client: User-Agent, timeouts, LRU cache,        |
-   |   |  in-flight request dedupe                             |
-   |   +-------------------------------------------------------+
-   +-----------------------------+-----------------------------+
-                                 |
-         +-------------+---------+---------+-------------+
-         v             v                   v             v
-   +-----------+ +-----------+       +-----------+ +-----------+
-   | API       | | scrape    |  ...  | scrape    | | link-only |
-   | Poly Haven| | Kenney    |       | itch.io   | | Fab       |
-   | ambientCG | | TextureCan|       | HDRI Hub  | | Poliigon  |
-   | BlenderKit| | Quaternius|       | ...       | | TurboSquid|
-   +-----------+ +-----------+       +-----------+ +-----------+
-```
+![Architecture: the web UI, curl, AI assistants (MCP) and the CLI all reach one server. Its REST API and MCP server call AssetService, which searches 19 sources through a caching HTTP client: 10 via APIs, 6 scraped, 3 link-only.](docs/images/architecture.svg)
 
 What a single search does:
 
-```
-  "sunset" type=hdri free=true
-           |
-           v
-  +------------------+   skip sites that don't carry HDRIs, or are paid-only
-  |   pick sources   |-----------------------------------------------------+
-  +--------+---------+                                                     |
-           |  in parallel, each with its own timeout (default 12s)         |
-     +-----+------+------------+------------+------------+                 |
-     v            v            v            v            v                 v
-  Poly Haven   ambientCG   BlenderKit    HDRMaps     Poliigon        cgbookcase,
-   ok 24        ok 24        ok 24        ok 12      link ->         kenney, ...
-     |            |            |            |            |            skipped
-     +------------+-----+------+------------+            |
-                        v                                 |
-  +---------------------------------------------+         |
-  | rank:  60% text match (title > tags > desc) |         |
-  |        20% the site's own ranking           |         |
-  |        10% API > scrape                     |         |
-  |        +free  +direct download              |         |
-  |        diversity penalty per site           |         |
-  +---------------------+-----------------------+         |
-                        v                                 v
-           results[]  +  per-site report (ok / error / timeout / skipped / link)
-```
+![One search: pick the sources that fit, search them in parallel with a timeout each, rank and merge the results, and return them with a status report for every site.](docs/images/search-flow.svg)
 
 A slow or broken site never fails the search. It shows up in the per-site report with its error
 and a link to the same search on that site.
@@ -151,15 +75,7 @@ and a link to the same search on that site.
 | [TurboSquid](https://www.turbosquid.com) | Free and paid models | link only (bot wall) | no | per listing |
 | [itch.io](https://itch.io/game-assets) | Indie art, 3D packs, UI, audio | scrape | no: itch's download flow | per listing |
 
-```
-  search + direct download    Poly Haven, ambientCG, BlenderKit (free), Kenney,
-                              Polyfork (free), TextureCan, HDRMaps (free)
-
-  search + link to the page   CGBookcase, ShareTextures, Quaternius, 3DTextures.me,
-                              3DTexel, Textures.com, HDRI Hub, CGTrader, itch.io
-
-  link to the site's search   Fab, Poliigon, TurboSquid
-```
+![Sources by what they give you: 7 with search and direct download, 9 with search and a link to the asset page, 3 linked to their own search.](docs/images/source-access.svg)
 
 Notes:
 
@@ -244,19 +160,7 @@ is the versioning, deprecation and rate-limit policy.
 
 ## MCP: use it from an AI assistant
 
-```
-  you: "find me a free sci-fi crate model and put it in the project"
-   |
-   v
-  assistant --search_assets("sci-fi crate", types=[model], free_only)--> ranked results
-   |
-   +--------get_asset("polyhaven:...", format="gltf")-----------------> formats, licence,
-   |                                                                     files, size
-   +--------download_asset("polyhaven:...", resolution="2k")----------> ./assets/polyhaven-.../
-   |
-   v
-  "Done: CC0, no credit needed. Saved to assets/polyhaven-.../crate_2k.gltf"
-```
+![An assistant calls search_assets, then get_asset, then download_asset, and tells you the licence and where the files were saved.](docs/images/mcp-flow.svg)
 
 ### Claude Code
 
@@ -394,33 +298,31 @@ Sources:
 
 Unless you say otherwise, a download picks game- and web-friendly files:
 
-```
-  asset type   preferred format, in order          resolution
-  ----------   ---------------------------------   --------------------------
-  model        glb > gltf > fbx > obj > blend      closest to 2k
-  hdri         hdr > exr                           closest to 2k
-  material     jpg maps > png maps > zip           closest to 2k
-  texture      jpg > png > zip > exr               closest to 2k
-  packs        zip (extracted)                     -
-```
+| Asset type | Preferred format, in order | Resolution |
+|---|---|---|
+| model | glb → gltf → fbx → obj → blend | closest to 2k |
+| hdri | hdr → exr | closest to 2k |
+| material | jpg maps → png maps → zip | closest to 2k |
+| texture | jpg → png → zip → exr | closest to 2k |
+| pack | zip (extracted) | – |
 
 Companion files keep their relative paths, so a glTF loads straight away:
 
-```
+```text
   assets/
-  `-- polyhaven-WoodenChair_01/
-      |-- WoodenChair_01_2k.gltf
-      |-- WoodenChair_01.bin
-      `-- textures/
-          |-- WoodenChair_01_diff_2k.jpg
-          |-- WoodenChair_01_nor_gl_2k.jpg
-          `-- WoodenChair_01_arm_2k.jpg
+  └── polyhaven-WoodenChair_01/
+      ├── WoodenChair_01_2k.gltf
+      ├── WoodenChair_01.bin
+      └── textures/
+          ├── WoodenChair_01_diff_2k.jpg
+          ├── WoodenChair_01_nor_gl_2k.jpg
+          └── WoodenChair_01_arm_2k.jpg
 
   assets/
-  `-- kenney-nature-kit/              <- zip downloaded and extracted
-      `-- kenney_nature-kit/
-          |-- Models/GLTF format/...
-          `-- License.txt
+  └── kenney-nature-kit/              ← zip downloaded and extracted
+      └── kenney_nature-kit/
+          ├── Models/GLTF format/...
+          └── License.txt
 ```
 
 Safety:
@@ -534,55 +436,58 @@ It needs one repository secret: `CLAUDE_CODE_OAUTH_TOKEN` (from `claude setup-to
 
 ## Project layout
 
-```
+```text
 src/
-|-- cli.ts               serve | mcp | search
-|-- index.ts             library exports
-|-- core/
-|   |-- types.ts         Asset, AssetFile, Provider, SearchQuery ...
-|   |-- http.ts          fetch wrapper: UA, timeouts, LRU cache, in-flight dedupe
-|   |-- service.ts       fan-out search, ranking, per-site reports
-|   |-- download.ts      file selection, safe downloads, zip extraction, zip streaming
-|   `-- util.ts          matching/scoring, type inference, helpers
-|-- providers/           one adapter per site, plus index.ts (the registry)
-|   |-- polyhaven.ts  ambientcg.ts  blenderkit.ts  kenney.ts  quaternius.ts
-|   |-- itchio.ts  cgtrader.ts  texturescom.ts  threedtextures.ts  hdrmaps.ts
-|   |-- sharetextures.ts  cgbookcase.ts  texturecan.ts  hdrihub.ts
-|   `-- linked.ts        Fab, Poliigon, TurboSquid (link-only)
-|-- api/
-|   |-- app.ts           Hono REST API, website, MCP Streamable HTTP mount, request metrics
-|   |-- site.ts          serves the pre-rendered site: caching, 404, markdown twins for agents
-|   `-- openapi.ts       OpenAPI 3.1 with full schemas (rendered at /docs/api/reference)
-|-- core/analytics.ts    Prometheus metrics + JSON event log
-|-- core/stats.ts        /v1/stats: Prometheus queries or in-process tallies
-`-- mcp/
-    `-- server.ts        MCP tool definitions (shared by stdio and HTTP)
+├── cli.ts               serve | mcp | search
+├── index.ts             library exports
+├── core/
+│   ├── types.ts         Asset, AssetFile, Provider, SearchQuery ...
+│   ├── http.ts          fetch wrapper: UA, timeouts, LRU cache, in-flight dedupe
+│   ├── service.ts       fan-out search, ranking, per-site reports
+│   ├── download.ts      file selection, safe downloads, zip extraction, zip streaming
+│   └── util.ts          matching/scoring, type inference, helpers
+├── providers/           one adapter per site, plus index.ts (the registry)
+│   ├── polyhaven.ts  ambientcg.ts  blenderkit.ts  kenney.ts  quaternius.ts
+│   ├── itchio.ts  cgtrader.ts  texturescom.ts  threedtextures.ts  hdrmaps.ts
+│   ├── sharetextures.ts  cgbookcase.ts  texturecan.ts  hdrihub.ts
+│   └── linked.ts        Fab, Poliigon, TurboSquid (link-only)
+├── api/
+│   ├── app.ts           Hono REST API, website, MCP Streamable HTTP mount, request metrics
+│   ├── site.ts          serves the pre-rendered site: caching, 404, markdown twins for agents
+│   └── openapi.ts       OpenAPI 3.1 with full schemas (rendered at /docs/api/reference)
+├── core/analytics.ts    Prometheus metrics + JSON event log
+├── core/stats.ts        /v1/stats: Prometheus queries or in-process tallies
+└── mcp/
+    └── server.ts        MCP tool definitions (shared by stdio and HTTP)
 web/                     the website (Astro + React + Tailwind + shadcn/ui)
-|-- src/pages/           index, search, stats, docs (markdown), sources, API reference, 404
-|-- src/components/      ui/ (shadcn + Magic UI), search/ (the search app), home/
-|-- src/content/         AGENTS.md and the Claude Code skill
-|-- src/lib/             site constants, schema.org JSON-LD, agent client configs, FAQ
-`-- integrations/        emits AGENTS.md, llms.txt, llms-full.txt, markdown twins, Scalar bundle
+├── src/pages/           index, search, stats, docs (markdown), sources, API reference, 404
+├── src/components/      ui/ (shadcn + Magic UI), search/ (the search app), home/
+├── src/content/         AGENTS.md and the Claude Code skill
+├── src/lib/             site constants, schema.org JSON-LD, agent client configs, FAQ
+└── integrations/        emits AGENTS.md, llms.txt, llms-full.txt, markdown twins, Scalar bundle
 deploy/                  Kubernetes manifests for 3d.shep.bot (synced by ArgoCD)
 integrations/            registry.json: live sources (with date added) and evaluated/rejected sites
 prompts/                 instructions for the daily source-discovery agent
 scripts/                 site data export, integration gate
 test/
-|-- providers/           offline tests per site, against trimmed fixtures
-|-- live/                live smoke tests (LIVE=1)
-`-- service.test.ts      ranking, downloads, API, MCP
+├── providers/           offline tests per site, against trimmed fixtures
+├── live/                live smoke tests (LIVE=1)
+└── service.test.ts      ranking, downloads, API, MCP
 ```
 
 Adding a source: implement the `Provider` interface (see
 [docs/PROVIDERS_GUIDE.md](docs/PROVIDERS_GUIDE.md)), add it to `src/providers/index.ts`, and add an
 offline test with fixtures.
 
-```
-  interface Provider
-    id, name, homepage, description, assetTypes, access: api | scrape | link, pricing, license
-    search(query, ctx)     -> { assets, total?, searchUrl? }
-    getAsset?(id, ctx)     -> { ...asset, files[] } | null
-    buildSearchUrl(query)  -> link to the same search on the site
+```ts
+interface Provider {
+  id, name, homepage, description, assetTypes
+  access: "api" | "scrape" | "link"
+  pricing, license
+  search(query, ctx): { assets, total?, searchUrl? }
+  getAsset?(id, ctx): { ...asset, files[] } | null
+  buildSearchUrl(query): string   // the same search on the site
+}
 ```
 
 ---
@@ -606,13 +511,9 @@ CI (`.github/workflows/ci.yml`) runs build, typecheck and tests on every push an
 
 ## Licences & etiquette
 
-```
-  +----------------------------------------------------------------------+
-  |  This server finds and fetches assets. It does not own them.         |
-  |  Every result shows its licence: respect it, and credit authors      |
-  |  when it says so.                                                    |
-  +----------------------------------------------------------------------+
-```
+> [!IMPORTANT]
+> This server finds and fetches assets. It does not own them. Every result shows its licence:
+> respect it, and credit authors when it says so.
 
 - Sites are queried gently: responses are cached, there are a few requests per search, and the
   User-Agent identifies the server.

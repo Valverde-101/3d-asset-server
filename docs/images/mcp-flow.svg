@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" width="960" height="500" role="img" aria-labelledby="t d">
+  <title id="t">An AI assistant using the MCP tools</title>
+  <desc id="d">You ask for a free sci-fi crate model in your project. The assistant calls search_assets and gets ranked results with licences, calls get_asset for formats, licence, files and size, then download_asset, which saves the files under ./assets. The assistant replies that the model is CC0, needs no credit, and where it was saved.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#c4b5fd"/>
+    </marker>
+    <marker id="ret" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#7fdcf0"/>
+    </marker>
+    <marker id="you" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#e2dff0"/>
+    </marker>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .card { fill: #1d1a2b; stroke: #36314c; }
+    .h { fill: #f0eef7; font-size: 16px; font-weight: 700; }
+    .sub { fill: #a29eb6; font-size: 12.5px; }
+    .life { stroke: #3d3855; stroke-width: 1.5; stroke-dasharray: 5 5; }
+    .call { stroke: #c4b5fd; stroke-width: 1.8; fill: none; }
+    .ret { stroke: #7fdcf0; stroke-width: 1.6; fill: none; stroke-dasharray: 6 4; }
+    .say { stroke: #e2dff0; stroke-width: 1.8; fill: none; }
+    .callText { fill: #e4ddff; font-size: 13.5px; }
+    .retText { fill: #9be6f5; font-size: 13.5px; }
+    .sayText { fill: #f0eef7; font-size: 14.5px; font-style: italic; }
+  </style>
+  <rect width="960" height="500" rx="18" fill="#13111c"/>
+  <rect x="0.5" y="0.5" width="959" height="499" rx="17.5" fill="none" stroke="#2a2638"/>
+
+  <!-- participants -->
+  <g text-anchor="middle">
+    <rect class="card" x="40" y="24" width="140" height="54" rx="12"/>
+    <text class="h" x="110" y="50">You</text>
+    <text class="sub" x="110" y="68">in your project</text>
+
+    <rect class="card" x="290" y="24" width="180" height="54" rx="12"/>
+    <text class="h" x="380" y="50">AI assistant</text>
+    <text class="sub" x="380" y="68">Claude, Cursor, …</text>
+
+    <rect x="770" y="24" width="170" height="54" rx="12" fill="#1d1a2b" stroke="#8b6cf6" stroke-opacity="0.8"/>
+    <text class="h" x="855" y="50" fill="#c4b5fd">3d-asset-server</text>
+    <text class="sub" x="855" y="68">MCP tools</text>
+  </g>
+  <path class="life" d="M110 78V480M380 78V480M855 78V480"/>
+
+  <!-- activation bars on the server -->
+  <rect x="849" y="176" width="12" height="46" rx="3" fill="#8b6cf6" fill-opacity="0.5"/>
+  <rect x="849" y="264" width="12" height="46" rx="3" fill="#8b6cf6" fill-opacity="0.5"/>
+  <rect x="849" y="352" width="12" height="46" rx="3" fill="#8b6cf6" fill-opacity="0.5"/>
+
+  <!-- 1. ask -->
+  <text class="sayText" x="245" y="106" text-anchor="middle">“find me a free sci-fi crate</text>
+  <text class="sayText" x="245" y="124" text-anchor="middle">model and put it in the project”</text>
+  <path class="say" d="M112 138H376" marker-end="url(#you)"/>
+
+  <!-- 2. search -->
+  <text class="callText mono" x="610" y="168" font-size="12.5" text-anchor="middle">search_assets("sci-fi crate", types=[model], free_only)</text>
+  <path class="call" d="M382 180H847" marker-end="url(#arr)"/>
+  <text class="retText" x="617" y="210" text-anchor="middle">ranked results, each with its licence</text>
+  <path class="ret" d="M849 222H384" marker-end="url(#ret)"/>
+
+  <!-- 3. details -->
+  <text class="callText mono" x="617" y="256" text-anchor="middle">get_asset("polyhaven:…", format="gltf")</text>
+  <path class="call" d="M382 268H847" marker-end="url(#arr)"/>
+  <text class="retText" x="617" y="298" text-anchor="middle">formats, licence, the exact files and their size</text>
+  <path class="ret" d="M849 310H384" marker-end="url(#ret)"/>
+
+  <!-- 4. download -->
+  <text class="callText mono" x="617" y="344" text-anchor="middle">download_asset("polyhaven:…", resolution="2k")</text>
+  <path class="call" d="M382 356H847" marker-end="url(#arr)"/>
+  <text class="retText" x="617" y="386" text-anchor="middle">saved to ./assets/polyhaven-…/ with its licence</text>
+  <path class="ret" d="M849 398H384" marker-end="url(#ret)"/>
+
+  <!-- 5. answer -->
+  <text class="sayText" x="245" y="432" text-anchor="middle">“Done: CC0, no credit needed.</text>
+  <text class="sayText" x="245" y="450" text-anchor="middle">Saved to assets/polyhaven-…/”</text>
+  <path class="say" d="M378 464H114" marker-end="url(#you)"/>
+</svg>

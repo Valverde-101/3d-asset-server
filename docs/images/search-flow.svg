@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 724" width="960" height="724" role="img" aria-labelledby="t d">
+  <title id="t">What a single search does</title>
+  <desc id="d">The query "sunset" with type hdri and free only picks the sources that carry free HDRIs, searches them in parallel with a 12 second timeout each, ranks and merges the results (60% text match, 20% the site's own ranking, 10% API over scrape, 5% free, 5% direct download, then a per-site diversity penalty), and returns the results together with a status report for every site.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#8a85a3"/>
+    </marker>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b6cf6"/>
+      <stop offset="1" stop-color="#4cc9e6"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .eyebrow { fill: #8a85a3; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; }
+    .card { fill: #1d1a2b; stroke: #36314c; }
+    .h { fill: #f0eef7; font-size: 17px; font-weight: 700; }
+    .sub { fill: #a29eb6; font-size: 13.5px; }
+    .txt { fill: #d9d6e8; font-size: 14px; }
+    .wire { stroke: #8a85a3; stroke-width: 1.6; fill: none; }
+    .badge { fill: #8b6cf6; }
+    .badgeText { fill: #13111c; font-size: 13px; font-weight: 800; }
+    .site { fill: #f0eef7; font-size: 14.5px; font-weight: 700; }
+    .st { font-size: 12.5px; font-weight: 700; }
+  </style>
+
+  <rect width="960" height="724" rx="18" fill="#13111c"/>
+  <rect x="0.5" y="0.5" width="959" height="723" rx="17.5" fill="none" stroke="#2a2638"/>
+
+  <!-- query -->
+  <text class="eyebrow" x="30" y="34">QUERY</text>
+  <rect x="250" y="40" width="460" height="48" rx="24" fill="#1d1a2b" stroke="url(#brand)" stroke-width="1.6"/>
+  <text class="mono" x="480" y="70" text-anchor="middle" font-size="16" fill="#f0eef7">"sunset" <tspan fill="#8a85a3">·</tspan> <tspan fill="#c4b5fd">type</tspan>=hdri <tspan fill="#8a85a3">·</tspan> <tspan fill="#c4b5fd">free</tspan>=true</text>
+  <path class="wire" d="M480 88V117" marker-end="url(#arr)"/>
+
+  <!-- 1. pick sources -->
+  <rect class="card" x="30" y="120" width="900" height="60" rx="12"/>
+  <circle class="badge" cx="62" cy="150" r="13"/><text class="badgeText" x="62" y="155" text-anchor="middle">1</text>
+  <text class="h" x="88" y="146">Pick sources</text>
+  <text class="sub" x="88" y="167">Skip sites that don't carry HDRIs or are paid-only; bot-walled sites become links.</text>
+  <path class="wire" d="M480 180V205" marker-end="url(#arr)"/>
+
+  <!-- 2. parallel search -->
+  <rect class="card" x="30" y="208" width="900" height="146" rx="12"/>
+  <circle class="badge" cx="62" cy="236" r="13"/><text class="badgeText" x="62" y="241" text-anchor="middle">2</text>
+  <text class="h" x="88" y="242">Search every site in parallel</text>
+  <text class="sub" x="906" y="242" text-anchor="end">each with its own timeout (12 s default)</text>
+
+  <g text-anchor="middle">
+    <!-- ok -->
+    <rect x="54" y="258" width="132" height="76" rx="10" fill="#34d399" fill-opacity="0.07" stroke="#34d399" stroke-opacity="0.5"/>
+    <text class="site" x="120" y="286">Poly Haven</text>
+    <rect x="86" y="298" width="68" height="24" rx="12" fill="#34d399" fill-opacity="0.18"/>
+    <text class="st" x="120" y="315" fill="#6ee7b7">ok · 24</text>
+
+    <rect x="198" y="258" width="132" height="76" rx="10" fill="#34d399" fill-opacity="0.07" stroke="#34d399" stroke-opacity="0.5"/>
+    <text class="site" x="264" y="286">ambientCG</text>
+    <rect x="230" y="298" width="68" height="24" rx="12" fill="#34d399" fill-opacity="0.18"/>
+    <text class="st" x="264" y="315" fill="#6ee7b7">ok · 24</text>
+
+    <rect x="342" y="258" width="132" height="76" rx="10" fill="#34d399" fill-opacity="0.07" stroke="#34d399" stroke-opacity="0.5"/>
+    <text class="site" x="408" y="286">BlenderKit</text>
+    <rect x="374" y="298" width="68" height="24" rx="12" fill="#34d399" fill-opacity="0.18"/>
+    <text class="st" x="408" y="315" fill="#6ee7b7">ok · 24</text>
+
+    <rect x="486" y="258" width="132" height="76" rx="10" fill="#34d399" fill-opacity="0.07" stroke="#34d399" stroke-opacity="0.5"/>
+    <text class="site" x="552" y="286">HDRMaps</text>
+    <rect x="518" y="298" width="68" height="24" rx="12" fill="#34d399" fill-opacity="0.18"/>
+    <text class="st" x="552" y="315" fill="#6ee7b7">ok · 12</text>
+
+    <!-- link -->
+    <rect x="630" y="258" width="132" height="76" rx="10" fill="#f5b85b" fill-opacity="0.07" stroke="#f5b85b" stroke-opacity="0.5"/>
+    <text class="site" x="696" y="286">Poliigon</text>
+    <rect x="662" y="298" width="68" height="24" rx="12" fill="#f5b85b" fill-opacity="0.18"/>
+    <text class="st" x="696" y="315" fill="#fcd9a0">link ↗</text>
+
+    <!-- skipped -->
+    <rect x="774" y="258" width="132" height="76" rx="10" fill="#6b6880" fill-opacity="0.08" stroke="#6b6880" stroke-opacity="0.6" stroke-dasharray="4 4"/>
+    <text class="site" x="840" y="286" fill="#a29eb6">Kenney, …</text>
+    <rect x="800" y="298" width="80" height="24" rx="12" fill="#6b6880" fill-opacity="0.25"/>
+    <text class="st" x="840" y="315" fill="#c3bfd4">skipped</text>
+  </g>
+
+  <path class="wire" d="M324 354V383" marker-end="url(#arr)"/>
+  <text class="sub" x="334" y="374">assets from the sites that answered</text>
+  <path class="wire" d="M784 354V383" marker-end="url(#arr)"/>
+  <text class="sub" x="794" y="374">every site</text>
+
+  <!-- 3. rank -->
+  <rect class="card" x="30" y="386" width="588" height="212" rx="12"/>
+  <circle class="badge" cx="62" cy="414" r="13"/><text class="badgeText" x="62" y="419" text-anchor="middle">3</text>
+  <text class="h" x="88" y="420">Rank &amp; merge</text>
+
+  <g>
+    <rect x="54" y="436" width="324" height="26" rx="6" fill="#8b6cf6"/>
+    <rect x="378" y="436" width="108" height="26" fill="#4cc9e6"/>
+    <rect x="486" y="436" width="54" height="26" fill="#34d399"/>
+    <rect x="540" y="436" width="27" height="26" fill="#f5b85b"/>
+    <rect x="567" y="436" width="27" height="26" rx="0" fill="#f472b6"/>
+    <rect x="54" y="436" width="540" height="26" rx="6" fill="none" stroke="#13111c" stroke-width="0"/>
+    <text x="216" y="454" text-anchor="middle" fill="#13111c" font-size="13" font-weight="800">60%</text>
+    <text x="432" y="454" text-anchor="middle" fill="#13111c" font-size="13" font-weight="800">20%</text>
+    <text x="513" y="454" text-anchor="middle" fill="#13111c" font-size="12" font-weight="800">10%</text>
+  </g>
+
+  <g class="txt">
+    <rect x="54" y="476" width="12" height="12" rx="3" fill="#8b6cf6"/>
+    <text x="76" y="487"><tspan font-weight="700">60%</tspan>  text match: title &gt; tags &gt; description</text>
+    <rect x="54" y="500" width="12" height="12" rx="3" fill="#4cc9e6"/>
+    <text x="76" y="511"><tspan font-weight="700">20%</tspan>  the site's own ranking</text>
+    <rect x="54" y="524" width="12" height="12" rx="3" fill="#34d399"/>
+    <text x="76" y="535"><tspan font-weight="700">10%</tspan>  API source over a scraped one</text>
+    <rect x="54" y="548" width="12" height="12" rx="3" fill="#f5b85b"/>
+    <rect x="70" y="548" width="12" height="12" rx="3" fill="#f472b6"/>
+    <text x="92" y="559"><tspan font-weight="700">5% + 5%</tspan>  free · direct download</text>
+  </g>
+  <text class="sub" x="54" y="584">then <tspan class="mono" fill="#e4ddff">× 0.93ⁿ</tspan> for a site's n-th result, so no one catalogue fills page one</text>
+
+  <!-- report -->
+  <rect class="card" x="638" y="386" width="292" height="212" rx="12"/>
+  <text class="h" x="662" y="420">Per-site report</text>
+  <g text-anchor="middle">
+    <rect x="662" y="436" width="74" height="22" rx="11" fill="#34d399" fill-opacity="0.18"/><text class="st" x="699" y="452" fill="#6ee7b7">ok</text>
+    <rect x="662" y="466" width="74" height="22" rx="11" fill="#f87171" fill-opacity="0.18"/><text class="st" x="699" y="482" fill="#fca5a5">error</text>
+    <rect x="662" y="496" width="74" height="22" rx="11" fill="#fb923c" fill-opacity="0.18"/><text class="st" x="699" y="512" fill="#fdba74">timeout</text>
+    <rect x="662" y="526" width="74" height="22" rx="11" fill="#6b6880" fill-opacity="0.25"/><text class="st" x="699" y="542" fill="#c3bfd4">skipped</text>
+    <rect x="662" y="556" width="74" height="22" rx="11" fill="#f5b85b" fill-opacity="0.18"/><text class="st" x="699" y="572" fill="#fcd9a0">link</text>
+  </g>
+  <g class="sub">
+    <text x="748" y="452">count and time taken</text>
+    <text x="748" y="482">message + link to the site</text>
+    <text x="748" y="512">+ link to the site</text>
+    <text x="748" y="542">with the reason</text>
+    <text x="748" y="572">the site's own search</text>
+  </g>
+
+  <path class="wire" d="M324 598V627" marker-end="url(#arr)"/>
+  <path class="wire" d="M784 598V627" marker-end="url(#arr)"/>
+
+  <!-- response -->
+  <rect x="30" y="630" width="900" height="70" rx="12" fill="#171424" stroke="url(#brand)" stroke-width="1.5"/>
+  <text class="mono" x="54" y="660" font-size="15" fill="#f0eef7"><tspan fill="#c4b5fd">"results"</tspan>: [ … ]</text>
+  <text class="sub" x="54" y="684">merged, ranked, paged with limit / offset</text>
+  <text class="mono" x="662" y="660" font-size="15" fill="#f0eef7"><tspan fill="#c4b5fd">"providers"</tspan>: [ … ]</text>
+  <text class="sub" x="662" y="684">one entry per site</text>
+</svg>
