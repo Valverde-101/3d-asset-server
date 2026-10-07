@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 812" width="960" height="812" role="img" aria-labelledby="t d">
+  <title id="t">How 3d-asset-server works</title>
+  <desc id="d">Four clients (web UI, curl or your app, AI assistants over MCP, and the CLI) talk to one server. Its REST API and MCP server both call AssetService, which fans a search out to 19 sources through a caching HTTP client: 10 with APIs, 6 scraped, and 3 that are link-only.</desc>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#8a85a3"/>
+    </marker>
+    <marker id="arrSm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#8b6cf6"/>
+    </marker>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8b6cf6"/>
+      <stop offset="1" stop-color="#4cc9e6"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+    .eyebrow { fill: #8a85a3; font-size: 12px; font-weight: 700; letter-spacing: 1.6px; }
+    .card { fill: #1d1a2b; stroke: #36314c; }
+    .h { fill: #f0eef7; font-size: 17px; font-weight: 700; }
+    .sub { fill: #a29eb6; font-size: 13.5px; }
+    .code { fill: #c9c4dc; font-size: 13.5px; }
+    .file { fill: #7d7894; font-size: 12.5px; }
+    .wire { stroke: #8a85a3; stroke-width: 1.6; fill: none; }
+    .pill { fill: #13111c; stroke: #3d3855; }
+    .pillText { fill: #d4d0e4; font-size: 12.5px; }
+    .step { fill: #2a2541; stroke: #5b4ca0; }
+    .stepText { fill: #e4ddff; font-size: 13.5px; font-weight: 600; }
+    .name { fill: #e2dff0; font-size: 14.5px; }
+  </style>
+
+  <rect width="960" height="812" rx="18" fill="#13111c"/>
+  <rect x="0.5" y="0.5" width="959" height="811" rx="17.5" fill="none" stroke="#2a2638"/>
+
+  <!-- ============ clients ============ -->
+  <text class="eyebrow" x="30" y="34">CLIENTS</text>
+  <g text-anchor="middle">
+    <rect class="card" x="30"  y="46" width="195" height="66" rx="12"/>
+    <text class="h"   x="127.5" y="74">Web UI</text>
+    <text class="sub" x="127.5" y="96">browser · 3d.shep.bot</text>
+
+    <rect class="card" x="265" y="46" width="195" height="66" rx="12"/>
+    <text class="h"   x="362.5" y="74">curl / your app</text>
+    <text class="sub" x="362.5" y="96">REST + JSON</text>
+
+    <rect class="card" x="500" y="46" width="195" height="66" rx="12"/>
+    <text class="h"   x="597.5" y="74">AI assistants</text>
+    <text class="sub" x="597.5" y="96">Claude, Cursor, VS Code…</text>
+
+    <rect class="card" x="735" y="46" width="195" height="66" rx="12"/>
+    <text class="h"   x="832.5" y="74">CLI</text>
+    <text class="sub" x="832.5" y="96">node dist/cli.js</text>
+  </g>
+
+  <!-- client -> server wires with protocol labels -->
+  <path class="wire" d="M127.5 112V180" marker-end="url(#arr)"/>
+  <path class="wire" d="M362.5 112V180" marker-end="url(#arr)"/>
+  <path class="wire" d="M597.5 112V180" marker-end="url(#arr)"/>
+  <path class="wire" d="M832.5 112V180" marker-end="url(#arr)"/>
+  <g text-anchor="middle">
+    <rect class="pill" x="94"  y="133" width="67"  height="24" rx="12"/>
+    <text class="pillText mono" x="127.5" y="149.5">GET /</text>
+    <rect class="pill" x="327" y="133" width="71"  height="24" rx="12"/>
+    <text class="pillText mono" x="362.5" y="149.5">/v1/*</text>
+    <rect class="pill" x="512" y="133" width="171" height="24" rx="12"/>
+    <text class="pillText mono" x="597.5" y="149.5">MCP · stdio or /mcp</text>
+    <rect class="pill" x="752" y="133" width="161" height="24" rx="12"/>
+    <text class="pillText mono" x="832.5" y="149.5">search · serve · mcp</text>
+  </g>
+
+  <!-- ============ server ============ -->
+  <rect x="30" y="182" width="900" height="370" rx="16" fill="#171424" stroke="url(#brand)" stroke-opacity="0.7" stroke-width="1.5"/>
+  <text x="54" y="212" fill="#c4b5fd" font-size="15" font-weight="800">3d-asset-server</text>
+  <text class="file mono" x="906" y="212" text-anchor="end">one Node.js process · src/</text>
+
+  <rect class="card" x="54" y="226" width="416" height="92" rx="12"/>
+  <text class="h" x="76" y="254">REST API <tspan class="sub" font-weight="400">· Hono</tspan></text>
+  <text class="code mono" x="76" y="280">/v1/search · /v1/assets/{id}</text>
+  <text class="code mono" x="76" y="302">/openapi.json · /og/*.png · web UI</text>
+
+  <rect class="card" x="490" y="226" width="416" height="92" rx="12"/>
+  <text class="h" x="512" y="254">MCP server <tspan class="sub" font-weight="400">· stdio + Streamable HTTP</tspan></text>
+  <text class="code mono" x="512" y="280">search_assets · get_asset</text>
+  <text class="code mono" x="512" y="302">download_asset · list_providers</text>
+
+  <path class="wire" d="M262 318V348" marker-end="url(#arr)"/>
+  <path class="wire" d="M698 318V348" marker-end="url(#arr)"/>
+
+  <rect class="card" x="54" y="350" width="852" height="104" rx="12"/>
+  <text class="h" x="76" y="378">AssetService</text>
+  <text class="file mono" x="884" y="378" text-anchor="end">core/service.ts</text>
+  <g text-anchor="middle">
+    <rect class="step" x="78"  y="396" width="128" height="36" rx="18"/>
+    <text class="stepText" x="142" y="419">pick sources</text>
+    <rect class="step" x="232" y="396" width="160" height="36" rx="18"/>
+    <text class="stepText" x="312" y="419">fan out in parallel</text>
+    <rect class="step" x="418" y="396" width="142" height="36" rx="18"/>
+    <text class="stepText" x="489" y="419">per-site timeout</text>
+    <rect class="step" x="586" y="396" width="128" height="36" rx="18"/>
+    <text class="stepText" x="650" y="419">rank &amp; merge</text>
+    <rect class="step" x="740" y="396" width="142" height="36" rx="18"/>
+    <text class="stepText" x="811" y="419">per-site report</text>
+  </g>
+  <g stroke="#8b6cf6" stroke-width="1.6" fill="none">
+    <path d="M208 414H229" marker-end="url(#arrSm)"/>
+    <path d="M394 414H415" marker-end="url(#arrSm)"/>
+    <path d="M562 414H583" marker-end="url(#arrSm)"/>
+    <path d="M716 414H737" marker-end="url(#arrSm)"/>
+  </g>
+
+  <path class="wire" d="M480 454V472" marker-end="url(#arr)"/>
+
+  <rect class="card" x="54" y="474" width="852" height="54" rx="12"/>
+  <text class="h" x="76" y="507">HTTP client</text>
+  <text class="code" x="190" y="507">User-Agent · timeouts · LRU cache · in-flight request dedupe</text>
+  <text class="file mono" x="884" y="507" text-anchor="end">core/http.ts</text>
+
+  <!-- ============ fan-out to sources ============ -->
+  <path class="wire" d="M480 552V574M225 574H830"/>
+  <path class="wire" d="M225 574V598" marker-end="url(#arr)"/>
+  <path class="wire" d="M575 574V598" marker-end="url(#arr)"/>
+  <path class="wire" d="M830 574V598" marker-end="url(#arr)"/>
+
+  <!-- API -->
+  <rect x="30" y="600" width="390" height="184" rx="14" fill="#4cc9e6" fill-opacity="0.07" stroke="#4cc9e6" stroke-opacity="0.55"/>
+  <text x="52" y="630" fill="#7fdcf0" font-size="17" font-weight="800">API</text>
+  <text class="sub" x="398" y="630" text-anchor="end">10 sites</text>
+  <text class="sub" x="52" y="652">official, JSON, WordPress and shop APIs</text>
+  <g fill="#4cc9e6">
+    <circle cx="58" cy="678" r="3.5"/><circle cx="58" cy="700" r="3.5"/><circle cx="58" cy="722" r="3.5"/><circle cx="58" cy="744" r="3.5"/><circle cx="58" cy="766" r="3.5"/>
+    <circle cx="238" cy="678" r="3.5"/><circle cx="238" cy="700" r="3.5"/><circle cx="238" cy="722" r="3.5"/><circle cx="238" cy="744" r="3.5"/><circle cx="238" cy="766" r="3.5"/>
+  </g>
+  <g class="name">
+    <text x="70" y="683">Poly Haven</text><text x="70" y="705">ambientCG</text><text x="70" y="727">BlenderKit</text><text x="70" y="749">Polyfork</text><text x="70" y="771">CGBookcase</text>
+    <text x="250" y="683">ShareTextures</text><text x="250" y="705">3DTexel</text><text x="250" y="727">3DTextures.me</text><text x="250" y="749">Textures.com</text><text x="250" y="771">HDRMaps</text>
+  </g>
+
+  <!-- Scrape -->
+  <rect x="440" y="600" width="270" height="184" rx="14" fill="#8b6cf6" fill-opacity="0.08" stroke="#8b6cf6" stroke-opacity="0.6"/>
+  <text x="462" y="630" fill="#c4b5fd" font-size="17" font-weight="800">Scrape</text>
+  <text class="sub" x="688" y="630" text-anchor="end">6 sites</text>
+  <text class="sub" x="462" y="652">parse the public pages</text>
+  <g fill="#8b6cf6">
+    <circle cx="468" cy="678" r="3.5"/><circle cx="468" cy="700" r="3.5"/><circle cx="468" cy="722" r="3.5"/>
+    <circle cx="594" cy="678" r="3.5"/><circle cx="594" cy="700" r="3.5"/><circle cx="594" cy="722" r="3.5"/>
+  </g>
+  <g class="name">
+    <text x="480" y="683">Kenney</text><text x="480" y="705">Quaternius</text><text x="480" y="727">TextureCan</text>
+    <text x="606" y="683">HDRI Hub</text><text x="606" y="705">CGTrader</text><text x="606" y="727">itch.io</text>
+  </g>
+  <text class="file" x="462" y="756">if a site changes its HTML, only</text>
+  <text class="file" x="462" y="773">that source fails</text>
+
+  <!-- Link only -->
+  <rect x="730" y="600" width="200" height="184" rx="14" fill="#f5b85b" fill-opacity="0.07" stroke="#f5b85b" stroke-opacity="0.55"/>
+  <text x="752" y="630" fill="#fcd9a0" font-size="17" font-weight="800">Link only</text>
+  <text class="sub" x="908" y="630" text-anchor="end">3 sites</text>
+  <text class="sub" x="752" y="652">bot wall: link to search</text>
+  <g fill="#f5b85b">
+    <circle cx="758" cy="678" r="3.5"/><circle cx="758" cy="700" r="3.5"/><circle cx="758" cy="722" r="3.5"/>
+  </g>
+  <g class="name">
+    <text x="770" y="683">Fab</text><text x="770" y="705">Poliigon</text><text x="770" y="727">TurboSquid</text>
+  </g>
+  <text class="file" x="752" y="756">returned as links to the</text>
+  <text class="file" x="752" y="773">site's own search</text>
+</svg>
