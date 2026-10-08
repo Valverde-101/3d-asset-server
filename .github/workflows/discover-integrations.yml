@@ -156,9 +156,10 @@ jobs:
           ASTRO_TELEMETRY_DISABLED: "1"
         run: npm run build
 
-      - name: Generated site data is up to date
-        # The build regenerates web/src/data/*.json; the patch must already match.
-        run: git diff --exit-code -- web/src/data
+      - name: Stage regenerated site data
+        # The build regenerates these from the registry and providers. A run that
+        # only records rejected sites never builds, so commit what the build wrote.
+        run: git add -- web/src/data/providers.json web/src/data/integrations.json web/src/data/openapi.json
 
       - name: Typecheck
         run: npm run typecheck
@@ -258,6 +259,8 @@ jobs:
             days=7
           fi
           node scripts/integration-gate.mjs demote "$RUNNER_TEMP/patched-registry.json" "$reason" "$days"
+          # Rebuild the server from the base tree so the site's rejected count matches.
+          npm run build:server && node scripts/export-site-data.mjs
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -qam "chore(integrations): record failed integration attempt (${{ steps.gate.outputs.added }})"
