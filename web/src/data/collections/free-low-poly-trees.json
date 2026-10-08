@@ -7,7 +7,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:35.723Z",
+  "updatedAt": "2026-10-08T11:36:46.953Z",
   "assets": [
     {
       "id": "blenderkit:72fac4cb-901c-4a48-8fc8-84a0baa0bd21",
@@ -563,27 +563,6 @@
       "polyCount": 70
     },
     {
-      "id": "blenderkit:38e978d8-c41c-44c2-9bdc-0711d508b8be",
-      "provider": "blenderkit",
-      "title": "Low poly tree 2",
-      "type": "model",
-      "url": "https://www.blendkit.com/asset-gallery-detail/38e978d8-c41c-44c2-9bdc-0711d508b8be/",
-      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/f23d32cbdd4a45b9bbf7f32f336c4d16/files/thumbnail_605fc985-d4e0-4317-89bb-ee55627c662b.jpg.512x512_q85_crop-%2C.jpg",
-      "downloadable": true,
-      "author": "Pastean Narcis Dan",
-      "license": {
-        "name": "Royalty Free",
-        "url": "https://www.blendkit.com/docs/licenses/",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "free": true,
-      "formats": [
-        "blend"
-      ],
-      "polyCount": 374
-    },
-    {
       "id": "itchio:qwerxia/low-poly-trees-nature-props",
       "provider": "itchio",
       "title": "Low Poly Trees / Nature Props",
@@ -658,6 +637,27 @@
         "glb"
       ],
       "polyCount": 5164
+    },
+    {
+      "id": "threedassets:wipe-day-survival-island-pine-tree-dfc88d2b",
+      "provider": "threedassets",
+      "title": "Pine Tree (Wipe Day Survival Island)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/wipe-day-survival-island-pine-tree-dfc88d2b",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27427/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 132
     }
   ]
 }

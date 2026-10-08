@@ -7,7 +7,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:38.747Z",
+  "updatedAt": "2026-10-08T11:36:57.470Z",
   "assets": [
     {
       "id": "polyhaven:dikhololo_night",
@@ -314,27 +314,6 @@
         "exr"
       ],
       "maxResolution": "16k"
-    },
-    {
-      "id": "blenderkit:18287a7b-9302-495d-9669-e3ceed571799",
-      "provider": "blenderkit",
-      "title": "Aurora dark night clouds",
-      "type": "hdri",
-      "url": "https://www.blendkit.com/asset-gallery-detail/18287a7b-9302-495d-9669-e3ceed571799/",
-      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/e706677c64ce4854b24624a751d3a6bc/files/thumbnail_5f3c14a4-8597-4a4a-a593-9dc4aab4a7bd.jpg.512x512_q85_crop-%2C.jpg",
-      "downloadable": true,
-      "author": "Free poly",
-      "license": {
-        "name": "CC0",
-        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "free": true,
-      "formats": [
-        "exr"
-      ],
-      "maxResolution": "8k"
     },
     {
       "id": "ambientcg:NightSkyHDRI007",
@@ -755,6 +734,26 @@
         "exr"
       ],
       "maxResolution": "16k"
+    },
+    {
+      "id": "hdrmaps:egg-hill-cloudy-night-sky",
+      "provider": "hdrmaps",
+      "title": "Egg Hill Cloudy Night Sky",
+      "type": "hdri",
+      "url": "https://hdrmaps.com/freebies/egg-hill-cloudy-night-sky/",
+      "thumbnailUrl": "https://hdrmaps.com/wp-content/uploads/2024/11/free_hdr_171_night_cloudy_sky-560x280.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://hdrmaps.com/terms-of-use/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "10k"
     }
   ]
 }

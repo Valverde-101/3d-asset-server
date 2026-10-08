@@ -7,7 +7,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:43.362Z",
+  "updatedAt": "2026-10-08T11:37:09.707Z",
   "assets": [
     {
       "id": "polyhaven:studio_small_09",
@@ -611,6 +611,66 @@
         "exr"
       ],
       "maxResolution": "8k"
+    },
+    {
+      "id": "hdrmaps:fly-studio-2-0",
+      "provider": "hdrmaps",
+      "title": "Fly Studio 2.0",
+      "type": "hdri",
+      "url": "https://hdrmaps.com/freebies/fly-studio-2-0/",
+      "thumbnailUrl": "https://hdrmaps.com/wp-content/uploads/2025/11/free_hdr_200_photo_studio-560x280.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://hdrmaps.com/terms-of-use/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "10k"
+    },
+    {
+      "id": "hdrmaps:photo-studio",
+      "provider": "hdrmaps",
+      "title": "Photo studio",
+      "type": "hdri",
+      "url": "https://hdrmaps.com/freebies/photo-studio/",
+      "thumbnailUrl": "https://hdrmaps.com/wp-content/uploads/2020/11/free_hdri_105_studio_light_setup-560x280.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://hdrmaps.com/terms-of-use/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "10k"
+    },
+    {
+      "id": "hdrmaps:studio-apartment",
+      "provider": "hdrmaps",
+      "title": "Studio apartment",
+      "type": "hdri",
+      "url": "https://hdrmaps.com/freebies/studio-apartment/",
+      "thumbnailUrl": "https://hdrmaps.com/wp-content/uploads/2020/06/free_hdr_087_thumb-560x280.jpg",
+      "downloadable": true,
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://hdrmaps.com/terms-of-use/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "exr"
+      ],
+      "maxResolution": "10k"
     }
   ]
 }

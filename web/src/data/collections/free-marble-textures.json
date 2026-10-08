@@ -8,7 +8,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:36.463Z",
+  "updatedAt": "2026-10-08T11:36:49.337Z",
   "assets": [
     {
       "id": "polyhaven:marble_01",
@@ -183,27 +183,6 @@
         "gltf"
       ],
       "maxResolution": "8k"
-    },
-    {
-      "id": "blenderkit:68992d83-977c-4b60-ae4f-37ecd497b3cb",
-      "provider": "blenderkit",
-      "title": "Marble",
-      "type": "material",
-      "url": "https://www.blendkit.com/asset-gallery-detail/68992d83-977c-4b60-ae4f-37ecd497b3cb/",
-      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/5c27b4e415774fec8a76a1cfb639ef9f/files/thumbnail_136c1bd3-f5d4-4121-aa5e-32130d9d1d84.png.512x512_q85_crop-%2C.png",
-      "downloadable": true,
-      "author": "Steffen",
-      "license": {
-        "name": "Royalty Free",
-        "url": "https://www.blendkit.com/docs/licenses/",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "free": true,
-      "formats": [
-        "blend"
-      ],
-      "maxResolution": "2k"
     },
     {
       "id": "ambientcg:Marble016",
@@ -686,6 +665,27 @@
       },
       "free": true,
       "maxResolution": "1k"
+    },
+    {
+      "id": "blenderkit:462fb5e3-3bea-452c-bca0-2c0f33ca8580",
+      "provider": "blenderkit",
+      "title": "Marble",
+      "type": "material",
+      "url": "https://www.blendkit.com/asset-gallery-detail/462fb5e3-3bea-452c-bca0-2c0f33ca8580/",
+      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/76c309673c26400382ce031fdcf77739/files/thumbnail_79f7308d-f43d-4114-b946-0cfa7786c184.png.512x512_q85_crop-%2C.png",
+      "downloadable": true,
+      "author": "chroma 3D",
+      "license": {
+        "name": "Royalty Free",
+        "url": "https://www.blendkit.com/docs/licenses/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "blend"
+      ],
+      "maxResolution": "2k"
     }
   ]
 }

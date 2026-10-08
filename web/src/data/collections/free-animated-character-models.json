@@ -7,7 +7,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:27.300Z",
+  "updatedAt": "2026-10-08T11:36:21.676Z",
   "assets": [
     {
       "id": "kenney:animated-characters-protagonists",
@@ -446,6 +446,138 @@
       "free": true,
       "animated": true,
       "rigged": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-lumen-idle-46c78b9d",
+      "provider": "threedassets",
+      "title": "Lumen Floating Support Hero Figure (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-lumen-idle-46c78b9d",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27658/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 6682,
+      "animated": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-lumen-arms-spread-01a292c8",
+      "provider": "threedassets",
+      "title": "Lumen Hero Figure Arms Spread (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-lumen-arms-spread-01a292c8",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27657/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 6682,
+      "animated": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-kestrel-full-draw-dc36564f",
+      "provider": "threedassets",
+      "title": "Kestrel Hero Figure Full Draw (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-kestrel-full-draw-dc36564f",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27656/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 7634,
+      "animated": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-kestrel-idle-f578ca47",
+      "provider": "threedassets",
+      "title": "Kestrel Archer Damage Hero Figure (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-kestrel-idle-f578ca47",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27655/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 7634,
+      "animated": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-sable-dash-lunge-67f1f7d9",
+      "provider": "threedassets",
+      "title": "Sable Hero Figure Dash Lunge (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-sable-dash-lunge-67f1f7d9",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27652/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 7840,
+      "animated": true
+    },
+    {
+      "id": "threedassets:hero-shooter-harbour-payload-hero-sable-idle-7ba4d063",
+      "provider": "threedassets",
+      "title": "Sable Scout Damage Hero Figure (Hero Shooter Harbour Payload)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/hero-shooter-harbour-payload-hero-sable-idle-7ba4d063",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27651/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 7840,
+      "animated": true
     }
   ]
 }

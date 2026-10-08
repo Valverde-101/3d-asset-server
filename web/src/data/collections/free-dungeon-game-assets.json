@@ -12,7 +12,7 @@
       "dungeon and dragons"
     ]
   },
-  "updatedAt": "2026-10-07T09:06:20.971Z",
+  "updatedAt": "2026-10-08T11:36:31.597Z",
   "assets": [
     {
       "id": "blenderkit:bb93c779-bf60-439b-96d2-99167435443d",
@@ -626,6 +626,69 @@
         "obj"
       ],
       "polyCount": 576
+    },
+    {
+      "id": "threedassets:dungeon-room-builder-three-room-dungeon-f16c3a34-starter-scene",
+      "provider": "threedassets",
+      "title": "Three Room Dungeon (Dungeon Room Builder)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/dungeon-room-builder-three-room-dungeon-f16c3a34-starter-scene",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/25883/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 3692
+    },
+    {
+      "id": "threedassets:dungeon-room-builder-dungeon-connector-cases-42e6c9dc",
+      "provider": "threedassets",
+      "title": "Dungeon Connector Cases (Dungeon Room Builder)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/dungeon-room-builder-dungeon-connector-cases-42e6c9dc",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/25884/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 300
+    },
+    {
+      "id": "threedassets:ember-quest-dungeon-wall-module",
+      "provider": "threedassets",
+      "title": "Ember Quest dungeon wall module",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/ember-quest-dungeon-wall-module",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/313/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 288
     }
   ]
 }

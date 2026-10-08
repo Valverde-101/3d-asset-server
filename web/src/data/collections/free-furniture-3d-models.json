@@ -7,7 +7,7 @@
     ],
     "free": true
   },
-  "updatedAt": "2026-10-07T09:05:33.578Z",
+  "updatedAt": "2026-10-08T11:36:41.134Z",
   "assets": [
     {
       "id": "blenderkit:0f1918d7-7350-43a8-a012-469ddc446b35",
@@ -324,29 +324,6 @@
       "free": true
     },
     {
-      "id": "blenderkit:03d8fc7e-6a15-4110-844d-7615635998e9",
-      "provider": "blenderkit",
-      "title": "Office Desk | Table Furniture",
-      "type": "model",
-      "url": "https://www.blendkit.com/asset-gallery-detail/03d8fc7e-6a15-4110-844d-7615635998e9/",
-      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/c6021338fd87470abcc1345df43e020c/files/thumbnail_cfeda8e5-ce61-41f4-a306-fec88067100c.png.512x512_q85_crop-%2C.png",
-      "downloadable": true,
-      "author": "Wondie A.",
-      "license": {
-        "name": "Royalty Free",
-        "url": "https://www.blendkit.com/docs/licenses/",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "free": true,
-      "formats": [
-        "blend",
-        "glb"
-      ],
-      "maxResolution": "2k",
-      "polyCount": 1326
-    },
-    {
       "id": "sharetextures:chair_21",
       "provider": "sharetextures",
       "title": "Chair 21",
@@ -643,6 +620,27 @@
       "downloadable": false,
       "author": "Eclair Assets",
       "free": true
+    },
+    {
+      "id": "threedassets:printing-press-and-newspaper-office-furniture-rack-d252c708",
+      "provider": "threedassets",
+      "title": "Furniture Rack (Printing Press and Newspaper Office)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/printing-press-and-newspaper-office-furniture-rack-d252c708",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/37739/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 19980
     }
   ]
 }

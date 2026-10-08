@@ -14,7 +14,7 @@
       "visualization"
     ]
   },
-  "updatedAt": "2026-10-07T09:05:42.015Z",
+  "updatedAt": "2026-10-08T11:37:06.154Z",
   "assets": [
     {
       "id": "blenderkit:f856dc91-1475-40de-8aa0-d29cfa48a583",
@@ -484,6 +484,174 @@
       ],
       "maxResolution": "1k",
       "polyCount": 3956
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-connector-cases-a476800b",
+      "provider": "threedassets",
+      "title": "Connector Cases (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-connector-cases-a476800b",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23283/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 39578
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-street-deck-plaza-c373f429",
+      "provider": "threedassets",
+      "title": "Street Deck Plaza (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-street-deck-plaza-c373f429",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23282/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 14634
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-three-tower--b27ca724-starter-scene",
+      "provider": "threedassets",
+      "title": "Three Tower Arcology Block (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-three-tower--b27ca724-starter-scene",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23281/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 38174
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-vertical-wind-turbine-744ae1e7",
+      "provider": "threedassets",
+      "title": "Vertical Axis Wind Turbine (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-vertical-wind-turbine-744ae1e7",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23280/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 804
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-algae-panel-wall-8660932c",
+      "provider": "threedassets",
+      "title": "Algae Panel Wall (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-algae-panel-wall-8660932c",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23279/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 1232
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-hanging-garden-planter-0a31c0d8",
+      "provider": "threedassets",
+      "title": "Hanging Garden Planter (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-hanging-garden-planter-0a31c0d8",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23278/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 852
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-ring-turbine-b2da6d18",
+      "provider": "threedassets",
+      "title": "Ducted Ring Turbine (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-ring-turbine-b2da6d18",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23277/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 1064
+    },
+    {
+      "id": "threedassets:arcology-towers-and-skyways-courier-drone-8491fcf3",
+      "provider": "threedassets",
+      "title": "Arcology Courier Drone (Sci-Fi City Towers and Skyways)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/arcology-towers-and-skyways-courier-drone-8491fcf3",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/23276/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 1272
     }
   ]
 }

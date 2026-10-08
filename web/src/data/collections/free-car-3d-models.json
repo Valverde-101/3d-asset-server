@@ -21,7 +21,7 @@
       "lego"
     ]
   },
-  "updatedAt": "2026-10-07T09:06:13.890Z",
+  "updatedAt": "2026-10-08T11:36:26.592Z",
   "assets": [
     {
       "id": "polyhaven:covered_car",
@@ -568,6 +568,71 @@
         "blend"
       ],
       "polyCount": 1
+    },
+    {
+      "id": "threedassets:stock-car-oval-speedway-stock-car-damaged-6a429ea6",
+      "provider": "threedassets",
+      "title": "Stock car with crumpled quarter (Stock Car Oval Speedway)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/stock-car-oval-speedway-stock-car-damaged-6a429ea6",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/16955/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 7716,
+      "animated": true
+    },
+    {
+      "id": "threedassets:stock-car-oval-speedway-sprint-wing-removed-e0e73315",
+      "provider": "threedassets",
+      "title": "Sprint car with wing removed (Stock Car Oval Speedway)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/stock-car-oval-speedway-sprint-wing-removed-e0e73315",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/16956/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 6260,
+      "animated": true
+    },
+    {
+      "id": "threedassets:grand-prix-circuit-and-open-wheel-car-wheels-off-38611f74",
+      "provider": "threedassets",
+      "title": "Current car on jacks with wheels removed (Formula Race Cars and Grand Prix Circuit)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/grand-prix-circuit-and-open-wheel-car-wheels-off-38611f74",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/15249/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 4348
     }
   ]
 }

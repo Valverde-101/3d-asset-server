@@ -15,7 +15,7 @@
       "preview for"
     ]
   },
-  "updatedAt": "2026-10-07T09:06:22.858Z",
+  "updatedAt": "2026-10-08T11:37:04.630Z",
   "assets": [
     {
       "id": "polyhaven:rock_moss_set_02",
@@ -665,29 +665,6 @@
       "polyCount": 378
     },
     {
-      "id": "blenderkit:aa353f15-8446-4d89-8d97-f9bdfc1ccd17",
-      "provider": "blenderkit",
-      "title": "Beach rock scan from protugal",
-      "type": "model",
-      "url": "https://www.blendkit.com/asset-gallery-detail/aa353f15-8446-4d89-8d97-f9bdfc1ccd17/",
-      "thumbnailUrl": "https://public.blenderkit.com/thumbnails/assets/4163d748b9084826b4b20ff3bc5853d3/files/thumbnail_b93f333d-43fa-41e4-81f0-d87fb4dcbab2.png.512x512_q85_crop-%2C.png",
-      "downloadable": true,
-      "author": "Tedd Šámal",
-      "license": {
-        "name": "Royalty Free",
-        "url": "https://www.blendkit.com/docs/licenses/",
-        "commercialUse": true,
-        "attributionRequired": false
-      },
-      "free": true,
-      "formats": [
-        "blend",
-        "glb"
-      ],
-      "maxResolution": "8k",
-      "polyCount": 235073
-    },
-    {
       "id": "sharetextures:rock_9",
       "provider": "sharetextures",
       "title": "Rock 9",
@@ -750,6 +727,27 @@
         "obj"
       ],
       "polyCount": 173
+    },
+    {
+      "id": "threedassets:wipe-day-survival-island-shoreline-rock-15780204",
+      "provider": "threedassets",
+      "title": "Shoreline Rock (Wipe Day Survival Island)",
+      "type": "model",
+      "url": "https://3dassets.dev/assets/wipe-day-survival-island-shoreline-rock-15780204",
+      "thumbnailUrl": "https://cdn.3dassets.dev/assets/27438/v1/thumb.webp",
+      "downloadable": true,
+      "author": "3D Assets",
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercialUse": true,
+        "attributionRequired": false
+      },
+      "free": true,
+      "formats": [
+        "glb"
+      ],
+      "polyCount": 258
     }
   ]
 }
