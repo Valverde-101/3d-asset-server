@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { setNonce } from "get-nonce";
-import { ArrowUpRight, Download, Filter, Loader2, Search, SlidersHorizontal, Sparkles } from "lucide-react";
+import { ArrowUpRight, Download, Filter, Loader2, Search, SlidersHorizontal, Sparkles, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -12,6 +12,7 @@ import { Switch } from "@/components/ui/switch";
 import { cn } from "@/lib/utils";
 import { api, getKey, safeUrl, setKey, UnauthorizedError, type Asset, type Provider, type ProviderReport, type SearchResponse } from "./api";
 import { AssetDetail } from "./AssetDetail";
+import { findAssetFavorite, toggleAsset, useFavorites } from "@/components/favorites/client";
 
 const TYPES: [string, string][] = [
   ["model", "Models"],
@@ -74,6 +75,9 @@ export default function SearchApp() {
   const [canMore, setCanMore] = useState(false);
   const [searched, setSearched] = useState(false);
   const [selected, setSelected] = useState<Asset | null>(null);
+  const favorites = useFavorites();
+  const [favoriteBusy, setFavoriteBusy] = useState<string | null>(null);
+  const [favoriteError, setFavoriteError] = useState("");
   const offset = useRef(0);
   // The server already sends a unique <title> for the URL the page loaded with;
   // only searches the user runs afterwards update it.
@@ -150,6 +154,13 @@ export default function SearchApp() {
 
   const okReports = useMemo(() => reports.filter((r) => r.status !== "skipped"), [reports]);
   const sourceLabel = filters.sources ? `${filters.sources.length} of ${providers.length}` : "All sources";
+  const favoriteAction = async (asset: Asset) => {
+    setFavoriteBusy(asset.id);
+    setFavoriteError("");
+    try { await toggleAsset(asset, favorites.library); }
+    catch (e) { setFavoriteError(e instanceof Error ? e.message : String(e)); }
+    finally { setFavoriteBusy(null); }
+  };
 
   return (
     <div className="mx-auto max-w-7xl px-4 pb-24 sm:px-6">
@@ -295,10 +306,11 @@ export default function SearchApp() {
       )}
 
       {error && <p className="mt-8 rounded-lg border border-destructive/30 bg-destructive/10 p-4 text-sm text-destructive">{error}</p>}
+      {favoriteError && <p role="alert" className="mt-4 rounded-lg border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">{favoriteError}</p>}
 
       <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-4 lg:grid-cols-4 xl:grid-cols-5">
         {results.map((a) => (
-          <ResultCard key={a.id} asset={a} providerName={providerName(a.provider)} onOpen={() => openAsset(a)} />
+          <ResultCard key={a.id} asset={a} providerName={providerName(a.provider)} onOpen={() => openAsset(a)} saved={Boolean(findAssetFavorite(a, favorites.library) && !findAssetFavorite(a, favorites.library)?.deletedAt)} onFavorite={() => void favoriteAction(a)} favoriteBusy={favoriteBusy === a.id} favoriteUnavailable={Boolean(favorites.error)} />
         ))}
         {loading &&
           Array.from({ length: results.length ? 5 : 10 }).map((_, i) => (
@@ -342,7 +354,7 @@ export default function SearchApp() {
                 </SheetDescription>
                 <SheetTitle className="text-xl">{selected.title}</SheetTitle>
               </SheetHeader>
-              <AssetDetail asset={selected} providerName={providerName(selected.provider)} />
+              <AssetDetail asset={selected} providerName={providerName(selected.provider)} saved={Boolean(findAssetFavorite(selected, favorites.library) && !findAssetFavorite(selected, favorites.library)?.deletedAt)} onFavorite={() => void favoriteAction(selected)} favoriteBusy={favoriteBusy === selected.id} favoriteUnavailable={Boolean(favorites.error)} />
             </>
           )}
         </SheetContent>
@@ -351,15 +363,13 @@ export default function SearchApp() {
   );
 }
 
-function ResultCard({ asset: a, providerName, onOpen }: { asset: Asset; providerName: string; onOpen: () => void }) {
+function ResultCard({ asset: a, providerName, onOpen, saved, onFavorite, favoriteBusy, favoriteUnavailable }: { asset: Asset; providerName: string; onOpen: () => void; saved: boolean; onFavorite: () => void; favoriteBusy: boolean; favoriteUnavailable: boolean }) {
   const [broken, setBroken] = useState(false);
   const src = safeUrl(a.thumbnailUrl);
   return (
-    <button
-      type="button"
-      onClick={onOpen}
-      className="group flex flex-col overflow-hidden rounded-xl border bg-card/50 text-left transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5 focus-visible:outline-2 focus-visible:outline-ring"
-    >
+    <article className="group relative flex flex-col overflow-hidden rounded-xl border bg-card/50 text-left transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+      <button type="button" aria-label={saved ? `Quitar ${a.title} de Favoritos` : `Guardar ${a.title} en Favoritos`} aria-pressed={saved} title={favoriteUnavailable ? "Favoritos no disponible" : saved ? "Quitar de Favoritos" : "Guardar en Favoritos"} disabled={favoriteBusy || favoriteUnavailable} onClick={onFavorite} className="absolute left-2 top-2 z-10 inline-flex size-9 items-center justify-center rounded-full border bg-background/90 shadow-sm hover:bg-primary hover:text-primary-foreground disabled:opacity-50"><Star className="size-4" fill={saved ? "currentColor" : "none"} /></button>
+      <button type="button" onClick={onOpen} className="flex flex-1 flex-col text-left focus-visible:outline-2 focus-visible:outline-ring">
       <div className="relative aspect-[4/3] w-full overflow-hidden bg-muted">
         {src && !broken ? (
           <img src={src} alt="" loading="lazy" referrerPolicy="no-referrer" onError={() => setBroken(true)} className="size-full object-cover transition duration-500 group-hover:scale-[1.04]" />
@@ -384,7 +394,8 @@ function ResultCard({ asset: a, providerName, onOpen }: { asset: Asset; provider
           {a.license && <Badge variant="outline" className="text-[10px]">{a.license.name}</Badge>}
         </div>
       </div>
-    </button>
+      </button>
+    </article>
   );
 }
 

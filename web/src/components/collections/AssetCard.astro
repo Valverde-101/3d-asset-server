@@ -3,6 +3,7 @@
 // asset in the search app (preview, files, download); the footer links to the
 // asset's page on its source site.
 import { providerName, typeNoun, type SnapshotAsset } from "@/lib/collections";
+import FavoriteButton from "@/components/favorites/FavoriteButton";
 
 interface Props {
   asset: SnapshotAsset;
@@ -13,7 +14,8 @@ const { asset: a, eager = false } = Astro.props;
 const source = providerName(a.provider);
 const details = [a.maxResolution?.toUpperCase(), a.formats?.slice(0, 3).join(", ").toUpperCase(), a.animated ? "Animated" : a.rigged ? "Rigged" : undefined].filter(Boolean).join(" · ");
 ---
-<li class="group flex flex-col overflow-hidden rounded-xl border bg-card/50 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+<li class="group relative flex flex-col overflow-hidden rounded-xl border bg-card/50 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/5">
+  <div class="absolute left-2 top-2 z-10"><FavoriteButton asset={a} client:load /></div>
   <a href={`/search?asset=${encodeURIComponent(a.id)}`} class="flex flex-1 flex-col focus-visible:outline-2 focus-visible:outline-ring">
     <div class="relative aspect-[4/3] w-full overflow-hidden bg-muted">
       <img

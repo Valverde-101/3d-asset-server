@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
-import { ArrowUpRight, Bot, Check, Download, FileBox, Loader2, Share2, Terminal } from "lucide-react";
+import { ArrowUpRight, Bot, Check, Download, FileBox, Loader2, Share2, Terminal, Star } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { CopyButton } from "@/components/home/AgentSetup";
 import { api, formatBytes, getKey, safeUrl, type Asset, type AssetDetails, type FileSelection } from "./api";
 
-export function AssetDetail({ asset, providerName }: { asset: Asset; providerName: string }) {
+export function AssetDetail({ asset, providerName, saved, onFavorite, favoriteBusy, favoriteUnavailable }: { asset: Asset; providerName: string; saved: boolean; onFavorite: () => void; favoriteBusy: boolean; favoriteUnavailable: boolean }) {
   const [full, setFull] = useState<AssetDetails | null>(null);
   const [failed, setFailed] = useState(false);
   const [format, setFormat] = useState("");
@@ -104,6 +104,7 @@ export function AssetDetail({ asset, providerName }: { asset: Asset; providerNam
         </div>
       )}
       <div className="flex flex-wrap gap-2">
+        <Button variant="outline" onClick={onFavorite} disabled={favoriteBusy || favoriteUnavailable} aria-pressed={saved}><Star className="size-4" fill={saved ? "currentColor" : "none"} />{saved ? "Guardado en Favoritos" : "Guardar en Favoritos"}</Button>
         {source && (
           <Button variant="outline" asChild>
             <a href={source} target="_blank" rel="noopener noreferrer">Open on {providerName} <ArrowUpRight className="size-4" /></a>

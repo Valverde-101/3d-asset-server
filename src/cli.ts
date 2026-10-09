@@ -56,6 +56,8 @@ async function main(argv: string[]): Promise<void> {
         allowServerDownloads: process.env.ASSET_SERVER_HTTP_DOWNLOADS === "true",
         downloadDir: process.env.ASSET_DOWNLOAD_DIR,
         prometheus: process.env.PROMETHEUS_URL ? { url: process.env.PROMETHEUS_URL } : undefined,
+        favoritesDir: hostname === "127.0.0.1" || hostname === "localhost" || hostname === "::1" ? process.env.ASSET_SERVER_FAVORITES_DIR : undefined,
+        repositoriesDir: process.env.ASSET_SERVER_REPOSITORIES_DIR,
       });
       serve({ fetch: app.fetch, port, hostname }, (info) => {
         console.log(`3d-asset-server listening on http://${hostname}:${info.port} (MCP at /mcp)`);

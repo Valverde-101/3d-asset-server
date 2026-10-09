@@ -24,6 +24,8 @@ import { RATE_LIMIT_HEADERS, rateLimit, type RateLimitOptions } from "./ratelimi
 import { OgImages } from "./og.js";
 import { assetMeta, searchMeta, searchShare, shareableAssetId, type HeadMeta } from "./search-meta.js";
 import { Site, rewriteHead, type ServeOptions } from "./site.js";
+import { FavoriteError } from "../core/favorites.js";
+import { registerFavoritesRoutes } from "./favorites.js";
 
 export interface AppOptions {
   /** Require this key as `Authorization: Bearer <key>` or `x-api-key` on /v1 and /mcp. */
@@ -44,6 +46,9 @@ export interface AppOptions {
    * and 7 days. Without it, /v1/stats counts this process since it started.
    */
   prometheus?: { url: string; fetch?: typeof fetch };
+  /** Local, private library; never enabled by the public HTTP service. */
+  favoritesDir?: string;
+  repositoriesDir?: string;
 }
 
 /** Short, guessable URLs for developer resources. */
@@ -207,6 +212,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
   }
 
   app.onError((err, c) => {
+    if (err instanceof FavoriteError) return c.json({ error: err.message }, err.status);
     if (err instanceof UnknownProviderError || err instanceof InvalidAssetIdError || err instanceof z.ZodError) {
       return c.json({ error: err instanceof z.ZodError ? z.prettifyError(err) : err.message }, 400);
     }
@@ -405,6 +411,8 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     void server.close().catch(() => undefined);
     return res;
   });
+
+  if (opts.favoritesDir) registerFavoritesRoutes(app, opts.favoritesDir, opts.repositoriesDir);
 
   // Share cards for search and asset links (static pages have pre-rendered /og/<page>.png files).
   const providerIds = service.listProviders().map((p) => p.id);
