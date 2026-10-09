@@ -46,6 +46,7 @@ export const MCP_URL = `${SITE.url}/mcp`;
 export const NAV = [
   { href: "/search", label: "Search" },
   { href: "/assets", label: "Collections" },
+  { href: "/favoritos", label: "Favoritos" },
   { href: "/docs", label: "Docs" },
   { href: "/docs/mcp", label: "AI agents" },
   { href: "/docs/api", label: "API" },

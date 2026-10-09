@@ -1,0 +1,7 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import FavoritesApp from "@/components/favorites/FavoritesApp";
+---
+<BaseLayout title="Favoritos" description="Biblioteca local de recursos y enlaces guardados en AndroidBuild." noindex>
+  <FavoritesApp client:load />
+</BaseLayout>
