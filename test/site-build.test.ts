@@ -4,6 +4,7 @@
  * the site has not been built.
  */
 import { existsSync, readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 
 const root = new URL("../dist/web/", import.meta.url);
@@ -83,7 +84,7 @@ describe.skipIf(!built)("built website", () => {
   });
 
   it("keeps the API playground out of crawls and renders the full reference statically", () => {
-    const robots = read("robots.txt");
+    const robots = read("robots.txt").replace(/\r\n/g, "\n");
     expect(robots).toMatch(/User-agent: \*\nDisallow: \/v1\/assets\/\*\/download\nDisallow: \/docs\/api\/playground/);
     expect(robots).not.toContain("Allow: /");
     expect(read("sitemap-0.xml")).not.toContain("playground");
@@ -133,7 +134,7 @@ describe.skipIf(!built)("built website", () => {
       images.add(image!);
       const file = new URL(`.${new URL(image!).pathname}`, root);
       expect(statSync(file).size, image).toBeGreaterThan(10_000);
-      expect(await sharp(file.pathname).metadata(), image).toMatchObject({ width: 1200, height: 630, format: "png" });
+      expect(await sharp(fileURLToPath(file)).metadata(), image).toMatchObject({ width: 1200, height: 630, format: "png" });
       for (const tag of ['property="og:image:alt"', 'name="twitter:image:alt"', 'property="og:image:type" content="image/png"', 'name="twitter:card" content="summary_large_image"']) {
         expect(html, `${page} ${tag}`).toContain(tag);
       }
