@@ -3,6 +3,7 @@ import { ambientcg } from "./ambientcg.js";
 import { blenderkit } from "./blenderkit.js";
 import { cgbookcase } from "./cgbookcase.js";
 import { cgtrader } from "./cgtrader.js";
+import { craftpix } from "./craftpix.js";
 import { hdrihub } from "./hdrihub.js";
 import { hdrmaps } from "./hdrmaps.js";
 import { itchio } from "./itchio.js";
@@ -38,6 +39,7 @@ export const allProviders: Provider[] = [
   hdrmaps,
   hdrihub,
   cgtrader,
+  craftpix,
   turbosquid,
   itchio,
 ];

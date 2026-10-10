@@ -1,0 +1,7 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import SourcesApp from "@/components/sources/SourcesApp";
+---
+<BaseLayout title="Sources" description="Choose which asset sites this browser includes in website searches." noindex>
+  <SourcesApp client:load />
+</BaseLayout>

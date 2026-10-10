@@ -43,7 +43,17 @@ export interface ProviderReport {
   tookMs: number;
 }
 export interface SearchResponse { query: string; results: Asset[]; providers: ProviderReport[] }
-export interface Provider { id: string; name: string; description: string; supportsDownload: boolean }
+export interface Provider {
+  id: string;
+  name: string;
+  homepage: string;
+  description: string;
+  assetTypes: string[];
+  access: "api" | "scrape" | "link";
+  pricing: "free" | "freemium" | "paid";
+  license?: { name: string };
+  supportsDownload: boolean;
+}
 export interface FileSelection { id: string; totalBytes?: number; files: AssetFile[] }
 
 const KEY_STORE = "asset-server-key";

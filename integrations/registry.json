@@ -129,6 +129,14 @@
       "addedBy": "launch"
     },
     {
+      "id": "craftpix",
+      "name": "CraftPix",
+      "homepage": "https://craftpix.net/",
+      "access": "link",
+      "addedAt": "2026-10-09",
+      "addedBy": "agent"
+    },
+    {
       "id": "turbosquid",
       "name": "TurboSquid",
       "homepage": "https://www.turbosquid.com",
