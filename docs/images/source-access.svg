@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 336" width="960" height="336" role="img" aria-labelledby="t d">
   <title id="t">What each source gives you</title>
-  <desc id="d">Search and direct download: Poly Haven, ambientCG, BlenderKit (free), Kenney, Polyfork (free), TextureCan, HDRMaps (free). Search and a link to the asset page: CGBookcase, ShareTextures, Quaternius, 3DTextures.me, 3DTexel, Textures.com, HDRI Hub, CGTrader, itch.io. A link to the site's own search: Fab, Poliigon, TurboSquid.</desc>
+  <desc id="d">Search and direct download: Poly Haven, ambientCG, BlenderKit (free), Kenney, Polyfork (free), 3DAssets.dev, TextureCan, HDRMaps (free). Search and a link to the asset page: CGBookcase, ShareTextures, Quaternius, 3DTextures.me, 3DTexel, Textures.com, HDRI Hub, CGTrader, itch.io. A link to the site's own search: Fab, Poliigon, TurboSquid and CraftPix.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
     .h { fill: #f0eef7; font-size: 16.5px; font-weight: 700; }
@@ -19,7 +19,7 @@
   <text class="h" x="50" y="114">Search + download</text>
   <text class="sub" x="50" y="134">files come straight to you</text>
   <rect x="246" y="52" width="56" height="22" rx="11" fill="#34d399" fill-opacity="0.18"/>
-  <text class="count" x="274" y="67.5" text-anchor="middle" fill="#6ee7b7">7 sites</text>
+  <text class="count" x="274" y="67.5" text-anchor="middle" fill="#6ee7b7">8 sites</text>
   <g fill="#34d399">
     <circle cx="56" cy="162" r="3.5"/><circle cx="56" cy="190" r="3.5"/><circle cx="56" cy="218" r="3.5"/><circle cx="56" cy="246" r="3.5"/>
     <circle cx="56" cy="274" r="3.5"/>
@@ -33,6 +33,7 @@
     <text x="68" y="279">HDRMaps <tspan class="free">free</tspan></text>
     <text x="202" y="167">Kenney</text>
     <text x="202" y="195">TextureCan</text>
+    <text x="202" y="223">3DAssets.dev</text>
   </g>
 
   <!-- link to page -->
@@ -67,15 +68,16 @@
   <text class="h" x="660" y="114">Link to site's search</text>
   <text class="sub" x="660" y="134">bot wall: no results here</text>
   <rect x="856" y="52" width="56" height="22" rx="11" fill="#f5b85b" fill-opacity="0.18"/>
-  <text class="count" x="884" y="67.5" text-anchor="middle" fill="#fcd9a0">3 sites</text>
+  <text class="count" x="884" y="67.5" text-anchor="middle" fill="#fcd9a0">4 sites</text>
   <g fill="#f5b85b">
-    <circle cx="666" cy="162" r="3.5"/><circle cx="666" cy="190" r="3.5"/><circle cx="666" cy="218" r="3.5"/>
+    <circle cx="666" cy="162" r="3.5"/><circle cx="666" cy="190" r="3.5"/><circle cx="666" cy="218" r="3.5"/><circle cx="666" cy="246" r="3.5"/>
   </g>
   <g class="name">
     <text x="678" y="167">Fab</text>
     <text x="678" y="195">Poliigon</text>
     <text x="678" y="223">TurboSquid</text>
+    <text x="678" y="251">CraftPix</text>
   </g>
-  <text class="sub" x="660" y="266">Returned as <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#fcd9a0">also_search_on</tspan></text>
-  <text class="sub" x="660" y="286">links with your query filled in.</text>
+  <text class="sub" x="660" y="277">Returned as <tspan font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#fcd9a0">also_search_on</tspan></text>
+  <text class="sub" x="660" y="296">links with your query filled in.</text>
 </svg>

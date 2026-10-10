@@ -47,6 +47,7 @@ export const NAV = [
   { href: "/search", label: "Search" },
   { href: "/assets", label: "Collections" },
   { href: "/favoritos", label: "Favoritos" },
+  { href: "/fuentes", label: "Sources" },
   { href: "/docs", label: "Docs" },
   { href: "/docs/mcp", label: "AI agents" },
   { href: "/docs/api", label: "API" },

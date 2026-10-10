@@ -13,6 +13,8 @@ import { cn } from "@/lib/utils";
 import { api, getKey, safeUrl, setKey, UnauthorizedError, type Asset, type Provider, type ProviderReport, type SearchResponse } from "./api";
 import { AssetDetail } from "./AssetDetail";
 import { findAssetFavorite, toggleAsset, useFavorites } from "@/components/favorites/client";
+import { PROVIDERS } from "@/lib/site";
+import { enabledSources, readDisabledSources } from "@/lib/source-preferences";
 
 const TYPES: [string, string][] = [
   ["model", "Models"],
@@ -66,7 +68,8 @@ function toParams(f: Filters, offset = 0): URLSearchParams {
 export default function SearchApp() {
   const [filters, setFilters] = useState<Filters>({ q: "", types: [], free: false, downloadable: false, sources: null });
   const [draft, setDraft] = useState("");
-  const [providers, setProviders] = useState<Provider[]>([]);
+  const [providers, setProviders] = useState<Provider[]>(PROVIDERS as unknown as Provider[]);
+  const [activeSourceIds, setActiveSourceIds] = useState<string[]>(() => PROVIDERS.map((p) => p.id));
   const [results, setResults] = useState<Asset[]>([]);
   const [reports, setReports] = useState<ProviderReport[]>([]);
   const [loading, setLoading] = useState(false);
@@ -84,10 +87,23 @@ export default function SearchApp() {
   const firstRun = useRef(true);
   const seen = useRef(new Set<string>());
   const inputRef = useRef<HTMLInputElement>(null);
+  const activeSourceIdsRef = useRef<string[]>(PROVIDERS.map((p) => p.id));
 
   const providerName = useCallback((id: string) => providers.find((p) => p.id === id)?.name ?? id, [providers]);
 
   const run = useCallback(async (f: Filters, append: boolean) => {
+    const active = new Set(activeSourceIdsRef.current);
+    const selectedSources = f.sources === null ? [...active] : f.sources.filter((id) => active.has(id));
+    if (!selectedSources.length) {
+      setResults([]);
+      setReports([]);
+      setCanMore(false);
+      setSearched(true);
+      setLoading(false);
+      setError("No sources are enabled for this search. Enable a source in Sources and try again.");
+      return;
+    }
+    const effectiveFilters = { ...f, sources: selectedSources };
     if (!append) {
       offset.current = 0;
       seen.current = new Set();
@@ -97,14 +113,14 @@ export default function SearchApp() {
     setLoading(true);
     setError(undefined);
     setSearched(true);
-    const qs = toParams(f);
+    const qs = toParams(effectiveFilters);
     const shared = new URLSearchParams(window.location.search).get("asset");
     if (shared) qs.set("asset", shared);
     window.history.replaceState(null, "", `/search?${qs.toString()}`);
     if (!firstRun.current) document.title = f.q ? `“${f.q}”: 3D assets · 3D Asset Server` : "Search free 3D models, textures & HDRIs · 3D Asset Server";
     firstRun.current = false;
     try {
-      const params = toParams(f, offset.current);
+      const params = toParams(effectiveFilters, offset.current);
       params.set("limit", String(PAGE));
       const res = await api<SearchResponse>(`/v1/search?${params.toString()}`);
       const fresh = res.results.filter((a) => !seen.current.has(a.id) && seen.current.add(a.id));
@@ -130,12 +146,24 @@ export default function SearchApp() {
   }, []);
 
   useEffect(() => {
-    const f = readUrl();
+    const urlFilters = readUrl();
+    const staticIds = PROVIDERS.map((p) => p.id);
+    const active = enabledSources(staticIds, readDisabledSources());
+    activeSourceIdsRef.current = active;
+    setActiveSourceIds(active);
+    const requested = urlFilters.sources === null ? active : urlFilters.sources.filter((id) => active.includes(id));
+    const f = { ...urlFilters, sources: requested };
     setFilters(f);
     setDraft(f.q);
     const shared = new URLSearchParams(window.location.search).get("asset");
     api<{ providers: Provider[] }>("/v1/providers")
-      .then((r) => setProviders(r.providers))
+      .then((r) => {
+        setProviders(r.providers);
+        const currentActive = enabledSources(r.providers.map((p) => p.id), readDisabledSources());
+        activeSourceIdsRef.current = currentActive;
+        setActiveSourceIds(currentActive);
+        setFilters((current) => ({ ...current, sources: current.sources?.length ? current.sources.filter((id) => currentActive.includes(id)) : currentActive }));
+      })
       .catch((e) => e instanceof UnauthorizedError && setNeedKey(true));
     if (f.q || f.types.length) void run(f, false);
     else if (!shared) inputRef.current?.focus();
@@ -146,6 +174,18 @@ export default function SearchApp() {
     }
   }, [run, openAsset]);
 
+  useEffect(() => {
+    const onStorage = (event: StorageEvent) => {
+      if (event.key !== "3d-asset-server:disabled-sources:v1") return;
+      const active = enabledSources(providers.map((p) => p.id));
+      activeSourceIdsRef.current = active;
+      setActiveSourceIds(active);
+      setFilters((current) => ({ ...current, sources: current.sources?.length ? current.sources.filter((id) => active.includes(id)) : active }));
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, [providers]);
+
   const update = (patch: Partial<Filters>, rerun = true) => {
     const next = { ...filters, ...patch };
     setFilters(next);
@@ -153,7 +193,7 @@ export default function SearchApp() {
   };
 
   const okReports = useMemo(() => reports.filter((r) => r.status !== "skipped"), [reports]);
-  const sourceLabel = filters.sources ? `${filters.sources.length} of ${providers.length}` : "All sources";
+  const sourceLabel = !activeSourceIds.length ? "No sources" : filters.sources?.length === activeSourceIds.length ? "All sources" : `${filters.sources?.length ?? activeSourceIds.length} of ${activeSourceIds.length}`;
   const favoriteAction = async (asset: Asset) => {
     setFavoriteBusy(asset.id);
     setFavoriteError("");
@@ -228,21 +268,21 @@ export default function SearchApp() {
             <PopoverContent align="start" className="w-72">
               <div className="mb-2 flex items-center justify-between">
                 <p className="text-sm font-medium">Sources</p>
-                <button type="button" className="text-xs text-primary hover:underline" onClick={() => update({ sources: null })}>
+                <button type="button" className="text-xs text-primary hover:underline" onClick={() => update({ sources: activeSourceIds })}>
                   Select all
                 </button>
               </div>
               <div className="grid max-h-72 grid-cols-1 gap-1 overflow-y-auto">
-                {providers.map((p) => {
-                  const on = !filters.sources || filters.sources.includes(p.id);
+                {providers.filter((p) => activeSourceIds.includes(p.id)).map((p) => {
+                  const on = filters.sources?.includes(p.id) ?? true;
                   return (
                     <label key={p.id} className="flex cursor-pointer items-center gap-2 rounded-md px-1.5 py-1 text-sm hover:bg-accent" title={p.description}>
                       <Checkbox
                         checked={on}
                         onCheckedChange={(v) => {
-                          const current = filters.sources ?? providers.map((x) => x.id);
-                          const next = v ? [...current, p.id] : current.filter((x) => x !== p.id);
-                          update({ sources: next.length === providers.length ? null : next }, false);
+                          const current = filters.sources ?? activeSourceIds;
+                          const next = v ? [...new Set([...current, p.id])] : current.filter((x) => x !== p.id);
+                          update({ sources: next }, false);
                         }}
                       />
                       <span className="flex-1">{p.name}</span>
@@ -251,6 +291,7 @@ export default function SearchApp() {
                   );
                 })}
               </div>
+              <a href="/fuentes" className="mt-3 inline-flex text-xs text-primary hover:underline">Manage enabled sources</a>
               <Button size="sm" className="mt-3 w-full" onClick={() => void run(filters, false)} disabled={!filters.q && !filters.types.length}>
                 Apply
               </Button>
@@ -275,6 +316,12 @@ export default function SearchApp() {
           </form>
         )}
       </div>
+
+      {!activeSourceIds.length && (
+        <p role="status" className="mt-5 rounded-lg border border-warning/40 bg-warning/10 p-3 text-sm">
+          All sources are disabled for website searches. <a href="/fuentes" className="font-medium text-primary underline underline-offset-2">Enable sources</a> to search again.
+        </p>
+      )}
 
       {okReports.length > 0 && (
         <div className="mt-5 flex flex-wrap gap-1.5 text-xs" aria-label="Sources">
@@ -334,7 +381,7 @@ export default function SearchApp() {
         <div className="mt-16 text-center text-muted-foreground">
           <Sparkles className="mx-auto size-8 text-primary/70" />
           <p className="mt-3">
-            Search Poly Haven, ambientCG, Kenney, BlenderKit, itch.io and {Math.max(providers.length - 5, 12)} more sources at once.
+            Search across {activeSourceIds.length} enabled sources at once. <a href="/fuentes" className="text-primary hover:underline">Manage sources</a> whenever you want to change them.
           </p>
         </div>
       )}

@@ -274,6 +274,23 @@
     "supportsDownload": false
   },
   {
+    "id": "craftpix",
+    "name": "CraftPix",
+    "homepage": "https://craftpix.net/",
+    "description": "Free and premium 2D and 3D game assets, including sprites, UI, tilesets, models and asset packs. Searches open on CraftPix.",
+    "assetTypes": [
+      "model",
+      "sprite",
+      "ui",
+      "texture",
+      "pack"
+    ],
+    "access": "link",
+    "pricing": "freemium",
+    "license": null,
+    "supportsDownload": false
+  },
+  {
     "id": "turbosquid",
     "name": "TurboSquid",
     "homepage": "https://www.turbosquid.com",

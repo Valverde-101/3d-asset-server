@@ -1,12 +1,12 @@
 # 3D Asset Server: guide for AI agents
 
-> You are reading the agent guide for https://3d.shep.bot. This service searches 20 3D asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io, Textures.com, HDRMaps and more) and returns 3D models, PBR materials/textures, HDRIs and game asset packs with their licences, plus direct downloads where the source allows. It is free and needs no account or API key.
+> You are reading the agent guide for https://3d.shep.bot. This service searches 21 3D asset sites at once (Poly Haven, ambientCG, Kenney, BlenderKit, CGTrader, itch.io, CraftPix, Textures.com, HDRMaps and more) and returns 3D models, PBR materials/textures, HDRIs and game asset packs with their licences, plus direct downloads where the source allows. It is free and needs no account or API key.
 
 ## When to use this
 
 Reach for 3D Asset Server when the job is one of these:
 
-- **Find an asset for a project**: "get me a low-poly tree", "I need a wooden crate model", "find a sci-fi corridor kit". Search models, packs and sprites across 20 sites in one call instead of browsing each.
+- **Find an asset for a project**: "get me a low-poly tree", "I need a wooden crate model", "find a sci-fi corridor kit". Search models, packs and sprites across 21 sites in one call instead of browsing each.
 - **Get PBR textures or materials**: "mossy rock material", "brick wall 2k textures". Returns map sets (color, normal, roughness, AO, displacement) at 1k–8k.
 - **Light a scene with an HDRI**: "sunset HDRI for three.js", "studio environment map". Returns HDR/EXR files at the resolution you ask for.
 - **Put files into a codebase**: download glTF/GLB, FBX, Blend, OBJ, textures or HDRIs straight into `./assets` or `./public` for Three.js, Babylon.js, React Three Fiber, Godot, Unity, Unreal, Blender or a website.
@@ -58,7 +58,7 @@ Full OpenAPI 3.1 spec: https://3d.shep.bot/openapi.json
 - Always tell the user each asset's licence, and when `attributionRequired` is true, give the exact credit line (title, author, source URL, licence).
 - Show a few options (title, source, licence, thumbnail URL) when the choice is subjective; download directly when the request is specific.
 - To let the user see an asset (or share it), link `https://3d.shep.bot/search?asset=<id>`: it opens the asset with its preview, licence and downloads, and unfurls in chat apps with a card showing its thumbnail.
-- If a search comes back thin, try a simpler synonym, drop filters, or pass along the `searchUrl` links of `link` sources (Fab, Poliigon, TurboSquid).
+- If a search comes back thin, try a simpler synonym, drop filters, or pass along the `searchUrl` links of `link` sources (Fab, Poliigon, TurboSquid, CraftPix).
 
 ## Example
 

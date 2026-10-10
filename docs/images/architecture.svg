@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 812" width="960" height="812" role="img" aria-labelledby="t d">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 840" width="960" height="840" role="img" aria-labelledby="t d">
   <title id="t">How 3d-asset-server works</title>
-  <desc id="d">Four clients (web UI, curl or your app, AI assistants over MCP, and the CLI) talk to one server. Its REST API and MCP server both call AssetService, which fans a search out to 19 sources through a caching HTTP client: 10 with APIs, 6 scraped, and 3 that are link-only.</desc>
+  <desc id="d">Four clients (web UI, curl or your app, AI assistants over MCP, and the CLI) talk to one server. Its REST API and MCP server both call AssetService, which fans a search out to 21 sources through a caching HTTP client: 11 with APIs, 6 scraped, and 4 that are link-only.</desc>
   <defs>
     <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <path d="M0 0L10 5L0 10z" fill="#8a85a3"/>
@@ -123,16 +123,16 @@
   <path class="wire" d="M830 574V598" marker-end="url(#arr)"/>
 
   <!-- API -->
-  <rect x="30" y="600" width="390" height="184" rx="14" fill="#4cc9e6" fill-opacity="0.07" stroke="#4cc9e6" stroke-opacity="0.55"/>
+  <rect x="30" y="600" width="390" height="212" rx="14" fill="#4cc9e6" fill-opacity="0.07" stroke="#4cc9e6" stroke-opacity="0.55"/>
   <text x="52" y="630" fill="#7fdcf0" font-size="17" font-weight="800">API</text>
-  <text class="sub" x="398" y="630" text-anchor="end">10 sites</text>
+  <text class="sub" x="398" y="630" text-anchor="end">11 sites</text>
   <text class="sub" x="52" y="652">official, JSON, WordPress and shop APIs</text>
   <g fill="#4cc9e6">
-    <circle cx="58" cy="678" r="3.5"/><circle cx="58" cy="700" r="3.5"/><circle cx="58" cy="722" r="3.5"/><circle cx="58" cy="744" r="3.5"/><circle cx="58" cy="766" r="3.5"/>
+    <circle cx="58" cy="678" r="3.5"/><circle cx="58" cy="700" r="3.5"/><circle cx="58" cy="722" r="3.5"/><circle cx="58" cy="744" r="3.5"/><circle cx="58" cy="766" r="3.5"/><circle cx="58" cy="788" r="3.5"/>
     <circle cx="238" cy="678" r="3.5"/><circle cx="238" cy="700" r="3.5"/><circle cx="238" cy="722" r="3.5"/><circle cx="238" cy="744" r="3.5"/><circle cx="238" cy="766" r="3.5"/>
   </g>
   <g class="name">
-    <text x="70" y="683">Poly Haven</text><text x="70" y="705">ambientCG</text><text x="70" y="727">BlenderKit</text><text x="70" y="749">Polyfork</text><text x="70" y="771">CGBookcase</text>
+    <text x="70" y="683">Poly Haven</text><text x="70" y="705">ambientCG</text><text x="70" y="727">BlenderKit</text><text x="70" y="749">Polyfork</text><text x="70" y="771">CGBookcase</text><text x="70" y="793">3DAssets.dev</text>
     <text x="250" y="683">ShareTextures</text><text x="250" y="705">3DTexel</text><text x="250" y="727">3DTextures.me</text><text x="250" y="749">Textures.com</text><text x="250" y="771">HDRMaps</text>
   </g>
 
@@ -153,16 +153,16 @@
   <text class="file" x="462" y="773">that source fails</text>
 
   <!-- Link only -->
-  <rect x="730" y="600" width="200" height="184" rx="14" fill="#f5b85b" fill-opacity="0.07" stroke="#f5b85b" stroke-opacity="0.55"/>
+  <rect x="730" y="600" width="200" height="212" rx="14" fill="#f5b85b" fill-opacity="0.07" stroke="#f5b85b" stroke-opacity="0.55"/>
   <text x="752" y="630" fill="#fcd9a0" font-size="17" font-weight="800">Link only</text>
-  <text class="sub" x="908" y="630" text-anchor="end">3 sites</text>
-  <text class="sub" x="752" y="652">bot wall: link to search</text>
+  <text class="sub" x="908" y="630" text-anchor="end">4 sites</text>
+  <text class="sub" x="752" y="652">link to source search</text>
   <g fill="#f5b85b">
-    <circle cx="758" cy="678" r="3.5"/><circle cx="758" cy="700" r="3.5"/><circle cx="758" cy="722" r="3.5"/>
+    <circle cx="758" cy="678" r="3.5"/><circle cx="758" cy="700" r="3.5"/><circle cx="758" cy="722" r="3.5"/><circle cx="758" cy="744" r="3.5"/>
   </g>
   <g class="name">
-    <text x="770" y="683">Fab</text><text x="770" y="705">Poliigon</text><text x="770" y="727">TurboSquid</text>
+    <text x="770" y="683">Fab</text><text x="770" y="705">Poliigon</text><text x="770" y="727">TurboSquid</text><text x="770" y="749">CraftPix</text>
   </g>
-  <text class="file" x="752" y="756">returned as links to the</text>
-  <text class="file" x="752" y="773">site's own search</text>
+  <text class="file" x="752" y="784">returned as links to the</text>
+  <text class="file" x="752" y="803">site's own search</text>
 </svg>

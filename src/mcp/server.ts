@@ -78,7 +78,7 @@ export function createMcpServer(service: AssetService, opts: McpOptions): McpSer
         "Search all configured asset sources at once for models, materials/textures, HDRIs, sprites, UI, audio and packs. " +
         "Tips: use short, concrete queries ('wooden crate', 'brick wall', 'sunset sky', 'low poly tree'); filter with `types`; " +
         "set `free_only` for free assets and `downloadable_only` for assets this server can fetch directly. " +
-        "The response also lists deep links into sites that can't be searched automatically (e.g. Fab, Poliigon, TurboSquid).",
+        "The response also lists deep links into sites that are not searched automatically (e.g. Fab, Poliigon, TurboSquid, CraftPix).",
       inputSchema: {
         query: z.string().describe("What you are looking for, e.g. 'medieval barrel', 'mossy rock', 'night city hdri'."),
         types: z.array(typeEnum).optional().describe("Asset types to include. texture and material match each other."),

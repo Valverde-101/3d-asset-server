@@ -1,6 +1,13 @@
 {
   "integrations": [
     {
+      "id": "craftpix",
+      "name": "CraftPix",
+      "homepage": "https://craftpix.net/",
+      "addedAt": "2026-10-09",
+      "addedBy": "agent"
+    },
+    {
       "id": "threedassets",
       "name": "3DAssets.dev",
       "homepage": "https://3dassets.dev",

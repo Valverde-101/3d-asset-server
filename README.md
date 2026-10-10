@@ -2,7 +2,7 @@
   <img src="docs/images/banner.svg" width="100%" alt="3D Asset Server: one search box for 3D models, materials, textures, HDRIs and game assets. HTTP API, MCP server, web UI and CLI.">
 </p>
 
-**3d-asset-server** searches 20 asset sites at once and downloads what you pick, ready to drop
+**3d-asset-server** searches 21 asset sites at once and downloads what you pick, ready to drop
 into a game or a website. Use it from a browser, from `curl`, from the command line, or let your AI
 assistant drive it over MCP.
 
@@ -40,7 +40,7 @@ assistant drive it over MCP.
 
 ## How it works
 
-![Architecture: the web UI, curl, AI assistants (MCP) and the CLI all reach one server. Its REST API and MCP server call AssetService, which searches 20 sources through a caching HTTP client: 11 via APIs, 6 scraped, 3 link-only.](docs/images/architecture.svg)
+![Architecture: the web UI, curl, AI assistants (MCP) and the CLI all reach one server. Its REST API and MCP server call AssetService, which searches 21 sources through a caching HTTP client: 11 via APIs, 6 scraped, 4 link-only.](docs/images/architecture.svg)
 
 What a single search does:
 
@@ -74,9 +74,10 @@ and a link to the same search on that site.
 | [HDRI Hub](https://www.hdri-hub.com) | HDRI environments | scrape | no: checkout | royalty free |
 | [CGTrader](https://www.cgtrader.com/free-3d-models) | Free and paid models | JSON listing | no: login | per listing |
 | [TurboSquid](https://www.turbosquid.com) | Free and paid models | link only (bot wall) | no | per listing |
+| [CraftPix](https://craftpix.net) | 2D and 3D game assets, UI, sprites and packs | link to CraftPix product search | no | per listing |
 | [itch.io](https://itch.io/game-assets) | Indie art, 3D packs, UI, audio | scrape | no: itch's download flow | per listing |
 
-![Sources by what they give you: 8 with search and direct download, 9 with search and a link to the asset page, 3 linked to their own search.](docs/images/source-access.svg)
+![Sources by what they give you: 8 with search and direct download, 9 with search and a link to the asset page, 4 linked to their own search.](docs/images/source-access.svg)
 
 Notes:
 
@@ -132,6 +133,7 @@ only the interactive parts hydrate.
 | `/docs/sources` | All sources with licences, generated from the provider registry |
 | `/assets` | Curated asset collections (see [below](#asset-collections)): an index, four hubs (`/assets/hdris`, `/assets/textures`, `/assets/3d-models`, `/assets/game-assets`) and one page per topic, such as `/assets/free-sunset-hdris` |
 | `/sources/<id>` | One page per source: licence, pricing, how it is searched, census numbers and its assets in the collections |
+| `/fuentes` | Enable or disable sources for this browser's website searches (does not affect REST API or MCP) |
 | `/docs/self-hosting` | Docker, Node, configuration, metrics |
 
 - **Search state in the URL.** `/search?q=sunset&type=hdri&free=true` can be bookmarked or shared.
