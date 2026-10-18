@@ -19,6 +19,7 @@ Environment:
   HOST                         Bind address (default 0.0.0.0)
   ASSET_SERVER_API_KEY         Require this key on /v1 and /mcp
   ASSET_SERVER_PUBLIC_URL      Public base URL used in links
+  ASSET_SERVER_ALLOW_LAN       "true" to enable favorites on private RFC1918 hosts
   ASSET_SERVER_PROVIDERS       Comma list to enable a subset of providers
   ASSET_DOWNLOAD_DIR           Default folder for MCP downloads (default ./assets)
   ASSET_SERVER_HTTP_DOWNLOADS  "true" to expose download_asset on the HTTP MCP endpoint
@@ -56,7 +57,8 @@ async function main(argv: string[]): Promise<void> {
         allowServerDownloads: process.env.ASSET_SERVER_HTTP_DOWNLOADS === "true",
         downloadDir: process.env.ASSET_DOWNLOAD_DIR,
         prometheus: process.env.PROMETHEUS_URL ? { url: process.env.PROMETHEUS_URL } : undefined,
-        favoritesDir: hostname === "127.0.0.1" || hostname === "localhost" || hostname === "::1" ? process.env.ASSET_SERVER_FAVORITES_DIR : undefined,
+        favoritesDir: hostname === "127.0.0.1" || hostname === "localhost" || hostname === "::1" || process.env.ASSET_SERVER_ALLOW_LAN === "true" ? process.env.ASSET_SERVER_FAVORITES_DIR : undefined,
+        allowLanFavorites: process.env.ASSET_SERVER_ALLOW_LAN === "true",
         repositoriesDir: process.env.ASSET_SERVER_REPOSITORIES_DIR,
       });
       serve({ fetch: app.fetch, port, hostname }, (info) => {

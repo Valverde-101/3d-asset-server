@@ -54,6 +54,15 @@ export async function checkFavoriteLink(value: string): Promise<{ state: LinkSta
   return { state: "unknown", httpStatus: null };
 }
 
+function allowedFavoritesHost(hostname: string, allowLan: boolean): boolean {
+  if (["127.0.0.1", "localhost", "::1", "[::1]"].includes(hostname)) return true;
+  if (!allowLan || isIP(hostname) !== 4) return false;
+  const octets = hostname.split(".").map(Number);
+  const first = octets[0] ?? 0;
+  const second = octets[1] ?? 0;
+  return first === 10 || (first === 192 && second === 168) || (first === 172 && second >= 16 && second <= 31);
+}
+
 async function projects(repositoryDir?: string): Promise<{ id: string; name: string }[]> {
   if (!repositoryDir) return [];
   try {
@@ -76,11 +85,11 @@ async function jsonBody(c: { req: { header(name: string): string | undefined; te
   try { return JSON.parse(content) as unknown; } catch { throw new FavoriteError("JSON no válido."); }
 }
 
-export function registerFavoritesRoutes(app: Hono, directory: string, repositoryDir?: string): void {
+export function registerFavoritesRoutes(app: Hono, directory: string, repositoryDir?: string, allowLan = false): void {
   const store = new FavoriteStore(directory);
   app.use("/local/favorites", async (c, next) => {
     const url = new URL(c.req.url);
-    if (!["127.0.0.1", "localhost", "[::1]"].includes(url.hostname)) return c.json({ error: "Solo disponible en este equipo." }, 403);
+    if (!allowedFavoritesHost(url.hostname, allowLan)) return c.json({ error: "Solo disponible en este equipo o en una red local Privada habilitada." }, 403);
     const origin = c.req.header("origin");
     if (origin && origin !== url.origin) return c.json({ error: "Origen no permitido." }, 403);
     const site = c.req.header("sec-fetch-site");
@@ -90,7 +99,7 @@ export function registerFavoritesRoutes(app: Hono, directory: string, repository
   });
   app.use("/local/favorites/*", async (c, next) => {
     const url = new URL(c.req.url);
-    if (!["127.0.0.1", "localhost", "[::1]"].includes(url.hostname)) return c.json({ error: "Solo disponible en este equipo." }, 403);
+    if (!allowedFavoritesHost(url.hostname, allowLan)) return c.json({ error: "Solo disponible en este equipo o en una red local Privada habilitada." }, 403);
     const origin = c.req.header("origin");
     if (origin && origin !== url.origin) return c.json({ error: "Origen no permitido." }, 403);
     const site = c.req.header("sec-fetch-site");

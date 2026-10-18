@@ -46,8 +46,10 @@ export interface AppOptions {
    * and 7 days. Without it, /v1/stats counts this process since it started.
    */
   prometheus?: { url: string; fetch?: typeof fetch };
-  /** Local, private library; never enabled by the public HTTP service. */
+  /** Local favorites library, optionally usable from a trusted private LAN. */
   favoritesDir?: string;
+  /** Allow the favorites UI on RFC1918 hosts when the Windows firewall is scoped to a private LAN. */
+  allowLanFavorites?: boolean;
   repositoriesDir?: string;
 }
 
@@ -412,7 +414,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     return res;
   });
 
-  if (opts.favoritesDir) registerFavoritesRoutes(app, opts.favoritesDir, opts.repositoriesDir);
+  if (opts.favoritesDir) registerFavoritesRoutes(app, opts.favoritesDir, opts.repositoriesDir, opts.allowLanFavorites === true);
 
   // Share cards for search and asset links (static pages have pre-rendered /og/<page>.png files).
   const providerIds = service.listProviders().map((p) => p.id);
