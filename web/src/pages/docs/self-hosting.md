@@ -32,6 +32,7 @@ npm start
 | --- | --- | --- |
 | `PORT` / `HOST` | `8787` / `0.0.0.0` | HTTP bind address. |
 | `ASSET_SERVER_API_KEY` | none | Require `Authorization: Bearer <key>`, `x-api-key` or `?api_key=` on `/v1/*` and `/mcp`. |
+| `ASSET_SERVER_HTTP_MCP` | `true` | Set to `false` to disable the Streamable HTTP MCP endpoint at `/mcp` while keeping the website search API available. The stdio MCP server is unaffected. |
 | `ASSET_SERVER_PUBLIC_URL` | request origin | Base URL used in links handed to MCP clients. Set it behind a TLS proxy. |
 | `ASSET_SERVER_PROVIDERS` | all | Comma list to enable only some sources. |
 | `ASSET_SERVER_HTTP_DOWNLOADS` | `false` | Expose `download_asset` on the HTTP MCP endpoint (writes to the server's disk). |
