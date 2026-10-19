@@ -34,6 +34,8 @@ export interface AppOptions {
   publicBaseUrl?: string;
   /** Allow the MCP download tool to write to this server's disk. Off by default for HTTP. */
   allowServerDownloads?: boolean;
+  /** Disable the Streamable HTTP MCP endpoint while keeping website APIs available. Defaults to enabled. */
+  httpMcpEnabled?: boolean;
   downloadDir?: string;
   /** Product analytics sink (metrics + event log). Defaults to no-op. */
   analytics?: Analytics;
@@ -267,7 +269,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
       agents: {
         instructions: "/AGENTS.md",
         llms: "/llms.txt",
-        mcp: `claude mcp add --transport http 3d-assets ${(opts.publicBaseUrl ?? new URL(c.req.url).origin).replace(/\/$/, "")}/mcp`,
+        ...(opts.httpMcpEnabled === false ? {} : { mcp: `claude mcp add --transport http 3d-assets ${(opts.publicBaseUrl ?? new URL(c.req.url).origin).replace(/\/$/, "")}/mcp` }),
       },
       endpoints: {
         providers: "/v1/providers",
@@ -277,7 +279,7 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
         asset: "/v1/assets/{provider}:{id}",
         files: "/v1/assets/{provider}:{id}/files?format=gltf&resolution=2k",
         download: "/v1/assets/{provider}:{id}/download?format=gltf&resolution=2k",
-        mcp: "/mcp (Streamable HTTP)",
+        ...(opts.httpMcpEnabled === false ? {} : { mcp: "/mcp (Streamable HTTP)" }),
         openapi: "/openapi.json",
         docs: "/docs",
         apiReference: "/docs/api/reference",
@@ -387,32 +389,36 @@ export function createApp(service: AssetService, opts: AppOptions = {}): Hono {
     });
   });
 
-  // Opening the MCP URL in a browser leads to the setup guide instead of a JSON-RPC error.
-  app.get("/mcp", async (c, next) => {
-    const accept = c.req.header("accept") ?? "";
-    if (accept.includes("text/html") && !accept.includes("text/event-stream")) return c.redirect("/docs/mcp", 302);
-    await next();
-  });
+  if (opts.httpMcpEnabled === false) {
+    app.all("/mcp", (c) => c.json({ error: "HTTP MCP is disabled in this network mode." }, 404));
+  } else {
+    // Opening the MCP URL in a browser leads to the setup guide instead of a JSON-RPC error.
+    app.get("/mcp", async (c, next) => {
+      const accept = c.req.header("accept") ?? "";
+      if (accept.includes("text/html") && !accept.includes("text/event-stream")) return c.redirect("/docs/mcp", 302);
+      await next();
+    });
 
-  // MCP over Streamable HTTP, stateless: a fresh server+transport per request.
-  app.all("/mcp", async (c) => {
-    const server = createMcpServer(service, {
-      allowLocalDownload: opts.allowServerDownloads ?? false,
-      downloadDir: opts.downloadDir,
-      publicBaseUrl: opts.publicBaseUrl ?? new URL(c.req.url).origin,
-      analytics,
-      client: clientFamily(c.req.header("user-agent")),
+    // MCP over Streamable HTTP, stateless: a fresh server+transport per request.
+    app.all("/mcp", async (c) => {
+      const server = createMcpServer(service, {
+        allowLocalDownload: opts.allowServerDownloads ?? false,
+        downloadDir: opts.downloadDir,
+        publicBaseUrl: opts.publicBaseUrl ?? new URL(c.req.url).origin,
+        analytics,
+        client: clientFamily(c.req.header("user-agent")),
+      });
+      const transport = new WebStandardStreamableHTTPServerTransport({
+        sessionIdGenerator: undefined,
+        enableJsonResponse: true,
+      });
+      await server.connect(transport);
+      const res = await transport.handleRequest(c.req.raw);
+      // Stateless: release the per-request server once the response is produced.
+      void server.close().catch(() => undefined);
+      return res;
     });
-    const transport = new WebStandardStreamableHTTPServerTransport({
-      sessionIdGenerator: undefined,
-      enableJsonResponse: true,
-    });
-    await server.connect(transport);
-    const res = await transport.handleRequest(c.req.raw);
-    // Stateless: release the per-request server once the response is produced.
-    void server.close().catch(() => undefined);
-    return res;
-  });
+  }
 
   if (opts.favoritesDir) registerFavoritesRoutes(app, opts.favoritesDir, opts.repositoriesDir, opts.allowLanFavorites === true);
 

@@ -294,6 +294,22 @@ describe("HTTP API", () => {
     // download_asset writes to disk, so it is off for the HTTP transport by default.
     expect(body.result.tools.map((t) => t.name).sort()).toEqual(["get_asset", "list_providers", "search_assets"]);
   });
+
+  it("can disable HTTP MCP without disabling the website search API", async () => {
+    const webOnly = createApp(service(), { siteRoot: SITE, httpMcpEnabled: false });
+    const mcp = await webOnly.request("/mcp", {
+      method: "POST",
+      headers: { "content-type": "application/json", accept: "application/json, text/event-stream" },
+      body: JSON.stringify({ jsonrpc: "2.0", id: 1, method: "initialize", params: { protocolVersion: "2025-06-18", capabilities: {}, clientInfo: { name: "lan", version: "1" } } }),
+    });
+    expect(mcp.status).toBe(404);
+    const search = await webOnly.request("/v1/search?q=crate&type=model&providers=fake");
+    expect(search.status).toBe(200);
+    const index = await webOnly.request("/", { headers: { accept: "application/json" } });
+    const body = await index.json() as { agents: Record<string, string>; endpoints: Record<string, string> };
+    expect(body.agents).not.toHaveProperty("mcp");
+    expect(body.endpoints).not.toHaveProperty("mcp");
+  });
 });
 
 describe("MCP tools", () => {

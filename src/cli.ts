@@ -18,6 +18,7 @@ Environment:
   PORT                         HTTP port (default 8787)
   HOST                         Bind address (default 0.0.0.0)
   ASSET_SERVER_API_KEY         Require this key on /v1 and /mcp
+  ASSET_SERVER_HTTP_MCP        "false" to disable the Streamable HTTP MCP endpoint while keeping the web catalog/API available
   ASSET_SERVER_PUBLIC_URL      Public base URL used in links
   ASSET_SERVER_ALLOW_LAN       "true" to enable favorites on private RFC1918 hosts
   ASSET_SERVER_PROVIDERS       Comma list to enable a subset of providers
@@ -55,6 +56,7 @@ async function main(argv: string[]): Promise<void> {
         apiKey: process.env.ASSET_SERVER_API_KEY,
         publicBaseUrl: process.env.ASSET_SERVER_PUBLIC_URL,
         allowServerDownloads: process.env.ASSET_SERVER_HTTP_DOWNLOADS === "true",
+        httpMcpEnabled: process.env.ASSET_SERVER_HTTP_MCP !== "false",
         downloadDir: process.env.ASSET_DOWNLOAD_DIR,
         prometheus: process.env.PROMETHEUS_URL ? { url: process.env.PROMETHEUS_URL } : undefined,
         favoritesDir: hostname === "127.0.0.1" || hostname === "localhost" || hostname === "::1" || process.env.ASSET_SERVER_ALLOW_LAN === "true" ? process.env.ASSET_SERVER_FAVORITES_DIR : undefined,

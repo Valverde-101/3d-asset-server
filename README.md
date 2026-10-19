@@ -346,6 +346,7 @@ Safety:
 | `PORT` / `HOST` | `8787` / `0.0.0.0` | HTTP bind address |
 | `ASSET_SERVER_API_KEY` | – | Require `Authorization: Bearer <key>`, `x-api-key` or `?api_key=` on `/v1/*` and `/mcp` |
 | `ASSET_SERVER_PUBLIC_URL` | request origin | Base URL used in links handed to MCP clients |
+| `ASSET_SERVER_HTTP_MCP` | `true` | Set to `false` to disable Streamable HTTP MCP at `/mcp` while keeping the website and its search API available; stdio MCP is unaffected |
 | `ASSET_SERVER_PROVIDERS` | all | Comma list to enable only some sources, e.g. `polyhaven,ambientcg,kenney` |
 | `ASSET_DOWNLOAD_DIR` | `./assets` | Default download folder for MCP |
 | `ASSET_SERVER_HTTP_DOWNLOADS` | `false` | Expose `download_asset` on the HTTP MCP endpoint (writes to the server's disk) |
